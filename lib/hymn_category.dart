@@ -22,8 +22,9 @@ class HymnCategory extends StatelessWidget {
           children: HYMNS
               .map(
                 (e) => InkWell(
-                  onTap: () =>
-                      Navigator.of(context).pushNamed(HymnView.routeName),
+                  onTap: () => Navigator.of(context).pushNamed(
+                      HymnView.routeName,
+                      arguments: {'title': e['title'], 'hymn': e['hymn']}),
                   child: Card(
                     elevation: 5.0,
                     child: FittedBox(

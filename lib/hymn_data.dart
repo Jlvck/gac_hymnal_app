@@ -3,7 +3,17 @@
 import 'package:flutter/material.dart';
 
 const HYMNS = const [
-  {'id': '1'},
+  {
+    'id': '1',
+    'title': 'Ji okan mi, ba oorun ji ',
+    'hymn': [
+      '1.',
+      'Ji okan mi, ba oorun ji ',
+      'Mura si işe ojo re:',
+      'Maşe ilora, ji kutu,',
+      "K'o san gbese ebo oro."
+    ]
+  },
   {'id': '2'},
   {'id': '3'},
   {'id': '4'},
