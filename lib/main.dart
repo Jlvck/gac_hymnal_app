@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import './providers/hymn_book.dart';
 import './hymn_category.dart';
 import './hymn_view.dart';
 
@@ -10,12 +12,15 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyHomePage(),
-      routes: {
-        HymnCategory.routeName: (ctx) => HymnCategory(),
-        HymnView.routeName: (ctx) => HymnView()
-      },
+    return ChangeNotifierProvider(
+      create: (ctx) => HymnBook(),
+      child: MaterialApp(
+        home: MyHomePage(),
+        routes: {
+          HymnCategory.routeName: (ctx) => HymnCategory(),
+          HymnView.routeName: (ctx) => HymnView()
+        },
+      ),
     );
   }
 }
@@ -28,18 +33,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String logo_1 = 'images/church_logo1.png';
   String logo_2 = 'images/church_logo2.png';
-  bool state = true;
-  String name = 'images/church_logo2.png';
 
-  changeName() {
-    setState(() {
-      if (state == false) {
-        state = true;
-      } else {
-        state = false;
-      }
-    });
-  }
+  String name = 'images/church_logo2.png';
 
   @override
   Widget build(BuildContext context) {

@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import './providers/hymn.dart';
+
 class HymnView extends StatelessWidget {
   static const routeName = '/hymn_view';
 
@@ -13,25 +15,47 @@ class HymnView extends StatelessWidget {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
 
-    final routeArgs =
-        ModalRoute.of(context).settings.arguments as Map<String, Object>;
+    final routeArgs = ModalRoute.of(context).settings.arguments as Hymn;
 
-    final String routeTitle = routeArgs['title'];
-    final List routeHymn = routeArgs['hymn'];
+    final String routeTitle = routeArgs.verses[0][0];
+    final List<List<String>> routeHymn = routeArgs.verses;
 
     return Scaffold(
         appBar: AppBar(title: Text(routeTitle.toUpperCase())),
-        body: SizedBox(
-          height: maxHeight,
-          width: maxWidth,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
+        body: SingleChildScrollView(
+          child: SizedBox(
+            height: maxHeight,
+            width: maxWidth,
             child: ListView.builder(
               itemBuilder: (ctx, index) => Align(
                 alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(routeHymn[index]),
+                  child: Column(
+                    children: [
+                      Text(
+                        "${index + 1}",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30),
+                      ),
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: ClampingScrollPhysics(),
+                        primary: false,
+                        itemBuilder: (ctxx, i) => Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              routeHymn[index][i],
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ),
+                        itemCount: routeHymn[index].length,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               itemCount: routeHymn.length,
