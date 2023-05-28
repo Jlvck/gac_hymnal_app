@@ -21,7 +21,8 @@ class HymnView extends StatelessWidget {
     final List<List<String>> routeHymn = routeArgs.verses;
 
     return Scaffold(
-        appBar: AppBar(title: Text(routeTitle.toUpperCase())),
+        appBar:
+            AppBar(title: Text("${routeArgs.id}:${routeTitle.toUpperCase()}")),
         body: SingleChildScrollView(
           child: SizedBox(
             height: maxHeight,
@@ -54,6 +55,38 @@ class HymnView extends StatelessWidget {
                         ),
                         itemCount: routeHymn[index].length,
                       ),
+                      if (routeArgs.isChorus)
+                        Container(
+                          margin: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Chorus",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.italic),
+                              ),
+                              ListView.builder(
+                                shrinkWrap: true,
+                                physics: ClampingScrollPhysics(),
+                                primary: false,
+                                itemBuilder: (ctxx, t) => Align(
+                                  alignment: Alignment.center,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      routeArgs.chorus[t],
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                                itemCount: routeArgs.chorus.length,
+                              ),
+                            ],
+                          ),
+                        ),
                     ],
                   ),
                 ),
