@@ -940,6 +940,78 @@ class HymnBook with ChangeNotifier {
         "Omo Re ni mo je, ‘tori oro Re so,",
         "Pe okanna ni Olorun Iyanu loni.",
       ],
-    )
+    ),
+    Hymn(
+        id: '26',
+        verses: [
+          [
+            "Ko su wa lati maa ko orin ti igbani,",
+            "Ogo f’ Olorun Halleluya!",
+            "A le fi igbagbo korin na soke kikan;",
+            "Ogo f’ Olorun Halleluya.",
+          ],
+          [
+            "Awa mbe n’nu ibu ife t’o ra wa pada;",
+            "Ogo f’ Olorun Halleluya!",
+            "Awa y’o iye goke lo s’oke orun",
+            "Ogo f’ Olorun Halleluya!",
+          ],
+          [
+            "Awa nlo si Afin kan ti a fi wura ko:",
+            "Ogo f’ Olorun Halleluya!",
+            "Nibiti ao ri Oba Ogo n’nu ewa Re",
+            "Ogo f’Olorun Halleluya!'",
+          ],
+          [
+            "Nibe ao korin titun t’anu t’o da wa nde,",
+            "Ogo f’ Olorun Halleluya!",
+            "Nibe awa ayanfe y’ o korin ‘yin ti Krist’:",
+            "Ogo f’ Olorun Halleluya!",
+          ],
+        ],
+        isChorus: true,
+        chorus: [
+          "Omo Olorun ni eto lati ma bu sayo;",
+          "Pe ona yi nye wa si, ",
+          "Okan wa nsa feri re",
+          "Nigbose a o de Afin Oba wa Ologo;",
+          "Ogo f’ Olorun halleluya",
+        ]),
+    Hymn(
+        id: '27',
+        verses: [
+          [
+            "Fi iyin fun! Jesu Olurapada wa",
+            "Ki aiye k’okiki ife Re nla",
+            "Fi iyin fun! Enyin Angeli ologo,",
+            "F’ola at’ogo fun oruko Re",
+            "B’Olusaguntan Jesu y’o to omo Re",
+            "Apa Re lo ngbe won le lojojo;",
+            "Enyin enia mimo ti ngb’oke Sion",
+            "Fi iyin fun pelu orin ayo",
+          ],
+          [
+            "Fi iyin fun Jesu Olurapada wa,",
+            "Fun wa O t’eje re si le O ku",
+            "On ni apata ati reti,gbala wa,",
+            "Yin Jesu ti a kan m’agbelebu",
+            "Olugbala to f’ara da irora nla",
+            "Ti a fi ade egun de lori",
+            "Eniti a pa nitori awa eda,",
+            "Oba Ogo n joba titi lailai",
+          ],
+          [
+            "Fi iyin fun Jesu Olurapada wa,",
+            "Ki ariwo Iyin gba Orun kan,",
+            "Jesu Oluwa njoba lai ati lailai,",
+            "Se l’oba gbogb’ enyin alagbara,",
+            "A segun iku: fi ayo rohin na ka,",
+            "Isegun re ha da? Isa oku?",
+            "Jesu ye! Ko tu n si wahala fun wa mo:",
+            "Tori O l’agbara lati gbala.",
+          ],
+        ],
+        isChorus: false,
+        chorus: ['']),
   ];
 }
