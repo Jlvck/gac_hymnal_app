@@ -7,6 +7,10 @@ class HymnBook with ChangeNotifier {
     return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
+  List<Hymn> get hymnList {
+    return [..._hymnBook];
+  }
+
   final List<Hymn> _hymnBook = [
     Hymn(
       id: '1',
@@ -178,7 +182,7 @@ class HymnBook with ChangeNotifier {
       id: '5',
       verses: [
         [
-          "Imolę oorg didun yi",
+          "Imolę ooro didun yi",
           "Ji mi nin' orun mi",
           "Baba, ife Tire nikan",
           "L'o pa omo Rę mo.",
