@@ -63,6 +63,7 @@ flutter:
   assets:
     - images/church_logo1.png
     - images/church_logo2.png
+    - images/church_image_drawer.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

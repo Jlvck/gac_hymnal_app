@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import './hymn_view.dart';
 import './providers/hymn.dart';
 import './providers/hymn_book.dart';
+import './drawer.dart';
 
 class HymnCategory extends StatefulWidget {
   static const routeName = '/hymn_category';
@@ -18,6 +19,8 @@ class _HymnCategoryState extends State<HymnCategory> {
   final _enteredHymnNumber = TextEditingController();
   final _enteredHymnTitle = TextEditingController();
   final FocusNode myfocusNode = FocusNode();
+
+  final ScrollController _scroll = ScrollController();
 
   List<Hymn> _staticHymns = [];
   List<Hymn> _foundHymns = [];
@@ -76,6 +79,7 @@ class _HymnCategoryState extends State<HymnCategory> {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     final hymnData = Provider.of<HymnBook>(context, listen: false);
     return Scaffold(
+        drawer: MainDrawer(),
         appBar: AppBar(title: const Text('HYMNBOOK')),
         body: Column(
           children: [
@@ -201,34 +205,43 @@ class _HymnCategoryState extends State<HymnCategory> {
             Padding(padding: EdgeInsets.all(8)),
             Flexible(
               child: _foundHymns.isNotEmpty
-                  ? ListView.builder(
-                      itemBuilder: (ctx, index) => GestureDetector(
-                            onTap: () {
-                              final Hymn selectedHymn =
-                                  hymnData.getHymn(_foundHymns[index].id);
-                              Navigator.of(context).pushNamed(
-                                  HymnView.routeName,
-                                  arguments: selectedHymn);
-                              // setState(() {
-                              //   _enteredHymnNumber.clear();
-                              //   _enteredHymnTitle.clear();
-                              // });
-                            },
-                            child: Container(
-                              margin: EdgeInsets.only(left: 10, right: 10),
-                              child: Card(
-                                elevation: 5,
-                                child: ListTile(
-                                  leading: CircleAvatar(
-                                    child: Text(_foundHymns[index].id),
+                  ? Scrollbar(
+                      thumbVisibility: false,
+                      trackVisibility: false,
+                      interactive: true,
+                      controller: _scroll,
+                      radius: Radius.circular(4),
+                      thickness: 10,
+                      child: ListView.builder(
+                          controller: _scroll,
+                          itemBuilder: (ctx, index) => GestureDetector(
+                                onTap: () {
+                                  final Hymn selectedHymn =
+                                      hymnData.getHymn(_foundHymns[index].id);
+                                  Navigator.of(context).pushNamed(
+                                      HymnView.routeName,
+                                      arguments: selectedHymn);
+                                  // setState(() {
+                                  //   _enteredHymnNumber.clear();
+                                  //   _enteredHymnTitle.clear();
+                                  // });
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 10, right: 10),
+                                  child: Card(
+                                    elevation: 5,
+                                    child: ListTile(
+                                      leading: CircleAvatar(
+                                        child: Text(_foundHymns[index].id),
+                                      ),
+                                      title: Text(
+                                          "${_foundHymns[index].verses[0][0]} "),
+                                    ),
                                   ),
-                                  title: Text(
-                                      "${_foundHymns[index].verses[0][0]} "),
                                 ),
                               ),
-                            ),
-                          ),
-                      itemCount: _foundHymns.length)
+                          itemCount: _foundHymns.length),
+                    )
                   : const Text(
                       'No results found',
                       style: TextStyle(fontSize: 24),
