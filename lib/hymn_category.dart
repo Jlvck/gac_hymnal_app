@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -52,7 +52,7 @@ class _HymnCategoryState extends State<HymnCategory> {
 
   @override
   void didChangeDependencies() {
-    final preHymn = Provider.of<HymnBook>(context, listen: false);
+    final preHymn = Provider.of<HymnBook>(context, listen: true);
 
     _staticHymns = preHymn.hymnList;
 
@@ -70,6 +70,7 @@ class _HymnCategoryState extends State<HymnCategory> {
     _enteredHymnNumber.dispose();
     _enteredHymnTitle.dispose();
     myfocusNode.dispose();
+    _scroll.dispose();
     super.dispose();
   }
 
@@ -77,7 +78,7 @@ class _HymnCategoryState extends State<HymnCategory> {
   Widget build(BuildContext context) {
     print('......building state');
     MediaQueryData mediaQuery = MediaQuery.of(context);
-    final hymnData = Provider.of<HymnBook>(context, listen: false);
+    final hymnData = Provider.of<HymnBook>(context, listen: true);
     return Scaffold(
         drawer: MainDrawer(),
         appBar: AppBar(title: const Text('HYMNBOOK')),
@@ -107,8 +108,8 @@ class _HymnCategoryState extends State<HymnCategory> {
                               if (_enteredHymnTitle.value.text.isEmpty) {
                                 setState(() {
                                   _enteredHymnNumber.clear();
+                                  _runFilter(_enteredHymnNumber.value.text);
                                 });
-                                _runFilter(_enteredHymnNumber.value.text);
                               } else {
                                 _enteredHymnNumber.clear();
                               }
@@ -119,8 +120,14 @@ class _HymnCategoryState extends State<HymnCategory> {
                                 setState(() {
                                   _foundHymns = _staticHymns;
                                 });
+                                if (_scroll.hasClients) {
+                                  _scroll.jumpTo(0);
+                                }
                               } else {
                                 _runFilter(value);
+                                if (_scroll.hasClients) {
+                                  _scroll.jumpTo(0);
+                                }
                               }
                             },
                             keyboardType: TextInputType.text,
@@ -156,8 +163,8 @@ class _HymnCategoryState extends State<HymnCategory> {
                               if (_enteredHymnNumber.value.text.isEmpty) {
                                 setState(() {
                                   _enteredHymnTitle.clear();
+                                  _runFilter(_enteredHymnTitle.value.text);
                                 });
-                                _runFilter(_enteredHymnTitle.value.text);
                               } else {
                                 _enteredHymnTitle.clear();
                               }
@@ -171,8 +178,14 @@ class _HymnCategoryState extends State<HymnCategory> {
                                 setState(() {
                                   _foundHymns = _staticHymns;
                                 });
+                                if (_scroll.hasClients) {
+                                  _scroll.jumpTo(0);
+                                }
                               } else {
                                 _runFilter(value);
+                                if (_scroll.hasClients) {
+                                  _scroll.jumpTo(0);
+                                }
                               }
                             },
                             onSubmitted: (_) {
@@ -213,7 +226,9 @@ class _HymnCategoryState extends State<HymnCategory> {
                       radius: Radius.circular(4),
                       thickness: 10,
                       child: ListView.builder(
+                          padding: EdgeInsets.all(2),
                           controller: _scroll,
+                          itemExtent: 60,
                           itemBuilder: (ctx, index) => GestureDetector(
                                 onTap: () {
                                   final Hymn selectedHymn =
@@ -226,16 +241,33 @@ class _HymnCategoryState extends State<HymnCategory> {
                                   //   _enteredHymnTitle.clear();
                                   // });
                                 },
-                                child: Container(
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  child: Card(
-                                    elevation: 5,
-                                    child: ListTile(
-                                      leading: CircleAvatar(
-                                        child: Text(_foundHymns[index].id),
+                                child: ChangeNotifierProvider.value(
+                                  value: _foundHymns[index],
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.only(left: 10, right: 10),
+                                    child: Card(
+                                      elevation: 5,
+                                      child: ListTile(
+                                        leading: CircleAvatar(
+                                          child: Text(_foundHymns[index].id),
+                                          radius: 15,
+                                        ),
+                                        title: Text(
+                                            "${_foundHymns[index].verses[0][0]} "),
+                                        trailing: Consumer<Hymn>(
+                                          builder: (ctxx, hymn, _) =>
+                                              IconButton(
+                                            icon: Icon(
+                                                _foundHymns[index].isFavorites
+                                                    ? Icons.favorite
+                                                    : Icons.favorite_border),
+                                            onPressed: () {
+                                              _foundHymns[index].toggleFav();
+                                            },
+                                          ),
+                                        ),
                                       ),
-                                      title: Text(
-                                          "${_foundHymns[index].verses[0][0]} "),
                                     ),
                                   ),
                                 ),

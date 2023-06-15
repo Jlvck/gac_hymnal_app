@@ -5,13 +5,17 @@ class Hymn with ChangeNotifier {
   final List<List<String>> verses;
   final bool isChorus;
   final List<String> chorus;
-  bool isFavorites;
+  bool isFavorites = false;
+
+  void toggleFav() {
+    isFavorites = !isFavorites;
+    notifyListeners();
+  }
 
   Hymn({
     @required this.id,
     @required this.verses,
     @required this.isChorus,
     @required this.chorus,
-    isFavorites = false,
   });
 }

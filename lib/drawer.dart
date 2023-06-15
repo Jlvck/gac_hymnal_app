@@ -18,6 +18,7 @@ class MainDrawer extends StatelessWidget {
             image: DecorationImage(
               image: AssetImage('images/church_image_drawer.png'),
               fit: BoxFit.contain,
+              alignment: Alignment.centerLeft,
             ),
           ),
           child: Align(
@@ -29,6 +30,8 @@ class MainDrawer extends StatelessWidget {
           hoverColor: Colors.black54,
           splashColor: Colors.black54,
           horizontalTitleGap: 5,
+          contentPadding:
+              EdgeInsets.only(top: 15, bottom: 10, left: 20, right: 20),
           visualDensity: VisualDensity(horizontal: 0, vertical: 0),
           leading: Icon(
             Icons.music_note,
@@ -46,6 +49,8 @@ class MainDrawer extends StatelessWidget {
           iconColor: Colors.white,
           hoverColor: Colors.black54,
           splashColor: Colors.black54,
+          contentPadding:
+              EdgeInsets.only(top: 15, bottom: 10, left: 20, right: 20),
           horizontalTitleGap: 5,
           visualDensity: VisualDensity(horizontal: 0, vertical: 0),
           leading: Icon(
