@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import './hymn_category.dart';
+import '../screens/hymn_book_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -38,7 +38,8 @@ class MainDrawer extends StatelessWidget {
             size: 30,
           ),
           onTap: () {
-            Navigator.of(context).pushReplacementNamed(HymnCategory.routeName);
+            Navigator.of(context)
+                .pushReplacementNamed(HymnBookScreen.routeName);
           },
           title: Text(
             'Hymn Book',
@@ -58,7 +59,8 @@ class MainDrawer extends StatelessWidget {
             size: 30,
           ),
           onTap: () {
-            Navigator.of(context).pushReplacementNamed(HymnCategory.routeName);
+            Navigator.of(context)
+                .pushReplacementNamed(HymnBookScreen.routeName);
           },
           title: Text(
             'Favorites',

@@ -6,6 +6,10 @@ class HymnBook with ChangeNotifier {
     return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
+  bool checkHymn(String hymnNumber) {
+    return _hymnBook.every((element) => element.id == hymnNumber);
+  }
+
   List<Hymn> get hymnList {
     return [..._hymnBook];
   }

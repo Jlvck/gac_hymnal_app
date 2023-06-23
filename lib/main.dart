@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './providers/hymn_book.dart';
-import './hymn_category.dart';
-import './hymn_view.dart';
+import 'screens/hymn_book_screen.dart';
+import 'widgets/hymn_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         home: MyHomePage(),
         routes: {
-          HymnCategory.routeName: (ctx) => HymnCategory(),
+          HymnBookScreen.routeName: (ctx) => HymnBookScreen(),
           HymnView.routeName: (ctx) => HymnView()
         },
       ),
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.black54),
                     child: IconButton(
                       onPressed: () => Navigator.of(context)
-                          .pushReplacementNamed(HymnCategory.routeName),
+                          .pushReplacementNamed(HymnBookScreen.routeName),
                       icon: Icon(Icons.navigate_next),
                       color: Colors.blue,
                     ),
