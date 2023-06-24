@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../widgets/hymn_view_widget.dart';
 import '../providers/hymn_book.dart';
 
 import '../providers/hymn.dart';
 
-class HymnView extends StatelessWidget {
+class HymnViewScreen extends StatelessWidget {
   static const routeName = '/hymn_view';
 
   Widget versesWidget(List<List<String>> verses, int index) {
@@ -97,39 +99,13 @@ class HymnView extends StatelessWidget {
         ],
       ),
       body: SizedBox(
-        width: maxWidth,
-        height: maxHeight,
-        child: ListView(
-          children: [
-            ListView.builder(
-              shrinkWrap: true,
-              physics: ScrollPhysics(),
-              itemBuilder: (ctx, index) => Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        "${index + 1}",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
-                      ),
-                      versesWidget(routeHymnVerses, index),
-                      if (routeHymn.isChorus) chorusWidget(routeHymn.chorus)
-                    ],
-                  ),
-                ),
-              ),
-              itemCount: routeHymnVerses.length,
-            ),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Text('Amen'),
-            )
-          ],
-        ),
-      ),
+          width: maxWidth,
+          height: maxHeight,
+          child: HymnViewWidget(
+            hymnVerses: routeHymn.verses,
+            hymnChorus: routeHymn.chorus,
+            isChorus: routeHymn.isChorus,
+          )),
     );
   }
 }

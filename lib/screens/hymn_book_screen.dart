@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/hymn_view.dart';
+import 'hymn_view_screen.dart';
 import '../providers/hymn.dart';
 import '../providers/hymn_book.dart';
 import '../widgets/drawer.dart';
@@ -97,7 +97,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
       _foundHymns = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();
       Navigator.of(context)
-          .pushNamed(HymnView.routeName, arguments: selectedHymn);
+          .pushNamed(HymnViewScreen.routeName, arguments: selectedHymn);
     } else {
       return;
     }

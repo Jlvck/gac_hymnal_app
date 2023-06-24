@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/hymn.dart';
 import '../providers/hymn_book.dart';
-import './hymn_view.dart';
+import '../screens/hymn_view_screen.dart';
 
 class HymnListView extends StatelessWidget {
   final List<Hymn> hymnList;
@@ -29,8 +29,8 @@ class HymnListView extends StatelessWidget {
                 final Hymn selectedHymn =
                     Provider.of<HymnBook>(context, listen: false)
                         .getHymn(hymnList[index].id);
-                Navigator.of(context)
-                    .pushNamed(HymnView.routeName, arguments: selectedHymn);
+                Navigator.of(context).pushNamed(HymnViewScreen.routeName,
+                    arguments: selectedHymn);
               },
               child: ChangeNotifierProvider.value(
                 value: hymnList[index],
