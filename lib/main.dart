@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import './providers/hymn_book.dart';
 import 'screens/hymn_book_screen.dart';
+import 'screens/favorites_screen.dart';
 import 'widgets/hymn_view.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         home: MyHomePage(),
         routes: {
           HymnBookScreen.routeName: (ctx) => HymnBookScreen(),
-          HymnView.routeName: (ctx) => HymnView()
+          HymnView.routeName: (ctx) => HymnView(),
+          FavoritesScreen.routeName: (ctx) => FavoritesScreen(),
         },
       ),
     );
