@@ -8,9 +8,15 @@ import './hymn_view.dart';
 
 class HymnListView extends StatelessWidget {
   final List<Hymn> hymnList;
+
   final ScrollController scroll;
+
+  final bool wholeProv;
   // ignore: prefer_const_constructors_in_immutables
-  HymnListView({this.hymnList, this.scroll});
+  HymnListView(
+      {@required this.hymnList,
+      @required this.scroll,
+      @required this.wholeProv});
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +52,10 @@ class HymnListView extends StatelessWidget {
                           color: Colors.red,
                           onPressed: () {
                             hymnIcon.toggleFav();
+                            if (wholeProv) {
+                              Provider.of<HymnBook>(context, listen: false)
+                                  .changeFavBut();
+                            }
                           },
                         ),
                       ),

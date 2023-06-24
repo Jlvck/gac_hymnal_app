@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../providers/hymn_book.dart';
 
 import '../providers/hymn.dart';
 
@@ -88,6 +89,7 @@ class HymnView extends StatelessWidget {
                 color: Colors.red,
                 onPressed: () {
                   hymnIcon.toggleFav();
+                  Provider.of<HymnBook>(context, listen: false).changeFavBut();
                 },
               ),
             ),

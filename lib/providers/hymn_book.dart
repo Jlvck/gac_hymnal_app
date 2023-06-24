@@ -2,6 +2,17 @@ import 'package:flutter/material.dart';
 import './hymn.dart';
 
 class HymnBook with ChangeNotifier {
+  bool tapFavBut = false;
+  void changeFavBut() {
+    tapFavBut = !tapFavBut;
+    notifyListeners();
+  }
+
+  void resetFavBut() {
+    tapFavBut = false;
+    notifyListeners();
+  }
+
   Hymn getHymn(String hymnNumber) {
     return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }

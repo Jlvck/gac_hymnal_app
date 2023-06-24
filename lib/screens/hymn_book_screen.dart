@@ -162,7 +162,11 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
               controller: _scroll,
               radius: Radius.circular(4),
               thickness: 10,
-              child: HymnListView(hymnList: _foundHymns, scroll: _scroll))
+              child: HymnListView(
+                hymnList: _foundHymns,
+                scroll: _scroll,
+                wholeProv: false,
+              ))
           : const Text(
               'No results found',
               style: TextStyle(fontSize: 24),
