@@ -14,6 +14,12 @@ class HymnBook with ChangeNotifier {
     return [..._hymnBook];
   }
 
+  List<Hymn> get favHymnList {
+    List<Hymn> favList =
+        _hymnBook.where((hymn) => hymn.isFavorites == true).toList();
+    return favList;
+  }
+
   final List<Hymn> _hymnBook = [
     Hymn(
       id: '1',

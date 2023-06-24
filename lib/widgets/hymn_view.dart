@@ -85,6 +85,7 @@ class HymnView extends StatelessWidget {
                 icon: Icon(hymnIcon.isFavorites
                     ? Icons.favorite
                     : Icons.favorite_border),
+                color: Colors.red,
                 onPressed: () {
                   hymnIcon.toggleFav();
                 },

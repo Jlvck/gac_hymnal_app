@@ -8,10 +8,9 @@ import './hymn_view.dart';
 
 class HymnListView extends StatelessWidget {
   final List<Hymn> hymnList;
-  final HymnBook hymnBook;
   final ScrollController scroll;
   // ignore: prefer_const_constructors_in_immutables
-  HymnListView({this.hymnList, this.hymnBook, this.scroll});
+  HymnListView({this.hymnList, this.scroll});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,9 @@ class HymnListView extends StatelessWidget {
         itemExtent: 60,
         itemBuilder: (ctx, index) => GestureDetector(
               onTap: () {
-                final Hymn selectedHymn = hymnBook.getHymn(hymnList[index].id);
+                final Hymn selectedHymn =
+                    Provider.of<HymnBook>(context, listen: false)
+                        .getHymn(hymnList[index].id);
                 Navigator.of(context)
                     .pushNamed(HymnView.routeName, arguments: selectedHymn);
               },
@@ -42,6 +43,7 @@ class HymnListView extends StatelessWidget {
                           icon: Icon(hymnIcon.isFavorites
                               ? Icons.favorite
                               : Icons.favorite_border),
+                          color: Colors.red,
                           onPressed: () {
                             hymnIcon.toggleFav();
                           },

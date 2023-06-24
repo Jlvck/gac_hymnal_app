@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/hymn_book_screen.dart';
+import '../screens/favorites_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   ListTile drawerListTile(String tileName, IconData tileIcon, String routeName,
@@ -51,7 +52,7 @@ class MainDrawer extends StatelessWidget {
         drawerListTile(
             'HymnBook', Icons.music_note, HymnBookScreen.routeName, context),
         drawerListTile('Favorites', Icons.favorite_border,
-            HymnBookScreen.routeName, context),
+            FavoritesScreen.routeName, context),
       ]),
     );
   }
