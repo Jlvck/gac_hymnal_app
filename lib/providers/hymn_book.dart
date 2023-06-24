@@ -1716,8 +1716,6 @@ class HymnBook with ChangeNotifier {
           "L’okan ati l’ohun wa,",
           "Eni s’ohun ‘yanu,",
           "N’nu Enit’araiye nyo;",
-        ],
-        [
           "Gbat’a wa l’om’owo",
           "On na l’ ntoju wa",
           "O si nf’ebun ife",
@@ -1728,8 +1726,6 @@ class HymnBook with ChangeNotifier {
           "Ma fi wa sile lailai",
           "Ayo ti ko l’opin",
           "On ‘bukun yo je tiwa;",
-        ],
-        [
           "Pa wa mo n’nu ore,",
           "To wa gba ba damu,",
           "Yo wa ninu ibi",

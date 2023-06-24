@@ -7,12 +7,11 @@ import '../providers/hymn_book.dart';
 import './hymn_view.dart';
 
 class HymnListView extends StatelessWidget {
-  final List<Hymn> hymn;
-  // final BuildContext ctx;
+  final List<Hymn> hymnList;
   final HymnBook hymnBook;
   final ScrollController scroll;
   // ignore: prefer_const_constructors_in_immutables
-  HymnListView({this.hymn, this.hymnBook, this.scroll});
+  HymnListView({this.hymnList, this.hymnBook, this.scroll});
 
   @override
   Widget build(BuildContext context) {
@@ -22,26 +21,22 @@ class HymnListView extends StatelessWidget {
         itemExtent: 60,
         itemBuilder: (ctx, index) => GestureDetector(
               onTap: () {
-                final Hymn selectedHymn = hymnBook.getHymn(hymn[index].id);
+                final Hymn selectedHymn = hymnBook.getHymn(hymnList[index].id);
                 Navigator.of(context)
                     .pushNamed(HymnView.routeName, arguments: selectedHymn);
-                // setState(() {
-                //   _enteredHymnNumber.clear();
-                //   _enteredHymnTitle.clear();
-                // });
               },
               child: ChangeNotifierProvider.value(
-                value: hymn[index],
+                value: hymnList[index],
                 child: Container(
                   margin: const EdgeInsets.only(left: 10, right: 10),
                   child: Card(
                     elevation: 5,
                     child: ListTile(
                       leading: CircleAvatar(
-                        child: Text(hymn[index].id),
+                        child: Text(hymnList[index].id),
                         radius: 15,
                       ),
-                      title: Text("${hymn[index].verses[0][0]} "),
+                      title: Text("${hymnList[index].verses[0][0]} "),
                       trailing: Consumer<Hymn>(
                         builder: (ctxx, hymnIcon, _) => IconButton(
                           icon: Icon(hymnIcon.isFavorites
@@ -57,6 +52,6 @@ class HymnListView extends StatelessWidget {
                 ),
               ),
             ),
-        itemCount: hymn.length);
+        itemCount: hymnList.length);
   }
 }

@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../providers/hymn.dart';
 
@@ -10,7 +11,7 @@ class HymnView extends StatelessWidget {
   Widget versesWidget(List<List<String>> verses, int index) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: ClampingScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       primary: false,
       itemBuilder: (ctxx, i) => Align(
         alignment: Alignment.center,
@@ -41,7 +42,7 @@ class HymnView extends StatelessWidget {
           ),
           ListView.builder(
             shrinkWrap: true,
-            physics: ClampingScrollPhysics(),
+            physics: NeverScrollableScrollPhysics(),
             primary: false,
             itemBuilder: (ctxx, t) => Align(
               alignment: Alignment.center,
@@ -68,19 +69,38 @@ class HymnView extends StatelessWidget {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
 
-    final routeArgs = ModalRoute.of(context).settings.arguments as Hymn;
+    final routeHymn = ModalRoute.of(context).settings.arguments as Hymn;
 
-    final String routeTitle = routeArgs.verses[0][0];
-    final List<List<String>> routeHymnVerses = routeArgs.verses;
+    final String routeTitle = routeHymn.verses[0][0];
+    final List<List<String>> routeHymnVerses = routeHymn.verses;
 
     return Scaffold(
-        appBar:
-            AppBar(title: Text("${routeArgs.id}:${routeTitle.toUpperCase()}")),
-        body: SingleChildScrollView(
-          child: SizedBox(
-            height: maxHeight,
-            width: maxWidth,
-            child: ListView.builder(
+      appBar: AppBar(
+        title: Text("${routeHymn.id}:${routeTitle.toUpperCase()}"),
+        actions: [
+          ChangeNotifierProvider.value(
+            value: routeHymn,
+            child: Consumer<Hymn>(
+              builder: (ctx, hymnIcon, _) => IconButton(
+                icon: Icon(hymnIcon.isFavorites
+                    ? Icons.favorite
+                    : Icons.favorite_border),
+                onPressed: () {
+                  hymnIcon.toggleFav();
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+      body: SizedBox(
+        width: maxWidth,
+        height: maxHeight,
+        child: ListView(
+          children: [
+            ListView.builder(
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
               itemBuilder: (ctx, index) => Align(
                 alignment: Alignment.center,
                 child: Padding(
@@ -93,14 +113,20 @@ class HymnView extends StatelessWidget {
                             fontWeight: FontWeight.bold, fontSize: 30),
                       ),
                       versesWidget(routeHymnVerses, index),
-                      if (routeArgs.isChorus) chorusWidget(routeArgs.chorus)
+                      if (routeHymn.isChorus) chorusWidget(routeHymn.chorus)
                     ],
                   ),
                 ),
               ),
               itemCount: routeHymnVerses.length,
             ),
-          ),
-        ));
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text('Amen'),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
