@@ -56,6 +56,9 @@ class HymnViewWidget extends StatelessWidget {
                 child: Text(
                   chorus[t],
                   style: const TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
+                  maxLines: 2,
                 ),
               ),
             ),

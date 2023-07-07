@@ -75,11 +75,24 @@ class HymnViewScreen extends StatelessWidget {
     final routeHymn = ModalRoute.of(context).settings.arguments as Hymn;
 
     final String routeTitle = routeHymn.verses[0][0];
-    final List<List<String>> routeHymnVerses = routeHymn.verses;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("${routeHymn.id}:${routeTitle.toUpperCase()}"),
+        // leading: IconButton(
+        //     onPressed: () {
+        //       Navigator.of(context).pop();
+        //     },
+        //     icon: Icon(Icons.arrow_back)),
+        title: Align(
+          alignment: Alignment.center,
+          child: Text(
+            "${routeHymn.id}: $routeTitle",
+            softWrap: true,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        elevation: 0,
         actions: [
           ChangeNotifierProvider.value(
             value: routeHymn,
@@ -106,6 +119,7 @@ class HymnViewScreen extends StatelessWidget {
             hymnChorus: routeHymn.chorus,
             isChorus: routeHymn.isChorus,
           )),
+      backgroundColor: Colors.white,
     );
   }
 }

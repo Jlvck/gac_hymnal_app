@@ -1950,5 +1950,159 @@ class HymnBook with ChangeNotifier {
           "Je k'a jumo k'orin ife",
           "L'Olorun",
         ]),
+    Hymn(
+      id: '51',
+      verses: [
+        [
+          "Ngo korin itan 'yanu na;",
+          "Ti Jesu t'o ku fun mi;",
+          "B'o ti fi 'le ogo silę,",
+          "Fun iku agbelebui.",
+        ],
+        [
+          "Mo sonu, Jesu wa mi ri,",
+          "Agutan t'o ti şako;",
+          "O n'apa 'fe Rè yi ni ka,",
+          "O fà mi pada s'agbo.",
+        ],
+        [
+          "Mo gbogbę Jesu wo mi san,",
+          "Mo şubu O gbe mi n'de;",
+          "Iberu so mi d'afoju,",
+          "Jesu so mi d'ominira.",
+        ],
+        [
+          "Y'o pa mi mo titi d'opin,",
+          "Titi d'ipadabo Re",
+          "Y'o gbe mi soke l'apa Re",
+          "Ngo lo b'awon to ti lo.",
+        ],
+      ],
+      isChorus: true,
+      chorus: [
+        "Ngo maa korin 'tan 'yanu na,",
+        "Ti Jesu t'o ku fun mi;",
+        "Ngo b'awon mimo korin na,",
+        "'Gbat'a ba pade loke.",
+      ],
+    ),
+    Hymn(
+      id: '52',
+      verses: [
+        [
+          "E gbe ohun ayo at'iyin ga, Alle/luya!",
+          "Orin ogo Oba nla l'awon ti a rapada/",
+          "y'o ma ko: Alle/luya! Alle/luya!",
+        ],
+        [
+          "Awon egbe ako/rin orun",
+          "Nwon o gberin na yi/ka orun:",
+          "Alle/luya Alle/luya",
+        ],
+        [
+          "Awon ti nrin gbefe kiri ni Pa/radise,",
+          "Awon eni 'bukun ni, nwon o ma ko/ri wipe,",
+          "Alle/luya Alle/luya",
+        ],
+        [
+          "Awon 'rawo ti ntan/mole won,",
+          "Ati gbogbo awon egbe irawo, da",
+          "ohun won/lu wipe, Alle/luya Alle/luya",
+        ],
+        [
+          "Enyin sanmo t'o nwo si lo at'enyin/efufu",
+          "Eyin ara t'o nsan wa/",
+          "enyin mana mana ti o / nko mana;",
+          "E fi a/yo gberin Alle/luya!",
+        ],
+        [
+          "Enyin omi, at'igbi okun, enyin ojo, a/t'otutu,",
+          "Enyin ojo dida/ra gbogbo",
+          "Enyin igboro at'igbo, e/gberin na",
+          "Allen/luya!",
+        ],
+        [
+          "Enyin oniruru eiye, e ko/rin iyin/Ele/",
+          "da nyin pe, Alle/luya Alle/luya!",
+        ],
+        [
+          "Enyin eranko igbe, e di/o/hun nyin lu",
+          "E si korin iyin Ele/da wipe,",
+          "Alle/luya Alle/luya",
+        ],
+        [
+          "Je k'awon oke k'o / bu s'ayo,",
+          "Alle/luya!",
+          "K'awon petele si / gberin na",
+          "Alle/luya!",
+        ],
+        [
+          "Enyin ogbun omi okun, e / ko wipe,",
+          "Alle/luya!",
+          "Eyin ile gbigbe e da / hun wipe",
+          "Alle/luya!",
+        ],
+        [
+          "Olorun t'O / da aiye, ni k'a / f'orin yin",
+          "Alle/luya! Alle/luya!",
+        ],
+        [
+          "Eyi l'orin ti O/lorun fe, Alle/luya!",
+          "Eyi l'orin ti Krist' tika/lare, Fe,",
+          "Alle/luya",
+        ],
+        [
+          "Nitorina, tokantokan l'ao/ fi korin",
+          "Alle/luya!",
+          "Awon omode wewewe y'o gba orin na/ ",
+          "ko wipe, Alle/luya!",
+        ],
+        [
+          "Ki gbogbo enia / ki o ko",
+          "Alle/luya si /Olorun;",
+          "Alleluya ti /ti aiye,",
+          "Fun Omo on E/ mi Mimo.",
+        ],
+      ],
+      isChorus: false,
+      chorus: [''],
+    ),
+    Hymn(
+      id: '53',
+      verses: [
+        [
+          "Ile-eko ojo 'simi",
+          ", mo ti fe O to;",
+          "Inu mi dun mo daraya,",
+          "Lati yo ayo Re",
+        ],
+        [
+          "Ile-eko ojo 'simi",
+          "Ore re p' apoju;",
+          "T'agba t'ewe wa nkorin re,",
+          "A nse aferi re.",
+        ],
+        [
+          "Ile-eko ojo 'simi,",
+          "Jesu l'O ti ko o;",
+          "Emi Mimo Olukoni,",
+          "L'O si nse 'toju",
+        ],
+        [
+          "Ile-eko ojo 'simi,",
+          "Awa ri eri gba,",
+          "P'Olorun Olodumare",
+          "F'ibukun s'ori re.",
+        ],
+        [
+          "Ile-eko ojo 'simi,",
+          "B'oorun nran l'aranju,"
+              "Bi ojo su dudu l'orun,",
+          "Ninu re l'em'o wa",
+        ],
+      ],
+      isChorus: false,
+      chorus: [''],
+    ),
   ];
 }

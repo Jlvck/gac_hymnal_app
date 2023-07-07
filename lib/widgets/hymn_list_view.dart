@@ -40,10 +40,22 @@ class HymnListView extends StatelessWidget {
                     elevation: 5,
                     child: ListTile(
                       leading: CircleAvatar(
-                        child: Text(hymnList[index].id),
+                        child: FittedBox(
+                          child: Text(
+                            hymnList[index].id,
+                            softWrap: false,
+                          ),
+                        ),
                         radius: 15,
                       ),
-                      title: Text("${hymnList[index].verses[0][0]} "),
+                      title: Text(
+                        "${hymnList[index].verses[0][0]} ",
+                        style: const TextStyle(
+                          fontSize: 20,
+                        ),
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                       trailing: Consumer<Hymn>(
                         builder: (ctxx, hymnIcon, _) => IconButton(
                           icon: Icon(hymnIcon.isFavorites
