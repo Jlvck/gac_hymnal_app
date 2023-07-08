@@ -34,19 +34,24 @@ class MainDrawer extends StatelessWidget {
     return Drawer(
       backgroundColor: Theme.of(context).primaryColorDark,
       child: ListView(padding: EdgeInsets.all(0), children: [
-        DrawerHeader(
+        Card(
           margin: EdgeInsets.zero,
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-            image: DecorationImage(
-              image: AssetImage('images/church_image_drawer.png'),
-              fit: BoxFit.contain,
-              alignment: Alignment.centerLeft,
+          elevation: 5.0,
+          clipBehavior: Clip.hardEdge,
+          child: DrawerHeader(
+            margin: EdgeInsets.zero,
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+              image: DecorationImage(
+                image: AssetImage('images/church_image_drawer.png'),
+                fit: BoxFit.contain,
+                alignment: Alignment.centerLeft,
+              ),
             ),
-          ),
-          child: Align(
-            alignment: Alignment.bottomLeft,
+            child: Align(
+              alignment: Alignment.bottomLeft,
+            ),
           ),
         ),
         drawerListTile(

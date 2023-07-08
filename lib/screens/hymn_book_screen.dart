@@ -238,9 +238,24 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     print('......building state');
     MediaQueryData mediaQuery = MediaQuery.of(context);
     final hymnData = Provider.of<HymnBook>(context, listen: true);
+    final int totalHymnNumber = hymnData.hymnList.length;
     return Scaffold(
         drawer: MainDrawer(),
-        appBar: AppBar(title: const Text('HYMNBOOK')),
+        appBar: AppBar(
+          title: const Text('HYMNBOOK'),
+          actions: [
+            Padding(
+              padding: EdgeInsets.all(12),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  totalHymnNumber.toString(),
+                  style: TextStyle(fontSize: 25, color: Colors.red),
+                ),
+              ),
+            )
+          ],
+        ),
         body: Column(
           children: [
             const Padding(padding: EdgeInsets.all(10)),
