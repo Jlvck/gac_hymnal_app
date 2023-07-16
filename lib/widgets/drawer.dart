@@ -32,26 +32,21 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).primaryColorDark,
+      backgroundColor: Theme.of(context).primaryColorLight,
       child: ListView(padding: EdgeInsets.all(0), children: [
-        Card(
+        DrawerHeader(
           margin: EdgeInsets.zero,
-          elevation: 5.0,
-          clipBehavior: Clip.hardEdge,
-          child: DrawerHeader(
-            margin: EdgeInsets.zero,
-            padding: EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
-              image: DecorationImage(
-                image: AssetImage('images/church_image_drawer.png'),
-                fit: BoxFit.contain,
-                alignment: Alignment.centerLeft,
-              ),
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage('images/church_image_drawer.png'),
+              fit: BoxFit.contain,
+              alignment: Alignment.centerLeft,
             ),
-            child: Align(
-              alignment: Alignment.bottomLeft,
-            ),
+          ),
+          child: Align(
+            alignment: Alignment.bottomLeft,
           ),
         ),
         drawerListTile(
