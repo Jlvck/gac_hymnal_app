@@ -8,17 +8,26 @@ class HymnBook with ChangeNotifier {
 
   List<String> favStringList = [];
 
-  void setListtoSF() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    favStringList = prefs.getStringList(prefKey) ?? [];
+  //simple manipulation i did to ensure when
+  //the fav button is clicked in favorite screen the effect is rapid
+  bool tapFavBut = false;
+  void changeFavBut() {
+    tapFavBut = !tapFavBut;
     notifyListeners();
   }
 
-  void addListtoSF(List<String> fav) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList(prefKey, favStringList);
+  //adding an id to favorite list of id
+  void addPrefFav(String id) {
+    favStringList.add(id);
   }
 
+  //removing an id to favorite list of id
+  void removePrefFav(String id) {
+    favStringList.remove(id);
+  }
+
+  //called upon when the favorite button is clicked
+  //it runs the mechanism for adding or removing an id from favorites list
   void checkfav(String id) {
     if (favStringList.contains(id)) {
       removePrefFav(id);
@@ -29,24 +38,18 @@ class HymnBook with ChangeNotifier {
     print(favStringList);
   }
 
-  void addPrefFav(String id) {
-    favStringList.add(id);
+  //overwrite the saved shared preferences intance with another
+  void addListtoSF(List<String> fav) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setStringList(prefKey, favStringList);
   }
 
-  void removePrefFav(String id) {
-    favStringList.remove(id);
-  }
-
-  bool tapFavBut = false;
-  void changeFavBut() {
-    tapFavBut = !tapFavBut;
+  //setting the saved list of favorites to the value
+  //only called once when the app starts and used during the splash screen
+  void setListtoSF() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    favStringList = prefs.getStringList(prefKey) ?? [];
     notifyListeners();
-  }
-
-  //function required to fetch hymn from
-  //the original hymn from search operations
-  Hymn getHymn(String hymnNumber) {
-    return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
   // Screen Function for the Slash screen which works by setting saved
@@ -68,6 +71,12 @@ class HymnBook with ChangeNotifier {
 
     _hymnBook = pre;
     notifyListeners();
+  }
+
+  //function required to fetch hymn from
+  //the original hymn from search operations
+  Hymn getHymn(String hymnNumber) {
+    return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
   //Returning List of Favavorite Hymn List to Favorite Screen
