@@ -37,7 +37,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('FAVORITES'),
-        actions: [],
+        // actions: [],
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty

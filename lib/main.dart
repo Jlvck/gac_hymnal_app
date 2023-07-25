@@ -14,7 +14,7 @@ import 'screens/hymn_view_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  MaterialColor mycolor = MaterialColor(
+  final MaterialColor mycolor = MaterialColor(
     Color.fromRGBO(0, 0, 102, 1).value,
     <int, Color>{
       50: Color.fromRGBO(0, 0, 105, 1),
@@ -67,12 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
-    double maxHeight = mediaQuery.size.height -
-        AppBar().preferredSize.height -
-        mediaQuery.padding.top;
-    double maxWidth = mediaQuery.size.width;
-    return AnimatedSplashScreen(
+    // final MediaQueryData mediaQuery = MediaQuery.of(context);
+    // double maxHeight = mediaQuery.size.height -
+    //     AppBar().preferredSize.height -
+    //     mediaQuery.padding.top;
+    // double maxWidth = mediaQuery.size.width;
+    return AnimatedSplashScreen.withScreenFunction(
       // splashIconSize: double.infinity,
       splash: SizedBox(
         // width: maxWidth,
@@ -84,9 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       backgroundColor: Colors.white,
-      nextScreen: HymnBookScreen(),
+      // splashIconSize: ,
+      // splashTransition: ,
+      screenFunction: () async {
+        Provider.of<HymnBook>(context, listen: false).setFavHymnList();
+        return HymnBookScreen();
+      },
       duration: 2500,
-      pageTransitionType: PageTransitionType.fade,
+      pageTransitionType: PageTransitionType.leftToRight,
     );
   }
 }

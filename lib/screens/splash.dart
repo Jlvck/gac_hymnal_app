@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class Splash extends StatelessWidget {
-  String logo_1 = 'images/church_logo1.png';
-  String logo_2 = 'images/church_logo2.png';
+  final String logo_1 = 'images/church_logo1.png';
+  final String logo_2 = 'images/church_logo2.png';
 
-  String name = 'images/church_logo2.png';
+  final name = 'images/church_logo2.png';
 
   @override
   Widget build(BuildContext context) {

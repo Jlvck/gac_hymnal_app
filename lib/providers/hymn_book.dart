@@ -1,7 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import './hymn.dart';
 
 class HymnBook with ChangeNotifier {
+  static const String prefKey = "favList";
+
+  List<String> favStringList = [];
+
+  // void setListtoSF() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   favStringList = prefs.getStringList(prefKey);
+  //   notifyListeners();
+  // }
+
+  void addListtoSF(List<String> fav) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setStringList(prefKey, favStringList);
+  }
+
+  void checkfav(String id) {
+    if (favStringList.contains(id)) {
+      removePrefFav(id);
+    } else {
+      addPrefFav(id);
+    }
+    addListtoSF(favStringList);
+    print(favStringList);
+  }
+
+  void addPrefFav(String id) {
+    favStringList.add(id);
+  }
+
+  void removePrefFav(String id) {
+    favStringList.remove(id);
+  }
+
   bool tapFavBut = false;
   void changeFavBut() {
     tapFavBut = !tapFavBut;
@@ -21,6 +56,24 @@ class HymnBook with ChangeNotifier {
     return _hymnBook.every((element) => element.id == hymnNumber);
   }
 
+  void setFavHymnList() async {
+    List<Hymn> pre = [];
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> fav = prefs.getStringList(prefKey);
+
+    for (Hymn hymn in _hymnBook) {
+      if (fav.contains(hymn.id)) {
+        hymn.isFavorites = true;
+        pre.add(hymn);
+      } else {
+        pre.add(hymn);
+      }
+    }
+
+    _hymnBook = pre;
+    notifyListeners();
+  }
+
   List<Hymn> get hymnList {
     return [..._hymnBook];
   }
@@ -31,7 +84,7 @@ class HymnBook with ChangeNotifier {
     return favList;
   }
 
-  final List<Hymn> _hymnBook = [
+  List<Hymn> _hymnBook = [
     Hymn(
       id: '1',
       verses: [

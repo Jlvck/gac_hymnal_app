@@ -63,6 +63,8 @@ class HymnListView extends StatelessWidget {
                               : Icons.favorite_border),
                           color: Colors.red,
                           onPressed: () {
+                            Provider.of<HymnBook>(context, listen: false)
+                                .checkfav(hymnIcon.id);
                             hymnIcon.toggleFav();
                             if (wholeProv) {
                               Provider.of<HymnBook>(context, listen: false)
