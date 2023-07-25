@@ -13,9 +13,9 @@ class Hymn with ChangeNotifier {
   }
 
   Hymn({
-    @required this.id,
-    @required this.verses,
-    @required this.isChorus,
-    @required this.chorus,
+    required this.id,
+    required this.verses,
+    required this.isChorus,
+    required this.chorus,
   });
 }

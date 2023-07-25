@@ -8,11 +8,11 @@ class HymnBook with ChangeNotifier {
 
   List<String> favStringList = [];
 
-  // void setListtoSF() async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   favStringList = prefs.getStringList(prefKey);
-  //   notifyListeners();
-  // }
+  void setListtoSF() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    favStringList = prefs.getStringList(prefKey) ?? [];
+    notifyListeners();
+  }
 
   void addListtoSF(List<String> fav) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -43,24 +43,20 @@ class HymnBook with ChangeNotifier {
     notifyListeners();
   }
 
-  void resetFavBut() {
-    tapFavBut = false;
-    notifyListeners();
-  }
-
+  //function required to fetch hymn from
+  //the original hymn from search operations
   Hymn getHymn(String hymnNumber) {
     return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
-  bool checkHymn(String hymnNumber) {
-    return _hymnBook.every((element) => element.id == hymnNumber);
-  }
-
+  // Screen Function for the Slash screen which works by setting saved
+  //shared preferences intances of  list of ids of favorite hymn list
   void setFavHymnList() async {
     List<Hymn> pre = [];
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> fav = prefs.getStringList(prefKey);
+    List<String> fav = prefs.getStringList(prefKey) ?? [];
 
+    //filtering mechanism of list of hymns that are saved as favorites
     for (Hymn hymn in _hymnBook) {
       if (fav.contains(hymn.id)) {
         hymn.isFavorites = true;
@@ -74,16 +70,19 @@ class HymnBook with ChangeNotifier {
     notifyListeners();
   }
 
-  List<Hymn> get hymnList {
-    return [..._hymnBook];
-  }
-
+  //Returning List of Favavorite Hymn List to Favorite Screen
   List<Hymn> get favHymnList {
     List<Hymn> favList =
         _hymnBook.where((hymn) => hymn.isFavorites == true).toList();
     return favList;
   }
 
+  //Returning a copy of original List
+  List<Hymn> get hymnList {
+    return [..._hymnBook];
+  }
+
+  //The Original List of Hymn
   List<Hymn> _hymnBook = [
     Hymn(
       id: '1',

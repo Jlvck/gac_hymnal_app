@@ -72,7 +72,7 @@ class HymnViewScreen extends StatelessWidget {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
 
-    final routeHymn = ModalRoute.of(context).settings.arguments as Hymn;
+    final routeHymn = ModalRoute.of(context)!.settings.arguments as Hymn;
 
     final String routeTitle = routeHymn.verses[0][0];
 

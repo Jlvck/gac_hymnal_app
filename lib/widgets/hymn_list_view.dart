@@ -14,9 +14,7 @@ class HymnListView extends StatelessWidget {
   final bool wholeProv;
   // ignore: prefer_const_constructors_in_immutables
   HymnListView(
-      {@required this.hymnList,
-      @required this.scroll,
-      @required this.wholeProv});
+      {required this.hymnList, required this.scroll, required this.wholeProv});
 
   @override
   Widget build(BuildContext context) {

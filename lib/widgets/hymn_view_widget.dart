@@ -9,9 +9,9 @@ class HymnViewWidget extends StatelessWidget {
 
   // ignore: prefer_const_constructors_in_immutables
   HymnViewWidget(
-      {@required this.hymnVerses,
-      @required this.hymnChorus,
-      @required this.isChorus});
+      {required this.hymnVerses,
+      required this.hymnChorus,
+      required this.isChorus});
 
   Widget versesWidget(List<List<String>> verses, int index) {
     return ListView.builder(

@@ -87,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // splashIconSize: ,
       // splashTransition: ,
       screenFunction: () async {
+        Provider.of<HymnBook>(context, listen: false).setListtoSF();
         Provider.of<HymnBook>(context, listen: false).setFavHymnList();
         return HymnBookScreen();
       },
