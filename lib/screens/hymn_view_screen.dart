@@ -78,11 +78,6 @@ class HymnViewScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //     onPressed: () {
-        //       Navigator.of(context).pop();
-        //     },
-        //     icon: Icon(Icons.arrow_back)),
         title: Align(
           alignment: Alignment.center,
           child: Text(

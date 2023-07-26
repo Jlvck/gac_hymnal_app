@@ -17,18 +17,6 @@ class FavoritesScreen extends StatefulWidget {
 class _FavoritesScreenState extends State<FavoritesScreen> {
   final ScrollController _favscroll = ScrollController();
   bool init = true;
-  @override
-  void initState() {
-    // TODO: implement initState
-
-    super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +25,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('FAVORITES'),
-        // actions: [],
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty

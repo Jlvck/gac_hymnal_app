@@ -19,7 +19,6 @@ class HymnBookScreen extends StatefulWidget {
 class _HymnBookScreenState extends State<HymnBookScreen> {
   final _enteredHymnNumber = TextEditingController();
   final _enteredHymnTitle = TextEditingController();
-  final FocusNode myfocusNode = FocusNode();
 
   final ScrollController _scroll = ScrollController();
 
@@ -147,7 +146,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   void dispose() {
     _enteredHymnNumber.dispose();
     _enteredHymnTitle.dispose();
-    myfocusNode.dispose();
     _scroll.dispose();
     super.dispose();
   }
