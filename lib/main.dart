@@ -9,7 +9,6 @@ import './providers/hymn_book.dart';
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
 import 'screens/hymn_view_screen.dart';
-// import 'screens/splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,12 +36,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: MyHomePage(),
+        title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
           primarySwatch: mycolor,
-          // colorScheme: ColorScheme.fromSwatch(
-          //   primarySwatch:
-          //       MaterialColor(1, {1: Color.fromARGB(255, 0, 0, 120)}),
-          // ),
         ),
         routes: {
           HymnBookScreen.routeName: (ctx) => HymnBookScreen(),
@@ -67,25 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // final MediaQueryData mediaQuery = MediaQuery.of(context);
-    // double maxHeight = mediaQuery.size.height -
-    //     AppBar().preferredSize.height -
-    //     mediaQuery.padding.top;
-    // double maxWidth = mediaQuery.size.width;
     return AnimatedSplashScreen.withScreenFunction(
-      // splashIconSize: double.infinity,
-      splash: SizedBox(
-        // width: maxWidth,
-        // height: maxHeight,
-        child: Image.asset(
-          name,
-          // scale: 10,
-          // fit: BoxFit.scaleDown,
-        ),
+      splash: Image.asset(
+        name,
       ),
       backgroundColor: Colors.white,
-      // splashIconSize: ,
-      // splashTransition: ,
       screenFunction: () async {
         Provider.of<HymnBook>(context, listen: false).setListtoSF();
         Provider.of<HymnBook>(context, listen: false).setFavHymnList();
