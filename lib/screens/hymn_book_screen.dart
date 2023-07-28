@@ -204,7 +204,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                       iconSize: 30,
                       alignment: Alignment.bottomRight,
                       icon: Icon(Icons.cancel),
-                      tooltip: 'clear input',
+                      tooltip: "clear input",
                       onPressed: () {
                         setState(() {
                           _enteredHymnTitle.clear();
