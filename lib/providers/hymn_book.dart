@@ -35,7 +35,6 @@ class HymnBook with ChangeNotifier {
       addPrefFav(id);
     }
     addListtoSF(favStringList);
-    print(favStringList);
   }
 
   //overwrite the saved shared preferences intance with another

@@ -185,19 +185,35 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
-            child: TextField(
-              onTapOutside: (event) =>
-                  FocusManager.instance.primaryFocus?.unfocus(),
-              onTap: () => onTapTitle(),
-              controller: _enteredHymnTitle,
-              onChanged: (value) => onChangedTitle(value),
-              keyboardType: TextInputType.text,
-              autocorrect: false,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(5),
-                  labelText: 'Search for hymn by title',
-                  prefixIcon: Icon(Icons.search),
-                  border: InputBorder.none),
+            child: SizedBox(
+              height: 50,
+              child: TextField(
+                onTapOutside: (event) =>
+                    FocusManager.instance.primaryFocus?.unfocus(),
+                onTap: () => onTapTitle(),
+                controller: _enteredHymnTitle,
+                onChanged: (value) => onChangedTitle(value),
+                keyboardType: TextInputType.text,
+                autocorrect: false,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(5),
+                    labelText: 'Search for hymn by title',
+                    prefixIcon: Icon(Icons.search),
+                    suffix: IconButton(
+                      color: Theme.of(context).primaryColor,
+                      iconSize: 30,
+                      alignment: Alignment.bottomRight,
+                      icon: Icon(Icons.cancel),
+                      tooltip: 'clear input',
+                      onPressed: () {
+                        setState(() {
+                          _enteredHymnTitle.clear();
+                          _runFilter(_enteredHymnTitle.text);
+                        });
+                      },
+                    ),
+                    border: InputBorder.none),
+              ),
             ),
           ),
         ),
@@ -209,21 +225,24 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
-            child: TextField(
-              onTapOutside: (event) =>
-                  FocusManager.instance.primaryFocus?.unfocus(),
-              onTap: () => onTapNumber(),
-              keyboardType: TextInputType.numberWithOptions(
-                decimal: false,
-                signed: false,
+            child: SizedBox(
+              height: 50,
+              child: TextField(
+                onTapOutside: (event) =>
+                    FocusManager.instance.primaryFocus?.unfocus(),
+                onTap: () => onTapNumber(),
+                keyboardType: TextInputType.numberWithOptions(
+                  decimal: false,
+                  signed: false,
+                ),
+                onChanged: (value) => onChangedNumber(value),
+                onSubmitted: (submit) => onSubmittedNumber(submit, hymnData),
+                controller: _enteredHymnNumber,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(5),
+                    labelText: '#',
+                    border: InputBorder.none),
               ),
-              onChanged: (value) => onChangedNumber(value),
-              onSubmitted: (submit) => onSubmittedNumber(submit, hymnData),
-              controller: _enteredHymnNumber,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(5),
-                  labelText: '#',
-                  border: InputBorder.none),
             ),
           ),
         ),
