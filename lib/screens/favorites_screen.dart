@@ -28,19 +28,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty
-          ? RawScrollbar(
-              thumbColor: Colors.red,
-              thumbVisibility: false,
-              trackVisibility: false,
-              interactive: true,
-              controller: _favscroll,
-              radius: Radius.circular(4),
-              thickness: 10,
-              child: HymnListView(
-                hymnList: favoriteHymnList,
-                scroll: _favscroll,
-                wholeProv: true,
-              ))
+          ? Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: RawScrollbar(
+                  thumbColor: Colors.red,
+                  thumbVisibility: false,
+                  trackVisibility: false,
+                  interactive: true,
+                  controller: _favscroll,
+                  radius: Radius.circular(4),
+                  thickness: 10,
+                  child: HymnListView(
+                    hymnList: favoriteHymnList,
+                    scroll: _favscroll,
+                    wholeProv: true,
+                  )),
+            )
           : Center(
               child: Text('No Favorites added'),
             ),

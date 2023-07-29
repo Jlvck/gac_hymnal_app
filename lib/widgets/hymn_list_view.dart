@@ -24,11 +24,11 @@ class HymnListView extends StatelessWidget {
         itemExtent: 60,
         itemBuilder: (ctx, index) => GestureDetector(
               onTap: () {
-                final Hymn selectedHymn =
-                    Provider.of<HymnBook>(context, listen: false)
-                        .getHymn(hymnList[index].id);
+                // final Hymn selectedHymn =
+                //     Provider.of<HymnBook>(context, listen: false)
+                //         .getHymn(hymnList[index].id);
                 Navigator.of(context).pushNamed(HymnViewScreen.routeName,
-                    arguments: selectedHymn);
+                    arguments: hymnList[index]);
               },
               child: ChangeNotifierProvider.value(
                 value: hymnList[index],
