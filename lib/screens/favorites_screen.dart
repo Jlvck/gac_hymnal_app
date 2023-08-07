@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:church/providers/hymn_book.dart';
+import '../providers/hymn_book.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
 import '../providers/hymn.dart';

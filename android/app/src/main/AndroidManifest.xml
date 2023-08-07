@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.church">
    <application
-        android:label="church"
+        android:label="GAC Hymnal (Adigbe Branch)"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
