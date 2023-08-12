@@ -186,8 +186,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
             child: SizedBox(
-              height: 50,
+              height: 40,
               child: TextField(
+                textAlignVertical: TextAlignVertical.center,
+                strutStyle: StrutStyle(
+                  forceStrutHeight: true,
+                ),
+                style: TextStyle(fontSize: 23),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapTitle(),
@@ -196,23 +201,30 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 keyboardType: TextInputType.text,
                 autocorrect: false,
                 decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(5),
-                    labelText: 'Search for hymn by title',
-                    prefixIcon: Icon(Icons.search),
-                    suffix: IconButton(
-                      color: Theme.of(context).primaryColor,
-                      iconSize: 30,
-                      alignment: Alignment.bottomRight,
-                      icon: Icon(Icons.cancel),
-                      tooltip: "clear input",
-                      onPressed: () {
-                        setState(() {
-                          _enteredHymnTitle.clear();
-                          _runFilter(_enteredHymnTitle.text);
-                        });
-                      },
+                  contentPadding: EdgeInsets.all(5),
+                  hintText: 'Search for hymn by title',
+                  hintStyle: TextStyle(
+                    fontSize: 15,
+                  ),
+                  prefixIcon: Icon(Icons.search),
+                  suffix: IconButton(
+                    padding: EdgeInsets.zero,
+                    alignment: Alignment.center,
+                    color: Theme.of(context).primaryColor,
+                    icon: Icon(
+                      Icons.cancel,
+                      size: 25,
                     ),
-                    border: InputBorder.none),
+                    tooltip: "clear input",
+                    onPressed: () {
+                      setState(() {
+                        _enteredHymnTitle.clear();
+                        _runFilter(_enteredHymnTitle.text);
+                      });
+                    },
+                  ),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),
@@ -226,8 +238,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
             child: SizedBox(
-              height: 50,
+              height: 40,
               child: TextField(
+                style: TextStyle(fontSize: 20),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapNumber(),
@@ -240,7 +253,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 controller: _enteredHymnNumber,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(5),
-                    labelText: '#',
+                    hintText: '#',
                     border: InputBorder.none),
               ),
             ),
