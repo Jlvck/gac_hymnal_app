@@ -25,6 +25,7 @@ class HymnViewWidget extends StatelessWidget {
           child: Text(
             verses[index][i],
             style: const TextStyle(fontSize: 20),
+            textAlign: TextAlign.center,
           ),
         ),
       ),

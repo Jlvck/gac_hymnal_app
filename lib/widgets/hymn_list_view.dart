@@ -37,6 +37,9 @@ class HymnListView extends StatelessWidget {
                   child: Card(
                     elevation: 5,
                     child: ListTile(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                      minLeadingWidth: 40,
+                      horizontalTitleGap: 0,
                       leading: CircleAvatar(
                         child: FittedBox(
                           child: Text(
@@ -56,9 +59,12 @@ class HymnListView extends StatelessWidget {
                       ),
                       trailing: Consumer<Hymn>(
                         builder: (ctxx, hymnIcon, _) => IconButton(
-                          icon: Icon(hymnIcon.isFavorites
-                              ? Icons.favorite
-                              : Icons.favorite_border),
+                          padding: const EdgeInsets.only(left: 0),
+                          icon: Icon(
+                            hymnIcon.isFavorites
+                                ? Icons.favorite
+                                : Icons.favorite_border,
+                          ),
                           color: Colors.red,
                           onPressed: () {
                             Provider.of<HymnBook>(context, listen: false)

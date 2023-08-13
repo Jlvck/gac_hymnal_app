@@ -80,11 +80,16 @@ class HymnViewScreen extends StatelessWidget {
       appBar: AppBar(
         title: Align(
           alignment: Alignment.center,
-          child: Text(
-            "${routeHymn.id}: $routeTitle",
-            softWrap: true,
-            overflow: TextOverflow.fade,
-            textAlign: TextAlign.center,
+          child: FittedBox(
+            fit: BoxFit.fill,
+            alignment: Alignment.centerRight,
+            child: Text(
+              "Hymn ${routeHymn.id}",
+              softWrap: true,
+              overflow: TextOverflow.fade,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         elevation: 0,

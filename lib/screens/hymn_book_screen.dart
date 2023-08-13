@@ -111,7 +111,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
       results = _staticHymns
           .where((hymnbook) =>
               hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.id.toLowerCase().contains(enteredUserHymn))
+              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.verses[0][0].contains(enteredUserHymn))
           .toList();
       setState(() {
         _foundHymns = results;
@@ -189,6 +190,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
               height: 40,
               child: TextField(
                 textAlignVertical: TextAlignVertical.center,
+                textAlign: TextAlign.left,
                 strutStyle: StrutStyle(
                   forceStrutHeight: true,
                 ),
@@ -202,10 +204,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 autocorrect: false,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(5),
-                  hintText: 'Search for hymn by title',
-                  hintStyle: TextStyle(
-                    fontSize: 15,
-                  ),
+                  hintText: 'Search....',
+                  hintMaxLines: 1,
+                  hintTextDirection: TextDirection.ltr,
                   prefixIcon: Icon(Icons.search),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
@@ -266,10 +267,15 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   @override
   Widget build(BuildContext context) {
     print('......building state');
-    MediaQueryData mediaQuery = MediaQuery.of(context);
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    double maxHeight = mediaQuery.size.height -
+        AppBar().preferredSize.height -
+        mediaQuery.padding.top;
+    double maxWidth = mediaQuery.size.width;
     final hymnData = Provider.of<HymnBook>(context, listen: true);
     final int totalHymnNumber = hymnData.hymnList.length;
     return Scaffold(
+        resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
         appBar: AppBar(
           title: const Text('HYMNBOOK'),
@@ -286,13 +292,20 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             )
           ],
         ),
-        body: Column(
-          children: [
-            const Padding(padding: EdgeInsets.all(10)),
-            mainTextField(mediaQuery, context, hymnData),
-            const Padding(padding: EdgeInsets.all(8)),
-            displayedHymnList(hymnData, context)
-          ],
+        body: SingleChildScrollView(
+          physics: ClampingScrollPhysics(),
+          child: SizedBox(
+            height: maxHeight,
+            width: maxWidth,
+            child: Column(
+              children: [
+                const Padding(padding: EdgeInsets.all(10)),
+                mainTextField(mediaQuery, context, hymnData),
+                const Padding(padding: EdgeInsets.all(8)),
+                displayedHymnList(hymnData, context)
+              ],
+            ),
+          ),
         ));
   }
 }
