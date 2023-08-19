@@ -1,11 +1,119 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:community_material_icon/community_material_icon.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../screens/hymn_book_screen.dart';
 import '../screens/favorites_screen.dart';
 
-class MainDrawer extends StatelessWidget {
+class MainDrawer extends StatefulWidget {
+  @override
+  State<MainDrawer> createState() => _MainDrawerState();
+}
+
+class _MainDrawerState extends State<MainDrawer> {
+  final ScrollController _scroll = ScrollController();
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      backgroundColor: Theme.of(context).primaryColorLight,
+      child: Column(children: [
+        Expanded(
+            child: Scrollbar(
+          thumbVisibility: false,
+          trackVisibility: false,
+          interactive: true,
+          controller: _scroll,
+          thickness: 10,
+          child: ScrollConfiguration(
+            behavior: ScrollBehavior().copyWith(overscroll: false),
+            child: ListView(
+              controller: _scroll,
+              padding: EdgeInsets.zero,
+              children: [
+                DrawerHeader(
+                  margin: EdgeInsets.zero,
+                  padding: EdgeInsets.zero,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image: AssetImage('images/church_image_drawer.png'),
+                      fit: BoxFit.contain,
+                      alignment: Alignment.centerLeft,
+                    ),
+                  ),
+                  child: Align(),
+                ),
+                drawerListTile('HymnBook', Icons.music_note,
+                    HymnBookScreen.routeName, context),
+                drawerListTile('Favorites', Icons.favorite_border,
+                    FavoritesScreen.routeName, context),
+                ListTile(
+                  horizontalTitleGap: 5,
+                  title: Text(
+                    'Follow us',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(color: Colors.white70, fontSize: 20),
+                  ),
+                  contentPadding:
+                      EdgeInsets.only(top: 5, bottom: 0, left: 25, right: 20),
+                ),
+                drawerFollowWidget(
+                  context,
+                  'YouTube',
+                  'Gac Hq',
+                  CommunityMaterialIcons.youtube,
+                  Uri.parse('https://www.youtube.com/@gachq'),
+                ),
+                drawerFollowWidget(
+                  context,
+                  'Facebook',
+                  'Gac Headquarters',
+                  CommunityMaterialIcons.facebook,
+                  Uri.parse(
+                      "https://web.facebook.com/Gac-Headquarters-104257107601052/?ref=page_internal"),
+                ),
+                drawerFollowWidget(
+                    context,
+                    'Instagram',
+                    '@gachqs',
+                    CommunityMaterialIcons.instagram,
+                    Uri.parse('https://www.instagram.com/gachqs/')),
+                drawerFollowWidget(
+                    context,
+                    'Twitter',
+                    '@gachqs',
+                    CommunityMaterialIcons.twitter,
+                    Uri.parse('https://twitter.com/gachqs')),
+              ],
+            ),
+          ),
+        )),
+      ]),
+    );
+  }
+
+  _launchURL(Uri urltext) async {
+    final url = urltext;
+    if (await canLaunchUrl(url)) {
+      await launchUrl(
+        url,
+        mode: LaunchMode.externalApplication,
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   ListTile drawerListTile(String tileName, IconData tileIcon, String routeName,
       BuildContext context) {
     return ListTile(
@@ -13,7 +121,7 @@ class MainDrawer extends StatelessWidget {
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
       horizontalTitleGap: 5,
-      contentPadding: EdgeInsets.only(top: 15, bottom: 10, left: 20, right: 20),
+      contentPadding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
       visualDensity: VisualDensity(horizontal: 0, vertical: 0),
       leading: Icon(
         tileIcon,
@@ -29,31 +137,44 @@ class MainDrawer extends StatelessWidget {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Theme.of(context).primaryColorLight,
-      child: ListView(padding: EdgeInsets.all(0), children: [
-        DrawerHeader(
-          margin: EdgeInsets.zero,
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            image: DecorationImage(
-              image: AssetImage('images/church_image_drawer.png'),
-              fit: BoxFit.contain,
-              alignment: Alignment.centerLeft,
-            ),
-          ),
-          child: Align(
-            alignment: Alignment.bottomLeft,
-          ),
-        ),
-        drawerListTile(
-            'HymnBook', Icons.music_note, HymnBookScreen.routeName, context),
-        drawerListTile('Favorites', Icons.favorite_border,
-            FavoritesScreen.routeName, context),
-      ]),
+  ListTile drawerFollowWidget(
+    BuildContext context,
+    String socialTitle,
+    String displayText,
+    IconData socialIcon,
+    Uri linkText,
+  ) {
+    return ListTile(
+      iconColor: Colors.white,
+      hoverColor: Colors.black54,
+      splashColor: Colors.black54,
+      horizontalTitleGap: 5,
+      contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
+      visualDensity: VisualDensity(horizontal: 0, vertical: 0),
+      leading: Icon(
+        socialIcon,
+        size: 30,
+      ),
+      onTap: () {
+        _launchURL(linkText);
+      },
+      onLongPress: () {
+        Clipboard.setData(ClipboardData(text: linkText.toString())).then((_) {
+          Navigator.of(context).pop();
+          ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Link copied to your clipboard')));
+        });
+      },
+      title: Text(
+        socialTitle,
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
+      subtitle: Text(
+        displayText,
+        overflow: TextOverflow.ellipsis,
+        maxLines: 1,
+        style: TextStyle(color: Colors.red),
+      ),
     );
   }
 }

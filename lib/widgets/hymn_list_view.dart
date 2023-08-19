@@ -21,6 +21,7 @@ class HymnListView extends StatelessWidget {
     return ListView.builder(
         padding: const EdgeInsets.all(2),
         controller: scroll,
+        physics: const BouncingScrollPhysics(),
         itemExtent: 60,
         itemBuilder: (ctx, index) => GestureDetector(
               onTap: () {

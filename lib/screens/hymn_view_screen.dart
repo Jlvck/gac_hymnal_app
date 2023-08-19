@@ -74,8 +74,6 @@ class HymnViewScreen extends StatelessWidget {
 
     final routeHymn = ModalRoute.of(context)!.settings.arguments as Hymn;
 
-    final String routeTitle = routeHymn.verses[0][0];
-
     return Scaffold(
       appBar: AppBar(
         title: Align(

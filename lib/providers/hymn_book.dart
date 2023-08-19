@@ -1168,7 +1168,7 @@ class HymnBook with ChangeNotifier {
       id: '30',
       verses: [
         [
-          "B’ orukọ Jesu ti dun to",
+          "B’ oruko Jesu ti dun to",
           "Ogo ni fun oruko Re",
           "O tan banujẹ at’ọgbẹ,",
           "ogo ni fun oruko Re",
@@ -1302,7 +1302,7 @@ class HymnBook with ChangeNotifier {
       id: '33',
       verses: [
         [
-          "Ẹ jẹ k’a f’ inu didun",
+          "E je k’a f’ inu didun",
           "Yin Oluwa Olore;",
           "Anu Rẹ, O wa titi,",
           "Lododo dajudaju.",
@@ -1487,7 +1487,7 @@ class HymnBook with ChangeNotifier {
       id: '38',
       verses: [
         [
-          "Ẹ wolẹ f’Ọba, Ologo julọ,",
+          "E wole f’ Oba, Ologo julọ,",
           "Ẹ kọrin ipa ati ifẹ Rẹ;",
           "Alabo wa ni, at’ Ẹni Igbani,",
           "O ngbe ‘nu ogo, Ẹlẹru ni iyin.",
@@ -1612,7 +1612,7 @@ class HymnBook with ChangeNotifier {
       id: '41',
       verses: [
         [
-          "Ọkan mi, yin Ọba ọrun,",
+          "Okan mi, yin Oba orun,",
           "Mu ọrẹ wa s’ ọdọ Rẹ;",
           "‘Wo t’a wosan t’a dariji,",
           "Tal’ a ba ha yin bi Rẹ?",
@@ -1691,7 +1691,7 @@ class HymnBook with ChangeNotifier {
       id: '43',
       verses: [
         [
-          "Oluwa ọrun on aiye,",
+          "Oluwa orun on aiye,",
           "‘Wọ n’iyin at’ ọpẹ yẹ fun;",
           "Bawo l’ a ba ti fẹ Ọ to,",
           "Onibu ọrẹ?",
@@ -1851,7 +1851,7 @@ class HymnBook with ChangeNotifier {
       id: '47',
       verses: [
         [
-          "Yin Ọlọrun Ọba wa;",
+          "Yin Olorun Oba wa;",
           "Ẹ gbe ohun iyin ga;",
           "Anu Rẹ o wa titi",
           "Lododo daju daju.",
@@ -2395,7 +2395,7 @@ class HymnBook with ChangeNotifier {
       id: '58',
       verses: [
         [
-          "Ọjọ ‘simi at’ ayọ,",
+          "Ojo ‘simi at’ ayo,",
           "Ọjọ inu didun,",
           "Itunu fun ‘banujẹ",
           "Ọjọ dida julọ;",
@@ -2546,7 +2546,7 @@ class HymnBook with ChangeNotifier {
       id: '61',
       verses: [
         [
-          "A bẹ, a fẹ ri Ọ",
+          "A be, a fẹ ri Ọ",
           "Ọjọ ‘simi rere",
           "Gbogbo ọsẹ ama wipe",
           "Iwọ o ti pẹ to?",
@@ -2676,7 +2676,7 @@ class HymnBook with ChangeNotifier {
       id: '65',
       verses: [
         [
-          "Ayọ l’ ọjọ ‘simi fun mi,",
+          "Ayo l’ ojo ‘simi fun mi,",
           "At’ agogo at’ iwasu:",
           "Gbat’ a ba mi n’nu ‘banujẹ",
           "Awọn l’o nmu inu mi dun."
@@ -2750,7 +2750,7 @@ class HymnBook with ChangeNotifier {
       id: '67',
       verses: [
         [
-          "Didun ni 'ṣẹ na, Ọba mi,",
+          "Didun ni 'se na, Oba mi,",
           "Lati ma yin orukọ Rẹ,",
           "Lati ṣe ‘fẹ Rẹ l’ owurọ,",
           "Lati sọ ọrọ Rẹ l’ alẹ.",
@@ -2921,7 +2921,7 @@ class HymnBook with ChangeNotifier {
           "Gba 'feran mi Oluwa,",
           "Mo fi gbogbo re fun O;",
           "Gb'emi paapaa lat'oni",
-          "Ki m'je Tire titi lai. ",
+          "Ki m' je Tire titi lai. ",
         ],
       ],
       isChorus: false,
@@ -2933,7 +2933,7 @@ class HymnBook with ChangeNotifier {
         [
           "Gbekele Olorun re,",
           "K'o ma nso! K'o ma nso!",
-          "D'ileri Re mu sinsin,",
+          "D' ileri Re mu sinsin,",
           "K'o ma nso!",
           "Mase se oruko Re,",
           "B'o tile mu egan wa;,",
@@ -2967,7 +2967,7 @@ class HymnBook with ChangeNotifier {
           "Sa ma nso!",
           "Kristi l'atilehin re",
           "On na si ni onje re",
-          "Y'o sin o de 'nu ogo",
+          "Y' o sin o de 'nu ogo",
           "Sa ma nso!",
         ],
         [
@@ -3002,7 +3002,7 @@ class HymnBook with ChangeNotifier {
         [
           "Sise tori oru mbo! Orun fere wo na,",
           "Sise 'gbat' imole wa, ojo bulo tan,",
-          "Sise titi de opin, sise tit d'ale,",
+          "Sise titi de opin, sise tit d' ale,",
           "Sise gbat'ile ba nsu, gba 'se o pari.",
         ],
       ],
@@ -3013,7 +3013,7 @@ class HymnBook with ChangeNotifier {
       id: '74',
       verses: [
         [
-          "A o sise! A o sise! Om'Olorun ni wa,",
+          "A o sise! A o sise! Om' Olorun ni wa,",
           "Je k'a tele ipa ti Oluwa wa to;",
           "K'a fi 'moran Re so agbara wa d'otun,",
           "K'a fi gbogbo okun wa sise t'a o se.",
@@ -3049,7 +3049,7 @@ class HymnBook with ChangeNotifier {
       id: '75',
       verses: [
         [
-          "Ọkan arẹ, ile kan mbẹ,",
+          "Okan are, ile kan mbe,",
           "L’ọna jinjin s’ aiye iṣẹ;",
           "Ile t’ ayida ko le de,",
           "Tani ko fẹ simi nibẹ?",
@@ -3077,16 +3077,16 @@ class HymnBook with ChangeNotifier {
       chorus: [
         "Duro rọju duro, maṣe kun!",
         "Duro rọju duro, maṣe kun!",
-        " Duro, duro, sa rọju, maṣe kun!",
+        "Duro, duro, sa rọju, maṣe kun!",
       ],
     ),
     Hymn(
       id: '76',
       verses: [
         [
-          "Wa, maa şişe,",
+          "Wa, maa sise,",
           "Tani gbodo s' olę ninu oko,",
-          " 'Gbati gbogbo enia nkore jo?",
+          "'Gbati gbogbo enia nkore jo?",
           "'Kaluku ni Baba paşe fun pe,",
           " \"Şişe loni.\"",
         ],
@@ -3154,7 +3154,7 @@ class HymnBook with ChangeNotifier {
           "Ko mi Oluwa, ki nle fi",
           "Eko rere Rę k' elomi;",
           "F’ iye f' oro mi, kó le fò",
-          "D é ikoko gbogbo okan.",
+          "De ikoko gbogbo okan.",
         ],
         [
           "F' isimi didun Re fun mi,",
@@ -3194,7 +3194,7 @@ class HymnBook with ChangeNotifier {
           "L'odo Mi on Baba egbe nyin kun.",
         ],
         [
-          "E wa so gbogbo ohun t'e şe fun mi,",
+          "E wa so gbogbo ohun t' e şe fun mi,",
           "So t' isegun ati t' işubu nyin,",
           "Mo mo b' işe emi ti şoro to.",
           "Ade t' o dara t' on t' omije ni",
@@ -3209,7 +3209,7 @@ class HymnBook with ChangeNotifier {
           "Jade l' otun lat' odo Oluwa,",
           "Ę pada lo şişe titi su 'lę;",
           "E ko padanu wakati t'e lo",
-          "Feko sii, at' isimi orun.",
+          "F' eko sii, at' isimi orun.",
         ],
       ],
       isChorus: false,
@@ -3238,15 +3238,15 @@ class HymnBook with ChangeNotifier {
         ],
         [
           "Silekun sile fun 'se Re,",
-          "Taiye at’eşu kio le see;",
+          "T'aiye at’eşu kio le see;",
           "Je k'oro Re maa gbe 'nu wa,",
           "Ki eso rè k'o wà titi.",
         ],
         [
           "Bukun eso afunrungbin!",
           "K'a le maa so eso titi,",
-          "K'a tan hinrere Re k'aiye,"
-              "Ati otito Re titi.",
+          "K'a tan hinrere Re k'aiye,",
+          "Ati otito Re titi.",
         ],
         [
           "Ao mo titobi ipa Re.",
@@ -3298,8 +3298,8 @@ class HymnBook with ChangeNotifier {
       id: '81',
       verses: [
         [
-          "O ha J’ohun elo ibukun?",
-          "Ife Olorun ha nşan si o ?",
+          "O ha j’ohun elo ibukun?",
+          "Ife Olorun ha nşan si o?",
           "O ha nso t'Olugbala f'elomi?",
           "O ha mura lati şişe?",
         ],
@@ -3310,7 +3310,7 @@ class HymnBook with ChangeNotifier {
           "Lati w'Olugbala t'o ku.",
         ],
         [
-          "O ha Johun-elo ibukun?",
+          "O ha j'ohun-elo ibukun?",
           "Aiye rę ha nso ti ifę Re?",
           "O ha ti soro igbala fun won?",
           "Awon ti nku ninu eşę.",
@@ -3336,8 +3336,8 @@ class HymnBook with ChangeNotifier {
         [
           "Awon ti nkore s'inu aba da?",
           "Awon ti nşa alikama s'oto?",
-          "Nwon mu daje otito l'owo won,",
-          "Nwon kò simt titi d'ajo 'kore.",
+          "Nwon mu doje otito l'owo won,",
+          "Nwon kò simi titi d'ajo 'kore.",
         ],
         [
           "E lo si abuja-ona pelu,",
@@ -3370,11 +3370,10 @@ class HymnBook with ChangeNotifier {
       id: '83',
       verses: [
         [
-          "O ti dùn to lati rohin Re",
+          "O ti dun to lati rohin Re",
           "Lati so ti Jesu f'elomi;",
           "K'a ba le dari ji elese.",
-          "K'a si fi Krist t'a kan mo",
-          "'gi han won;",
+          "K'a si fi Krist t'a kan mo 'gi han won;",
           "Ayo okan wa ti po to,",
           "'Gbat' elese ronupiwada;",
           "Ti aşako pada bo wa 'le,",
@@ -3423,8 +3422,8 @@ class HymnBook with ChangeNotifier {
         [
           "'Gbana l' a ran akede Angeli,",
           "T'o so f' awon Oluşagutan, pe,",
-          "Mo mu hinrere Olugbala wa,",
-          "T'a bi fun nyin ati gbogbo aiye",
+          "Mo mu 'hinrere Olugbala wa,",
+          "T' a bi fun nyin ati gbogbo aiye",
           "Olorun mu 'leri Rè se l'oni",
           "A bi Olugbala Krist' Oluwa.",
         ],
@@ -3433,11 +3432,11 @@ class HymnBook with ChangeNotifier {
           "Opolopo ogun orun si de;",
           "Nwon nkorin ayo t' eti ko gbo ri,",
           "Orun si ho fun 'yin Olorun pe,",
-          "Ogo nif' Olorun l' oke orun,"
-              "Alafia at' ife s' enia.",
+          "Ogo nif' Olorun l' oke orun,",
+          "Alafia at' ife s' enia.",
         ],
         [
-          "O ye kawa k' o ma rò l'okan wa,",
+          "O ye k'awa k' o ma rò l'okan wa,",
           "Ife nla t'Olorun ni s' araiye:",
           "K'a si ro t'omo na t' a bi loni,",
           "T’ o wa jiya oro agbelebu,",
@@ -3474,7 +3473,7 @@ class HymnBook with ChangeNotifier {
         [
           "Onigbagbo ti nteriba,",
           "Ni 'beru at' ireti",
-          "L'ojiji l' Oluwa o de",
+          "L' ojiji l' Oluwa o de",
           "Ti yio mu nyin re 'le",
         ],
       ],
@@ -3494,7 +3493,7 @@ class HymnBook with ChangeNotifier {
           "Olorun ba wa la ja,",
           "Gbogbo eda, nde l' ayo",
           "Dapo mo hiho orun;",
-          "W’Alade alafia!",
+          "W’ Alade alafia!",
           "Wo Oorun ododo de",
         ],
         [
@@ -3509,7 +3508,7 @@ class HymnBook with ChangeNotifier {
         ],
         [
           "Pa aworan Adam run,",
-          "Faworan Re s' ipo re",
+          "F' aworan Re s' ipo re",
           "Jo, masai f' Emi Re kun",
           "Okan gbogb' onigbagbo,",
           "Ogo fun Oba t' a bi,",
@@ -3607,7 +3606,7 @@ class HymnBook with ChangeNotifier {
           "L'aiye yi ati l'orun:",
           "Ki gbogbo ohun alaye",
           "Nile, l'oke yin Jesu.",
-          "E fogo fun, Ę f' ogo fun",
+          "E f' ogo fun, Ę f' ogo fun",
           "Oba nla t'a bi loni!",
         ],
         [
@@ -3642,10 +3641,10 @@ class HymnBook with ChangeNotifier {
       id: '90',
       verses: [
         [
-          "Wa ẹnyin olotọ,",
-          "L’ayọ at’ iṣẹgun,",
-          "Wa kalọ, wa kalọ si Bẹtlehẹm",
-          "Wa kalọ wo o!",
+          "Wa enyin oloto,",
+          "L’ ayọ at’ iṣẹgun,",
+          "Wa k'a lọ, wa kalọ si Bẹtlehẹm",
+          "Wa k'a lọ wo o!",
           "Ọba awọn Angẹl!",
         ],
         [
@@ -3672,10 +3671,9 @@ class HymnBook with ChangeNotifier {
       ],
       isChorus: true,
       chorus: [
-        "Ẹ wa kalọ juba Rẹ,",
-        "Ẹ wa kalọ juba Rẹ,",
-        "Ẹ wa k’a lọ juba",
-        "Kristi Oluwa.",
+        "Ẹ wa k'a lọ juba Rẹ,",
+        "Ẹ wa k'a lọ juba Rẹ,",
+        "Ẹ wa k'a lọ juba Kristi Oluwa.",
       ],
     ),
     Hymn(
@@ -3767,7 +3765,7 @@ class HymnBook with ChangeNotifier {
           "O wa mi ri, an'emi,",
           "(O wa mi ri, O wa mi ri) ",
           "O wa mi ri, an' emi",
-          "Al iyanu ni, yin Oruko Re",
+          "A! iyanu ni, yin Oruko Re",
           "Enit' O wa mi ri.",
         ],
         [
@@ -3855,7 +3853,7 @@ class HymnBook with ChangeNotifier {
         [
           "Lehin odun dię,",
           "Lehin igba die,",
-          "A o ko wa jo pel‘ awon",
+          "A o ko wa jo pel' awon",
           "Ti o sun n'iboji",
         ],
         [
@@ -3868,7 +3866,7 @@ class HymnBook with ChangeNotifier {
           "Lehin igbi dię",
           "L'ebute lile yi,",
           "A o de b' iji ko si mo.",
-          "T'okun ki bù s'oke.",
+          "T' okun ki bù s'oke.",
         ],
         [
           "Lehin 'yonu die.",
@@ -3910,7 +3908,7 @@ class HymnBook with ChangeNotifier {
           "Igba mi mbę li owo Re.",
           "Wo la o gbekele,",
           "Tit' a o f' aiye oşi le",
-          "T’a o si r’ogo Re",
+          "T’ a o si r’ ogo Re",
         ],
         [
           "Igba mi mbę li owo Re",
@@ -3934,7 +3932,7 @@ class HymnBook with ChangeNotifier {
         [
           "Apata aiyeraye,",
           "Enit' O mbę lailai,",
-          "Nigbakugba t'iji nja,",
+          "Nigbakugba t' iji nja,",
           "Wo 'bugbe alafia:",
           "Ş'aju did' aiye wa yi,",
           "Iwo mbe, bakanna:",
@@ -3945,9 +3943,9 @@ class HymnBook with ChangeNotifier {
           "Oj’ odun wa ri b'oji,",
           "To hàn l' ori oke;",
           "Bi koriko ipa 'dò,",
-          "Toru ti o si ku:",
+          "T' o ru ti o si ku:",
           "Bi àlá; tabi b' itàn,",
-          "Tenikan nyara pa:",
+          "T'enikan nyara pa:",
           "Ogo ti kò ni si mo.",
           "Ohun t' o gbo tan ni",
         ],
@@ -3979,10 +3977,10 @@ class HymnBook with ChangeNotifier {
       id: '98',
       verses: [
         [
-          "Olorun, t’odun t’o Koja",
+          "Olorun, t’odun t’o koja",
           "Iret’ eyi ti mbo;",
-          "Ib’isadi wa ni iji,",
-          "At’ile wa lailai,",
+          "Ib’ isadi wa ni iji,",
+          "At’ ile wa lailai,",
         ],
         [
           "Labe ojiji ite Re",
@@ -3991,28 +3989,28 @@ class HymnBook with ChangeNotifier {
           "Abo wa si daju.",
         ],
         [
-          "K’awon oke k’o to duro,",
+          "K’ awon oke k’o to duro,",
           "Tabi K’a to d’aiye,",
           "Lailai iwo ni Olorun",
-          "Bakanna, l’ailopin!",
+          "Bakanna, l’ ailopin!",
         ],
         [
           "Egberun odun l’oju Re,",
           "Bi ale kan l’o ri;",
-          "B’iso kan l’afemojumo’",
-          "Ki orun k’o to la.",
+          "B’ iso kan l’afemojumo’",
+          "Ki orun k’ o to la.",
         ],
         [
           "Ojo wa, bi odo sisan,",
-          "Opo l’o I ngbe lo;",
-          "Nwon nlo, nwon di eni’Gbagbe",
+          "Opo l’ o si ngbe lo;",
+          "Nwon nlo, nwon di eni ’gbagbe",
           "Bi ala ti a nro.",
         ],
         [
-          "Olorun t’odun t’o koja",
+          "Olorun t’ odun t’ o koja",
           "Ireti eyi ti mbo,",
-          "Ma s’abo wa ‘gba ‘yonu de",
-          "At’ile wa lailai.",
+          "Ma s’ abo wa ‘gba ‘yonu de",
+          "At’ ile wa lailai.",
         ],
       ],
       isChorus: false,
@@ -4086,7 +4084,7 @@ class HymnBook with ChangeNotifier {
           "Bukun f' ewe at' agha,",
           "F’ ife Oluwa kun wa;",
           "'Gba ojo aiye wa pin,",
-          "K'a gbe odo Re l' oke.",
+          "K' a gbe odo Re l' oke.",
         ],
       ],
       isChorus: false,
