@@ -23,7 +23,7 @@ class HymnListView extends StatelessWidget {
         controller: scroll,
         physics: const BouncingScrollPhysics(),
         itemExtent: 60,
-        itemBuilder: (ctx, index) => GestureDetector(
+        itemBuilder: (ctx, index) => InkWell(
               onTap: () {
                 // final Hymn selectedHymn =
                 //     Provider.of<HymnBook>(context, listen: false)
@@ -35,6 +35,7 @@ class HymnListView extends StatelessWidget {
                 value: hymnList[index],
                 child: Container(
                   margin: const EdgeInsets.only(left: 10, right: 10),
+                  height: 60,
                   child: Card(
                     elevation: 5,
                     child: ListTile(

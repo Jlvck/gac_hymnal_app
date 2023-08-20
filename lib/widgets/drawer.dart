@@ -33,7 +33,7 @@ class _MainDrawerState extends State<MainDrawer> {
           trackVisibility: false,
           interactive: true,
           controller: _scroll,
-          thickness: 10,
+          thickness: 5,
           child: ScrollConfiguration(
             behavior: ScrollBehavior().copyWith(overscroll: false),
             child: ListView(

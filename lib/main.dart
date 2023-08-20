@@ -73,7 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
         Provider.of<HymnBook>(context, listen: false).setFavHymnList();
         return HymnBookScreen();
       },
-      duration: 2500,
       pageTransitionType: PageTransitionType.leftToRight,
     );
   }
