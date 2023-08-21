@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/hymn_book.dart';
+import '../providers/hymn_book_provider.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
-import '../providers/hymn.dart';
+import '../model/hymn.dart';
 
 class FavoritesScreen extends StatefulWidget {
   static const routeName = "/favorites_screen";
@@ -20,7 +20,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    HymnBook hymnData = Provider.of<HymnBook>(context, listen: true);
+    HymnBookProvider hymnData =
+        Provider.of<HymnBookProvider>(context, listen: true);
     List<Hymn> favoriteHymnList = hymnData.favHymnList;
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +32,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
           ? Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: RawScrollbar(
-                  thumbColor: Colors.red,
+                  thumbColor: Theme.of(context).secondaryHeaderColor,
                   thumbVisibility: false,
                   trackVisibility: false,
                   interactive: true,
@@ -41,7 +42,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   child: HymnListView(
                     hymnList: favoriteHymnList,
                     scroll: _favscroll,
-                    wholeProv: true,
+                    wholeProv: false,
                   )),
             )
           : Center(

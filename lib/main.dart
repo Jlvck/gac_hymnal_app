@@ -5,7 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
-import './providers/hymn_book.dart';
+import 'providers/hymn_book_provider.dart';
+import 'providers/navigation_provider.dart';
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
 import 'screens/hymn_view_screen.dart';
@@ -31,15 +32,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (ctx) => HymnBook(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<HymnBookProvider>(
+          create: (ctx) => HymnBookProvider(),
+        ),
+        ChangeNotifierProvider<NavigationProvider>(
+            create: (ctx) => NavigationProvider())
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
-          primarySwatch: mycolor,
-        ),
+                primarySwatch: mycolor,
+                colorScheme: ColorScheme.fromSwatch(primarySwatch: mycolor))
+            .copyWith(
+                secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0)),
         routes: {
           HymnBookScreen.routeName: (ctx) => HymnBookScreen(),
           HymnViewScreen.routeName: (ctx) => HymnViewScreen(),
@@ -69,8 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       backgroundColor: Colors.white,
       screenFunction: () async {
-        Provider.of<HymnBook>(context, listen: false).setListtoSF();
-        Provider.of<HymnBook>(context, listen: false).setFavHymnList();
+        Provider.of<HymnBookProvider>(context, listen: false).setFavHymnList();
         return HymnBookScreen();
       },
       pageTransitionType: PageTransitionType.leftToRight,

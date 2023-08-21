@@ -1,0 +1,1 @@
+enum NavigationItem { hymnbook, favorites }

@@ -3,24 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:community_material_icon/community_material_icon.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../providers/navigation_provider.dart';
+import '../model/navigation_item.dart';
 import '../screens/hymn_book_screen.dart';
 import '../screens/favorites_screen.dart';
 
-class MainDrawer extends StatefulWidget {
-  @override
-  State<MainDrawer> createState() => _MainDrawerState();
-}
-
-class _MainDrawerState extends State<MainDrawer> {
+class MainDrawer extends StatelessWidget {
   final ScrollController _scroll = ScrollController();
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    _scroll.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +46,13 @@ class _MainDrawerState extends State<MainDrawer> {
                   child: Align(),
                 ),
                 drawerListTile('HymnBook', Icons.music_note,
-                    HymnBookScreen.routeName, context),
-                drawerListTile('Favorites', Icons.favorite_border,
-                    FavoritesScreen.routeName, context),
+                    HymnBookScreen.routeName, NavigationItem.hymnbook, context),
+                drawerListTile(
+                    'Favorites',
+                    Icons.favorite_border,
+                    FavoritesScreen.routeName,
+                    NavigationItem.favorites,
+                    context),
                 ListTile(
                   horizontalTitleGap: 5,
                   title: Text(
@@ -115,8 +111,15 @@ class _MainDrawerState extends State<MainDrawer> {
   }
 
   ListTile drawerListTile(String tileName, IconData tileIcon, String routeName,
-      BuildContext context) {
+      NavigationItem item, BuildContext context) {
+    final provider = Provider.of<NavigationProvider>(context);
+    final currentItem = provider.navigationItem;
+    final isSelected = item == currentItem;
+
     return ListTile(
+      selected: isSelected,
+      selectedColor: const Color.fromARGB(255, 255, 0, 0),
+      enabled: true,
       iconColor: Colors.white,
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
@@ -128,11 +131,16 @@ class _MainDrawerState extends State<MainDrawer> {
         size: 30,
       ),
       onTap: () {
+        provider.setNavigationItem(item);
         Navigator.of(context).pushReplacementNamed(routeName);
       },
       title: Text(
         tileName,
-        style: TextStyle(color: Colors.white, fontSize: 20),
+        style: TextStyle(
+            color: isSelected
+                ? const Color.fromARGB(255, 255, 0, 0)
+                : Colors.white,
+            fontSize: 20),
       ),
     );
   }
@@ -161,8 +169,11 @@ class _MainDrawerState extends State<MainDrawer> {
       onLongPress: () {
         Clipboard.setData(ClipboardData(text: linkText.toString())).then((_) {
           Navigator.of(context).pop();
-          ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Link copied to your clipboard')));
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text(
+            'Link copied to your clipboard',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          )));
         });
       },
       title: Text(
@@ -173,7 +184,7 @@ class _MainDrawerState extends State<MainDrawer> {
         displayText,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: TextStyle(color: Colors.red),
+        style: TextStyle(color: Theme.of(context).secondaryHeaderColor),
       ),
     );
   }

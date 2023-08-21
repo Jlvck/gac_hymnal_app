@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/hymn.dart';
-import '../providers/hymn_book.dart';
+import '../model/hymn.dart';
+import '../providers/hymn_book_provider.dart';
 import '../screens/hymn_view_screen.dart';
 
 class HymnListView extends StatelessWidget {
@@ -67,15 +67,12 @@ class HymnListView extends StatelessWidget {
                                 ? Icons.favorite
                                 : Icons.favorite_border,
                           ),
-                          color: Colors.red,
+                          color: Theme.of(context).secondaryHeaderColor,
                           onPressed: () {
-                            Provider.of<HymnBook>(context, listen: false)
-                                .checkfav(hymnIcon.id);
+                            Provider.of<HymnBookProvider>(context,
+                                    listen: false)
+                                .checkfav(hymnIcon.id, context);
                             hymnIcon.toggleFav();
-                            if (wholeProv) {
-                              Provider.of<HymnBook>(context, listen: false)
-                                  .changeFavBut();
-                            }
                           },
                         ),
                       ),

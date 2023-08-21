@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'hymn_view_screen.dart';
-import '../providers/hymn.dart';
-import '../providers/hymn_book.dart';
+import '../model/hymn.dart';
+import '../providers/hymn_book_provider.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
 
@@ -89,7 +89,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onSubmittedNumber(String submit, HymnBook hymnData) {
+  void onSubmittedNumber(String submit, HymnBookProvider hymnData) {
     if (hymnData.hymnList.any((hymn) => hymn.id == submit)) {
       final Hymn selectedHymn = hymnData.getHymn(submit);
       _enteredHymnNumber.clear();
@@ -130,7 +130,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   @override
   void didChangeDependencies() {
-    final preHymn = Provider.of<HymnBook>(context, listen: true);
+    final preHymn = Provider.of<HymnBookProvider>(context, listen: true);
 
     _staticHymns = preHymn.hymnList;
 
@@ -151,7 +151,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     super.dispose();
   }
 
-  Flexible displayedHymnList(HymnBook hymnData, BuildContext context) {
+  Flexible displayedHymnList(HymnBookProvider hymnData, BuildContext context) {
     return Flexible(
       child: _foundHymns.isNotEmpty
           ? Scrollbar(
@@ -173,8 +173,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     );
   }
 
-  Row mainTextField(
-      MediaQueryData mediaQuery, BuildContext context, HymnBook hymnData) {
+  Row mainTextField(MediaQueryData mediaQuery, BuildContext context,
+      HymnBookProvider hymnData) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -272,7 +272,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    final hymnData = Provider.of<HymnBook>(context, listen: true);
+    final hymnData = Provider.of<HymnBookProvider>(context, listen: true);
     final int totalHymnNumber = hymnData.hymnList.length;
     return Scaffold(
         resizeToAvoidBottomInset: true,
@@ -286,7 +286,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   totalHymnNumber.toString(),
-                  style: TextStyle(fontSize: 25, color: Colors.red),
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Theme.of(context).secondaryHeaderColor),
                 ),
               ),
             )

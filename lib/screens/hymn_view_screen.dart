@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../providers/hymn_book_provider.dart';
 import '../widgets/hymn_view_widget.dart';
-import '../providers/hymn_book.dart';
 
-import '../providers/hymn.dart';
+import '../model/hymn.dart';
 
 class HymnViewScreen extends StatelessWidget {
   static const routeName = '/hymn_view';
@@ -99,10 +99,11 @@ class HymnViewScreen extends StatelessWidget {
                 icon: Icon(hymnIcon.isFavorites
                     ? Icons.favorite
                     : Icons.favorite_border),
-                color: Colors.red,
+                color: Theme.of(context).secondaryHeaderColor,
                 onPressed: () {
                   hymnIcon.toggleFav();
-                  Provider.of<HymnBook>(context, listen: false).changeFavBut();
+                  Provider.of<HymnBookProvider>(context, listen: false)
+                      .checkfav(hymnIcon.id, context);
                 },
               ),
             ),
