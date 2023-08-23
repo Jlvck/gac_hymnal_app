@@ -56,7 +56,8 @@ class HymnViewWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   chorus[t],
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(
+                      fontSize: 20, fontStyle: FontStyle.italic),
                   textAlign: TextAlign.center,
                   softWrap: true,
                   maxLines: 2,
@@ -98,7 +99,15 @@ class HymnViewWidget extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.all(20),
-          child: Text('Amen'),
+          child: Center(
+            child: Text(
+              'Amin....',
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic),
+            ),
+          ),
         )
       ],
     );
