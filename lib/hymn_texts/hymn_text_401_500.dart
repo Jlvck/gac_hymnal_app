@@ -2611,7 +2611,7 @@ class HymnText401to500 {
           "Tit'a o si ma yo titi lailai:",
         ],
       ],
-      isChorus: true,
+      isChorus: false,
       chorus: [''],
     ),
     Hymn(

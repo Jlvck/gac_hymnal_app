@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../hymn_texts/hymn_text_1_100.dart';
+import '../hymn_texts/hymn_text_201_300.dart';
 import '../hymn_texts/hymn_text_301_400.dart';
 import '../hymn_texts/hymn_text_401_500.dart';
 
@@ -11,9 +12,6 @@ class HymnBookProvider with ChangeNotifier {
   static const String prefKey = "favList";
 
   List<String> favStringList = [];
-
-  //simple manipulation i did to ensure when
-  //the fav button is clicked in favorite screen the effect is rapid
 
   //adding an id to favorite list of id
   void addPrefFav(String id) {
@@ -107,6 +105,7 @@ class HymnBookProvider with ChangeNotifier {
   //The Original List of Hymn
   List<Hymn> _hymnBook = [
     ...HymnText1to100().hymntext,
+    ...HymnText201to300().hymtext,
     ...HymnText301to400().hymntext,
     ...HymnText401to500().hymntext,
   ];

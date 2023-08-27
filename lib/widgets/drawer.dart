@@ -16,7 +16,9 @@ class MainDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Drawer(
+      width: 3 / 4 * width,
       backgroundColor: Theme.of(context).primaryColorLight,
       child: Column(children: [
         Expanded(
