@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,10 +9,12 @@ import '../model/hymn.dart';
 class HymnViewScreen extends StatelessWidget {
   static const routeName = '/hymn_view';
 
+  const HymnViewScreen({super.key});
+
   Widget versesWidget(List<List<String>> verses, int index) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       primary: false,
       itemBuilder: (ctxx, i) => Align(
         alignment: Alignment.center,
@@ -22,7 +22,7 @@ class HymnViewScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             verses[index][i],
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
         ),
       ),
@@ -32,11 +32,11 @@ class HymnViewScreen extends StatelessWidget {
 
   Widget chorusWidget(List<String> chorus) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Text(
+          const Text(
             "Chorus",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class HymnViewScreen extends StatelessWidget {
           ),
           ListView.builder(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             primary: false,
             itemBuilder: (ctxx, t) => Align(
               alignment: Alignment.center,
@@ -53,7 +53,7 @@ class HymnViewScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   chorus[t],
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
               ),
             ),
@@ -86,7 +86,7 @@ class HymnViewScreen extends StatelessWidget {
               softWrap: true,
               overflow: TextOverflow.fade,
               textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ),

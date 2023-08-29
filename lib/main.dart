@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -14,8 +13,8 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final MaterialColor mycolor = MaterialColor(
-    Color.fromRGBO(0, 0, 102, 1).value,
-    <int, Color>{
+    const Color.fromRGBO(0, 0, 102, 1).value,
+    const <int, Color>{
       50: Color.fromRGBO(0, 0, 105, 1),
       100: Color.fromRGBO(0, 0, 108, 1),
       200: Color.fromRGBO(1, 1, 113, 1),
@@ -29,6 +28,8 @@ class MyApp extends StatelessWidget {
     },
   );
 
+  MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MyHomePage(),
+        home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
                 primarySwatch: mycolor,
@@ -49,9 +50,9 @@ class MyApp extends StatelessWidget {
             .copyWith(
                 secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0)),
         routes: {
-          HymnBookScreen.routeName: (ctx) => HymnBookScreen(),
-          HymnViewScreen.routeName: (ctx) => HymnViewScreen(),
-          FavoritesScreen.routeName: (ctx) => FavoritesScreen(),
+          HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
+          HymnViewScreen.routeName: (ctx) => const HymnViewScreen(),
+          FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
         },
       ),
     );
@@ -59,6 +60,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -83,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         screenFunction: () async {
           Provider.of<HymnBookProvider>(context, listen: false)
               .setFavHymnList();
-          return HymnBookScreen();
+          return const HymnBookScreen();
         },
         pageTransitionType: PageTransitionType.leftToRight,
       ),

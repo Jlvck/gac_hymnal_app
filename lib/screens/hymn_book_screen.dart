@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +9,8 @@ import '../widgets/hymn_list_view.dart';
 
 class HymnBookScreen extends StatefulWidget {
   static const routeName = '/hymn_category';
+
+  const HymnBookScreen({super.key});
 
   @override
   State<HymnBookScreen> createState() => _HymnBookScreenState();
@@ -124,7 +124,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   @override
   void initState() {
-    print('........initstate');
     super.initState();
   }
 
@@ -159,7 +158,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
               trackVisibility: false,
               interactive: true,
               controller: _scroll,
-              radius: Radius.circular(4),
+              radius: const Radius.circular(4),
               thickness: 10,
               child: HymnListView(
                 hymnList: _foundHymns,
@@ -181,8 +180,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 3 / 4),
           child: Container(
-            margin: EdgeInsets.only(left: 20, top: 10),
-            padding: EdgeInsets.all(8),
+            margin: const EdgeInsets.only(left: 20, top: 10),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
@@ -191,10 +190,10 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
               child: TextField(
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
-                strutStyle: StrutStyle(
+                strutStyle: const StrutStyle(
                   forceStrutHeight: true,
                 ),
-                style: TextStyle(fontSize: 23),
+                style: const TextStyle(fontSize: 23),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapTitle(),
@@ -203,16 +202,16 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 keyboardType: TextInputType.text,
                 autocorrect: false,
                 decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(5),
+                  contentPadding: const EdgeInsets.all(5),
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.search),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.center,
                     color: Theme.of(context).primaryColor,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.cancel,
                       size: 25,
                     ),
@@ -233,26 +232,26 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 1 / 4),
           child: Container(
-            margin: EdgeInsets.only(right: 20, top: 10),
-            padding: EdgeInsets.all(8),
+            margin: const EdgeInsets.only(right: 20, top: 10),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
             child: SizedBox(
               height: 40,
               child: TextField(
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapNumber(),
-                keyboardType: TextInputType.numberWithOptions(
+                keyboardType: const TextInputType.numberWithOptions(
                   decimal: false,
                   signed: false,
                 ),
                 onChanged: (value) => onChangedNumber(value),
                 onSubmitted: (submit) => onSubmittedNumber(submit, hymnData),
                 controller: _enteredHymnNumber,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(5),
                     hintText: '#',
                     border: InputBorder.none),
@@ -266,7 +265,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print('......building state');
     final MediaQueryData mediaQuery = MediaQuery.of(context);
     double maxHeight = mediaQuery.size.height -
         AppBar().preferredSize.height -
@@ -278,10 +276,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
         appBar: AppBar(
-          title: const Text('HYMNBOOK'),
+          title: const Text(
+            'HYMNBOOK',
+            overflow: TextOverflow.visible,
+          ),
           actions: [
             Padding(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -295,7 +296,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
           ],
         ),
         body: SingleChildScrollView(
-          physics: ClampingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           child: SizedBox(
             height: maxHeight,
             width: maxWidth,

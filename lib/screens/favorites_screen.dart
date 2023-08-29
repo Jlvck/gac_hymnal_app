@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/hymn_book_provider.dart';
@@ -9,6 +7,8 @@ import '../model/hymn.dart';
 
 class FavoritesScreen extends StatefulWidget {
   static const routeName = "/favorites_screen";
+
+  const FavoritesScreen({super.key});
 
   @override
   State<FavoritesScreen> createState() => _FavoritesScreenState();
@@ -25,7 +25,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     List<Hymn> favoriteHymnList = hymnData.favHymnList;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FAVORITES'),
+        title: const Text(
+          'FAVORITES',
+          overflow: TextOverflow.visible,
+        ),
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty
@@ -37,7 +40,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   trackVisibility: false,
                   interactive: true,
                   controller: _favscroll,
-                  radius: Radius.circular(4),
+                  radius: const Radius.circular(4),
                   thickness: 10,
                   child: HymnListView(
                     hymnList: favoriteHymnList,
@@ -45,7 +48,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                     wholeProv: false,
                   )),
             )
-          : Center(
+          : const Center(
               child: Text('No Favorites added'),
             ),
     );

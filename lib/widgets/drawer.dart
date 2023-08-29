@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:community_material_icon/community_material_icon.dart';
@@ -13,6 +11,8 @@ import '../screens/favorites_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   final ScrollController _scroll = ScrollController();
+
+  MainDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +29,12 @@ class MainDrawer extends StatelessWidget {
           controller: _scroll,
           thickness: 5,
           child: ScrollConfiguration(
-            behavior: ScrollBehavior().copyWith(overscroll: false),
+            behavior: const ScrollBehavior().copyWith(overscroll: false),
             child: ListView(
               controller: _scroll,
               padding: EdgeInsets.zero,
               children: [
-                DrawerHeader(
+                const DrawerHeader(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
                   decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class MainDrawer extends StatelessWidget {
                     FavoritesScreen.routeName,
                     NavigationItem.favorites,
                     context),
-                ListTile(
+                const ListTile(
                   horizontalTitleGap: 5,
                   title: Text(
                     'Follow us',
@@ -126,8 +126,9 @@ class MainDrawer extends StatelessWidget {
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
       horizontalTitleGap: 5,
-      contentPadding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-      visualDensity: VisualDensity(horizontal: 0, vertical: 0),
+      contentPadding:
+          const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+      visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
       leading: Icon(
         tileIcon,
         size: 30,
@@ -159,8 +160,9 @@ class MainDrawer extends StatelessWidget {
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
       horizontalTitleGap: 5,
-      contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
-      visualDensity: VisualDensity(horizontal: 0, vertical: 0),
+      contentPadding:
+          const EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
+      visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
       leading: Icon(
         socialIcon,
         size: 30,
@@ -180,7 +182,7 @@ class MainDrawer extends StatelessWidget {
       },
       title: Text(
         socialTitle,
-        style: TextStyle(color: Colors.white, fontSize: 20),
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       subtitle: Text(
         displayText,

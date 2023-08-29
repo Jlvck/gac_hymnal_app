@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 
 class HymnViewWidget extends StatelessWidget {
@@ -7,9 +5,9 @@ class HymnViewWidget extends StatelessWidget {
   final List<String> hymnChorus;
   final bool isChorus;
 
-  // ignore: prefer_const_constructors_in_immutables
-  HymnViewWidget(
-      {required this.hymnVerses,
+  const HymnViewWidget(
+      {super.key,
+      required this.hymnVerses,
       required this.hymnChorus,
       required this.isChorus});
 

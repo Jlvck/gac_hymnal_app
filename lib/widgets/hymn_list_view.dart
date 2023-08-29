@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../model/hymn.dart';
@@ -12,9 +10,12 @@ class HymnListView extends StatelessWidget {
   final ScrollController scroll;
 
   final bool wholeProv;
-  // ignore: prefer_const_constructors_in_immutables
-  HymnListView(
-      {required this.hymnList, required this.scroll, required this.wholeProv});
+
+  const HymnListView(
+      {super.key,
+      required this.hymnList,
+      required this.scroll,
+      required this.wholeProv});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +26,6 @@ class HymnListView extends StatelessWidget {
         itemExtent: 60,
         itemBuilder: (ctx, index) => InkWell(
               onTap: () {
-                // final Hymn selectedHymn =
-                //     Provider.of<HymnBook>(context, listen: false)
-                //         .getHymn(hymnList[index].id);
                 Navigator.of(context).pushNamed(HymnViewScreen.routeName,
                     arguments: hymnList[index]);
               },
@@ -43,13 +41,13 @@ class HymnListView extends StatelessWidget {
                       minLeadingWidth: 40,
                       horizontalTitleGap: 0,
                       leading: CircleAvatar(
+                        radius: 15,
                         child: FittedBox(
                           child: Text(
                             hymnList[index].id,
                             softWrap: false,
                           ),
                         ),
-                        radius: 15,
                       ),
                       title: Text(
                         "${hymnList[index].verses[0][0]} ",
