@@ -23,6 +23,9 @@ class HymnListView extends StatelessWidget {
         padding: const EdgeInsets.all(2),
         controller: scroll,
         physics: const BouncingScrollPhysics(),
+        primary: false,
+        shrinkWrap: true,
+        semanticChildCount: hymnList.length,
         itemExtent: 60,
         itemBuilder: (ctx, index) => InkWell(
               onTap: () {
