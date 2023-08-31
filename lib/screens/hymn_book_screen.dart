@@ -163,7 +163,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
               child: HymnListView(
                 hymnList: _foundHymns,
                 scroll: _scroll,
-                wholeProv: false,
               ))
           : const Text(
               'No results found',

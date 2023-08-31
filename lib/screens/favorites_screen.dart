@@ -45,7 +45,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   child: HymnListView(
                     hymnList: favoriteHymnList,
                     scroll: _favscroll,
-                    wholeProv: false,
                   )),
             )
           : const Center(

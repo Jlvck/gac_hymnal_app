@@ -9,13 +9,11 @@ class HymnListView extends StatelessWidget {
 
   final ScrollController scroll;
 
-  final bool wholeProv;
-
-  const HymnListView(
-      {super.key,
-      required this.hymnList,
-      required this.scroll,
-      required this.wholeProv});
+  const HymnListView({
+    super.key,
+    required this.hymnList,
+    required this.scroll,
+  });
 
   @override
   Widget build(BuildContext context) {
