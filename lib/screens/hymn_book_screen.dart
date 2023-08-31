@@ -25,103 +25,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   List<Hymn> _staticHymns = [];
   List<Hymn> _foundHymns = [];
 
-  void onTapTitle() {
-    if (_enteredHymnTitle.value.text.isEmpty &
-        _enteredHymnNumber.value.text.isEmpty) {
-      return;
-    } else {
-      if (_enteredHymnTitle.value.text.isEmpty) {
-        setState(() {
-          _enteredHymnNumber.clear();
-          _runFilter(_enteredHymnNumber.value.text);
-        });
-      } else {
-        _enteredHymnNumber.clear();
-      }
-    }
-  }
-
-  void onChangedTitle(String value) {
-    if (value == '') {
-      setState(() {
-        _foundHymns = _staticHymns;
-      });
-      if (_scroll.hasClients) {
-        _scroll.jumpTo(0);
-      }
-    } else {
-      _runFilter(value);
-      if (_scroll.hasClients) {
-        _scroll.jumpTo(0);
-      }
-    }
-  }
-
-  void onTapNumber() {
-    if (_enteredHymnTitle.value.text.isEmpty &
-        _enteredHymnNumber.value.text.isEmpty) {
-      return;
-    } else {
-      if (_enteredHymnNumber.value.text.isEmpty) {
-        setState(() {
-          _enteredHymnTitle.clear();
-          _runFilter(_enteredHymnTitle.value.text);
-        });
-      } else {
-        _enteredHymnTitle.clear();
-      }
-    }
-  }
-
-  void onChangedNumber(String value) {
-    if (value == '') {
-      setState(() {
-        _foundHymns = _staticHymns;
-      });
-      if (_scroll.hasClients) {
-        _scroll.jumpTo(0);
-      }
-    } else {
-      _runFilter(value);
-      if (_scroll.hasClients) {
-        _scroll.jumpTo(0);
-      }
-    }
-  }
-
-  void onSubmittedNumber(String submit, HymnBookProvider hymnData) {
-    if (hymnData.hymnList.any((hymn) => hymn.id == submit)) {
-      final Hymn selectedHymn = hymnData.getHymn(submit);
-      _enteredHymnNumber.clear();
-      _foundHymns = _staticHymns;
-      FocusManager.instance.primaryFocus?.unfocus();
-      Navigator.of(context)
-          .pushNamed(HymnViewScreen.routeName, arguments: selectedHymn);
-    } else {
-      return;
-    }
-  }
-
-  void _runFilter(String enteredUserHymn) {
-    List<Hymn> results = [];
-
-    if (enteredUserHymn.isEmpty) {
-      results = _staticHymns;
-    } else {
-      results = _staticHymns
-          .where((hymnbook) =>
-              hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.verses[0][0].contains(enteredUserHymn))
-          .toList();
-      setState(() {
-        _foundHymns = results;
-      });
-    }
-
-    _foundHymns = results;
-  }
-
   @override
   void initState() {
     super.initState();
@@ -148,6 +51,55 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     _enteredHymnTitle.dispose();
     _scroll.dispose();
     super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    double maxHeight = mediaQuery.size.height -
+        AppBar().preferredSize.height -
+        mediaQuery.padding.top;
+    double maxWidth = mediaQuery.size.width;
+    final hymnData = Provider.of<HymnBookProvider>(context, listen: true);
+    final int totalHymnNumber = hymnData.hymnList.length;
+    return Scaffold(
+        resizeToAvoidBottomInset: true,
+        drawer: MainDrawer(),
+        appBar: AppBar(
+          title: const Text(
+            'HYMNBOOK',
+            overflow: TextOverflow.visible,
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  totalHymnNumber.toString(),
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Theme.of(context).secondaryHeaderColor),
+                ),
+              ),
+            )
+          ],
+        ),
+        body: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: SizedBox(
+            height: maxHeight,
+            width: maxWidth,
+            child: Column(
+              children: [
+                const Padding(padding: EdgeInsets.all(10)),
+                mainTextField(mediaQuery, context, hymnData),
+                const Padding(padding: EdgeInsets.all(8)),
+                displayedHymnList(hymnData, context)
+              ],
+            ),
+          ),
+        ));
   }
 
   Flexible displayedHymnList(HymnBookProvider hymnData, BuildContext context) {
@@ -262,52 +214,110 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
-    double maxHeight = mediaQuery.size.height -
-        AppBar().preferredSize.height -
-        mediaQuery.padding.top;
-    double maxWidth = mediaQuery.size.width;
-    final hymnData = Provider.of<HymnBookProvider>(context, listen: true);
-    final int totalHymnNumber = hymnData.hymnList.length;
-    return Scaffold(
-        resizeToAvoidBottomInset: true,
-        drawer: MainDrawer(),
-        appBar: AppBar(
-          title: const Text(
-            'HYMNBOOK',
-            overflow: TextOverflow.visible,
-          ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  totalHymnNumber.toString(),
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Theme.of(context).secondaryHeaderColor),
-                ),
-              ),
-            )
-          ],
-        ),
-        body: SingleChildScrollView(
-          physics: const ClampingScrollPhysics(),
-          child: SizedBox(
-            height: maxHeight,
-            width: maxWidth,
-            child: Column(
-              children: [
-                const Padding(padding: EdgeInsets.all(10)),
-                mainTextField(mediaQuery, context, hymnData),
-                const Padding(padding: EdgeInsets.all(8)),
-                displayedHymnList(hymnData, context)
-              ],
-            ),
-          ),
-        ));
+  void _toScrollStart() {
+    _scroll.jumpTo(0);
+  }
+
+  void onTapTitle() {
+    if (_enteredHymnTitle.value.text.isEmpty &
+        _enteredHymnNumber.value.text.isEmpty) {
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+      return;
+    } else {
+      if (_enteredHymnTitle.value.text.isEmpty) {
+        setState(() {
+          _enteredHymnNumber.clear();
+          _runFilter(_enteredHymnNumber.value.text);
+        });
+      } else {
+        _enteredHymnNumber.clear();
+      }
+    }
+  }
+
+  void onChangedTitle(String value) {
+    if (value == '') {
+      setState(() {
+        _foundHymns = _staticHymns;
+      });
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+    } else {
+      _runFilter(value);
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+    }
+  }
+
+  void onTapNumber() {
+    if (_enteredHymnTitle.value.text.isEmpty &
+        _enteredHymnNumber.value.text.isEmpty) {
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+      return;
+    } else {
+      if (_enteredHymnNumber.value.text.isEmpty) {
+        setState(() {
+          _enteredHymnTitle.clear();
+          _runFilter(_enteredHymnTitle.value.text);
+        });
+      } else {
+        _enteredHymnTitle.clear();
+      }
+    }
+  }
+
+  void onChangedNumber(String value) {
+    if (value == '') {
+      setState(() {
+        _foundHymns = _staticHymns;
+      });
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+    } else {
+      _runFilter(value);
+      if (_scroll.hasClients) {
+        _toScrollStart();
+      }
+    }
+  }
+
+  void onSubmittedNumber(String submit, HymnBookProvider hymnData) {
+    if (hymnData.hymnList.any((hymn) => hymn.id == submit)) {
+      final Hymn selectedHymn = hymnData.getHymn(submit);
+      _enteredHymnNumber.clear();
+      _foundHymns = _staticHymns;
+      FocusManager.instance.primaryFocus?.unfocus();
+      Navigator.of(context)
+          .pushNamed(HymnViewScreen.routeName, arguments: selectedHymn);
+    } else {
+      return;
+    }
+  }
+
+  void _runFilter(String enteredUserHymn) {
+    List<Hymn> results = [];
+
+    if (enteredUserHymn.isEmpty) {
+      results = _staticHymns;
+    } else {
+      results = _staticHymns
+          .where((hymnbook) =>
+              hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.verses[0][0].contains(enteredUserHymn))
+          .toList();
+      setState(() {
+        _foundHymns = results;
+      });
+    }
+
+    _foundHymns = results;
   }
 }
