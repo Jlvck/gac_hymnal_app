@@ -19,6 +19,10 @@ class HymnBookProvider with ChangeNotifier {
     favStringList.add(id);
   }
 
+  void notify() {
+    notifyListeners();
+  }
+
   //removing an id to favorite list of id
   void removePrefFav(String id) {
     favStringList.remove(id);
@@ -53,9 +57,9 @@ class HymnBookProvider with ChangeNotifier {
         duration: const Duration(seconds: 1),
       ));
       addPrefFav(id);
+      notifyListeners();
     }
     addListtoSharedPref(favStringList);
-    notifyListeners();
   }
 
   //overwrite the saved shared preferences intance with another
@@ -96,6 +100,7 @@ class HymnBookProvider with ChangeNotifier {
   List<Hymn> get favHymnList {
     List<Hymn> favList =
         _hymnBook.where((hymn) => hymn.isFavorites == true).toList();
+
     return favList;
   }
 

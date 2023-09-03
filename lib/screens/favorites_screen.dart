@@ -20,9 +20,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    HymnBookProvider hymnData =
-        Provider.of<HymnBookProvider>(context, listen: true);
-    List<Hymn> favoriteHymnList = hymnData.favHymnList;
+    List<Hymn> favoriteHymnList =
+        Provider.of<HymnBookProvider>(context, listen: true).favHymnList;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
