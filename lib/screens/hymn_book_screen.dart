@@ -61,7 +61,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
     final hymnData = Provider.of<HymnBookProvider>(context, listen: true);
-    final int totalHymnNumber = hymnData.hymnList.length;
     return Scaffold(
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
@@ -69,21 +68,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
           title: const Text(
             'HYMNBOOK',
             overflow: TextOverflow.visible,
+            textAlign: TextAlign.center,
           ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  totalHymnNumber.toString(),
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Theme.of(context).secondaryHeaderColor),
-                ),
-              ),
-            )
-          ],
         ),
         body: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),

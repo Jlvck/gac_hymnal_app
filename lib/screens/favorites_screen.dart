@@ -28,6 +28,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         title: const Text(
           'FAVORITES',
           overflow: TextOverflow.visible,
+          textAlign: TextAlign.center,
         ),
       ),
       drawer: MainDrawer(),

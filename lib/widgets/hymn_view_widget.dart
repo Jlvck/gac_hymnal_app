@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class HymnViewWidget extends StatelessWidget {
@@ -74,45 +76,29 @@ class HymnViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [
-        ListView(
-          shrinkWrap: true,
-          physics: const ScrollPhysics(),
-          children: List.generate(hymnVerses.length, (index) {
-            return Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Text(
-                      "${index + 1}",
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30),
-                    ),
-                    versesWidget(
-                      hymnVerses[index],
-                    ),
-                    if (isChorus) chorusWidget(hymnChorus)
-                  ],
+      shrinkWrap: true,
+      physics: const ScrollPhysics(),
+      children: List.generate(hymnVerses.length, (index) {
+        return Align(
+          alignment: Alignment.center,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  "${index + 1}",
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 30),
                 ),
-              ),
-            );
-          }),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(20),
-          child: Center(
-            child: Text(
-              'Amin....',
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 30,
-                  fontStyle: FontStyle.italic),
+                versesWidget(
+                  hymnVerses[index],
+                ),
+                if (isChorus) chorusWidget(hymnChorus)
+              ],
             ),
           ),
-        )
-      ],
+        );
+      }),
     );
   }
 }

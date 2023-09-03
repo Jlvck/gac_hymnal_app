@@ -33,7 +33,7 @@ class HymnText101to200 {
           "Iru ibukun bi eyi",
           "L’a mbere lowo Re;",
           "Iwo o je Olorun wa",
-          "At’ipin wa laila.",
+          "At’ ipin wa laila.",
         ],
       ],
       isChorus: false,
@@ -80,11 +80,11 @@ class HymnText101to200 {
       id: '103',
       verses: [
         [
-          "Elese. e yi pada,",
+          "Elese e yi pada,",
           "Eese ti e o fi ku?",
           "Elęda nyin ni mbere,",
           "T'O fę ki ę ba On gbe,",
-          "Qran nla ni O nbi yin",
+          "Oran nla ni O nbi yin",
           "Ise owo Re ni yin",
           "A! enyin alailope.",
           "Eese t'ę o ko 'fe Re?",
@@ -127,21 +127,21 @@ class HymnText101to200 {
       id: '104',
       verses: [
         [
-          "Ojo nla l’ojo ti mo yan",
-          "Olugbala l’Oloun mi;",
+          "Ojo nla l’ ojo ti mo yan",
+          "Olugbala l’ Oloun mi;",
           "O ye ki okan mi ma yo,",
           "K’o si ro ihin na ka le.",
         ],
         [
           "Ise igbala pari na,",
-          "Mo di t’Oluwa mi loni:",
-          "On l’ope mi ti mo si je,",
-          "Mo f’ayo j’ipe mimo na.",
+          "Mo di t’ Oluwa mi loni:",
+          "On l’ ope mi ti mo si je,",
+          "Mo f’ ayo j’ipe mimo na.",
         ],
         [
           "Eje mimo yi ni mo je",
-          "F’Enit’o ye lati feran;",
-          "Je k’orin didun kun le re",
+          "F’ Enit’o ye lati feran;",
+          "Je k’ orin didun kun le re",
           "Nigba mo ba nlo sin nibe",
         ],
         [
@@ -153,17 +153,17 @@ class HymnText101to200 {
         [
           "Enyin orun, gbo eje mi",
           "Eje mi ni ojojumo,",
-          "Em’o ma so dotun titi",
+          "Em’ o ma so dotun titi",
           "Jesu y’o fi mu mi re ‘ le",
         ],
       ],
       isChorus: true,
       chorus: [
-        "Ojo nla l’ojo na",
+        "Ojo nla l’ ojo na",
         "Ti Jesu we ese mi nu;",
         "O ko mi ki nma gbadura,",
         "Ki  nma sora, ki si maa yo",
-        "Ojo nla l’ojo na!",
+        "Ojo nla l’ ojo na!",
         "Ti Jesu we ese mi nu.",
       ],
     ),
@@ -173,7 +173,7 @@ class HymnText101to200 {
         [
           "Ipe t'o ni bukun lat' oke orun",
           "Ipe t'o ni 'bukun li Emi pe wa",
-          "Ónfi agbara fun eniti nsare",
+          "O nfi agbara fun eniti nsare",
           "Enit' o ba gbagbo fun o ni",
         ],
         [
@@ -189,7 +189,7 @@ class HymnText101to200 {
           "Enit' o ba gbagbo, fun o ni.",
         ],
         [
-          "Ma ş'iyemeji mo wa 'do Re loni,",
+          "Ma ş' iyemeji mo wa 'do Re loni,",
           "Kuro ninu eşę rę patapata;",
           "Tori anu Re nla, yo dariji o",
           "Y' O si şamona re de orun.",
@@ -213,13 +213,13 @@ class HymnText101to200 {
       id: '106',
       verses: [
         [
-          "Wa gba isimi rę",
+          "Wa gba isimi re",
           "Maşe je 'rora mo",
-          "Wa s'odo Jesu rę.",
+          "Wa s' odo Jesu rę.",
           "Maşe jafara.",
         ],
         [
-          "Okunkun l'alye yi,",
+          "Okunkun l'aiye yi,",
           "Lälä inu rè po",
           "Wa s' agb' Olugbala,",
           "Maşe Jafara.",
@@ -310,7 +310,7 @@ class HymnText101to200 {
           "Wole, wole, wole nisisiyi,",
         ],
         [
-          "Kiki ayo l’o wa nibe, wole!",
+          "Kiki ayo l’ o wa nibe, wole!",
           "Awon Angeli npe o fun ade,",
           "Wole, wole, wole nisisiyi,",
         ],
@@ -368,17 +368,17 @@ class HymnText101to200 {
       id: '110',
       verses: [
         [
-          "\"Was' çdo Mi, alaarę,",
+          "\"Wa s' odo Mi, alaarę,",
           "Ngo fun nyin n' isimi\"",
           "A! ohûn didun Jesu,",
           "Ti o p'elese wa.",
-          "Onso ti Ore-ofę,",
+          "O nso ti Ore-ofę,",
           "Ati t' alafia,",
           "Ti ayo ti ko l' opin",
-          "Tife ti ko le tan.",
+          "T' ife ti ko le tan.",
         ],
         [
-          "\"Ewa, enyin omo Mi,",
+          "\"E wa, enyin omo Mi,",
           "Ngo fun nyin n' imole\"",
           "A! ohun ife Jesu,",
           "Ti nle okunkun lo;",
@@ -391,7 +391,7 @@ class HymnText101to200 {
           "\"E wa, enyin ti ndaku,",
           "Ngo fun nyin ni iye;\"",
           "Ohún alafia Jesu,",
-          "T'o f' opin s' ija wa,",
+          "T' o f' opin s' ija wa,",
           "Oju ota wa koro,",
           "Ija si le pupo;",
           "Sugbon 'Wo fun wa n' ipa,",
@@ -403,8 +403,8 @@ class HymnText101to200 {
           "A! ohun suru Jesu,",
           "Ninu ifę iyanu,",
           "To p'awa eleşę.",
-          "B'a tilę ję alaiye,",
-          "S'odo Re, Oluwa.",
+          "B' a tilę ję alaiye,",
+          "S' odo Re, Oluwa.",
         ],
       ],
       isChorus: false,
@@ -414,7 +414,7 @@ class HymnText101to200 {
       id: '111',
       verses: [
         [
-          "Yara, eleşę k'o gbon.",
+          "Yara, elese k'o gbon.",
           "Ma reti ojo ola",
           "Ogbon t' oke kilo o,",
           "K'o yà 'na iku silę.",
@@ -445,7 +445,7 @@ class HymnText101to200 {
       id: '112',
       verses: [
         [
-          "Pada aşako s' ile rę,",
+          "Pada asako s' ile re,",
           "Baba rę l' O npe o:",
           "Má se alarinkiri mo,",
           "Nin' eşe at' oşi;",
@@ -453,16 +453,16 @@ class HymnText101to200 {
         ],
         [
           "Pada aşako s' ile rę,",
-          "Jesu l'O sa npe o:",
+          "Jesu l' O sa npe o:",
           "Emi pelu Ijo si npe,",
           "Yara sa asala:",
-          " Pada, pada.",
+          "Pada, pada.",
         ],
         [
           "Pada aşako s' ile re.",
           "Were ni, b' o ba pe:",
           "Ko si 'dariji n' iboji",
-          "O anu kuru;",
+          "Ojo anu kuru;",
           "Pada, pada.",
         ],
       ],
@@ -537,9 +537,9 @@ class HymnText101to200 {
         [
           "B’ Olorun Oba orun",
           "Ti ma nso’ro nigbani,",
-          "Otun ba wa s’oro be loni;",
+          "O tun ba wa s’oro be loni;",
           "Arakunrin, ooto ni,",
-          "Ohun t’O ba wi fun o,",
+          "Ohun t’ O ba wi fun o,",
           "Ohun kan l’ aigbodo-mase, gboran.",
         ],
         [
@@ -711,7 +711,7 @@ class HymnText101to200 {
       id: '120',
       verses: [
         [
-          "Gbo ihin ayo b'o ti ndún,",
+          "Gbo ihin ayo b'o ti ndun,",
           "Kristi jiya lor'igi,",
           "Odò ǎnu nşan laidękun,",
           "Ore-ofę f'elese.",
@@ -832,7 +832,7 @@ class HymnText101to200 {
       id: '123',
       verses: [
         [
-          "'Wo ha nfę bo low' eru ese re?",
+          "'Wo ha nfe bo low' eru ese re?",
           "Agbara mbę ninu eję Re.",
           "'Wo ha fe gba 'segun lori eşu?",
           "Agbara mbę n'nu eję Re",
@@ -870,7 +870,7 @@ class HymnText101to200 {
       id: '124',
       verses: [
         [
-          "Jesu nf'ohun jeję pe o wa' le,",
+          "Jesu nf'ohun jeje pe o wa' le,",
           "O npe loni, O npe loni!",
           "Eeşe ti o ko ife Re silę,",
           "T'o şako jinna rere?",
@@ -1017,7 +1017,7 @@ class HymnText101to200 {
       id: '128',
       verses: [
         [
-          "Eredi irokękę yi,",
+          "Eredi irokeke yi,",
           "Ti enia ti nwo koja?",
           "'Jojumo n'iwojopo na,",
           "Eredi rè ti nwọn nşe bę?",
@@ -1156,7 +1156,7 @@ class HymnText101to200 {
       id: '131',
       verses: [
         [
-          "Okan mi, sunmo 'tę ānu,",
+          "Okan mi, sunmo 'te anu,",
           "Nibi Jesu ngb' ebe,",
           "F' trèle wolę l' ese Rè.",
           "'Wo ko le gbe, nibę.",
@@ -1193,9 +1193,9 @@ class HymnText101to200 {
       id: '132',
       verses: [
         [
-          "Elese:- mo nfe 'bukun:",
-          "Onde :- mo fe d' omnira:",
-          "Alare:- mo nfe 'simi;",
+          "Elese mo nfe 'bukun:",
+          "Onde mo fe d' omnira:",
+          "Alare mo nfe 'simi;",
           "\"Olorun şanu fun mi\"",
         ],
         [
@@ -1283,7 +1283,7 @@ class HymnText101to200 {
       id: '134',
       verses: [
         [
-          "Iwo low' Enit' ire nşan,",
+          "Iwo low' Enit' ire nsan,",
           "Mo gb' okan mi si O;",
           "N' ibanuję, at' işe mi,",
           "Oluwa, ranti mi",
@@ -1320,7 +1320,7 @@ class HymnText101to200 {
       id: '135',
       verses: [
         [
-          "Jina S'ile orun,",
+          "Jina S' ile orun,",
           "S'ookan aiya Baba,",
           "Emi 'bukun, wa, mo ndaku,",
           "Mu mi re 'bi 'simi",
@@ -1474,7 +1474,7 @@ class HymnText101to200 {
       id: '139',
       verses: [
         [
-          "Baba má yi oju kuro,",
+          "Baba ma yi oju kuro,",
           "Fun emi otoşi;",
           "Ti npohunrere eşe mi",
           "N' iwaju itę Re.",
@@ -1554,7 +1554,7 @@ class HymnText101to200 {
       id: '141',
       verses: [
         [
-          "Ki şe l'aint 'reti",
+          "Ki se l'aint 'reti",
           "Ni mo to o wa;",
           "Ki se l' aini gbagbo",
           "Ni mo kunlę:",
@@ -1608,7 +1608,7 @@ class HymnText101to200 {
       chorus: [''],
     ),
     Hymn(
-      id: '143',
+      id: '142',
       verses: [
         [
           "Jesu Oluf' okan mi,",
@@ -1697,7 +1697,7 @@ class HymnText101to200 {
       id: '144',
       verses: [
         [
-          "Bi agbonrin ti nmi helę,",
+          "Bi agbonrin ti nmi hele,",
           "S'ipa odo omi;",
           "Beni okan mi nmi si O,",
           "Iwo Olorun mi.",
@@ -1728,13 +1728,13 @@ class HymnText101to200 {
       id: '145',
       verses: [
         [
-          "Bi mo ti ri – laiṣawawi,",
+          "Bi mo ti ri laisawawi,",
           "Sugbon nitori eje Re:",
           "B' O si ti pe mi pe ki nwa",
           "Olugba-la, mo de.",
         ],
         [
-          "Bi mo ti ri - laiduro pe,",
+          "Bi mo ti ri laiduro pe,",
           "Mo fę k' okan mi mo toto,",
           "S'odo Re t'o le wę mi mo,",
           "Olugbala, mo de.",
@@ -1801,7 +1801,7 @@ class HymnText101to200 {
           "Nibi agbelebu.",
         ],
       ],
-      isChorus: false,
+      isChorus: true,
       chorus: [
         "Oluwa, jo gba mi,",
         "Nki y'o bi O ninu mo!",
@@ -1841,7 +1841,7 @@ class HymnText101to200 {
           "Igbagbo le gba mi",
         ],
       ],
-      isChorus: false,
+      isChorus: true,
       chorus: [
         "Jesu sun O ku fun mi",
         "O Jiya l'ori igi",
@@ -1853,7 +1853,7 @@ class HymnText101to200 {
       id: '148',
       verses: [
         [
-          "Oluwa, emi sá ti gb'ohun Re.",
+          "Oluwa, emi sa ti gb'ohun Re.",
           "O nso ife Re si mi;",
           "Sugbon mo fe nde l' apa igbagbo",
           "Ki nle tubo sunmo O.",
@@ -2153,7 +2153,7 @@ class HymnText101to200 {
       id: '156',
       verses: [
         [
-          "Ami ijinlę nla l'eyi,",
+          "Ami ijinle nla l'eyi,",
           "Ti a nfihan loni;",
           "Ràn wa lowo k'a mo riri,",
           "Otito t'O nko wa.",
@@ -2224,7 +2224,7 @@ class HymnText101to200 {
       id: '158',
       verses: [
         [
-          "Agbara mbę n'nu Eje Jesu,",
+          "Agbara mbe n'nu Eje Jesu,",
           "Tori O w' ese mi nu;",
           "Mo si mo pe isin Rè li ayo",
           "O s' ōkùn mi di molę.",
@@ -2253,44 +2253,7 @@ class HymnText101to200 {
       id: '159',
       verses: [
         [
-          "Gęgębi oro oore Re",
-          "Ninu irelę nla,",
-          "Emi o şe yi Oluwa,",
-          "Emi o ranti Rę.",
-        ],
-        [
-          "Ara Re ti a bu fun mi,",
-          "Yio je on je mi;",
-          "Mo gba ago majemu Rę,",
-          "Lati se 'ranti Rę.",
-        ],
-        [
-          "Mo le gbagbe Getsemane,",
-          "Ti mo r' idamu Rę,",
-          "Iya on oogun eje Rę.",
-          "Ki nmá si ranti Rę?",
-        ],
-        [
-          "Ngo ranti gbogbo 'rora Rę,",
-          "At' ife Re si mi;",
-          "Bi o ku emi kan fun mi,",
-          "Emi o ranti Rę.",
-        ],
-        [
-          "'Gbati enu mi ba pamo,",
-          "Ti aiye mi buşe;",
-          "Ti O ba de n'ijoba Rę,",
-          "Jesu jo ranti mi.",
-        ],
-      ],
-      isChorus: false,
-      chorus: [''],
-    ),
-    Hymn(
-      id: '159',
-      verses: [
-        [
-          "Gęgębi oro oore Re",
+          "Gegebi oro oore Re",
           "Ninu irelę nla,",
           "Emi o şe yi Oluwa,",
           "Emi o ranti Rę.",
@@ -2364,7 +2327,7 @@ class HymnText101to200 {
       id: '161',
       verses: [
         [
-          "Ọjọ ko; ase na leyi,",
+          "Ojo ko ase na leyi,",
           "Mo f’ ara mi fun nyin;",
           "Ẹ wo, mo f’ ẹjẹ mi fun nyin,",
           "Lati ra nyin pada.",
@@ -2624,7 +2587,7 @@ class HymnText101to200 {
       id: '168',
       verses: [
         [
-          "Mă şişe lo, máşe ş'aare,",
+          "Ma sise lo, mase s'aare,",
           "Fi ayo şişe Baba re:",
           "Bayi ni Jesu şe l' aiye,",
           "Ko ha ye, k' awa ko se be?",
@@ -2905,7 +2868,7 @@ class HymnText101to200 {
       id: '175',
       verses: [
         [
-          "E fun 'pe nå kikan,",
+          "E fun 'pe na kikan,",
           "Ipe lhinrere,",
           "K'o dún jade jado",
           "L'eti gbogbo eda;",
@@ -3542,7 +3505,7 @@ class HymnText101to200 {
         ],
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '190',
@@ -3575,7 +3538,7 @@ class HymnText101to200 {
           "Ko l'orin etc.",
         ],
       ],
-      isChorus: false,
+      isChorus: true,
       chorus: [
         "Ko l'orin, k'o si tun ko:",
         "Kristi ngba 'won elese:",
@@ -3587,7 +3550,7 @@ class HymnText101to200 {
       id: '191',
       verses: [
         [
-          "Olorun wa mbę l'arin wa,",
+          "Olorun wa mbe l'arin wa,",
           "Lati bukun gbogbo wa;",
           "Wo oju orun b'o ti şu,",
           "Yio r' ojo ibukun",
@@ -3744,7 +3707,7 @@ class HymnText101to200 {
       id: '195',
       verses: [
         [
-          "Oluwa mi mo kepe Q,",
+          "Oluwa mi mo kepe O,",
           "Ngo ku b' O ko ran mi lowo:",
           "Mu igbala Re to mi wa,",
           "Gba mi bi mo ti ri.",
@@ -3780,7 +3743,7 @@ class HymnText101to200 {
       id: '196',
       verses: [
         [
-          "Ę tun won ko fun mi ki ngbo.",
+          "E tun won ko fun mi ki ngbo.",
           "Oro 'yanu t'iye,",
           "Je ki ntubo gbadun won si,",
           "Oro 'yanu t' iye.",
@@ -3816,7 +3779,7 @@ class HymnText101to200 {
       id: '197',
       verses: [
         [
-          "Onişegun nla wa nihin,",
+          "Onisegun nla wa nihin,",
           "Jesu Abanidaro;",
           "Oro Re mu ni l' ara da,",
           "A! Gbo ohun ti Jesu.",

@@ -56,7 +56,7 @@ class HymnText1to100 {
         ]
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '2',
@@ -99,7 +99,7 @@ class HymnText1to100 {
         ]
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '3',
@@ -136,7 +136,7 @@ class HymnText1to100 {
         ]
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '4',
@@ -167,7 +167,7 @@ class HymnText1to100 {
         ]
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '5',
@@ -192,7 +192,7 @@ class HymnText1to100 {
         ],
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '6',
@@ -1564,7 +1564,7 @@ class HymnText1to100 {
         ],
       ],
       isChorus: false,
-      chorus: [""],
+      chorus: [''],
     ),
     Hymn(
       id: '42',

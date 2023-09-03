@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
               .setFavHymnList();
           return const HymnBookScreen();
         },
-        pageTransitionType: PageTransitionType.leftToRight,
+        pageTransitionType: PageTransitionType.leftToRightWithFade,
       ),
     );
   }

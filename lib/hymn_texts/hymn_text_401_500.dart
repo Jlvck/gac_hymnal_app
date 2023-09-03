@@ -1516,7 +1516,12 @@ class HymnText401to500 {
         ],
       ],
       isChorus: true,
-      chorus: [''],
+      chorus: [
+        "Olorun y'o to o.",
+        "Lojojumo, l'ona gbogbo,",
+        "On y'o mã toju rę.",
+        "Olorun y'o to o.",
+      ],
     ),
     Hymn(
       id: '438',
@@ -1699,7 +1704,12 @@ class HymnText401to500 {
         ],
       ],
       isChorus: true,
-      chorus: [''],
+      chorus: [
+        "A ! mo nfe ri Jesu, ki nma w' oju Re",
+        "Ki nma ko'rin titi, nipa ore Re:",
+        "Ni ilu ogo ni ki ngb'ohun s' oke,",
+        "Pe mo bo, ija tan, mo de ile mi.",
+      ],
     ),
     Hymn(
       id: '443',

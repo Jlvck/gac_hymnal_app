@@ -47,7 +47,7 @@ class MainDrawer extends StatelessWidget {
                   ),
                   child: Align(),
                 ),
-                drawerListTile('HymnBook', Icons.music_note,
+                drawerListTile('Hymnbook', Icons.music_note,
                     HymnBookScreen.routeName, NavigationItem.hymnbook, context),
                 drawerListTile(
                     'Favorites',

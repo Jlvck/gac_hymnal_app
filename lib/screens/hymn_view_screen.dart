@@ -6,64 +6,57 @@ import '../widgets/hymn_view_widget.dart';
 
 import '../model/hymn.dart';
 
-class HymnViewScreen extends StatelessWidget {
+class HymnViewScreen extends StatefulWidget {
   static const routeName = '/hymn_view';
 
   const HymnViewScreen({super.key});
 
-  Widget versesWidget(List<List<String>> verses, int index) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      primary: false,
-      itemBuilder: (ctxx, i) => Align(
-        alignment: Alignment.center,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            verses[index][i],
-            style: const TextStyle(fontSize: 20),
-          ),
-        ),
-      ),
-      itemCount: verses[index].length,
-    );
-  }
+  @override
+  State<HymnViewScreen> createState() => _HymnViewScreenState();
+}
 
-  Widget chorusWidget(List<String> chorus) {
-    return Container(
-      margin: const EdgeInsets.all(8),
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          const Text(
-            "Chorus",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                fontStyle: FontStyle.italic),
-          ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            primary: false,
-            itemBuilder: (ctxx, t) => Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  chorus[t],
-                  style: const TextStyle(fontSize: 20),
-                ),
-              ),
-            ),
-            itemCount: chorus.length,
-          ),
-        ],
+Widget _buttonWidget(
+  IconData icon,
+  BuildContext context,
+  String id,
+) {
+  return InkWell(
+    onTap: () {
+      icon == Icons.chevron_left
+          ? _moveLeft(context, id)
+          : _moveRight(context, id);
+    },
+    child: Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Theme.of(context).primaryColor,
       ),
-    );
-  }
+      child: Icon(
+        icon,
+        color: Colors.white,
+        size: 40,
+      ),
+    ),
+  );
+}
 
+void _moveRight(BuildContext context, String id) {
+  var idNumber = int.parse(id) + 1;
+  Navigator.of(context).pushReplacementNamed(HymnViewScreen.routeName,
+      arguments: Provider.of<HymnBookProvider>(context, listen: false)
+          .getHymn(idNumber.toString()));
+}
+
+void _moveLeft(BuildContext context, String id) {
+  var idNumber = int.parse(id) - 1;
+  Navigator.of(context).pushReplacementNamed(HymnViewScreen.routeName,
+      arguments: Provider.of<HymnBookProvider>(context, listen: false)
+          .getHymn(idNumber.toString()));
+}
+
+class _HymnViewScreenState extends State<HymnViewScreen> {
   @override
   Widget build(BuildContext context) {
     final MediaQueryData mediaQuery = MediaQuery.of(context);
@@ -72,7 +65,7 @@ class HymnViewScreen extends StatelessWidget {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
 
-    final routeHymn = ModalRoute.of(context)!.settings.arguments as Hymn;
+    Hymn routeHymn = ModalRoute.of(context)!.settings.arguments as Hymn;
 
     return Scaffold(
       appBar: AppBar(
@@ -113,10 +106,65 @@ class HymnViewScreen extends StatelessWidget {
       body: SizedBox(
           width: maxWidth,
           height: maxHeight,
-          child: HymnViewWidget(
-            hymnVerses: routeHymn.verses,
-            hymnChorus: routeHymn.chorus,
-            isChorus: routeHymn.isChorus,
+          child: GestureDetector(
+            onHorizontalDragUpdate: (details) {
+              if (details.primaryDelta! > 0) {
+                if (routeHymn.id != '1') {
+                  _moveLeft(context, routeHymn.id);
+                }
+              } else {
+                if (routeHymn.id != '500') {
+                  _moveRight(context, routeHymn.id);
+                }
+              }
+            },
+            child: ListView(children: [
+              HymnViewWidget(
+                hymnVerses: routeHymn.verses,
+                hymnChorus: routeHymn.chorus,
+                isChorus: routeHymn.isChorus,
+              ),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Amin....',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 30,
+                        fontStyle: FontStyle.italic),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Visibility(
+                      visible: routeHymn.id == '1' ? false : true,
+                      replacement: SizedBox.fromSize(
+                        size: const Size.fromWidth(50),
+                      ),
+                      child: _buttonWidget(
+                          Icons.chevron_left, context, routeHymn.id),
+                    ),
+                    Visibility(
+                      visible: routeHymn.id == '500' ? false : true,
+                      replacement: SizedBox.fromSize(
+                        child: SizedBox.fromSize(
+                          size: const Size.fromWidth(50),
+                        ),
+                      ),
+                      child: _buttonWidget(
+                          Icons.chevron_right, context, routeHymn.id),
+                    ),
+                  ],
+                ),
+              )
+            ]),
           )),
       backgroundColor: Colors.white,
     );

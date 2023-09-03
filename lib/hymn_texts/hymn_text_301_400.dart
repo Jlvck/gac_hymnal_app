@@ -3550,7 +3550,7 @@ class HymnText301to400 {
       ],
     ),
     Hymn(
-      id: '390',
+      id: '391',
       verses: [
         [
           "Ohun t'a fi'fun O,",
