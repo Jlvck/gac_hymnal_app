@@ -75,30 +75,55 @@ class HymnViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      physics: const ScrollPhysics(),
-      children: List.generate(hymnVerses.length, (index) {
-        return Align(
-          alignment: Alignment.center,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                Text(
-                  "${index + 1}",
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 30),
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    double maxHeight = mediaQuery.size.height -
+        AppBar().preferredSize.height -
+        mediaQuery.padding.top;
+    double maxWidth = mediaQuery.size.width;
+
+    return SizedBox(
+      height: maxHeight,
+      width: maxWidth,
+      child: ListView(children: [
+        ListView(
+          shrinkWrap: true,
+          physics: const ScrollPhysics(),
+          children: List.generate(hymnVerses.length, (index) {
+            return Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "${index + 1}",
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 30),
+                    ),
+                    versesWidget(
+                      hymnVerses[index],
+                    ),
+                    if (isChorus) chorusWidget(hymnChorus)
+                  ],
                 ),
-                versesWidget(
-                  hymnVerses[index],
-                ),
-                if (isChorus) chorusWidget(hymnChorus)
-              ],
+              ),
+            );
+          }),
+        ),
+        const Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Center(
+            child: Text(
+              'Amin....',
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic),
             ),
           ),
-        );
-      }),
+        ),
+      ]),
     );
   }
 }

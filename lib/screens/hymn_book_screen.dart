@@ -280,8 +280,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
       _enteredHymnNumber.clear();
       _foundHymns = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();
-      Navigator.of(context)
-          .pushNamed(HymnViewScreen.routeName, arguments: selectedHymn);
     } else {
       return;
     }

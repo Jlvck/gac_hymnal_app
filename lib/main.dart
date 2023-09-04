@@ -51,7 +51,6 @@ class MyApp extends StatelessWidget {
                 secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0)),
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
-          HymnViewScreen.routeName: (ctx) => const HymnViewScreen(),
           FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
         },
       ),
