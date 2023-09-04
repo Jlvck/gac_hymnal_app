@@ -138,30 +138,33 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Visibility(
-                      visible: routeHymn.id == '1' ? false : true,
-                      replacement: SizedBox.fromSize(
-                        size: const Size.fromWidth(50),
-                      ),
-                      child: _buttonWidget(
-                          Icons.chevron_left, context, routeHymn.id),
-                    ),
-                    Visibility(
-                      visible: routeHymn.id == '500' ? false : true,
-                      replacement: SizedBox.fromSize(
-                        child: SizedBox.fromSize(
+              IntrinsicHeight(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Visibility(
+                        visible: routeHymn.id == '1' ? false : true,
+                        replacement: SizedBox.fromSize(
                           size: const Size.fromWidth(50),
                         ),
+                        child: _buttonWidget(
+                            Icons.chevron_left, context, routeHymn.id),
                       ),
-                      child: _buttonWidget(
-                          Icons.chevron_right, context, routeHymn.id),
-                    ),
-                  ],
+                      Visibility(
+                        visible: routeHymn.id == '500' ? false : true,
+                        replacement: SizedBox.fromSize(
+                          child: SizedBox.fromSize(
+                            size: const Size.fromWidth(50),
+                          ),
+                        ),
+                        child: _buttonWidget(
+                            Icons.chevron_right, context, routeHymn.id),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ]),
