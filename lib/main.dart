@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
+                useMaterial3: false,
                 primarySwatch: mycolor,
                 colorScheme: ColorScheme.fromSwatch(primarySwatch: mycolor))
             .copyWith(
@@ -72,10 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return true;
-      },
+    return PopScope(
+      canPop: true,
       child: AnimatedSplashScreen.withScreenFunction(
         splash: Image.asset(
           name,

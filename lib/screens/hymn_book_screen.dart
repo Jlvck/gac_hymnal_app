@@ -213,10 +213,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
       return;
     } else {
       if (_enteredHymnTitle.value.text.isEmpty) {
-        setState(() {
-          _enteredHymnNumber.clear();
-          _runFilter(_enteredHymnNumber.value.text);
-        });
+        _enteredHymnNumber.clear();
+        _runFilter(_enteredHymnNumber.value.text);
       } else {
         _enteredHymnNumber.clear();
       }
@@ -248,10 +246,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
       return;
     } else {
       if (_enteredHymnNumber.value.text.isEmpty) {
-        setState(() {
-          _enteredHymnTitle.clear();
-          _runFilter(_enteredHymnTitle.value.text);
-        });
+        _enteredHymnTitle.clear();
+        _runFilter(_enteredHymnTitle.value.text);
       } else {
         _enteredHymnTitle.clear();
       }

@@ -26,19 +26,16 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
 
   @override
   void initState() {
-    print('init');
     widgetHymn = Provider.of<HymnBookProvider>(context, listen: false)
         .getHymn(widget.id);
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final h = MediaQuery.of(context).padding.top;
     final PageController controller =
         PageController(initialPage: int.parse(widget.id) - 1);
-    List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
+    final List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
 
     return Scaffold(
       appBar: AppBar(
@@ -77,17 +74,15 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         ],
       ),
       body: PageView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         onPageChanged: (value) {
           int newvalue = value + 1;
-          print(newvalue);
+
           setState(() {
             Hymn newrouteHymn =
                 Provider.of<HymnBookProvider>(context, listen: false)
                     .getHymn(newvalue.toString());
             widgetHymn = newrouteHymn;
-            print(widgetHymn.isFavorites);
-            print(h);
           });
         },
         controller: controller,
