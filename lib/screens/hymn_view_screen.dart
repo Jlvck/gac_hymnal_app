@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,16 +24,26 @@ class HymnViewScreen extends StatefulWidget {
 }
 
 class _HymnViewScreenState extends State<HymnViewScreen> {
+  Hymn widgetHymn = Hymn(id: 'id', verses: [], isChorus: false, chorus: ['']);
+
+  @override
+  void initState() {
+    print('init');
+    widgetHymn = Provider.of<HymnBookProvider>(context, listen: false)
+        .getHymn(widget.id);
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    final h = MediaQuery.of(context).padding.top;
     final PageController controller =
         PageController(initialPage: int.parse(widget.id) - 1);
     List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
 
     Hymn routeHymn =
         Provider.of<HymnBookProvider>(context, listen: true).getHymn(widget.id);
-
-    Hymn widgetHymn = routeHymn;
 
     return Scaffold(
       appBar: AppBar(
@@ -70,6 +82,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         ],
       ),
       body: PageView(
+        physics: BouncingScrollPhysics(),
         onPageChanged: (value) {
           int newvalue = value + 1;
           print(newvalue);
@@ -79,6 +92,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                     .getHymn(newvalue.toString());
             widgetHymn = newrouteHymn;
             print(widgetHymn.isFavorites);
+            print(h);
           });
         },
         controller: controller,
