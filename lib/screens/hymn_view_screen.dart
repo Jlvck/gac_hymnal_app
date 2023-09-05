@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -41,9 +39,6 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
     final PageController controller =
         PageController(initialPage: int.parse(widget.id) - 1);
     List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
-
-    Hymn routeHymn =
-        Provider.of<HymnBookProvider>(context, listen: true).getHymn(widget.id);
 
     return Scaffold(
       appBar: AppBar(

@@ -7,7 +7,6 @@ import 'providers/hymn_book_provider.dart';
 import 'providers/navigation_provider.dart';
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
-import 'screens/hymn_view_screen.dart';
 
 void main() => runApp(MyApp());
 
