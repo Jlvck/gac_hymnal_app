@@ -28,12 +28,14 @@ class HymnListView extends StatelessWidget {
       children: List.generate(hymnList.length, growable: true, (index) {
         return InkWell(
           onTap: () {
-            Navigator.of(context)
-                .pushNamed(HymnViewScreen.routeName, arguments: hymnList[index])
-                .then((value) {
-              // ignore: invalid_use_of_protected_member
-              Provider.of<HymnBookProvider>(context, listen: false).notify();
-            });
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  // ignore: prefer_const_constructors
+                  builder: (t) => HymnViewScreen(
+                    id: hymnList[index].id,
+                  ),
+                ));
           },
           child: ChangeNotifierProvider.value(
             value: hymnList[index],

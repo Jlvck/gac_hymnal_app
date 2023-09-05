@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,65 +9,41 @@ import '../widgets/hymn_view_widget.dart';
 import '../model/hymn.dart';
 
 class HymnViewScreen extends StatefulWidget {
-  static const routeName = '/hymn_view';
+  final String id;
+  const HymnViewScreen({
+    super.key,
+    required this.id,
+  });
 
-  const HymnViewScreen({super.key});
+  // ignore: prefer_typing_uninitialized_variables
+
+  // ignore: use_key_in_widget_constructors
 
   @override
   State<HymnViewScreen> createState() => _HymnViewScreenState();
 }
 
-Widget _buttonWidget(
-  IconData icon,
-  BuildContext context,
-  String id,
-) {
-  return InkWell(
-    onTap: () {
-      icon == Icons.chevron_left
-          ? _moveLeft(context, id)
-          : _moveRight(context, id);
-    },
-    child: Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Theme.of(context).primaryColor,
-      ),
-      child: Icon(
-        icon,
-        color: Colors.white,
-        size: 40,
-      ),
-    ),
-  );
-}
-
-void _moveRight(BuildContext context, String id) {
-  var idNumber = int.parse(id) + 1;
-  Navigator.of(context).pushReplacementNamed(HymnViewScreen.routeName,
-      arguments: Provider.of<HymnBookProvider>(context, listen: false)
-          .getHymn(idNumber.toString()));
-}
-
-void _moveLeft(BuildContext context, String id) {
-  var idNumber = int.parse(id) - 1;
-  Navigator.of(context).pushReplacementNamed(HymnViewScreen.routeName,
-      arguments: Provider.of<HymnBookProvider>(context, listen: false)
-          .getHymn(idNumber.toString()));
-}
-
 class _HymnViewScreenState extends State<HymnViewScreen> {
+  Hymn widgetHymn = Hymn(id: 'id', verses: [], isChorus: false, chorus: ['']);
+
+  @override
+  void initState() {
+    print('init');
+    widgetHymn = Provider.of<HymnBookProvider>(context, listen: false)
+        .getHymn(widget.id);
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
-    double maxHeight = mediaQuery.size.height -
-        AppBar().preferredSize.height -
-        mediaQuery.padding.top;
-    double maxWidth = mediaQuery.size.width;
+    final h = MediaQuery.of(context).padding.top;
+    final PageController controller =
+        PageController(initialPage: int.parse(widget.id) - 1);
+    List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
 
-    Hymn routeHymn = ModalRoute.of(context)!.settings.arguments as Hymn;
+    Hymn routeHymn =
+        Provider.of<HymnBookProvider>(context, listen: true).getHymn(widget.id);
 
     return Scaffold(
       appBar: AppBar(
@@ -75,7 +53,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
             fit: BoxFit.fill,
             alignment: Alignment.centerRight,
             child: Text(
-              "Hymn ${routeHymn.id}",
+              "Hymn ${widgetHymn.id}",
               softWrap: true,
               overflow: TextOverflow.fade,
               textAlign: TextAlign.center,
@@ -86,7 +64,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         elevation: 0,
         actions: [
           ChangeNotifierProvider.value(
-            value: routeHymn,
+            value: widgetHymn,
             child: Consumer<Hymn>(
               builder: (ctx, hymnIcon, _) => IconButton(
                 icon: Icon(hymnIcon.isFavorites
@@ -103,72 +81,28 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           )
         ],
       ),
-      body: SizedBox(
-          width: maxWidth,
-          height: maxHeight,
-          child: GestureDetector(
-            onHorizontalDragUpdate: (details) {
-              if (details.primaryDelta! > 0) {
-                if (routeHymn.id != '1') {
-                  _moveLeft(context, routeHymn.id);
-                }
-              } else {
-                if (routeHymn.id != '500') {
-                  _moveRight(context, routeHymn.id);
-                }
-              }
-            },
-            child: ListView(children: [
-              HymnViewWidget(
-                hymnVerses: routeHymn.verses,
-                hymnChorus: routeHymn.chorus,
-                isChorus: routeHymn.isChorus,
-              ),
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Amin....',
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 30,
-                        fontStyle: FontStyle.italic),
-                  ),
-                ),
-              ),
-              IntrinsicHeight(
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Visibility(
-                        visible: routeHymn.id == '1' ? false : true,
-                        replacement: SizedBox.fromSize(
-                          size: const Size.fromWidth(50),
-                        ),
-                        child: _buttonWidget(
-                            Icons.chevron_left, context, routeHymn.id),
-                      ),
-                      Visibility(
-                        visible: routeHymn.id == '500' ? false : true,
-                        replacement: SizedBox.fromSize(
-                          child: SizedBox.fromSize(
-                            size: const Size.fromWidth(50),
-                          ),
-                        ),
-                        child: _buttonWidget(
-                            Icons.chevron_right, context, routeHymn.id),
-                      ),
-                    ],
-                  ),
-                ),
-              )
-            ]),
-          )),
+      body: PageView(
+        physics: BouncingScrollPhysics(),
+        onPageChanged: (value) {
+          int newvalue = value + 1;
+          print(newvalue);
+          setState(() {
+            Hymn newrouteHymn =
+                Provider.of<HymnBookProvider>(context, listen: false)
+                    .getHymn(newvalue.toString());
+            widgetHymn = newrouteHymn;
+            print(widgetHymn.isFavorites);
+            print(h);
+          });
+        },
+        controller: controller,
+        children: List.generate(500, (index) {
+          return HymnViewWidget(
+              hymnVerses: hymnList[index].verses,
+              hymnChorus: hymnList[index].chorus,
+              isChorus: hymnList[index].isChorus);
+        }),
+      ),
       backgroundColor: Colors.white,
     );
   }
