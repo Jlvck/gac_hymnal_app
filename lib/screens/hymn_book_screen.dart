@@ -273,13 +273,15 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   void onSubmittedNumber(String submit, List<Hymn> hymnData) {
     if (hymnData.any((hymn) => hymn.id == submit)) {
       Navigator.push(
-          context,
-          MaterialPageRoute(
-            // ignore: prefer_const_constructors
-            builder: (t) => HymnViewScreen(
-              id: submit,
-            ),
-          ));
+              context,
+              MaterialPageRoute(
+                // ignore: prefer_const_constructors
+                builder: (t) => HymnViewScreen(
+                  id: submit,
+                ),
+              ))
+          .then((value) =>
+              Provider.of<HymnBookProvider>(context, listen: false).notify());
       _enteredHymnNumber.clear();
       _foundHymns = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();
