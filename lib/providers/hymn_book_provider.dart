@@ -75,7 +75,7 @@ class HymnBookProvider with ChangeNotifier {
     List<Hymn> pre = [];
     SharedPreferences prefs = await SharedPreferences.getInstance();
     favStringList = prefs.getStringList(prefKey) ?? [];
-    List<String> fav = prefs.getStringList(prefKey) ?? [];
+    List<String> fav = favStringList;
 
     //validating function of list of hymns that are saved as favorites
     for (Hymn hymn in _hymnBook) {
