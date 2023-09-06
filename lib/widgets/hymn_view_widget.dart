@@ -13,6 +13,64 @@ class HymnViewWidget extends StatelessWidget {
       required this.hymnChorus,
       required this.isChorus});
 
+  @override
+  Widget build(BuildContext context) {
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    double maxHeight = mediaQuery.size.height -
+        AppBar().preferredSize.height -
+        mediaQuery.padding.top;
+    double maxWidth = mediaQuery.size.width;
+
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.symmetric(
+              vertical: BorderSide(color: Colors.black, width: 1))),
+      height: maxHeight,
+      width: maxWidth,
+      child: ListView(padding: EdgeInsets.zero, children: [
+        ListView(
+          padding: EdgeInsets.zero,
+          shrinkWrap: true,
+          physics: const ScrollPhysics(),
+          children: List.generate(hymnVerses.length, (index) {
+            return Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "${index + 1}",
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 30),
+                    ),
+                    versesWidget(
+                      hymnVerses[index],
+                    ),
+                    if (isChorus) chorusWidget(hymnChorus)
+                  ],
+                ),
+              ),
+            );
+          }),
+        ),
+        const Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Center(
+            child: Text(
+              'Amin....',
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic),
+            ),
+          ),
+        ),
+      ]),
+    );
+  }
+
   Widget versesWidget(List<String> verseNumber) {
     return ListView(
       clipBehavior: Clip.hardEdge,
@@ -71,64 +129,6 @@ class HymnViewWidget extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
-    double maxHeight = mediaQuery.size.height -
-        AppBar().preferredSize.height -
-        mediaQuery.padding.top;
-    double maxWidth = mediaQuery.size.width;
-
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.symmetric(
-              vertical: BorderSide(color: Colors.black, width: 1))),
-      height: maxHeight,
-      width: maxWidth,
-      child: ListView(padding: EdgeInsets.zero, children: [
-        ListView(
-          padding: EdgeInsets.zero,
-          shrinkWrap: true,
-          physics: const ScrollPhysics(),
-          children: List.generate(hymnVerses.length, (index) {
-            return Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Text(
-                      "${index + 1}",
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30),
-                    ),
-                    versesWidget(
-                      hymnVerses[index],
-                    ),
-                    if (isChorus) chorusWidget(hymnChorus)
-                  ],
-                ),
-              ),
-            );
-          }),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Center(
-            child: Text(
-              'Amin....',
-              textAlign: TextAlign.justify,
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 30,
-                  fontStyle: FontStyle.italic),
-            ),
-          ),
-        ),
-      ]),
     );
   }
 }
