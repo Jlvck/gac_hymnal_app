@@ -15,6 +15,7 @@ class FavoritesScreen extends StatefulWidget {
 }
 
 class _FavoritesScreenState extends State<FavoritesScreen> {
+  static const screenName = 'Favorites';
   final ScrollController _favscroll = ScrollController();
   bool init = true;
 
@@ -25,9 +26,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'FAVORITES',
+          screenName,
           overflow: TextOverflow.visible,
-          textAlign: TextAlign.center,
         ),
       ),
       drawer: MainDrawer(),

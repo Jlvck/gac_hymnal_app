@@ -45,6 +45,16 @@ class MyApp extends StatelessWidget {
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
                 useMaterial3: false,
+                scaffoldBackgroundColor: Colors.white,
+                appBarTheme: AppBarTheme(
+                    elevation: 5,
+                    scrolledUnderElevation: 10,
+                    backgroundColor: mycolor,
+                    centerTitle: true,
+                    titleTextStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    )),
                 primarySwatch: mycolor,
                 colorScheme: ColorScheme.fromSwatch(primarySwatch: mycolor))
             .copyWith(

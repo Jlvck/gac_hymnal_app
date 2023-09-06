@@ -17,6 +17,7 @@ class HymnBookScreen extends StatefulWidget {
 }
 
 class _HymnBookScreenState extends State<HymnBookScreen> {
+  static const screenName = 'Hymnbook';
   final _enteredHymnNumber = TextEditingController();
   final _enteredHymnTitle = TextEditingController();
 
@@ -60,15 +61,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    final hymnData = Provider.of<HymnBookProvider>(context, listen: true);
     return Scaffold(
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
         appBar: AppBar(
           title: const Text(
-            'HYMNBOOK',
+            screenName,
             overflow: TextOverflow.visible,
-            textAlign: TextAlign.center,
           ),
         ),
         body: SingleChildScrollView(
@@ -79,16 +78,16 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             child: Column(
               children: [
                 const Padding(padding: EdgeInsets.all(10)),
-                mainTextField(mediaQuery, context, hymnData),
+                mainTextField(mediaQuery, context),
                 const Padding(padding: EdgeInsets.all(8)),
-                displayedHymnList(hymnData, context)
+                displayedHymnList(context)
               ],
             ),
           ),
         ));
   }
 
-  Flexible displayedHymnList(HymnBookProvider hymnData, BuildContext context) {
+  Flexible displayedHymnList(BuildContext context) {
     return Flexible(
       child: _foundHymns.isNotEmpty
           ? Scrollbar(
@@ -109,8 +108,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     );
   }
 
-  Row mainTextField(MediaQueryData mediaQuery, BuildContext context,
-      HymnBookProvider hymnData) {
+  Row mainTextField(MediaQueryData mediaQuery, BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
