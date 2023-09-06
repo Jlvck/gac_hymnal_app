@@ -186,7 +186,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                   signed: false,
                 ),
                 onChanged: (value) => onChangedNumber(value),
-                onSubmitted: (submit) => onSubmittedNumber(submit, hymnData),
+                onSubmitted: (submit) => onSubmittedNumber(submit, _foundHymns),
                 controller: _enteredHymnNumber,
                 decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(5),
@@ -270,8 +270,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onSubmittedNumber(String submit, HymnBookProvider hymnData) {
-    if (hymnData.hymnList.any((hymn) => hymn.id == submit)) {
+  void onSubmittedNumber(String submit, List<Hymn> hymnData) {
+    if (hymnData.any((hymn) => hymn.id == submit)) {
       Navigator.push(
           context,
           MaterialPageRoute(
