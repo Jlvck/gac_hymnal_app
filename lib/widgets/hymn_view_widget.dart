@@ -15,6 +15,7 @@ class HymnViewWidget extends StatelessWidget {
 
   Widget versesWidget(List<String> verseNumber) {
     return ListView(
+      clipBehavior: Clip.hardEdge,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       primary: false,
@@ -81,11 +82,15 @@ class HymnViewWidget extends StatelessWidget {
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
 
-    return SizedBox(
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.symmetric(
+              vertical: BorderSide(color: Colors.black, width: 1))),
       height: maxHeight,
       width: maxWidth,
-      child: ListView(children: [
+      child: ListView(padding: EdgeInsets.zero, children: [
         ListView(
+          padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: const ScrollPhysics(),
           children: List.generate(hymnVerses.length, (index) {

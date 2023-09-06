@@ -13,21 +13,19 @@ class HymnViewScreen extends StatefulWidget {
     required this.id,
   });
 
-  // ignore: prefer_typing_uninitialized_variables
-
-  // ignore: use_key_in_widget_constructors
-
   @override
   State<HymnViewScreen> createState() => _HymnViewScreenState();
 }
 
 class _HymnViewScreenState extends State<HymnViewScreen> {
-  Hymn widgetHymn = Hymn(id: 'id', verses: [], isChorus: false, chorus: ['']);
+  List<Hymn> hymnList = [];
+  int pagenumber = 0;
 
   @override
   void initState() {
-    widgetHymn = Provider.of<HymnBookProvider>(context, listen: false)
-        .getHymn(widget.id);
+    hymnList = Provider.of<HymnBookProvider>(context, listen: false).hymnList;
+    pagenumber = int.parse(widget.id) - 1;
+
     super.initState();
   }
 
@@ -35,7 +33,6 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
   Widget build(BuildContext context) {
     final PageController controller =
         PageController(initialPage: int.parse(widget.id) - 1);
-    final List<Hymn> hymnList = Provider.of<HymnBookProvider>(context).hymnList;
 
     return Scaffold(
       appBar: AppBar(
@@ -45,7 +42,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
             fit: BoxFit.fill,
             alignment: Alignment.centerRight,
             child: Text(
-              "Hymn ${widgetHymn.id}",
+              "Hymn ${hymnList[pagenumber].id}",
               softWrap: true,
               overflow: TextOverflow.fade,
               textAlign: TextAlign.center,
@@ -56,7 +53,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         elevation: 0,
         actions: [
           ChangeNotifierProvider.value(
-            value: widgetHymn,
+            value: hymnList[pagenumber],
             child: Consumer<Hymn>(
               builder: (ctx, hymnIcon, _) => IconButton(
                 icon: Icon(hymnIcon.isFavorites
@@ -74,15 +71,10 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         ],
       ),
       body: PageView(
-        physics: const BouncingScrollPhysics(),
+        clipBehavior: Clip.hardEdge,
         onPageChanged: (value) {
-          int newvalue = value + 1;
-
           setState(() {
-            Hymn newrouteHymn =
-                Provider.of<HymnBookProvider>(context, listen: false)
-                    .getHymn(newvalue.toString());
-            widgetHymn = newrouteHymn;
+            pagenumber = value;
           });
         },
         controller: controller,

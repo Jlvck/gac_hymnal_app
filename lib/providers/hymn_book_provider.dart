@@ -56,6 +56,7 @@ class HymnBookProvider with ChangeNotifier {
         closeIconColor: Colors.white,
         duration: const Duration(seconds: 1),
       ));
+
       addPrefFav(id);
       notifyListeners();
     }

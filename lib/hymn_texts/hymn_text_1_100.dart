@@ -65,18 +65,18 @@ class HymnText1to100 {
           "Oluwa mi, mo njade lo.",
           "Lati se ise ojo mi.",
           "Iwo nikan l'emi o mo.",
-          "L'oro l'ero; ati n' işe.",
+          "L' oro l'ero; ati n' işe.",
         ],
         [
-          "Ise t'O yan mi, l' anu Re",
+          "Ise t' O yan mi, l' anu Re",
           "Jęki nle şe tayotayo:",
-          "Ki nr' oju Re ni iSe mi,",
+          "Ki nr' oju Re ni ise mi,",
           "K' emi si le f' ife Re han.",
         ],
         [
           "Dabobo mi lowo 'danwo,",
-          "K'o pa okan mi mo kuro",
-          "L'owo aniyan aiye yi,",
+          "K' o pa okan mi mo kuro",
+          "L' owo aniyan aiye yi,",
           "Ati gbogbo ifękufe.",
         ],
         [
@@ -86,7 +86,7 @@ class HymnText1to100 {
           "Ki nf' işe mi gbogbo fun O.",
         ],
         [
-          "Je ki nreru Re t'o fuye",
+          "Je ki nreru Re t' o fuye",
           "Ki nmaa sora nigba gbogbo,",
           "Ki nma f' oju si nkan t' orun,",
           "Ki nsi mura d' ojo ogo:",
@@ -129,10 +129,10 @@ class HymnText1to100 {
           "Ri 'simi je li aiya Re.",
         ],
         [
-          "Wa s'odo mi, Oluwa mi",
+          "Wa s' odo mi, Oluwa mi",
           "Ni gbogbo ojo atye mi:",
           "Nigbati emi mi ba lo.",
-          "Ki nie n' tbugbe lodo Re.",
+          "Ki nie n' ibugbe lodo Re.",
         ]
       ],
       isChorus: false,
@@ -142,14 +142,14 @@ class HymnText1to100 {
       id: '4',
       verses: [
         [
-          "Wa s'adura ooro,",
+          "Wa s' adura ooro,",
           "Kunle k'a gbadura,",
           "Adura ni opa Kristian,",
           "Lati b' Olorun rin.",
         ],
         [
           "Losan, wolę labe",
-          "Apat' atyeraiye,",
+          "Apat' aiyeraiye,",
           "Itura ojiji Rę dun",
           "Nigbat' orun ba mu.",
         ],
@@ -176,7 +176,7 @@ class HymnText1to100 {
           "Imole ooro didun yi",
           "Ji mi nin' orun mi",
           "Baba, ife Tire nikan",
-          "L'o pa omo Rę mo.",
+          "L' o pa omo Rę mo.",
         ],
         [
           "Ni gbogbo oni, mo bę O.",
