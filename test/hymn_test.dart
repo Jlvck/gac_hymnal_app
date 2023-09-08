@@ -23,13 +23,13 @@ void main() {
       expect(totalnumber, 500);
     });
 
-    test('Testing integrity of false Hymn', () {
+    test('Testing integrity of false chorus Hymn', () {
       bool value = hymnListFalse
           .every((hymn) => const IterableEquality().equals(hymn.chorus, ['']));
       expect(value, true);
     });
 
-    test('Testing Integrity of true Hymn', () {
+    test('Testing Integrity of true chorus Hymn', () {
       bool value = hymnListTrue
           .every((hymn) => !const IterableEquality().equals(hymn.chorus, ['']));
       expect(value, true);
@@ -47,6 +47,23 @@ void main() {
       });
 
       expect(value, true);
+    });
+    test('checking for the integrity of hymn number arrangement', () {
+      List<int> number = List.generate(500, (index) {
+        int value = index + 1;
+        return value;
+      });
+
+      List<int> hymnNumber = List.generate(testHymnList.length, (index) {
+        int value = int.parse(testHymnList[index].id);
+        return value;
+      });
+
+      // print(number.length);
+      // print(number[0]);
+      // print(number[499]);
+
+      expect(const IterableEquality().equals(number, hymnNumber), true);
     });
   });
 }
