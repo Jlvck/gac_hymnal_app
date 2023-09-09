@@ -74,7 +74,7 @@ void main() {
       }
       // Hymn 272 is an expected hymn duplicate (Hymn 269)
       // which has been confirmed on the hymn book
-      //so expected hymn length should be 499
+      //so expected hymn length for this test should be 499
       expect(hymntitle.length, 499);
     });
   });
