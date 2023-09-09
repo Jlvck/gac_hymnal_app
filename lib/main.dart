@@ -44,21 +44,20 @@ class MyApp extends StatelessWidget {
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
-                useMaterial3: false,
-                scaffoldBackgroundColor: Colors.white,
-                appBarTheme: AppBarTheme(
-                    elevation: 5,
-                    scrolledUnderElevation: 10,
-                    backgroundColor: mycolor,
-                    centerTitle: true,
-                    titleTextStyle: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
-                    )),
-                primarySwatch: mycolor,
-                colorScheme: ColorScheme.fromSwatch(primarySwatch: mycolor))
-            .copyWith(
-                secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0)),
+          useMaterial3: false,
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: AppBarTheme(
+              elevation: 5,
+              scrolledUnderElevation: 10,
+              backgroundColor: mycolor,
+              centerTitle: true,
+              titleTextStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              )),
+          primarySwatch: mycolor,
+          secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
+        ),
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
           FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),

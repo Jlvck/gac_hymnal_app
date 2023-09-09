@@ -58,10 +58,13 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   test: ^1.24.6
 
-flutter_icons:
+flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "images/church_image_drawer.png"
+  image_path: "images/icon_image.png"
+  adaptive_icon_foreground:  "images/icon_image.png"
+  adaptive_icon_bacground: '#FFFFFF'
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -80,6 +83,7 @@ flutter:
     - images/church_logo1.png
     - images/church_logo2.png
     - images/church_image_drawer.png
+    - images/icon_image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -113,14 +113,15 @@ class MainDrawer extends StatelessWidget {
   }
 
   ListTile drawerListTile(String tileName, IconData tileIcon, String routeName,
-      NavigationItem item, BuildContext context) {
-    final provider = Provider.of<NavigationProvider>(context);
+      NavigationItem item, BuildContext ctx) {
+    final provider = Provider.of<NavigationProvider>(ctx);
     final currentItem = provider.navigationItem;
     final isSelected = item == currentItem;
+    final colorTheme = Theme.of(ctx).secondaryHeaderColor;
 
     return ListTile(
       selected: isSelected,
-      selectedColor: const Color.fromARGB(255, 255, 0, 0),
+      selectedColor: colorTheme,
       enabled: true,
       iconColor: Colors.white,
       hoverColor: Colors.black54,
@@ -135,15 +136,12 @@ class MainDrawer extends StatelessWidget {
       ),
       onTap: () {
         provider.setNavigationItem(item);
-        Navigator.of(context).pushReplacementNamed(routeName);
+        Navigator.of(ctx).pushReplacementNamed(routeName);
       },
       title: Text(
         tileName,
         style: TextStyle(
-            color: isSelected
-                ? const Color.fromARGB(255, 255, 0, 0)
-                : Colors.white,
-            fontSize: 20),
+            color: isSelected ? colorTheme : Colors.white, fontSize: 20),
       ),
     );
   }
