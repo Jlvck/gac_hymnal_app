@@ -59,11 +59,23 @@ void main() {
         return value;
       });
 
-      // print(number.length);
-      // print(number[0]);
-      // print(number[499]);
-
       expect(const IterableEquality().equals(number, hymnNumber), true);
+    });
+
+    test('Testing for dulicate in hymnList using hymntitle as a factor', () {
+      List<String> hymntitle = [];
+
+      for (Hymn hymn in testHymnList) {
+        if (hymntitle.contains(hymn.verses[0][0])) {
+          print('Hymn ${hymn.id} is a duplicate');
+        } else {
+          hymntitle.add(hymn.verses[0][0]);
+        }
+      }
+      // Hymn 272 is an expected hymn duplicate (Hymn 269)
+      // which has been confirmed on the hymn book
+      //so expected hymn length should be 499
+      expect(hymntitle.length, 499);
     });
   });
 }
