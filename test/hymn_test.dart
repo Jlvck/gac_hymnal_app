@@ -67,7 +67,7 @@ void main() {
 
       for (Hymn hymn in testHymnList) {
         if (hymntitle.contains(hymn.verses[0][0])) {
-          print('Hymn ${hymn.id} is a duplicate');
+          // print('Hymn ${hymn.id} is a duplicate');
         } else {
           hymntitle.add(hymn.verses[0][0]);
         }
