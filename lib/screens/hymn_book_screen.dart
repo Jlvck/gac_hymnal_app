@@ -154,7 +154,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                     onPressed: () {
                       setState(() {
                         _enteredHymnTitle.clear();
-                        _runFilter(_enteredHymnTitle.text);
+                        _runFilter(_enteredHymnTitle.text.toLowerCase());
                       });
                     },
                   ),
@@ -212,7 +212,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     } else {
       if (_enteredHymnTitle.value.text.isEmpty) {
         _enteredHymnNumber.clear();
-        _runFilter(_enteredHymnNumber.value.text);
+        _runFilter(_enteredHymnNumber.value.text.toLowerCase());
       } else {
         _enteredHymnNumber.clear();
       }
@@ -228,7 +228,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         _toScrollStart();
       }
     } else {
-      _runFilter(value);
+      _runFilter(value.toLowerCase());
       if (_scroll.hasClients) {
         _toScrollStart();
       }
@@ -245,7 +245,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     } else {
       if (_enteredHymnNumber.value.text.isEmpty) {
         _enteredHymnTitle.clear();
-        _runFilter(_enteredHymnTitle.value.text);
+        _runFilter(_enteredHymnTitle.value.text.toLowerCase());
       } else {
         _enteredHymnTitle.clear();
       }
@@ -261,7 +261,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         _toScrollStart();
       }
     } else {
-      _runFilter(value);
+      _runFilter(value.toLowerCase());
       if (_scroll.hasClients) {
         _toScrollStart();
       }
@@ -296,13 +296,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     } else {
       results = _staticHymns
           .where((hymnbook) =>
-              hymnbook.verses[0][0]
-                  .toLowerCase()
-                  .contains(enteredUserHymn.toLowerCase()) ||
-              hymnbook.id
-                  .toLowerCase()
-                  .contains(enteredUserHymn.toLowerCase()) ||
-              hymnbook.verses[0][0].contains(enteredUserHymn.toLowerCase()))
+              hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.verses[0][0].contains(enteredUserHymn))
           .toList();
       setState(() {
         _foundHymns = results;
