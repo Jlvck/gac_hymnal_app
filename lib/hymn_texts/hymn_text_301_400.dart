@@ -448,7 +448,7 @@ class HymnText301to400 {
           "L' oruko Oluwa!'",
         ],
         [
-          "\"Hosanna s' Qmo Dafidi\"",
+          "\"Hosanna s' Omo Dafidi\"",
           "L' egbe Angeli nke,",
           "Gbogb' eda, e jumo gbe 'rin,",
           "Hosanna s' Oba wa.",
@@ -1687,7 +1687,7 @@ class HymnText301to400 {
         ],
         [
           "Oba ojo l' eyi:",
-          "Fun wa ni isqjt:",
+          "Fun wa ni isOjt:",
           "Ji oku okan wa s' ife.",
           "Wo asegun iku.",
         ],
@@ -2425,7 +2425,7 @@ class HymnText301to400 {
         [
           "Tu agbara nla Re Jade,",
           "K'o si won eję etutu;",
-          "Ki Baba, Qmo, at' Emi,",
+          "Ki Baba, Omo, at' Emi,",
           "Jo so won d' omo Olorun.",
         ],
       ],

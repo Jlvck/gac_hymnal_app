@@ -2450,7 +2450,7 @@ class HymnText201to300 {
           "T'o ga ju orun lo,",
           "S'oke giga:",
           "Orin mi yio je",
-          "Ngo sunm' O, Qlorun,",
+          "Ngo sunm' O, Olorun,",
           "Ngo sunmo O.",
         ],
       ],

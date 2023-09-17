@@ -14,7 +14,7 @@ class HymnText401to500 {
         [
           "Ni oruko Jesu, ogun eşu sá,",
           "Nje Kristian ologun, maa nso si 'segun;",
-          "Qrun apadi mi ni hiho iyin,",
+          "Orun apadi mi ni hiho iyin,",
           "Ara, gbohun nyin ga, gb' orin nyin soke,",
         ],
         [
@@ -32,7 +32,7 @@ class HymnText401to500 {
         [
           "Ę mã ba ni kalo, enyin enia,",
           "D' ohun yin po mo wa, l' orin işegun;",
-          "Ogo, iyin, ola, fun Kristi Qba,",
+          "Ogo, iyin, ola, fun Kristi Oba,",
           "Eyi ni y'o mã je orin wa titi.",
         ],
       ],

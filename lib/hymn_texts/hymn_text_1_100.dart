@@ -3414,7 +3414,7 @@ class HymnText1to100 {
           "A bi k'o le tun wa bi",
           "Wa, ireti enia,",
           "şe ile Rę ninu wa;",
-          "N' de, iru Qmobinrin,",
+          "N' de, iru Omobinrin,",
           "Bori eşu ninu wa.",
         ],
         [
