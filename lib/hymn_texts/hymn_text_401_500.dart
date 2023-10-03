@@ -3105,7 +3105,7 @@ class HymnText401to500 {
           "Jęki m' ni'po mi lodo Rę,",
           "Nibi a ki yipo pada;",
           "Nib' a ko npé, O digbose,",
-          "Titi alye, titi aiye.",
+          "Titi aiye, titi aiye.",
         ],
       ],
       isChorus: false,

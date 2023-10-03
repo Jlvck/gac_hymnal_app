@@ -130,7 +130,7 @@ class HymnText1to100 {
         ],
         [
           "Wa s'odo mi, Oluwa mi",
-          "Ni gbogbo ojo atye mi:",
+          "Ni gbogbo ojo aiye mi:",
           "Nigbati emi mi ba lo.",
           "Ki nie n' tbugbe lodo Re.",
         ]
@@ -149,7 +149,7 @@ class HymnText1to100 {
         ],
         [
           "Losan, wolę labe",
-          "Apat' atyeraiye,",
+          "Apat' aiyeraiye,",
           "Itura ojiji Rę dun",
           "Nigbat' orun ba mu.",
         ],
