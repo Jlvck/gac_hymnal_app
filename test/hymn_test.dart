@@ -13,7 +13,7 @@ void main() {
     List<Hymn> hymnListTrue =
         testHymnList.where((hymn) => hymn.isChorus == true).toList();
 
-    test('testing for number of hymn', () {
+    test('Testing number of hymns ', () {
       int hymnnumber = testHymnList.length;
       expect(hymnnumber, 500);
     });
@@ -48,7 +48,7 @@ void main() {
 
       expect(value, true);
     });
-    test('checking for the integrity of hymn number arrangement', () {
+    test('Testing the integrity of hymn number arrangement', () {
       List<int> number = List.generate(500, (index) {
         int value = index + 1;
         return value;
@@ -62,7 +62,7 @@ void main() {
       expect(const IterableEquality().equals(number, hymnNumber), true);
     });
 
-    test('Testing for dulicate in hymnList using hymntitle as a factor', () {
+    test('Testing for dulicates in hymnList using hymntitle as a factor', () {
       List<String> hymntitle = [];
 
       for (Hymn hymn in testHymnList) {
