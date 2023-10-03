@@ -1618,7 +1618,7 @@ class HymnText101to200 {
           "Sa t' Irumi sunmo mi,",
           "Sa ti iji nfe s' oke,",
           "Pa mi mo Olugbala,",
-          "Tit' iji alye y' o pin,",
+          "Tit' iji aiye y' o pin,",
           "To mi lo s' ebute Rę,",
           "Nikehin gba okan mi.",
         ],
