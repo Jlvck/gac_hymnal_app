@@ -42,6 +42,7 @@ void main() {
                 const IterableEquality().equals(hymn.chorus, ['']))) {
           return true;
         } else {
+          // print('Hymn ${hymn.id} failed this test');
           return false;
         }
       });
