@@ -68,14 +68,14 @@ class MainDrawer extends StatelessWidget {
                 drawerFollowWidget(
                   context,
                   'YouTube',
-                  'Gac Hq',
+                  '@gachq',
                   CommunityMaterialIcons.youtube,
                   Uri.parse('https://www.youtube.com/@gachq'),
                 ),
                 drawerFollowWidget(
                   context,
                   'Facebook',
-                  'Gac Headquarters',
+                  'GAC Headquarters',
                   CommunityMaterialIcons.facebook,
                   Uri.parse(
                       "https://web.facebook.com/Gac-Headquarters-104257107601052/?ref=page_internal"),
@@ -136,7 +136,9 @@ class MainDrawer extends StatelessWidget {
       ),
       onTap: () {
         provider.setNavigationItem(item);
-        Navigator.of(ctx).pushReplacementNamed(routeName);
+        Navigator.of(ctx).pushReplacementNamed(
+          routeName,
+        );
       },
       title: Text(
         tileName,
