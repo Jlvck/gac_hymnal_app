@@ -75,7 +75,7 @@ class MainDrawer extends StatelessWidget {
                 drawerFollowWidget(
                   context,
                   'Facebook',
-                  'GAC Headquarters',
+                  'Gac Headquarters',
                   CommunityMaterialIcons.facebook,
                   Uri.parse(
                       "https://web.facebook.com/Gac-Headquarters-104257107601052/?ref=page_internal"),
