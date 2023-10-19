@@ -40,35 +40,43 @@ class HymnListView extends StatelessWidget {
                     Provider.of<HymnBookProvider>(context, listen: false)
                         .notify());
           },
-          child: ChangeNotifierProvider.value(
-            value: hymnList[index],
-            child: Container(
-              margin: const EdgeInsets.only(left: 10, right: 10),
-              height: 60,
-              child: Card(
-                elevation: 5,
-                child: ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                  minLeadingWidth: 40,
-                  horizontalTitleGap: 0,
-                  leading: CircleAvatar(
-                    radius: 15,
-                    child: FittedBox(
-                      child: Text(
-                        hymnList[index].id,
-                        softWrap: false,
-                      ),
+          child: Container(
+            margin: const EdgeInsets.only(left: 15, right: 15),
+            height: 60,
+            child: Card(
+              elevation: 5,
+              child: ListTile(
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                )),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                minLeadingWidth: 40,
+                horizontalTitleGap: 0,
+                tileColor: Colors.white,
+                leading: CircleAvatar(
+                  backgroundColor: Theme.of(context).primaryColorLight,
+                  foregroundColor: Colors.white,
+                  radius: 15,
+                  child: FittedBox(
+                    child: Text(
+                      hymnList[index].id,
+                      softWrap: false,
                     ),
                   ),
-                  title: Text(
-                    "${hymnList[index].verses[0][0]} ",
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
-                    softWrap: false,
-                    overflow: TextOverflow.ellipsis,
+                ),
+                title: Text(
+                  "${hymnList[index].verses[0][0]} ",
+                  style: const TextStyle(
+                    fontSize: 20,
                   ),
-                  trailing: Consumer<Hymn>(
+                  softWrap: false,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                trailing: ChangeNotifierProvider.value(
+                  value: hymnList[index],
+                  child: Consumer<Hymn>(
                     builder: (ctxx, hymnIcon, _) => IconButton(
                       padding: const EdgeInsets.only(left: 0),
                       icon: Icon(

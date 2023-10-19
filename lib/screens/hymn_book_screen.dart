@@ -115,20 +115,25 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 3 / 4),
           child: Container(
-            margin: const EdgeInsets.only(left: 20, top: 10),
-            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.only(
+              left: 40,
+            ),
+            padding: EdgeInsets.zero,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Theme.of(context).primaryColor)),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Theme.of(context).primaryColor),
+              color: Theme.of(context).primaryColorLight,
+            ),
             child: SizedBox(
               height: 40,
               child: TextField(
+                cursorColor: Colors.white,
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
                 strutStyle: const StrutStyle(
                   forceStrutHeight: true,
                 ),
-                style: const TextStyle(fontSize: 23),
+                style: const TextStyle(fontSize: 23, color: Colors.white),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapTitle(),
@@ -136,19 +141,27 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 onChanged: (value) => onChangedTitle(value),
                 keyboardType: TextInputType.text,
                 autocorrect: false,
+                enableSuggestions: false,
                 decoration: InputDecoration(
+                  errorBorder: InputBorder.none,
+                  focusedErrorBorder: InputBorder.none,
                   contentPadding: const EdgeInsets.all(5),
+                  hintStyle: const TextStyle(color: Colors.white),
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
-                  prefixIcon: const Icon(Icons.search),
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
                   suffix: IconButton(
-                    padding: EdgeInsets.zero,
+                    padding: const EdgeInsets.only(top: 10),
                     alignment: Alignment.center,
                     color: Theme.of(context).primaryColor,
                     icon: const Icon(
                       Icons.cancel,
-                      size: 25,
+                      size: 22,
+                      color: Colors.white,
                     ),
                     tooltip: "clear input",
                     onPressed: () {
@@ -167,15 +180,16 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 1 / 4),
           child: Container(
-            margin: const EdgeInsets.only(right: 20, top: 10),
-            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.only(right: 40),
             decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Theme.of(context).primaryColor)),
             child: SizedBox(
               height: 40,
               child: TextField(
-                style: const TextStyle(fontSize: 20),
+                cursorColor: Colors.white,
+                style: const TextStyle(fontSize: 20, color: Colors.white),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapNumber(),
@@ -189,6 +203,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(5),
                     hintText: '#',
+                    hintStyle: TextStyle(color: Colors.white, fontSize: 22),
                     border: InputBorder.none),
               ),
             ),

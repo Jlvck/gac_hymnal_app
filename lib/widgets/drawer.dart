@@ -17,9 +17,10 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+    final top_padding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
-      backgroundColor: Theme.of(context).primaryColorLight,
+      backgroundColor: Theme.of(context).primaryColor,
       child: Column(children: [
         Expanded(
             child: Scrollbar(
@@ -34,10 +35,10 @@ class MainDrawer extends StatelessWidget {
               controller: _scroll,
               padding: EdgeInsets.zero,
               children: [
-                const DrawerHeader(
-                  margin: EdgeInsets.zero,
+                DrawerHeader(
+                  margin: EdgeInsets.only(top: top_padding),
                   padding: EdgeInsets.zero,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     image: DecorationImage(
                       image: AssetImage('images/church_image_drawer.png'),
@@ -45,7 +46,7 @@ class MainDrawer extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                     ),
                   ),
-                  child: Align(),
+                  child: const Align(),
                 ),
                 drawerListTile('Hymnbook', Icons.music_note,
                     HymnBookScreen.routeName, NavigationItem.hymnbook, context),
@@ -120,6 +121,7 @@ class MainDrawer extends StatelessWidget {
     final colorTheme = Theme.of(ctx).secondaryHeaderColor;
 
     return ListTile(
+      tileColor: Theme.of(ctx).primaryColor,
       selected: isSelected,
       selectedColor: colorTheme,
       enabled: true,
@@ -149,13 +151,14 @@ class MainDrawer extends StatelessWidget {
   }
 
   ListTile drawerFollowWidget(
-    BuildContext context,
+    BuildContext ctx,
     String socialTitle,
     String displayText,
     IconData socialIcon,
     Uri linkText,
   ) {
     return ListTile(
+      tileColor: Theme.of(ctx).primaryColor,
       iconColor: Colors.white,
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
@@ -172,8 +175,8 @@ class MainDrawer extends StatelessWidget {
       },
       onLongPress: () {
         Clipboard.setData(ClipboardData(text: linkText.toString())).then((_) {
-          Navigator.of(context).pop();
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          Navigator.of(ctx).pop();
+          ScaffoldMessenger.of(ctx).showSnackBar(const SnackBar(
               content: Text(
             'Link copied to your clipboard',
             style: TextStyle(fontWeight: FontWeight.bold),
@@ -188,7 +191,7 @@ class MainDrawer extends StatelessWidget {
         displayText,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: TextStyle(color: Theme.of(context).secondaryHeaderColor),
+        style: TextStyle(color: Theme.of(ctx).secondaryHeaderColor),
       ),
     );
   }

@@ -44,9 +44,14 @@ class MyApp extends StatelessWidget {
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
-          useMaterial3: false,
+          cardTheme: CardTheme(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15))),
+          useMaterial3: true,
           scaffoldBackgroundColor: Colors.white,
+          dividerTheme: const DividerThemeData(color: Colors.transparent),
           appBarTheme: AppBarTheme(
+              iconTheme: const IconThemeData(color: Colors.white),
               elevation: 5,
               scrolledUnderElevation: 10,
               backgroundColor: mycolor,
@@ -57,6 +62,7 @@ class MyApp extends StatelessWidget {
               )),
           primarySwatch: mycolor,
           secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
+          primaryColor: mycolor,
         ),
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
