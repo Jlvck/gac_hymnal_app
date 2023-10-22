@@ -69,6 +69,18 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             screenName,
             overflow: TextOverflow.visible,
           ),
+          actions: [
+            PopupMenuButton(
+              enableFeedback: true,
+              icon: const Icon(Icons.language),
+              itemBuilder: (context) {
+                return const [
+                  PopupMenuItem(child: Text('Yoruba')),
+                  PopupMenuItem(child: Text('English'))
+                ];
+              },
+            )
+          ],
         ),
         body: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),

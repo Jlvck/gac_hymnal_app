@@ -17,7 +17,7 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final top_padding = MediaQuery.of(context).padding.top;
+    final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
       backgroundColor: Theme.of(context).primaryColor,
@@ -36,7 +36,7 @@ class MainDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
-                  margin: EdgeInsets.only(top: top_padding),
+                  margin: EdgeInsets.only(top: topPadding),
                   padding: EdgeInsets.zero,
                   decoration: const BoxDecoration(
                     color: Colors.white,
