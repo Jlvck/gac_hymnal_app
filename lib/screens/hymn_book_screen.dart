@@ -323,9 +323,11 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     } else {
       results = _staticHymns
           .where((hymnbook) =>
-              hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
+              hymnbook.versesYoruba[0][0]
+                  .toLowerCase()
+                  .contains(enteredUserHymn) ||
               hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.verses[0][0].contains(enteredUserHymn))
+              hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
           .toList();
       setState(() {
         _foundHymns = results;

@@ -2,7 +2,7 @@
 
 import 'package:test/test.dart';
 import 'package:church/providers/hymn_book_provider.dart';
-import 'package:church/model/hymn.dart';
+import 'package:church/model/formerModels/hymn.dart';
 import 'package:collection/equality.dart';
 
 void main() {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../hymn_texts/hymn_text_1_100.dart';
-import '../hymn_texts/hymn_text_101_200.dart';
-import '../hymn_texts/hymn_text_201_300.dart';
-import '../hymn_texts/hymn_text_301_400.dart';
-import '../hymn_texts/hymn_text_401_500.dart';
+// import '../hymn_texts/hymn_text_1_100.dart';
+// import '../hymn_texts/hymn_text_101_200.dart';
+// import '../hymn_texts/hymn_text_201_300.dart';
+// import '../hymn_texts/hymn_text_301_400.dart';
+// import '../hymn_texts/hymn_text_401_500.dart';
 
 import '../model/hymn.dart';
 
@@ -112,10 +112,10 @@ class HymnBookProvider with ChangeNotifier {
 
   //The Original List of Hymn
   List<Hymn> _hymnBook = [
-    ...HymnText1to100().hymntext,
-    ...HymnText101to200().hymnText,
-    ...HymnText201to300().hymtext,
-    ...HymnText301to400().hymntext,
-    ...HymnText401to500().hymntext,
+    // ...HymnText1to100().hymntext,
+    // ...HymnText101to200().hymnText,
+    // ...HymnText201to300().hymtext,
+    // ...HymnText301to400().hymntext,
+    // ...HymnText401to500().hymntext,
   ];
 }

@@ -80,9 +80,9 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         controller: controller,
         children: List.generate(500, (index) {
           return HymnViewWidget(
-              hymnVerses: hymnList[index].verses,
-              hymnChorus: hymnList[index].chorus,
-              isChorus: hymnList[index].isChorus);
+            hymnVerses: hymnList[index].versesYoruba,
+            hymnChorus: hymnList[index].chorusYoruba,
+          );
         }),
       ),
       backgroundColor: Colors.white,

@@ -4,14 +4,13 @@ import 'package:flutter/material.dart';
 
 class HymnViewWidget extends StatelessWidget {
   final List<List<String>> hymnVerses;
-  final List<String> hymnChorus;
-  final bool isChorus;
+  final List<String>? hymnChorus;
 
-  const HymnViewWidget(
-      {super.key,
-      required this.hymnVerses,
-      required this.hymnChorus,
-      required this.isChorus});
+  const HymnViewWidget({
+    super.key,
+    required this.hymnVerses,
+    this.hymnChorus,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class HymnViewWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     Text(
                       "${index + 1}",
                       style: const TextStyle(
@@ -47,7 +46,7 @@ class HymnViewWidget extends StatelessWidget {
                     versesWidget(
                       hymnVerses[index],
                     ),
-                    if (isChorus) chorusWidget(hymnChorus)
+                    if (hymnChorus != null) chorusWidget(hymnChorus!)
                   ],
                 ),
               ),
