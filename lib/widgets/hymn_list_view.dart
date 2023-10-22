@@ -67,7 +67,7 @@ class HymnListView extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  "${hymnList[index].verses[0][0]} ",
+                  "${hymnList[index].versesYoruba[0][0]} ",
                   style: const TextStyle(
                     fontSize: 20,
                   ),

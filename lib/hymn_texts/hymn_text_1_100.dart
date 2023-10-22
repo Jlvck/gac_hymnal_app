@@ -1,4 +1,4 @@
-import '../model/hymn.dart';
+import '../model/formerModels/hymn.dart';
 
 //Class that contains hymn text from hymn id 1 to 100
 class HymnText1to100 {
