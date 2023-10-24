@@ -1,8 +1,10 @@
+import 'package:church/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'hymn_view_screen.dart';
 import '../model/hymn.dart';
+import '../model/language_item.dart';
 import '../providers/hymn_book_provider.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
@@ -61,6 +63,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
+    print('build screen');
     return Scaffold(
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
@@ -73,10 +76,17 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             PopupMenuButton(
               enableFeedback: true,
               icon: const Icon(Icons.language),
+              onSelected: (value) =>
+                  Provider.of<LanguageProvider>(context, listen: false)
+                      .setLanguageItem(value),
               itemBuilder: (context) {
                 return const [
-                  PopupMenuItem(child: Text('Yoruba')),
-                  PopupMenuItem(child: Text('English'))
+                  PopupMenuItem(
+                    value: LanguageItem.yoruba,
+                    child: Text('Yoruba'),
+                  ),
+                  PopupMenuItem(
+                      value: LanguageItem.english, child: Text('English'))
                 ];
               },
             )

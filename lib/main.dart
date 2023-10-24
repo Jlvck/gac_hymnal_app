@@ -5,6 +5,7 @@ import 'package:page_transition/page_transition.dart';
 
 import 'providers/hymn_book_provider.dart';
 import 'providers/navigation_provider.dart';
+import 'providers/language_provider.dart';
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
 
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
           create: (ctx) => HymnBookProvider(),
         ),
         ChangeNotifierProvider<NavigationProvider>(
-            create: (ctx) => NavigationProvider())
+            create: (ctx) => NavigationProvider()),
+        ChangeNotifierProvider(create: (ctx) => LanguageProvider())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

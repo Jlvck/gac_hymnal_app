@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../model/hymn.dart';
+import '../model/language_item.dart';
 import '../providers/hymn_book_provider.dart';
+import '../providers/language_provider.dart';
 import '../screens/hymn_view_screen.dart';
 
 class HymnListView extends StatelessWidget {
@@ -15,8 +17,20 @@ class HymnListView extends StatelessWidget {
     required this.scroll,
   });
 
+  // ignore: curly_braces_in_flow_control_structures
+  String checkTitle(BuildContext context, int index) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return hymnList[index].versesYoruba[0][0];
+    } else {
+      return hymnList[index].versesEnglish[0][0];
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    print('biuld context');
     return ListView(
       padding: const EdgeInsets.all(2),
       controller: scroll,
@@ -67,7 +81,7 @@ class HymnListView extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  "${hymnList[index].versesYoruba[0][0]} ",
+                  checkTitle(context, index),
                   style: const TextStyle(
                     fontSize: 20,
                   ),

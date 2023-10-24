@@ -59,6 +59,6 @@ class HymnTestLyrics {
       ['English Test Verse 3']
     ], chorusEnglish: [
       ''
-    ])
+    ]),
   ];
 }

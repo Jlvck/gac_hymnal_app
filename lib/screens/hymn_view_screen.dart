@@ -78,10 +78,12 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           });
         },
         controller: controller,
-        children: List.generate(500, (index) {
+        children: List.generate(hymnList.length, (index) {
           return HymnViewWidget(
-            hymnVerses: hymnList[index].versesYoruba,
-            hymnChorus: hymnList[index].chorusYoruba,
+            hymnYorubaVerses: hymnList[index].versesYoruba,
+            hymnYorubaChorus: hymnList[index].chorusYoruba,
+            hymnEnglishVerses: hymnList[index].versesEnglish,
+            hymnEnglishChorus: hymnList[index].chorusEnglish,
           );
         }),
       ),

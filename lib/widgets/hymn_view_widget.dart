@@ -3,13 +3,17 @@
 import 'package:flutter/material.dart';
 
 class HymnViewWidget extends StatelessWidget {
-  final List<List<String>> hymnVerses;
-  final List<String>? hymnChorus;
+  final List<List<String>> hymnYorubaVerses;
+  final List<String>? hymnYorubaChorus;
+  final List<List<String>> hymnEnglishVerses;
+  final List<String>? hymnEnglishChorus;
 
   const HymnViewWidget({
     super.key,
-    required this.hymnVerses,
-    this.hymnChorus,
+    required this.hymnYorubaVerses,
+    this.hymnYorubaChorus,
+    required this.hymnEnglishVerses,
+    this.hymnEnglishChorus,
   });
 
   @override
@@ -31,7 +35,7 @@ class HymnViewWidget extends StatelessWidget {
           padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: const ScrollPhysics(),
-          children: List.generate(hymnVerses.length, (index) {
+          children: List.generate(hymnYorubaVerses.length, (index) {
             return Align(
               alignment: Alignment.center,
               child: Padding(
@@ -44,9 +48,10 @@ class HymnViewWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold, fontSize: 30),
                     ),
                     versesWidget(
-                      hymnVerses[index],
+                      hymnYorubaVerses[index],
                     ),
-                    if (hymnChorus != null) chorusWidget(hymnChorus!)
+                    if (hymnYorubaChorus != null)
+                      chorusWidget(hymnYorubaChorus!)
                   ],
                 ),
               ),
