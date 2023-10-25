@@ -17,20 +17,9 @@ class HymnListView extends StatelessWidget {
     required this.scroll,
   });
 
-  // ignore: curly_braces_in_flow_control_structures
-  String checkTitle(BuildContext context, int index) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return hymnList[index].versesYoruba[0][0];
-    } else {
-      return hymnList[index].versesEnglish[0][0];
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    print('biuld context');
+    print('build list_view context');
     return ListView(
       padding: const EdgeInsets.all(2),
       controller: scroll,
@@ -113,5 +102,15 @@ class HymnListView extends StatelessWidget {
         );
       }),
     );
+  }
+
+  String checkTitle(BuildContext context, int index) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return hymnList[index].versesYoruba[0][0];
+    } else {
+      return hymnList[index].versesEnglish[0][0];
+    }
   }
 }

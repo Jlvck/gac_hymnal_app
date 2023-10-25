@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 import '../providers/hymn_book_provider.dart';
+import '../widgets/language_popupMenu.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
 import '../model/hymn.dart';
@@ -25,10 +27,12 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         Provider.of<HymnBookProvider>(context, listen: true).favHymnList;
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           screenName,
           overflow: TextOverflow.visible,
         ),
+        actions: const [LanguagePopUpMenu()],
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty

@@ -1,13 +1,15 @@
-import 'package:church/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'hymn_view_screen.dart';
-import '../model/hymn.dart';
-import '../model/language_item.dart';
 import '../providers/hymn_book_provider.dart';
+
+import 'hymn_view_screen.dart';
+
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
+import '../widgets/language_popupMenu.dart';
+
+import '../model/hymn.dart';
 
 class HymnBookScreen extends StatefulWidget {
   static const routeName = '/hymn_category';
@@ -68,29 +70,12 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
         appBar: AppBar(
+          centerTitle: true,
           title: const Text(
             screenName,
             overflow: TextOverflow.visible,
           ),
-          actions: [
-            PopupMenuButton(
-              enableFeedback: true,
-              icon: const Icon(Icons.language),
-              onSelected: (value) =>
-                  Provider.of<LanguageProvider>(context, listen: false)
-                      .setLanguageItem(value),
-              itemBuilder: (context) {
-                return const [
-                  PopupMenuItem(
-                    value: LanguageItem.yoruba,
-                    child: Text('Yoruba'),
-                  ),
-                  PopupMenuItem(
-                      value: LanguageItem.english, child: Text('English'))
-                ];
-              },
-            )
-          ],
+          actions: const [LanguagePopUpMenu()],
         ),
         body: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),

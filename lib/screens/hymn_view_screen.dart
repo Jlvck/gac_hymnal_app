@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/hymn_book_provider.dart';
+
+import '../widgets/language_popupMenu.dart';
 import '../widgets/hymn_view_widget.dart';
 
 import '../model/hymn.dart';
@@ -31,23 +33,19 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller =
-        PageController(initialPage: int.parse(widget.id) - 1);
+    final PageController controller = PageController(initialPage: pagenumber);
 
     return Scaffold(
       appBar: AppBar(
-        title: Align(
-          alignment: Alignment.center,
-          child: FittedBox(
-            fit: BoxFit.fill,
-            alignment: Alignment.centerRight,
-            child: Text(
-              "Hymn ${hymnList[pagenumber].id}",
-              softWrap: true,
-              overflow: TextOverflow.fade,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
+        centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.fill,
+          child: Text(
+            "Hymn ${hymnList[pagenumber].id}",
+            softWrap: true,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
         elevation: 0,
@@ -67,7 +65,8 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                 },
               ),
             ),
-          )
+          ),
+          const LanguagePopUpMenu()
         ],
       ),
       body: PageView(

@@ -1,6 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/language_provider.dart';
+
+import '../model/language_item.dart';
 
 class HymnViewWidget extends StatelessWidget {
   final List<List<String>> hymnYorubaVerses;
@@ -23,6 +28,7 @@ class HymnViewWidget extends StatelessWidget {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
+    print('build hymn view widget');
 
     return Container(
       decoration: BoxDecoration(
@@ -35,7 +41,7 @@ class HymnViewWidget extends StatelessWidget {
           padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: const ScrollPhysics(),
-          children: List.generate(hymnYorubaVerses.length, (index) {
+          children: List.generate(checkLength(context), (index) {
             return Align(
               alignment: Alignment.center,
               child: Padding(
@@ -47,9 +53,7 @@ class HymnViewWidget extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 30),
                     ),
-                    versesWidget(
-                      hymnYorubaVerses[index],
-                    ),
+                    checkVerses(context, index),
                     if (hymnYorubaChorus != null)
                       chorusWidget(hymnYorubaChorus!)
                   ],
@@ -134,5 +138,25 @@ class HymnViewWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  int checkLength(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return hymnYorubaVerses.length;
+    } else {
+      return hymnEnglishVerses.length;
+    }
+  }
+
+  checkVerses(BuildContext context, int index) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return versesWidget(hymnYorubaVerses[index]);
+    } else {
+      return versesWidget(hymnEnglishVerses[index]);
+    }
   }
 }
