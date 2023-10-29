@@ -1,4 +1,4 @@
-import '../model/formerModels/hymn.dart';
+import 'package:church/model/formerModels/hymn.dart';
 
 //Class that contains hymn text from hymn id 301 to 400
 class HymnText301to400 {

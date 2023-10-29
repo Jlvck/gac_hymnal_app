@@ -62,12 +62,12 @@ class HymnViewWidget extends StatelessWidget {
             );
           }),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.all(20.0),
           child: Center(
             child: Text(
-              'Amin....',
-              textAlign: TextAlign.justify,
+              checkAmen(context),
+              textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
@@ -147,6 +147,16 @@ class HymnViewWidget extends StatelessWidget {
       return hymnYorubaVerses.length;
     } else {
       return hymnEnglishVerses.length;
+    }
+  }
+
+  String checkAmen(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Amin....';
+    } else {
+      return 'Amen...';
     }
   }
 

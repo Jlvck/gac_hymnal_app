@@ -1,4 +1,4 @@
-import '../model/formerModels/hymn.dart';
+import 'package:church/model/formerModels/hymn.dart';
 
 class HymnText101to200 {
   final hymnText = <Hymn>[

@@ -1,3 +1,5 @@
+import 'package:church/model/language_item.dart';
+import 'package:church/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -316,17 +318,32 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     if (enteredUserHymn.isEmpty) {
       results = _staticHymns;
     } else {
-      results = _staticHymns
-          .where((hymnbook) =>
-              hymnbook.versesYoruba[0][0]
-                  .toLowerCase()
-                  .contains(enteredUserHymn) ||
-              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
-          .toList();
-      setState(() {
-        _foundHymns = results;
-      });
+      if (Provider.of<LanguageProvider>(context, listen: false).currentItem ==
+          LanguageItem.yoruba) {
+        results = _staticHymns
+            .where((hymnbook) =>
+                hymnbook.versesYoruba[0][0]
+                    .toLowerCase()
+                    .contains(enteredUserHymn) ||
+                hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+                hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
+            .toList();
+        setState(() {
+          _foundHymns = results;
+        });
+      } else {
+        results = _staticHymns
+            .where((hymnbook) =>
+                hymnbook.versesEnglish[0][0]
+                    .toLowerCase()
+                    .contains(enteredUserHymn) ||
+                hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+                hymnbook.versesEnglish[0][0].contains(enteredUserHymn))
+            .toList();
+        setState(() {
+          _foundHymns = results;
+        });
+      }
     }
 
     _foundHymns = results;

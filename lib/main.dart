@@ -86,17 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
   String logo_1 = 'images/church_logo1.png';
   String logo_2 = 'images/church_logo2.png';
 
-  String name = 'images/church_logo2.png';
-
   @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: true,
       child: AnimatedSplashScreen.withScreenFunction(
         splash: Image.asset(
-          name,
+          logo_1,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).primaryColor,
         screenFunction: () async {
           Provider.of<HymnBookProvider>(context, listen: false)
               .setFavHymnList();
