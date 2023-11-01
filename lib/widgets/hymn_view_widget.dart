@@ -54,8 +54,8 @@ class HymnViewWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold, fontSize: 30),
                     ),
                     checkVerses(context, index),
-                    if (hymnYorubaChorus != null)
-                      chorusWidget(hymnYorubaChorus!)
+                    if (hymnYorubaChorus != null && hymnEnglishChorus != null)
+                      checkChorus(context)
                   ],
                 ),
               ),
@@ -167,6 +167,16 @@ class HymnViewWidget extends StatelessWidget {
       return versesWidget(hymnYorubaVerses[index]);
     } else {
       return versesWidget(hymnEnglishVerses[index]);
+    }
+  }
+
+  checkChorus(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return chorusWidget(hymnYorubaChorus!);
+    } else {
+      return chorusWidget(hymnEnglishChorus!);
     }
   }
 }
