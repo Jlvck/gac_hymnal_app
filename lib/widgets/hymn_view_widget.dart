@@ -101,14 +101,14 @@ class HymnViewWidget extends StatelessWidget {
     );
   }
 
-  Widget chorusWidget(List<String> chorus) {
+  Widget chorusWidget(BuildContext context, List<String> chorus) {
     return Container(
       margin: const EdgeInsets.all(8),
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          const Text(
-            "Chorus",
+          Text(
+            checkChorusTitle(context),
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
@@ -174,9 +174,19 @@ class HymnViewWidget extends StatelessWidget {
     LanguageItem currentLanguage =
         Provider.of<LanguageProvider>(context, listen: true).currentItem;
     if (currentLanguage == LanguageItem.yoruba) {
-      return chorusWidget(hymnYorubaChorus!);
+      return chorusWidget(context, hymnYorubaChorus!);
     } else {
-      return chorusWidget(hymnEnglishChorus!);
+      return chorusWidget(context, hymnEnglishChorus!);
+    }
+  }
+
+  String checkChorusTitle(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Ègbè';
+    } else {
+      return 'Chorus';
     }
   }
 }

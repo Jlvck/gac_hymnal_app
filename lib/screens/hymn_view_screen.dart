@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/hymn_book_provider.dart';
+import '../providers/language_provider.dart';
 
 import '../widgets/language_popup_menu.dart';
 import '../widgets/hymn_view_widget.dart';
 
 import '../model/hymn.dart';
+import '../model/language_item.dart';
 
 class HymnViewScreen extends StatefulWidget {
   final String id;
@@ -41,7 +43,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         title: FittedBox(
           fit: BoxFit.fill,
           child: Text(
-            "Hymn ${hymnList[pagenumber].id}",
+            checkAppBarTitle(context, hymnList[pagenumber].id),
             softWrap: true,
             overflow: TextOverflow.fade,
             textAlign: TextAlign.center,
@@ -88,5 +90,15 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
       ),
       backgroundColor: Colors.white,
     );
+  }
+
+  String checkAppBarTitle(BuildContext context, String id) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Iwe Orin $id';
+    } else {
+      return 'Hymn $id';
+    }
   }
 }
