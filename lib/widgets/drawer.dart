@@ -20,7 +20,7 @@ class MainDrawer extends StatelessWidget {
     final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.white,
       child: Column(children: [
         Expanded(
             child: Scrollbar(
@@ -36,35 +36,38 @@ class MainDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
-                  margin: EdgeInsets.only(top: topPadding),
+                  margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
-                  decoration: const BoxDecoration(
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).primaryColor),
+                  child: Container(
                     color: Colors.white,
-                    image: DecorationImage(
-                      image: AssetImage('images/church_image_drawer.png'),
+                    child: Image.asset(
+                      'images/church_image_drawer.png',
                       fit: BoxFit.contain,
                       alignment: Alignment.centerLeft,
                     ),
                   ),
-                  child: const Align(),
                 ),
                 drawerListTile('Hymnbook', Icons.music_note,
                     HymnBookScreen.routeName, NavigationItem.hymnbook, context),
                 drawerListTile(
                     'Favorites',
-                    Icons.favorite_border,
+                    Icons.favorite,
                     FavoritesScreen.routeName,
                     NavigationItem.favorites,
                     context),
-                const ListTile(
+                ListTile(
                   horizontalTitleGap: 5,
+                  tileColor: Colors.white,
                   title: Text(
                     'Follow us',
                     textAlign: TextAlign.left,
-                    style: TextStyle(color: Colors.white70, fontSize: 20),
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColor, fontSize: 20),
                   ),
-                  contentPadding:
-                      EdgeInsets.only(top: 5, bottom: 0, left: 25, right: 20),
+                  contentPadding: const EdgeInsets.only(
+                      top: 5, bottom: 0, left: 25, right: 20),
                 ),
                 drawerFollowWidget(
                   context,
@@ -121,13 +124,14 @@ class MainDrawer extends StatelessWidget {
     final colorTheme = Theme.of(ctx).secondaryHeaderColor;
 
     return ListTile(
-      tileColor: Theme.of(ctx).primaryColor,
+      tileColor: Colors.white,
       selected: isSelected,
       selectedColor: colorTheme,
       enabled: true,
-      iconColor: Colors.white,
+      iconColor: Theme.of(ctx).primaryColor,
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
+      selectedTileColor: Colors.white,
       horizontalTitleGap: 5,
       contentPadding:
           const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
@@ -145,7 +149,9 @@ class MainDrawer extends StatelessWidget {
       title: Text(
         tileName,
         style: TextStyle(
-            color: isSelected ? colorTheme : Colors.white, fontSize: 20),
+            color: isSelected ? colorTheme : Theme.of(ctx).primaryColor,
+            fontSize: 20,
+            fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -158,11 +164,11 @@ class MainDrawer extends StatelessWidget {
     Uri linkText,
   ) {
     return ListTile(
-      tileColor: Theme.of(ctx).primaryColor,
-      iconColor: Colors.white,
-      hoverColor: Colors.black54,
+      tileColor: Colors.white,
+      iconColor: Theme.of(ctx).primaryColor,
       splashColor: Colors.black54,
       horizontalTitleGap: 5,
+      minVerticalPadding: 1,
       contentPadding:
           const EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
       visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
@@ -185,13 +191,16 @@ class MainDrawer extends StatelessWidget {
       },
       title: Text(
         socialTitle,
-        style: const TextStyle(color: Colors.white, fontSize: 20),
+        style: TextStyle(
+            color: Theme.of(ctx).primaryColor,
+            fontSize: 20,
+            fontWeight: FontWeight.bold),
       ),
       subtitle: Text(
         displayText,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: TextStyle(color: Theme.of(ctx).secondaryHeaderColor),
+        style: TextStyle(color: Theme.of(ctx).primaryColor),
       ),
     );
   }

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   final MaterialColor mycolor = MaterialColor(
     const Color.fromRGBO(0, 0, 102, 1).value,
     const <int, Color>{
-      50: Color.fromRGBO(0, 0, 105, 1),
+      50: Color.fromRGBO(49, 49, 181, 1),
       100: Color.fromRGBO(0, 0, 108, 1),
       200: Color.fromRGBO(1, 1, 113, 1),
       300: Color.fromRGBO(3, 3, 115, 1),
@@ -59,9 +59,9 @@ class MyApp extends StatelessWidget {
               backgroundColor: mycolor,
               centerTitle: true,
               titleTextStyle: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              )),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.white)),
           primarySwatch: mycolor,
           secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
           primaryColor: mycolor,
