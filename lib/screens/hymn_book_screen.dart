@@ -130,7 +130,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             margin: const EdgeInsets.only(
               left: 15,
             ),
-            padding: EdgeInsets.zero,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.white,
@@ -155,24 +154,22 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 autocorrect: false,
                 enableSuggestions: false,
                 decoration: InputDecoration(
-                  errorBorder: InputBorder.none,
-                  focusedErrorBorder: InputBorder.none,
-                  isCollapsed: true,
-                  isDense: false,
+                  // errorBorder: InputBorder.none,
+                  // focusedErrorBorder: InputBorder.none,
+
+                  isDense: true,
+                  contentPadding: const EdgeInsets.only(left: 8, right: 8),
                   hintStyle: TextStyle(color: Theme.of(context).primaryColor),
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
-                  alignLabelWithHint: true,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Icon(
-                      Icons.search,
-                      color: Theme.of(context).primaryColor,
-                    ),
+
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Theme.of(context).primaryColor,
                   ),
                   suffix: IconButton(
-                    padding: const EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.zero,
                     alignment: Alignment.center,
                     color: Theme.of(context).primaryColor,
                     icon: Icon(
@@ -220,13 +217,14 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 onSubmitted: (submit) => onSubmittedNumber(submit, _foundHymns),
                 controller: _enteredHymnNumber,
                 decoration: InputDecoration(
-                    isDense: true,
-                    contentPadding:
-                        const EdgeInsets.only(top: 8, left: 8, right: 8),
-                    hintText: '#',
-                    hintStyle: TextStyle(
-                        color: Theme.of(context).primaryColor, fontSize: 22),
-                    border: InputBorder.none),
+                  isDense: true,
+                  contentPadding:
+                      const EdgeInsets.only(top: 8, left: 8, right: 8),
+                  hintText: '#',
+                  hintStyle: TextStyle(
+                      color: Theme.of(context).primaryColor, fontSize: 22),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),

@@ -17,7 +17,7 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final topPadding = MediaQuery.of(context).padding.top;
+    // final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
       backgroundColor: Colors.white,

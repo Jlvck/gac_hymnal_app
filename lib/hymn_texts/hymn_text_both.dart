@@ -1511,7 +1511,7 @@ class HymnTestLyrics {
         "Art Lord of all.",
       ]
     ]),
-    Hymn(id: '250', versesYoruba: [
+    Hymn(id: '24', versesYoruba: [
       [
         "Ki nto sun, fun oore t' oni",
         "T' Olorun",
@@ -1582,7 +1582,7 @@ class HymnTestLyrics {
       ],
     ]),
     Hymn(
-      id: '500',
+      id: '25',
       versesYoruba: [
         [
           "Oluwa t' O mu Israel la okun ja,",
