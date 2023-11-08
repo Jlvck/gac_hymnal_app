@@ -167,6 +167,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                   prefixIcon: Icon(
                     Icons.search,
                     color: Theme.of(context).primaryColor,
+                    size: 50,
                   ),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
