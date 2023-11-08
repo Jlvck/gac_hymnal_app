@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_slidable/flutter_slidable.dart';
 import '../providers/hymn_book_provider.dart';
 import '../providers/language_provider.dart';
 
@@ -24,11 +24,14 @@ class HymnViewScreen extends StatefulWidget {
 class _HymnViewScreenState extends State<HymnViewScreen> {
   List<Hymn> hymnList = [];
   int pagenumber = 0;
+  Hymn? presentHymn;
 
   @override
   void initState() {
     hymnList = Provider.of<HymnBookProvider>(context, listen: false).hymnList;
     pagenumber = int.parse(widget.id) - 1;
+    presentHymn = Provider.of<HymnBookProvider>(context, listen: false)
+        .getHymn(widget.id);
 
     super.initState();
   }
@@ -43,7 +46,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         title: FittedBox(
           fit: BoxFit.fill,
           child: Text(
-            checkAppBarTitle(context, hymnList[pagenumber].id),
+            checkAppBarTitle(context, presentHymn!.id),
             softWrap: true,
             overflow: TextOverflow.fade,
             textAlign: TextAlign.center,
@@ -53,7 +56,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
         elevation: 0,
         actions: [
           ChangeNotifierProvider.value(
-            value: hymnList[pagenumber],
+            value: presentHymn,
             child: Consumer<Hymn>(
               builder: (ctx, hymnIcon, _) => IconButton(
                 icon: Icon(hymnIcon.isFavorites
@@ -71,23 +74,15 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           const LanguagePopUpMenu()
         ],
       ),
-      body: PageView(
-        clipBehavior: Clip.hardEdge,
-        onPageChanged: (value) {
-          setState(() {
-            pagenumber = value;
-          });
-        },
-        controller: controller,
-        children: List.generate(hymnList.length, (index) {
-          return HymnViewWidget(
-            hymnYorubaVerses: hymnList[index].versesYoruba,
-            hymnYorubaChorus: hymnList[index].chorusYoruba,
-            hymnEnglishVerses: hymnList[index].versesEnglish,
-            hymnEnglishChorus: hymnList[index].chorusEnglish,
-          );
-        }),
-      ),
+      body: Dismissible(
+          key: UniqueKey(),
+          onDismissed: (DismissDirection direction) {},
+          child: HymnViewWidget(
+            hymnYorubaVerses: presentHymn!.versesYoruba,
+            hymnYorubaChorus: presentHymn!.chorusYoruba,
+            hymnEnglishVerses: presentHymn!.versesEnglish,
+            hymnEnglishChorus: presentHymn!.chorusEnglish,
+          )),
       backgroundColor: Colors.white,
     );
   }
