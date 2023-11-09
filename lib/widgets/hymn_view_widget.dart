@@ -33,7 +33,7 @@ class HymnViewWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           border: Border.symmetric(
-              vertical: BorderSide(color: Colors.black, width: 1))),
+              vertical: BorderSide(color: Colors.black, width: 0.5))),
       height: maxHeight,
       width: maxWidth,
       child: ListView(padding: EdgeInsets.zero, children: [
@@ -51,7 +51,7 @@ class HymnViewWidget extends StatelessWidget {
                     Text(
                       "${index + 1}",
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30),
+                          fontWeight: FontWeight.w900, fontSize: 30),
                     ),
                     checkVerses(context, index),
                     if (hymnYorubaChorus != null && hymnEnglishChorus != null)
@@ -110,7 +110,7 @@ class HymnViewWidget extends StatelessWidget {
           Text(
             checkChorusTitle(context),
             style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 fontSize: 20,
                 fontStyle: FontStyle.italic),
           ),
@@ -126,7 +126,9 @@ class HymnViewWidget extends StatelessWidget {
                   child: Text(
                     chorus[index],
                     style: const TextStyle(
-                        fontSize: 20, fontStyle: FontStyle.italic),
+                        fontSize: 20,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,
                     softWrap: true,
                     maxLines: 2,

@@ -1662,6 +1662,683 @@ class HymnTestLyrics {
         "The God who doeth wonders,",
         "Is just the same today.",
       ],
-    )
+    ),
+    Hymn(
+      id: '26',
+      versesYoruba: [
+        [
+          "Ko su wa lati maa ko orin ti igbani,",
+          "Ogo f' Olorun Halleluya!",
+          "A le fi igbagbo korin na soke kikan;",
+          "Ogo f' Olorun Halleluya.",
+        ],
+        [
+          "Awa mbe n'nu ibu ife t'o ra wa pada;",
+          "Ogo f' Olorun Halleluya!",
+          "Awa y'o iye goke lo s'oke orun",
+          "Ogo f' Olorun Halleluya!",
+        ],
+        [
+          "Awa nlo si Afin kan ti a fi wura ko:",
+          "Ogo f' Olorun Halleluya!",
+          "Nibiti ao ri Oba Ogo n'nu ewa Re",
+          "Ogo f'Olorun Halleluya!'",
+        ],
+        [
+          "Nibe ao korin titun t'anu t'o da wa nde,",
+          "Ogo f' Olorun Halleluya!",
+          "Nibe awa ayanfe y' o korin 'yin ti Krist':",
+          "Ogo f' Olorun Halleluya!",
+        ],
+      ],
+      chorusYoruba: [
+        "Omo Olorun ni eto lati ma bu sayo;",
+        "Pe ona yi nye wa si, ",
+        "Okan wa nsa feri re",
+        "Nigbose a o de Afin Oba wa Ologo;",
+        "Ogo f' Olorun halleluya",
+      ],
+      versesEnglish: [
+        [
+          "We are never, never weary of the grand old song;",
+          "Glory to God, halleluyah!",
+          "We can sing it loud as ever with our faith more strong;",
+          "Glory to God, halleluyah!"
+        ],
+        [
+          "We are lost amid the rapture of redeeming love;",
+          "Glory to God, halleluyah!",
+          "We are rising on its pinions to the hills above;",
+          "Glory to God, halleluyah!"
+        ],
+        [
+          "We are going to a palace that is built of gold;",
+          "Glory to God, halleluyah!",
+          "Where the King in all His splendor we",
+          "Shall soon behold;"
+        ],
+        [
+          "There we’ll shout redeeming mercy in a glad new song;",
+          "Glory to God, halleluyah!",
+          "There we’ll sing the praise of Jesus with the blood-wash’d through;",
+          "Glory to God, halleluyah!"
+        ]
+      ],
+      chorusEnglish: [
+        "O the children of the Lord have a right to shout and sing!",
+        "For the way is growing bright, and our souls are on the wing;",
+        "We are going by and by to the palace of a King;",
+        "Glory to God, halleluyah!"
+      ],
+    ),
+    Hymn(id: '27', versesYoruba: [
+      [
+        "Fi iyin fun! Jesu Olurapada wa",
+        "Ki aiye k'okiki ife Re nla",
+        "Fi iyin fun! Enyin Angeli ologo,",
+        "F'ola at' ogo fun oruko Re",
+        "B' Olusaguntan Jesu y'o to omo Re",
+        "Apa Re lo ngbe won le lojojo;",
+        "Enyin enia mimo ti ngb'oke Sion",
+        "Fi iyin fun pelu orin ayo",
+      ],
+      [
+        "Fi iyin fun Jesu Olurapada wa,",
+        "Fun wa O t'eje re si le O ku",
+        "On ni apata ati reti,gbala wa,",
+        "Yin Jesu ti a kan m'agbelebu",
+        "Olugbala to f'ara da irora nla",
+        "Ti a fi ade egun de lori",
+        "Eniti a pa nitori awa eda,",
+        "Oba Ogo njoba titi lailai",
+      ],
+      [
+        "Fi iyin fun Jesu Olurapada wa,",
+        "Ki ariwo Iyin gba Orun kan,",
+        "Jesu Oluwa njoba lai ati lailai,",
+        "Se l'oba gbogb' enyin alagbara,",
+        "A segun iku: fi ayo rohin na ka,",
+        "Isegun re ha da? Isa oku?",
+        "Jesu ye! Ko tu n si wahala fun wa mo:",
+        "Tori O l'agbara lati gbala.",
+      ],
+    ], versesEnglish: [
+      [
+        "Praise Him! Praise Him! Jesus, our blessed Redeemer,",
+        "Sing O earth, His wonderful love, proclaim,",
+        "Hail Him! Hail Him! Highest archangels in glory,",
+        "Strength and honour give to His holy Name",
+        "Like a shepherd Jesus will guard His children,",
+        "In His arms He carried them all day long.",
+        "O ye saints that dwell on the mountain of Zion,",
+        "Praise Him! Praise Him! Ever in joyful song."
+      ],
+      [
+        "Praise Him! Praise Him! Jesus, our blessed Redeemer,",
+        "For our sins He suffer’d and bled and died,",
+        "He, our Rock, our hope of eternal salvation,",
+        "Hail Him! Hail Him! Jesus, the Crucified.",
+        "Loving Saviour, meekly enduring sorrow,",
+        "Crown’d with thorns that cruelly pierc’d His brow’",
+        "Once for us rejected, despis’d and forsaken",
+        "Prince of Glory, ever triumphant now,"
+      ],
+      [
+        "Praise Him! Praise Him! Jesus, our blessed Redeemer,",
+        "Heav’nly portals loud with hosannahs ring,",
+        "Jesus, Saviour, reigneth for ever and ever,",
+        "Crown Him, crown Him, Prophet and Priest and King!",
+        "Death is vanquish’d! tell it with joy, ye faithful.",
+        "Where is now thy victory",
+        "Jesus lives! No longer thy portals are cheerless,",
+        "Jesus lives, the mighty and strong to save.",
+      ],
+    ]),
+    Hymn(id: '28', versesYoruba: [
+      [
+        "Em' o yin Oluwa fun ife Re,",
+        "A we mi nin' eje Olurapada;",
+        "Eje na to nsan nib' agbelebu,",
+        "A we mi nin' eje Olurapada.",
+      ],
+      [
+        "Ore ofe mu mi sunm'odo Re;",
+        "A we mi nin' eje Olurapada,",
+        "Em'o korin soke, aiye y'o gbo;",
+        "A we mi nin' eje Olurapada.",
+      ],
+      [
+        "Alafia wo l'o to yi, l'okan mi;",
+        "A we mi nin' eje Olurapada,",
+        "Ayo mimo na, ko se f'enu so;",
+        "A we mi niu' eje Olurapada.",
+      ],
+      [
+        "Emi o ma gb'ohun iyin soke;",
+        "A we mi nin' eje Olurapada,",
+        "Okan mi y'o ma korin lojojo;",
+        "A we mi nin' eje Olurapada,",
+      ],
+    ], chorusYoruba: [
+      "Ogo, Ogo, fun Odagutan,",
+      "O gba mi lowo ese, mo si di mimo;",
+      "Ogo, Ogo, Ogo, f' Odagutan,",
+      "A we mi nin' eje Olurapada.",
+    ], versesEnglish: [
+      [
+        "I will praise the Lord for His love to me,",
+        "I am washed in the blood of my Redeemer;",
+        "In the fount that flows at the Cross so free.",
+        "I am washed in the blood of my Redeemer."
+      ],
+      [
+        "I am saved by grace and to Him bro’t near,",
+        "I am washed in the blood of my Redeemer.",
+        "I would sing so loud that the world might hear,",
+        "I am washed in the blood of my Redeemer."
+      ],
+      [
+        "What a constant peace in my heart I feel,",
+        "I am washed in the blood of my Redeemer;",
+        "There’s a holy joy I can ne’er reveal,",
+        "I am washed in the blood of my Redeemer."
+      ],
+      [
+        "I will lift my voice while on earth I stay,",
+        "I am washed in the blood of my Redeemer,",
+        "Then my soul shall sing in the realms of day,",
+        "I am washed in the blood of my Redeemer."
+      ]
+    ], chorusEnglish: [
+      "Glory, Glory, glory to the Lamb",
+      "I am sav’d from sin and He makes me what I am;",
+      "Oh, glory, glory, glory to the Lamb,",
+      "I am washed in the blood of my Redeemer."
+    ]),
+    Hymn(id: '29', versesYoruba: [
+      [
+        "E yin oba ogo, on ni olorun;",
+        "Yin fun 'se yanu ti o ti fihan,",
+        "Owa pel'awon ero mimo l'ona;",
+        "O si je imole won l'osan, l'oru;",
+      ],
+      [
+        "E yin fun rapada ti gbogbo okan",
+        "E yin fun orisun imularada:",
+        "Fun inu rere ati itoju Re",
+        "Fun 'daniloju pe O ngbo adura:",
+      ],
+      [
+        "E yin fun idanwo bi okun ife,",
+        "T'o nso wa po mo awon ohun orun",
+        "Fun gbagbo ti nsegun, reti ti ki sa",
+        "Fun ile Ogo tO ti pese fun wa",
+      ],
+    ], chorusYoruba: [
+      "E yin angel' didan, lu duru wura,",
+      "Ki gbogbo yin juba, t'e nwo o ju Re",
+      "Ni gbogbo 'joba Re, b'aiye ti nyi lo",
+      "Ise Re yo ma yin",
+      "Ise Re yo ma yin",
+      "Fi ibukun fun oluwa okan mi",
+    ], versesEnglish: [
+      [
+        "Praise the King of Glory, He is God alone;",
+        "Praise Him for the wonders He to us hath shown,",
+        "For His promised presence all the pilgrim way;",
+        "For the flaming pillar, and the cloud by day."
+      ],
+      [
+        "Praise Him for redemption, free to every soul;",
+        "Praise Him for the Fountain that can make us whole;",
+        "For His gifts of kindness and His loving care,",
+        "For the blest assurance that He answers prayer."
+      ],
+      [
+        "Praise Him for the trials sent as cords of love;",
+        "Binding us more closely to the things above",
+        "For the faith that conquers, hope, that naught can dim,",
+        "For the land where loved ones gather unto Him."
+      ]
+    ], chorusEnglish: [
+      "Praise Him, shining angels,",
+      "Strike your harps of gold;",
+      "All His hosts adore Him",
+      "Who His face behold",
+      "Through His great dominion,",
+      "While the ages roll.",
+      "All His works shall praise Him,",
+      "All His works shall praise Him,",
+      "All His works shall praise Him,",
+      "Bless the Lord, my soul."
+    ]),
+    Hymn(id: '30', versesYoruba: [
+      [
+        "B' oruko Jesu ti dun to",
+        "Ogo ni fun oruko Re",
+        "O tan banujẹ at'ọgbẹ,",
+        "ogo ni fun oruko Re",
+      ],
+      [
+        "O wo ọkan t'o gbọgbẹ san,",
+        "Ogo ni fun oruko Re,",
+        "Onje ni f' ọkan t' ebi npa,",
+        "Ogo ni fun oruko Re.",
+      ],
+      [
+        "O tan aniyan elese,",
+        "Ogo ni fun oruko Re,",
+        "O fun alare ni 'simi",
+        "Ogo ni fun oruko Re,",
+      ],
+      [
+        "N je ngo rohin na f' elese",
+        "Ogo ni fun oruko Re,",
+        "Pe mo ti ri Olugbala,",
+        "Ogo ni fun oruko Re,",
+      ],
+    ], chorusYoruba: [
+      "Ogo f'oko Re, Ogo f'oko Re,",
+      "Ogo f'oruko Oluwa,",
+      "Ogo f'oko Re, Ogo f'oko Re,",
+      "Ogo f'oruko Oluwa.",
+    ], versesEnglish: [
+      [
+        "How sweet the name of Jesus sounds,",
+        "Blessed be the name of the Lord!",
+        "It soothes my sorrows, heals my wounds,",
+        "Blessed be the name of the Lord!"
+      ],
+      [
+        "It makes the wounded spirit whole,",
+        "Blessed be the name of the Lord!",
+        "‘Tis manna to the hungry soul!",
+        "Blessed be the name of the Lord!"
+      ],
+      [
+        "It soothes the troubled sinner’s breast,",
+        "Blessed be the name of the Lord!",
+        "It gives the weary sweetest rest,",
+        "Blessed be the name of the Lord!"
+      ],
+      [
+        "Then will I tell the sinners round,",
+        "Blessed be the name of the Lord!",
+        "What a dear Saviour I have found,",
+        "Blessed be the name of the Lord!"
+      ]
+    ], chorusEnglish: [
+      "Blessed be the name! Blessed be the name!",
+      "Blessed be the name of the Lord!",
+      "Blessed be the name! Blessed be the name!",
+      "Blessed be the name of the Lord!"
+    ]),
+    Hymn(id: '31', versesYoruba: [
+      [
+        "Kristi ni ipin mi titi,",
+        "On l' O ngba mi nin' ese. ",
+        "O je ona igbala mi, ",
+        "Eri yi wa l' okan mi,",
+      ],
+      [
+        "On ni odi agbara mi,",
+        "Amona at' Oba mi,",
+        "On si ni Olupamo mi,",
+        "Nje mo le f' ayo korin;",
+      ],
+      [
+        "Iyin fun Enit' O ra mi.",
+        "Iyin f' Eniti a pa,",
+        "Nje emi ko, Halleluya!",
+        "Iyin fun Oro 'yanu.",
+      ],
+    ], chorusYoruba: [
+      "Eri yi wa l' okan mi,",
+      "Jesu gba mi low' eşe:",
+      "Mo l'ayo laiya Re,",
+      "Or' ofe Re gba mi; ",
+      "Eri yi si wa l' okan mi",
+    ], versesEnglish: [
+      [
+        "Christ is my portion for ever,",
+        "He is my Savior from sin;",
+        "He is my blessed salvation;",
+        "I have the witness within."
+      ],
+      [
+        "He is my fortress and tower;",
+        "He is my guide and my king;",
+        "He is my shepherd, my keeper",
+        "Joyfully now I can sing."
+      ],
+      [
+        "Praise to the One who redeems me,",
+        "Praise to my crucified Lord;",
+        "Now I am saved, hallelujah!",
+        "Praise for the wonderful word."
+      ]
+    ], chorusEnglish: [
+      "I have the witness within",
+      "Jesus now saves me from sin.",
+      "In His heart I’ve a place,",
+      "I am saved by His grace",
+      "And I have the witness within."
+    ]),
+    Hymn(
+      id: '32',
+      versesYoruba: [
+        [
+          "Yin Olorun Abra'am",
+          "Ti O njoba l'oke",
+          "Enit' O ti wa titi lai, ",
+          "Olorun 'fe.",
+          "'Jehofa nla l' Emi'",
+          "Gbogbo eda jewo:",
+          "Mo fi 'bukun f' oruko Re",
+          "Titi lailai.",
+        ],
+        [
+          "Yin Olorun Abra'am, ",
+          "Nip' ase Eniti",
+          "Mo dide, mo si wa 'tunu",
+          "Lowo 'tun Re",
+          "Mo ko aiye silę;",
+          "Ogbon at' ola rę",
+          "On nikan si ni ipin mi",
+          "At' asa mi.",
+        ],
+        [
+          "On na ti se 'leri",
+          "Mo gbekele eyi,",
+          "Ngo fi iye idi goke",
+          "Lo si orun.",
+          "Ngo ma wo oju Re:",
+          "Ngo si yin ipa Re:",
+          "Ngo korin 'yanu t' or' ofe",
+          "Titi lailai."
+        ],
+        [
+          "B'agbara eda pin,",
+          "T' aiye at' eşu nde,",
+          "Ngo dojuko ona Kenaan",
+          "Nipa 'se Re:",
+          "Ngo re odo koja,",
+          "Bi Jesu wa lokan:",
+          "Ngo koja n'nu igbo didi",
+          "Lo s'ona mi.",
+        ],
+        [
+          "Oba Oke orun",
+          "Olor' Angeli nke,",
+          "Wipe 'Mimo, Mimo, Mimo'",
+          "Oba titi.",
+          "Eniti Ki pada",
+          "Ti y'o so wa lailai",
+          "Jehofa, Baba, “Emi ni,”",
+          "Awa yin o.",
+        ],
+        [
+          "Gbogb' egbe asegun,",
+          "Nyin Olorun loke,",
+          "Baba, Omo, at' Emi, ni",
+          "Nwon nke titi:",
+          "Yin Olorun Abra'am,",
+          "Ngo ba won korin na;",
+          "Tire l' agbara at' ola.",
+          "Pelu iyin",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "The God of Abra’am praise",
+          "Who reigns enthroned above;",
+          "Ancient of everlasting days,",
+          "And God of love:",
+          "“Jehovah, Great I AM”",
+          "By earth and heaven confess’d:-",
+          "I bow and bless the sacred name",
+          "For ever bless’d"
+        ],
+        [
+          "The God of Abra’am praise",
+          "At whose supreme command",
+          "From earth I rise, and seek the joys",
+          "At His right hand:",
+          "I all on earth forsake,",
+          "Its wisdom, fame, and power;",
+          "And His my only portion make,",
+          "My shield and tower."
+        ],
+        [
+          "He by Himself hath sworn;",
+          "I on His oath depend;",
+          "I shall, on eagle’s wings upborne",
+          "To heaven ascend",
+          "I shall behold His face",
+          "I shall His power adore;",
+          "And sing the wonders of His grace",
+          "For evermore."
+        ],
+        [
+          "Though nature’s strength decay,",
+          "And earth and hell withstand,",
+          "To Cannan’s bounds I urge my way,",
+          "At His command",
+          "The watery deep I pass,",
+          "With Jesus in my view;",
+          "And through the howling wilderness",
+          "My way pursue."
+        ],
+        [
+          "The God, who reigns on high,",
+          "The great archangels sing,",
+          "And “Holy, Holy, Holy” cry",
+          "Almighty King;",
+          "Who was and is the same,",
+          "And evermore shall be:",
+          "Jehovah, Father, Great I AM,",
+          "We worship Thee."
+        ],
+        [
+          "The whole triumphant host",
+          "Give thanks to God on high;",
+          "Hail, Father, Son and Holy Ghost,",
+          "They ever cry.",
+          "Hail, Abra’am’s God and mine,",
+          "I join the heavenly lays;",
+          "All might and majesty are Thine,",
+          "And endless praise."
+        ]
+      ],
+    ),
+    Hymn(
+      id: '33',
+      versesYoruba: [
+        [
+          "E je k'a f' inu didun",
+          "Yin Oluwa Olore;",
+          "Anu Rẹ, O wa titi,",
+          "Lododo dajudaju.",
+        ],
+        [
+          "On, nipa agbara Rẹ,",
+          "F' imọlẹ s'aiye titun;",
+          "Anu Rẹ, O wa titi,",
+          "Lododo dajudaju",
+        ],
+        [
+          "O mbọ gbogb' ẹda 'laye,",
+          "O npese fun aini wọn;",
+          "Anu Rẹ, o wa titi,",
+          "Lododo dajujdaju.",
+        ],
+        [
+          "O bukun ayanfẹ Rẹ,",
+          "Li aginju aiye yi;",
+          "Anu Rẹ, o wa titi,",
+          "Lododo dajudaju.",
+        ],
+        [
+          "Ẹ jẹ k'a f' inu didun,",
+          "Yin Oluwa Olore;",
+          "Anu Rẹ, o wa titi,",
+          "Lododo dajudaju",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Let us with a gladsome mind",
+          "Praise the Lord for He is kind;",
+          "For His mercies shall endure,",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "He with all-commanding might,",
+          "Filled the new-made world with light;",
+          "For His mercies shall endure,",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "All things living he doth feed,",
+          "His full hand supplies their need;",
+          "For His mercies shall endure,",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "He His chosen race did bless,",
+          "In the wasteful wilderness;",
+          "For His mercies shall endure;",
+          "Every faithful, ever sure."
+        ],
+        [
+          "Let us then with gladsome mind",
+          "Praise the Lord, for he is Kind;",
+          "For His mercies shall endure",
+          "Ever faithful, ever sure."
+        ]
+      ],
+    ),
+    Hymn(
+      id: '34',
+      versesYoruba: [
+        [
+          "Niwaju ite Jehofa,",
+          "E f'ayo sin, oril' ede; ",
+          "Mo p' Oluwa, On kanşo ni, ",
+          "O le da, O si le parun."
+        ],
+        [
+          "Ipa Re, laisi ' ranwo wa, ",
+          "F. amo da wa ni enia;",
+          "Nigba t'a şako b'agutan,",
+          "O tun wa mu si agbo Rę.",
+        ],
+        [
+          "A of' orin sunmo 'le Rę, ",
+          "L'ohun giga l'a o korin; ",
+          "Ile, l' egbarun ahon re. ",
+          "Y'o f' lyin kun agbala Rę.",
+        ],
+        [
+          "Ase Re gboro k'agbaiye,",
+          "Ife Re po b' aiyeraiye; ",
+          "Oto Re y'o duro lailai,",
+          "'Gbat' odun o dekun 'yipo.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "BEFORE Jehovah’s awful throne,",
+          "Ye nations, bow with sacred joy;",
+          "Know that the Lord is God alone:",
+          "He can create and He destroy."
+        ],
+        [
+          "His sovereign power, without our aid,",
+          "Made us of clay and form’d us men",
+          "And, when like wandering sheep we tray’d",
+          "He brought us to His fold again."
+        ],
+        [
+          "We’ll crowd Thy gates with thankful songs,",
+          "High as the heavens our voices raise;",
+          "And earth with her ten thousand tongues",
+          "Shall fill thy courts with sounding praise."
+        ],
+        [
+          "Wide as the world is Thy command,",
+          "Vast as eternity Thy love;",
+          "Firm as a rock Thy truth must stand,",
+          "When rolling years shall cease to move."
+        ]
+      ],
+    ),
+    Hymn(
+      id: '35',
+      versesYoruba: [
+        [
+          "N'nu gbogbo ayida aiye,",
+          "Ayọ on wahala;",
+          "Iyin Ọlọrun ni y'o ma",
+          "Wa l'ẹnu mi titi",
+        ],
+        [
+          "Gbe Oluwa ga pẹlu mi,",
+          "Ba mi gb'Okọ Rẹ ga;",
+          "N'nu wahala, 'gba mo kepe,",
+          "O si yọ mi kuro.",
+        ],
+        [
+          "Ogun Ọlọrun wa yika",
+          "Ibugbe olotọ;",
+          "Ẹniti o ba gbẹkẹle,",
+          "Yio si ri 'gbala.",
+        ],
+        [
+          "Sa dan ifẹ Rẹ wo lẹkan,",
+          "Gbana 'wọ o mọ pe,",
+          "Awọn t' o di ootọ Rẹ mu",
+          "Nikan l' ẹni 'bukun.",
+        ],
+        [
+          "Ẹ bẹru Rẹ, ẹnyin mimọ,",
+          "Ẹru miran ko si;",
+          "Sa jẹ ki 'sin Rẹ j'ayọ nyin,",
+          "On y'o ma tọju nyin.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "THROUGH all the changing scenes of life,",
+          "In trouble and in joy,",
+          "The praises of my God shall still",
+          "My heart and tongue employ."
+        ],
+        [
+          "Oh, magnify the Lord with me,",
+          "With me exalt His name:",
+          "When in distress to Him I call’d",
+          "He to my rescue came."
+        ],
+        [
+          "The hosts of God encamp around",
+          "The dwellings of the just;",
+          "Deliverance He affords to all",
+          "Who on His succor trust."
+        ],
+        [
+          "Oh make but trial of His love,",
+          "Experience will decide",
+          "How blest they are, and only they",
+          "Who in His truth confide."
+        ],
+        [
+          "Fear Him, ye saints; and you will then",
+          "Have nothing else to fear:",
+          "Make you His service your delight,",
+          "Your wants shall be His care."
+        ]
+      ],
+    ),
   ];
 }
