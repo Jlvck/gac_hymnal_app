@@ -2340,5 +2340,151 @@ class HymnTestLyrics {
         ]
       ],
     ),
+    Hymn(
+      id: '36',
+      versesYoruba: [
+        [
+          "Fun anu t'o po bi iyanrin,",
+          "Ti mo ngba l'ojojumo;",
+          "Lat'odo Jesu Oluwa,",
+          "Ki l'emi o fi fun?",
+        ],
+        [
+          "Kini ngo fi fun Oluwa, ",
+          "Lat' inu okan mi ",
+          "Ese ti ba gbogbo re je ",
+          "Ko tile jamo nkan.",
+        ],
+        [
+          "Eyi l'ohun t'emi o se, ",
+          "F'ohun t'O se fun mi;",
+          "Em' o mu ago igbala, ",
+          "Ngo kepe Olorun.",
+        ],
+        [
+          "Eyi l'ope ti mo le da, ",
+          "Emi osi are; ",
+          "Em' o ma soro ebun Re, ",
+          "Ngo si ma bere si.",
+        ],
+        [
+          "Emi ko le sin b'oti to,",
+          "Nko n'ise kan to pe ",
+          "Sugbon em'o sogo yi pe,",
+          "Gbese ope mi po.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "For mercies, countless as the sands,",
+          "Which daily, I receive",
+          "From Jesus, my Redeemer’s hands,",
+          "My soul, what canst thou give?"
+        ],
+        [
+          "Alas from such a heart as mine",
+          "What can I bring Him forth?",
+          "My best is stain’d and dyed with sin,",
+          "My all is nothing worth."
+        ],
+        [
+          "Yet this acknowledgment I’ll make,",
+          "For all he has bestow’d,",
+          "Salvation’s sacred cup I’ll take,",
+          "And call upon my God."
+        ],
+        [
+          "The best return for one like me,",
+          "So wretched and so poor,",
+          "Is from His gifts to draw a plea,",
+          "And ask Him still for more."
+        ],
+        [
+          "I cannot serve Him as I ought,",
+          "No works have I to boast,",
+          "Yet would I glory in the thought",
+          "That I shall owe Him most."
+        ]
+      ],
+    ),
+    Hymn(
+      id: '37',
+      versesYoruba: [
+        [
+          "Emi 'ba n' egberun ahon,",
+          "Fun 'yin Olugbala,",
+          "Ogo Ọlọrun Ọba mi,",
+          "Iṣẹgun ore Rẹ.",
+        ],
+        [
+          "Jesu t' O s'ẹru wa d'ayọ,",
+          "T' O mu banujẹ tan;",
+          "Orin ni l' eti ẹlẹṣẹ,",
+          "Iye at' ilera",
+        ],
+        [
+          "O ṣẹgun agbara ẹṣẹ,",
+          "O da onde silẹ;",
+          "Ẹjẹ Rẹ le w' eleri mọ,",
+          "Ẹjẹ Rẹ ṣeun fun mi"
+        ],
+        [
+          "O sọrọ, oku gb'ohun Rẹ;",
+          "O gba ẹmi titun;",
+          "Onirobinujẹ y' ayọ,",
+          "Otoṣi si gba-gbọ"
+        ],
+        [
+          "Odi, ẹ kọrin iyin Rẹ;",
+          "Aditi, gbohun Rẹ;",
+          "Afọju, Olugbala de,",
+          "Ayarọ, fo f' ayọ",
+        ],
+        [
+          "Baba mi at' Ọlọrun mi,",
+          "Fun mi ni 'ranwọ Rẹ;",
+          "Ki nle ro ka gbogbo aiye,",
+          "Ọla Orukọ Rẹ",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Oh for a thousand tongues to sing",
+          "My dear Redeemer’s praise",
+          "The glories of my God and King,",
+          "The triumphs of His grace."
+        ],
+        [
+          "Jesus the name that charms our fears,",
+          "That bids our sorrows cease;",
+          "‘Tis music in the sinner’s ears;",
+          "‘Tis life, and health, and peace."
+        ],
+        [
+          "He breaks the power of cancell’d sin,",
+          "And sets the prisoner free:",
+          "His blood can make the foulest clean;",
+          "His blood avail’d for me."
+        ],
+        [
+          "He speaks; and listening to His voice,",
+          "New life the dead receive;",
+          "The mournful broken hearts rejoice;",
+          "The humble poor believe."
+        ],
+        [
+          "Hear Him, ye deaf; His praise, ye dumb,",
+          "Your loosen’d tongues employ;",
+          "Ye blind, behold your Savoir come;",
+          "And leap, ye lame, for joy!"
+        ],
+        [
+          "My gracious Masters and my God,",
+          "Assist me to proclaim",
+          "And spread through all the earth abroad",
+          "The honours of Thy name."
+        ]
+      ],
+    )
   ];
 }
