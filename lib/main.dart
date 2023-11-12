@@ -46,6 +46,8 @@ class MyApp extends StatelessWidget {
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
+          drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+          listTileTheme: ListTileThemeData(tileColor: Colors.white),
           cardTheme: CardTheme(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15))),

@@ -21,6 +21,9 @@ class MainDrawer extends StatelessWidget {
     return Drawer(
       width: 3 / 4 * width,
       backgroundColor: Colors.white,
+      shadowColor: Colors.white,
+      surfaceTintColor: Colors.white,
+      clipBehavior: Clip.hardEdge,
       child: Column(children: [
         Expanded(
             child: Scrollbar(
@@ -38,10 +41,14 @@ class MainDrawer extends StatelessWidget {
                 DrawerHeader(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
-                  decoration:
-                      BoxDecoration(color: Theme.of(context).primaryColor),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                  ),
                   child: Container(
-                    color: Colors.white,
+                    padding: EdgeInsets.zero,
+                    decoration: BoxDecoration(color: Colors.white),
+                    margin: EdgeInsets.zero,
+                    clipBehavior: Clip.antiAlias,
                     child: Image.asset(
                       'images/church_image_drawer.png',
                       fit: BoxFit.contain,

@@ -89,7 +89,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             child: Column(
               children: [
                 Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     color: Theme.of(context).primaryColor,
                     child: mainTextField(mediaQuery, context)),
                 displayedHymnList(context)
