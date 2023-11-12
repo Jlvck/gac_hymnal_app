@@ -42,13 +42,13 @@ class MainDrawer extends StatelessWidget {
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.white,
                   ),
                   child: Container(
                     padding: EdgeInsets.zero,
-                    decoration: BoxDecoration(color: Colors.white),
+                    decoration: const BoxDecoration(color: Colors.white),
                     margin: EdgeInsets.zero,
-                    clipBehavior: Clip.antiAlias,
+                    clipBehavior: Clip.hardEdge,
                     child: Image.asset(
                       'images/church_image_drawer.png',
                       fit: BoxFit.contain,

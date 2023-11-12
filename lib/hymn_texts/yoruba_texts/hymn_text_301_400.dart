@@ -3863,16 +3863,16 @@ class HymnText301to400 {
       id: '399',
       verses: [
         [
-          "Gbati o ba no s' ile simi orun,",
-          "Sumo Jesu titi d'opin;",
+          "Gbati o ba nlo s' ile simi orun,",
+          "Sunmo Jesu titi d'opin;",
           "'Tori On ni Oluto t' o m' ona ju,",
-          "Sumo Jesu titi d' opin.",
+          "Sunmo Jesu titi d' opin.",
         ],
         [
           "Mase ronu wahala at'iponju,",
           "Sunmo Jesu titi d' opin;",
           "O dara lati ri oju - rere Re,",
-          "Sumo Jesu titi d' opin",
+          "Sunmo Jesu titi d' opin",
         ],
         [
           "Ki o ba le bo l'owo ofa esu,",

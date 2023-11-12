@@ -1,6 +1,6 @@
 import '../model/hymn.dart';
 
-class HymnTestLyrics {
+class HymnText1to50 {
   List<Hymn> hymnLyrics = [
     Hymn(
       id: '1',
@@ -2484,6 +2484,1035 @@ class HymnTestLyrics {
           "And spread through all the earth abroad",
           "The honours of Thy name."
         ]
+      ],
+    ),
+    Hymn(
+      id: '38',
+      versesYoruba: [
+        [
+          "E wole f' Oba, Ologo julọ,",
+          "Ẹ kọrin ipa ati ifẹ Rẹ;",
+          "Alabo wa ni, at' Ẹni Igbani,",
+          "O ngbe 'nu ogo, Ẹlẹru ni iyin.",
+        ],
+        [
+          "Ẹ sọ t'ipa Rẹ, ẹ sọ t'ore Rẹ;",
+          "'Mọlẹ l' aṣọ Rẹ, gọbi Rẹ, ọrun,",
+          "Ara ti nṣan ni kẹkẹ 'binu Rẹ jẹ;",
+          "Ipa ọna Rẹ ni a ko si le mọ.",
+        ],
+        [
+          "Aiye yi pẹlu ẹkun 'yanu rẹ,",
+          "Ọlọrun, agbara Rẹ l'o da wọn;",
+          "O fi idi rẹ mulẹ, ko si le yi,",
+          "O si f' okun ṣe aṣọ igunwa Rẹ.",
+        ],
+        [
+          "Ẹnu ha le sọ ti itọju Rẹ?",
+          "Ninu afẹfẹ, ninu imọlẹ;",
+          "Itọju Rẹ wa nin' odo t'o nṣan,",
+          "O si wa ninu iri ati ojo.",
+        ],
+        [
+          "Awa erupẹ, aw' alailera,",
+          "'Wọ l'a gbẹkẹle, O ki o da ni;",
+          "Anu Rẹ rọrun, o si le de opin,",
+          "Ẹlẹda, Alabo, Olugbala wa.",
+        ],
+        [
+          "'Wọ Alagbara, Onifẹ Julọ,",
+          "B'awọn angẹli ti nyin Ọ l'oke,",
+          "Be l'awa ẹda Rẹ, niwọn t'a le ṣe,",
+          "A o ma juba Rẹ, a o ma yin Ọ.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "O worship the King all glorious above;",
+          "Oh gratefully sing His power and His love;",
+          "Our shield and Defender, the Ancient of days,",
+          "Pavilioned in splendor, and girded with praise.",
+        ],
+        [
+          "Oh tell of His might, oh sing of His grace,",
+          "Whose robe is the light; whose canopy space;",
+          "His chariot of wrath deep thunder clouds form,",
+          "And dark is His path on the wings of the storm.",
+        ],
+        [
+          "The earth, with its store of wonders untold,",
+          "Almighty, Thy Power hath founded of old,",
+          "Hath stablished it fast by a changeless decree,",
+          "And round it hath cast, like a mantle, the sea.",
+        ],
+        [
+          "Thy bountiful care what tongue can recite?",
+          "It breathes in the air, it shines in the light;",
+          "It streams from the hills, it descends to the plain,",
+          "And sweetly distills in the dew and the rain.",
+        ],
+        [
+          "Frail children of dust, and feeble as frail,",
+          "In Thee do we trust, nor find Thee to fail:",
+          "Thy mercies how tender, how firm to the end,",
+          "Our maker, defender, Redeemer, and Friend.",
+        ],
+        [
+          "O measureless Might; ineffable Love,",
+          "While angels delight to hymn Thee above,",
+          "The humbler creation, though feeble their lays,",
+          "With true adoration shall lisp to Thy praise.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '39',
+      versesYoruba: [
+        [
+          "Gbogbo aiye, gbe Jesu ga,  ",
+          "Angel' e wolę fun.",
+          "E mu ade Oba Re wa.",
+          "Se l' Oba awon oba.",
+        ],
+        [
+          "E se l' oba, enyin Martyr,",
+          "Ti npe ni pepe Re:",
+          "Gbe gbongbo-igi Jesse ga, ",
+          "Se l'Oba awon oba",
+        ],
+        [
+          "Enyin iru-omo Israel. ",
+          "Ti a ti rapada:",
+          "E ki Enit' O gba nyin la,",
+          "Se l'Oba awon oba.",
+        ],
+        [
+          "Gbogbo enia elese.",
+          "Ranti 'banuję nyin:",
+          "E te 'kogun nyin s' ese Re.",
+          "Se l' Oba awon oba.",
+        ],
+        [
+          "Ki gbogbo orile-ede, ",
+          "Ni gbogbo agbaye",
+          "Ki won ki, \"Kabiyesilę,\"",
+          " Se l'Oba awon oba.",
+        ],
+        [
+          "A ba le pel' awon t' orun, ",
+          "Lati ma juba Re:",
+          "K'a ba le jo jumo korin,",
+          "Se l'Oba awon oba",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "All hail the power of Jesus’ name!",
+          "Let angels prostrate fall;",
+          "Bring forth the royal diadem,",
+          "And crown Him, Lord of all.",
+        ],
+        [
+          "Crow Him, ye martyrs of our God,",
+          "Who from His altar call;",
+          "Extol the stem of Jesus’s rod",
+          "And crown Him, Lord of all.",
+        ],
+        [
+          "Ye seed of Israel’s chosen race,",
+          "Ye Ransom’d of the fall,",
+          "Hail Him who saves you by His grace",
+          "And crown Him, Lord of all.",
+        ],
+        [
+          "Sinners, whose love can ne’er forget",
+          "The wormwood and the gall;",
+          "Go, spread your trophies at His feet,",
+          "And crown Him, Lord of all.",
+        ],
+        [
+          "Let every kindred, every tribe,",
+          "On this terrestrial ball,",
+          "To Him all majesty ascribe.",
+          "And crown Him, Lord of all.",
+        ],
+        [
+          "Oh that with yonder sacred throng,",
+          "We at His feet may fall,",
+          "There join the everlasting song",
+          "And crown Him, Lord of all.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '40',
+      versesYoruba: [
+        [
+          "Alleluya! orin t' o dun,",
+          "Ohun ayọ ti ki ku:",
+          "Alleluya! orin didun,",
+          "T' awọn t'o wa lọrun fẹ;",
+          "N' ile ti Ọlọrun mi ngbe,",
+          "Ni nwọn nkọ tọsantoru.",
+        ],
+        [
+          "Alleluya! Ijọ ọrun,",
+          "Ẹ le kọrin ayọ na.",
+          "Alleluya! orin 'ṣẹgun",
+          "Yẹ awọn t'a rapada.",
+          "Awa ero at' alejo,",
+          "Iyin wa ko nilari.",
+        ],
+        [
+          "Alleluya! orin ayọ",
+          "Ko yẹ wa nigbagbogbo.",
+          "Alleluya! ohùn arò",
+          "Da mọ orin ayọ wa;",
+          "Gbat' a wa laiye oṣi yi,",
+          "A ni gbawẹ f' ẹṣẹ wa.",
+        ],
+        [
+          "Iyin dapọ m' adua wa;",
+          "Gbọ tiwa, Mẹtalọkan!",
+          "Mu wa de 'waju Rẹ layọ,",
+          "K' a r' Ọdagutan t'a pa:",
+          "K' a le ma kọ Allelu",
+          "Nibẹ lai ati lailai. ",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Alleluia! Song of gladness,",
+          "Voice of everlasting joy;",
+          "Alleluia Sound the sweetest",
+          "Heard among the choirs on high",
+          "Hymning in God’s blissful mansion",
+          "Day and night incessantly.",
+        ],
+        [
+          "Alleluia! Church victorious,",
+          "Thou mayst lift the joyful strain.",
+          "Alleluia! Songs of triumph",
+          "Well befit the ransom’d train",
+          "Faint and feeble are our praises",
+          "While in exile we remain.",
+        ],
+        [
+          "Alleluia! Songs of gladness",
+          "Suit not always souls forlorn.",
+          "Alleluia! Sounds of sadness",
+          "‘Midst our joyful strains are borne;",
+          "For in this dark world of sorrow",
+          "We with tears our sins must mourn.",
+        ],
+        [
+          "Praises with our prayers uniting,",
+          "Hear us, blessed Trinity;",
+          "Bring us to Thy blissful presence,",
+          "There the paschal Lamb to see,",
+          "There to Thee our alleluia",
+          "Singing everlastingly. Amen.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '41',
+      versesYoruba: [
+        [
+          "Okan mi, yin Oba orun,",
+          "Mu ọrẹ wa s' ọdọ Rẹ;",
+          "'Wo t'a wosan t'a dariji,",
+          "Tal' a ba ha yin bi Rẹ?",
+          "Yin Oluwa, yin Oluwa,",
+          "Yin Ọba ainipẹkun.",
+        ],
+        [
+          "Yin, fun anu t'O ti fihan,",
+          "F'awọn baba 'nu pọnju;",
+          "Yin I, Okan na ni titi,",
+          "O lọra lati binu:",
+          "Yin Oluwa, yin Oluwa,",
+          "Ologo n'nu otitọ",
+        ],
+        [
+          "Bi baba ni O ntọju wa,",
+          "O si mọ ailera wa;",
+          "Jẹjẹ l' O ngbe wa l' apa Rẹ,",
+          "O gba wa lọwọ ọta;",
+          "Yin Oluwa, yin Oluwa,",
+          "Anu rẹ yi aiye ka.",
+        ],
+        [
+          "A ngba b' itana eweko,",
+          "T' afẹfẹ nfẹ, t'o si nrọ;",
+          "'Gbati a nwa, ti a si nku,",
+          "Ọlọrun wa bakanna;",
+          "Yin Oluwa, yin oluwa,",
+          "Ọba alainipẹkun.",
+        ],
+        [
+          "Angẹl, ẹ jumọ ba wa bọ,",
+          "Ẹnyin ri I l' ojukoju;",
+          "Ọrun, Oṣupa, ẹ wolẹ,",
+          "Ati gbogbo agbaiye.",
+          "Ẹ ba wa yin, Ẹ ba wa yin,",
+          "Ọlọrun Olotitọ",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Praise my soul the King of heaven",
+          "To His feet Thy tribute bring;",
+          "Ransom’d heal’d, restored forgiven,",
+          "Who like Thee His praise shall sing?",
+          "Praise Him, praise Him",
+          "Praise Him, praise Him",
+          "Praise the everlasting king.",
+        ],
+        [
+          "Praise Him for His grace and favour",
+          "To our fathers in distress;",
+          "Praise Him, still the same as ever,",
+          "Slow to chide, and swift to bless:",
+          "Praise Him, praise Him",
+          "Praise Him, praise Him",
+          "Praise the everlasting king.",
+        ],
+        [
+          "Father-like He tends and spares us;",
+          "Well our feeble frame he knows;",
+          "In His hands He gently bears us,",
+          "Rescues us from all our foes;",
+          "Praise Him, praise Him",
+          "Praise Him, praise Him",
+          "Praise the everlasting king.",
+        ],
+        [
+          "Just like grass, our lives be compared,",
+          "Which can faint when the wind blows",
+          "For a while we live and we die",
+          "But the Lord remains the same",
+          "Praise Him, praise Him",
+          "Praise Him, praise Him",
+          "Praise the everlasting king.",
+        ],
+        [
+          "Angels, help us to adore Him,",
+          "Ye behold Him face to face;",
+          "Sun and moon, bow down before Him;",
+          "Dwellers all in time and space,",
+          "Praise Him, praise Him",
+          "Praise Him, praise Him",
+          "Praise the everlasting king.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '42',
+      versesYoruba: [
+        [
+          "Ogo ni fun f'oluwa t'o se ohun nla",
+          "Ife lo mu k'O fun wa ni Omo re",
+          "Enit' o f' emi re lele f'ese wa",
+          "T'O si s'ilekun iye sile fun wa",
+        ],
+        [
+          "Irapada kikun ti Eje re ra",
+          "F' enikeni t'o gba ileri Re gbo",
+          "Enit'o buruju b'o ba le gbagbo",
+          "Lojukanna y'o ri idariji gba",
+        ],
+        [
+          "O s'ohun nla fun wa O da wa l'ola",
+          "Ayo wa di kikun ninu Omo Re",
+          "Ogo ati ewa Irapada yi",
+          "Y'o ya wa l'enu gbat' a ba ri Jesu",
+        ],
+      ],
+      chorusYoruba: [
+        "Yin oluwa,yin oluwa",
+        "Fiyin fun Oluwa",
+        "Yin Oluwa,yin Oluwa",
+        "E yo n'iwaju Re",
+        "K'a to Baba wa lo l'oruko Jesu",
+        "Jek' a jo f' ogo fun, onise 'yanu",
+      ],
+      versesEnglish: [
+        [
+          "To God be the glory, great things He hath done,",
+          "So lov’d He the world that He gave us His Son,",
+          "Who yielded His life and atonement for sin,",
+          "And open’d the life gate that all may go in.",
+        ],
+        [
+          "O perfect redemption, the purchase of blood,",
+          "To ev’ry believer the promise of God;",
+          "The vilest offender who truly believes,",
+          "That moment from Jesus a pardon receives.",
+        ],
+        [
+          "Great things He hath taught us,",
+          "Great things He hath done,",
+          "And great our rejoicing thro’ Jesus the Son;",
+          "But purer, and higher, and greater will be",
+          "Our wonder, our transport when Jesus we see.",
+        ],
+      ],
+      chorusEnglish: [
+        "Praise the Lord, praise the Lord,",
+        "Let the earth hear His voice,",
+        "Praise the Lord, Praise the Lord,",
+        "Let the people rejoice!",
+        "O come to the Father thro’ Jesus the Son,",
+        "And give Him the glory,",
+        "Great things He hath done.",
+      ],
+    ),
+    Hymn(
+      id: '43',
+      versesYoruba: [
+        [
+          "Oluwa orun on aiye,",
+          "'Wọ n'iyin at' ọpẹ yẹ fun;",
+          "Bawo l' a ba ti fẹ Ọ to,",
+          "Onibu ọrẹ?",
+        ],
+        [
+          "Orun ti nran, at' afẹfẹ,",
+          "Gbogbo eweko nsọ 'fẹ Rẹ;",
+          "'Wọ l' O nmu irugbin dara,",
+          "Onibu ọrẹ?",
+        ],
+        [
+          "Fun ara lile wa gbogbo,",
+          "Fun gbogbo ibukun aiye,",
+          "Awa yin Ọ, a si dupẹ,",
+          "Onibu ọrẹ?",
+        ],
+        [
+          "O ko du wa li Ọmọ Rẹ,",
+          "O fi fun aiye ẹṣẹ wa,",
+          "O si f' ẹbun gbogbo pẹlu",
+          "Onibu ọrẹ?",
+        ],
+        [
+          "O fun wa l' Ẹmi Mimọ Rẹ,",
+          "Ẹmi iye at' agbara,",
+          "O rọjo ẹkun bukun Rẹ",
+          "Le wa lori.",
+        ],
+        [
+          "Fun idariji ẹṣẹ wa,",
+          "Ati fun ireti ọrun,",
+          "Kil' ohun t' a ba fi fun Ọ?",
+          "Onibu ọrẹ.",
+        ],
+        [
+          "Owo ti a nna, ofo ni,",
+          "Ṣugbọn 'yi t'a fi fun Ọ?",
+          "O jẹ iṣura tit' aiye,",
+          "Onibu ọrẹ.",
+        ],
+        [
+          "Ohun t' a bun Ọ, Oluwa,",
+          "'Wọ o san le pada fun wa;",
+          "Layọ l' a o ta Ọ lọrẹ,",
+          "Onibu ọrẹ.",
+        ],
+        [
+          "Ni ọdọ Rẹ lati ṣan wa,",
+          "Ọlọrun Olodumare;",
+          "Je k' a le ba Ọ gbe titi,",
+          "Onibu ọrẹ.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "O Lord of heaven and earth and sea,",
+          "To Thee all praise and glory be;",
+          "How shall we show our love to Thee,",
+          "Giver of all?"
+        ],
+        [
+          "The golden sunshine, vernal air,",
+          "Sweet flowers and fruit, Thy love declare;",
+          "Where harvests ripen, Thou art there",
+          "Giver of all?"
+        ],
+        [
+          "For peaceful homes and healthful days,",
+          "For all the blessings earth displays,",
+          "We owe Thee thankfulness and praise,",
+          "Giver of all?"
+        ],
+        [
+          "Thou didst not spare Thine only Son,",
+          "But gav’st Him for a world undone,",
+          "And freely with that Blessed One",
+          "Thou givest all."
+        ],
+        [
+          "Thou giv’st the holy Spirit’s dower,",
+          "Spirit of life and love and power,",
+          "And dost his sevenfold graces shower",
+          "Upon us all."
+        ],
+        [
+          "For souls redeem’d for sins forgiven",
+          "For means of grace and hopes of heaven,",
+          "What can to Thee, O Lord, be given,",
+          "Who givest all?"
+        ],
+        [
+          "We lose what on ourselves we spend,",
+          "We have as treasure without end,",
+          "Whatever, Lord, to Thee we lend,",
+          "Who givest all."
+        ],
+        [
+          "Whatever, Lord, we lend to Thee",
+          "Repaid a thousand fold will be,",
+          "Then gladly will we give to Thee,",
+          "Giver of all;"
+        ],
+        [
+          "To Thee, from whom we all derive",
+          "Our life, our gifts, our power to give,",
+          "Oh may we ever with Thee live,",
+          "Giver of all."
+        ],
+      ],
+    ),
+    Hymn(
+      id: '44',
+      versesYoruba: [
+        [
+          "Ji, okan mi, dide layo,",
+          "Korin iyin Olugbala",
+          "Ola Re bere orin mi",
+          "'Seun ife Re ti po to ",
+        ],
+        [
+          "O ri mo segbe n'isubu",
+          "Sibe, O fe mi l'a fetan:",
+          "O yo mi ninu osi mi",
+          "'Seun ife Re ti tobi to!",
+        ],
+        [
+          "Ogun ota dide si mi",
+          "Aiye at' esu ndena mi",
+          "On nmu mi la gbogbo re ja;",
+          "'Seun 'fe Re ti n 'ipa to!",
+        ],
+        [
+          "'Gbagbogbo l'okan see mi ",
+          "Nfe ya lehin Oluwa mi;",
+          "Sugbon bi mo ti ngbagbe Re,",
+          "Iseun ife Re ki ye. ",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Awake, my soul, in joyful lays,",
+          "And sing the great Redeemer’s praise",
+          "He justly claims a song from me,",
+          "His loving kindness, oh, how free!"
+        ],
+        [
+          "He saw me ruined by the Fall,",
+          "Yet loved me, not withstanding all;",
+          "He saved me from my lost estate:",
+          "His loving kindness, oh how great."
+        ],
+        [
+          "Tho’ num’rous hosts of might foes",
+          "Tho’ earth and hell my way oppose",
+          "He safely leads my soul along",
+          "His loving kindness, oh, how strong."
+        ],
+        [
+          "This weak heart of mine is always,",
+          "Transgressing the laws of the Lord;",
+          "The more I tend to forget Him:",
+          "His endless love will never fail. Amen"
+        ],
+      ],
+    ),
+    Hymn(
+      id: '45',
+      versesYoruba: [
+        [
+          "Gbogbo enyin ti ngbe aiye, ",
+          "E f' ayo korin s' Oluwa:",
+          "F' iberu sin, e yin l' ogo, ",
+          "E wa s' odo Re, k'e si yo.",
+        ],
+        [
+          "Oluwa, On ni Olorun, ",
+          "Laisi, 'ranwo wa O da wa;",
+          "Agbo Re ni wa, O mbo wa; ",
+          "O si fi wa ş' aguntan Re.",
+        ],
+        [
+          "Nje, f' iyin wo ile Re, wa ",
+          "Fayo sunmo agbala Re:",
+          "Yin, k' e bukun oruko Rè,",
+          "Tori o ye be lati şe.",
+        ],
+        [
+          "Eeşe! Rere l' Olorun wa,",
+          "Anu Rè, o wa titi lai: ",
+          "Ooto Re ko figbakan ye. ",
+          "O duro lat' iran-de-ran.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "ALL people that on earth do dwell,",
+          "Sing to the Lord with cheerful voice:",
+          "Him serve with fear, His praise forth tell,",
+          "Come ye before Him and rejoice."
+        ],
+        [
+          "The Lord, ye know is God indeed;",
+          "Without our aid He did us make:",
+          "We are his flock, He doth us feed;",
+          "And for his sheep He doth us take."
+        ],
+        [
+          "Oh enter then His gates with praise,",
+          "Approach with joy His courts unto:",
+          "Praise, laud, and bless His name always;",
+          "For it is seemly so to do."
+        ],
+        [
+          "For why? The Lord our God is good;",
+          "His mercy is for ever sure;",
+          "His truth at all times firmly stood;",
+          "And shall from age to age endure."
+        ],
+      ],
+    ),
+    Hymn(
+      id: '46',
+      versesYoruba: [
+        [
+          "A f'ope f'olorun,",
+          "L'okan ati l'ohun wa,",
+          "Eni s'ohun 'yanu,",
+          "N'nu Enit'araiye nyo;",
+          "Gbat' a wa l' om' owo",
+          "On na l' ntoju wa",
+          "O si nf'ebun ife",
+          "Se 'toju wa sibe",
+        ],
+        [
+          "Oba Onib' ore,",
+          "Ma fi wa sile lailai",
+          "Ayo ti ko l'opin",
+          "On 'bukun yo je tiwa;",
+          "Pa wa mo n' nu ore,",
+          "To wa gb' a ba damu,",
+          "Yo wa ninu ibi",
+          "L' aiye ati L'orun",
+        ],
+        [
+          "K' a f' iyin on ope",
+          "F' olorun Baba, Omo",
+          "Ati Emi mimo;",
+          "Ti o ga julo l'orun,",
+          "Olorun kan lailai,",
+          "T' aiye at'orun mbo,",
+          "Be l' o wa d' isiyi,",
+          "Beni y' o wa lailai",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "NOW thank we all our God,",
+          "With heart and hands and voices,",
+          "Who wondrous things hath done,",
+          "In whom His world rejoices;",
+          "Who from our mother’s arms",
+          "Hath bless’d us on our way",
+          "With countless gifts of Love",
+          "And still is ours to-day"
+        ],
+        [
+          "Oh may this bounteous God",
+          "Through all our life be near us ",
+          "With ever joyful hearts",
+          "And blessed peace to cheer us;",
+          "And keep us in His grace,",
+          "And guide us when perplex’d,",
+          "And free us from all ills",
+          "In this world and the next."
+        ],
+        [
+          "All praise and thanks to God",
+          "The Father now be given,",
+          "The Son, and Holy Ghost,",
+          "Supreme in highest heaven,",
+          "The one eternal God,",
+          "Whom earth and heaven adore,",
+          "For thus it was, is now,",
+          "And shall be ever more."
+        ],
+      ],
+    ),
+    Hymn(
+      id: '47',
+      versesYoruba: [
+        [
+          "Yin Olorun Oba wa;",
+          "Ẹ gbe ohun iyin ga;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Yin Ẹnit' O da orun",
+          "Ti o nran lojojumọ;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Ati oṣupa loru",
+          "Ti o ntan 'mọlẹ jẹjẹ;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Yin Ẹnit' O m' ojo rọ",
+          "T' o nmu irugbin dagba;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Ẹnit' O paṣẹ fun 'lẹ",
+          "Lati mu eso pọ si;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Yin fun ikore oko,",
+          "O mu ki aka wa kun;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Yin f' onjẹ to ju yi lo,",
+          "Ẹri 'bukun ailopin;",
+          "Anu Rẹ o wa titi",
+          "Lododo daju daju.",
+        ],
+        [
+          "Ogo f' Ọba olore:",
+          "Ki gbogbo ẹda gberin:",
+          "Ogo fun Baba, Ọmọ,",
+          "At' Emi: Mẹtalọkan.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "PRAISE, O praise our God and king;",
+          "Hymns of adoration sing;",
+          "For his mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "Praise Him that He made the sun ",
+          "Day by day His course to run;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure:"
+        ],
+        [
+          "And the silver moon by night,",
+          "Shining with her gentle light;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "Praise Him that He gave the rain",
+          "To mature the swelling grain;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "And hath bid the fruitful field",
+          "Crops of precious increase yield;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "Praise Him for our harvest-store:",
+          "He hath fill’d the garner-floor;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "And for richer food than this,",
+          "Pledge of everlasting bliss;",
+          "For His mercies still endure",
+          "Ever faithful, ever sure."
+        ],
+        [
+          "Glory to our bounteous King;",
+          "Glory let creation sing:",
+          "Glory to the Father, Son,",
+          "And Blest Spirit, Three in One."
+        ],
+      ],
+    ),
+    Hymn(
+      id: '48',
+      versesYoruba: [
+        [
+          "Iyin f' Eni Mimo julo",
+          "L'oke ati n' ile",
+          "Oro Re gbogbo 'je 'yanu",
+          "Gbogb' ona Re daju",
+        ],
+        [
+          "Ogbon Olorun ti po to",
+          "Gbat' enia subu",
+          "Adam keji wa soju 'ja",
+          "Ati lati gbala",
+        ],
+        [
+          "Ogbon ife! p'eran ara",
+          "T'o gbe Adam subu",
+          "Tun b' ota ja ija otun",
+          "K'o ja, k'o is segun",
+        ],
+        [
+          "Ati p'ebun t' o j'or'ofe",
+          "So ara di otun,",
+          "Olorun papa tikare",
+          "J' Olorun ninu wa",
+        ],
+        [
+          "Ife 'yanu ti Eniti",
+          "O pa ota enia;",
+          "Ninu awo awa enia",
+          "Je irora f'enia.",
+        ],
+        [
+          "Nikoko ninu ogba ni",
+          "Ati lori igi",
+          "T'o si ko wa lati jiya",
+          "T'o ko wa lati ku ",
+        ],
+        [
+          "Iyin f'Eni mimo julo",
+          "L'oke ati n'ile",
+          "Oro Re gbogbo je 'yanu",
+          "Gbogb' ona Re daju",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "PRAISE to the Holiest in the height,",
+          "And in the depth be praise:",
+          "In all His words most wonderful",
+          "Most sure in all His ways."
+        ],
+        [
+          "Oh loving wisdom of our God",
+          "When all was sin and shame,",
+          "A second Adam to the fight",
+          "And to the rescue came."
+        ],
+        [
+          "Oh wisest love! That flesh and blood,",
+          "Which did in Adam fail,",
+          "Should strive afresh against their foe",
+          "Should strive and should prevail;"
+        ],
+        [
+          "And that a higher gift than grace",
+          "Should flesh and blood refine,",
+          "God’s presence and His very Self,",
+          "And essence all divine."
+        ],
+        [
+          "Oh generous love! That He, who smote",
+          "In Man for man foe,",
+          "The double agony in Man",
+          "For man should undergo;"
+        ],
+        [
+          "And in the garden secretly,",
+          "And on the cross on high,",
+          "Should teach His brethren, and inspire",
+          "To suffer and to die."
+        ],
+        [
+          "Praise to the Holies in the height",
+          "And in the depth be praise:",
+          "In all His words most wonderful,",
+          "Most sure in all His ways."
+        ],
+      ],
+    ),
+    Hymn(
+      id: '49',
+      versesYoruba: [
+        [
+          "Wa enyin olope wa",
+          "Gbe orin ikore ga'",
+          "Ire gbogbo ti wole,",
+          "K'otutu oye to de:",
+          "Olorun Eleda wa,",
+          "Lo ti pese f'aini wa;",
+          "Wa k'a rele Olorun",
+          "Gbe orin ikore ga",
+        ],
+        [
+          "Oko Olorun l'aiye,",
+          "Latin seso iyin Re;",
+          "Alikama at'epo",
+          "Ndagba f'aro tab'ayo:",
+          "Ehu na, ipe tele",
+          "Siri oka nikehin;",
+          "Oluwa k'ore, mu wa",
+          "Je eso rere fun O",
+        ],
+        [
+          "N'tori Olorun wa mbo",
+          "Y'o si 'kore Re sile:",
+          "On o gbon gbogbo panti",
+          "Kuro l'oko Re njona:",
+          "Y'o f'ase f'awon Angel,",
+          "Lati gba epo s'ina,",
+          "Si aba Re titi lai",
+        ],
+        [
+          "Beni ma wa, Oluwa,",
+          "Si kore ikehin,",
+          "Ko awon enia Re jo;",
+          "Kuro l'ese at'aro:",
+          "So won di mimo lailai",
+          "Ki nwon le ma ba O gbe;",
+          "Wa t'Iwo t'Angeli Re,",
+          "Gbe orin ikore ga.",
+        ],
+      ],
+      versesEnglish: [
+        [
+          "Come, ye thankful people, come, ",
+          "raise the song of harvest home;",
+          "All is safely gathered in,",
+          "ere the winter storms begin.",
+          "God our Maker",
+          "doth provide for our wants to be supplied;",
+          "Come to God’s own temple, come,",
+          "raise the song of harvest home."
+        ],
+        [
+          "All the world is God’s own field,",
+          "fruit unto His praise to yield;",
+          "Wheat and tares together",
+          "sown unto joy or sorrow grown.",
+          "First the blade and then the ear,",
+          "then the full corn shall appear;",
+          "Lord of harvest,grant that",
+          "we wholesome grain and pure may be."
+        ],
+        [
+          "For the Lord our God shall come,",
+          "and shall take His harvest home;",
+          "From His field shall in that day",
+          "all offenses purge away,",
+          "Giving angels charge at last",
+          "in the fire the tares to cast;",
+          "But the fruitful ears",
+          "to store in His garner evermore.",
+        ],
+        [
+          "Even so, Lord, quickly come,",
+          "bring Thy final harvest home;",
+          "Gather Thou Thy people in,",
+          "free from sorrow, free from sin,",
+          "There, forever purified,",
+          "in Thy garner to abide;",
+          "Come, with all Thine angels come,",
+          "raise the glorious harvest home.",
+        ]
+      ],
+    ),
+    Hymn(
+      id: '50',
+      versesYoruba: [
+        [
+          "Je k'a jumo korin-ife l'Olorun,",
+          "Ki gbogbo wa gberin,Ife - l'Olorun;",
+          "Ji okan t'o nsun nin'ęsę,",
+          "K'Olukuluku korin na ",
+          "Tori Jesu korin, ife - l'Olorun.",
+        ],
+        [
+          "So kakiri yi aiye ka - ife ni",
+          "Irapada mbe ninu Krist'- ife ni",
+          "Eje Re nwe ese wa nu",
+          "Emi Re nso ekun dayo",
+          "O si nmu wa korin ife - Olorun."
+        ],
+        [
+          "Ayo wa nihin ti po to - ife ni",
+          "Ileri Re nmu 'nu wa dun - ife ni",
+          "Oorun at'asa ni fun wa,",
+          "Iranwo at'ireti wa,",
+          "Ko ni fi wa sile, ife Olorun.",
+        ],
+        [
+          "B'iku ba pa oju mi de  -ife ni",
+          "Ngo segun iku nipa Kristi - ife ni",
+          "Nko ni beru odo Jordan",
+          "Toru Jesu y'o pelu mi",
+          "Ngo gunle s'ebute, ife - l'Olorun.",
+        ],
+      ],
+      chorusYoruba: [
+        "Ife ni Olorun",
+        "Je k'a jumo k'orin ife",
+        "L'Olorun",
+      ],
+      versesEnglish: [
+        [
+          "Come, let us all unite to sing - God is love!",
+          "While heaven and earth their praises bring - God is love!",
+          "Let every soul from sin awake,",
+          "Each in his heart sweet music make,",
+          "And sweetly sing for Jesus’ sake - God is love!",
+        ],
+        [
+          "Oh, tell to earth’s remotest bound - God is love!",
+          "In Christ is full redemption found - God is love!",
+          "His blood can cleanse our sins away;",
+          "His Spirit turns our night to day,",
+          "And leads our souls with joy to say",
+        ],
+        [
+          "How happy is our portion here - God is love!",
+          "His promises our spirits cheer - God is love!",
+          "He is our Sun and Shield by day,",
+          "Our help, our hope, our strength, our stay,",
+          "He will be with us all the way - God is love!",
+        ],
+        [
+          "What though my heart and flesh shall fail - God is love!!",
+          "Through Christ I shall o’er death prevail - God is love!",
+          "E’en Jordan’s swell I will not fear,",
+          "For Jesus will be with me there,",
+          "My soul above the waves to bear:",
+          "God us love!",
+        ],
+      ],
+      chorusEnglish: [
+        "God is love…",
+        "God is love!...",
+        "Come, let us all unite to sing:",
+        "God is love!",
       ],
     )
   ];
