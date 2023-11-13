@@ -1,11 +1,17 @@
+import 'package:church/model/language_item.dart';
+import 'package:church/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'hymn_view_screen.dart';
-import '../model/hymn.dart';
 import '../providers/hymn_book_provider.dart';
+
+import 'hymn_view_screen.dart';
+
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
+import '../widgets/language_popup_menu.dart';
+
+import '../model/hymn.dart';
 
 class HymnBookScreen extends StatefulWidget {
   static const routeName = '/hymn_category';
@@ -61,14 +67,19 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
+    print('build screen');
     return Scaffold(
         resizeToAvoidBottomInset: true,
         drawer: MainDrawer(),
         appBar: AppBar(
+          elevation: 0,
+          centerTitle: true,
+          backgroundColor: Theme.of(context).primaryColor,
           title: const Text(
             screenName,
             overflow: TextOverflow.visible,
           ),
+          actions: const [LanguagePopUpMenu()],
         ),
         body: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),
@@ -77,9 +88,10 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             width: maxWidth,
             child: Column(
               children: [
-                const Padding(padding: EdgeInsets.all(10)),
-                mainTextField(mediaQuery, context),
-                const Padding(padding: EdgeInsets.all(8)),
+                Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Theme.of(context).primaryColor,
+                    child: mainTextField(mediaQuery, context)),
                 displayedHymnList(context)
               ],
             ),
@@ -115,20 +127,24 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 3 / 4),
           child: Container(
-            margin: const EdgeInsets.only(left: 20, top: 10),
-            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.only(
+              left: 15,
+            ),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Theme.of(context).primaryColor)),
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.white,
+            ),
             child: SizedBox(
               height: 40,
               child: TextField(
+                cursorColor: Theme.of(context).primaryColor,
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
                 strutStyle: const StrutStyle(
                   forceStrutHeight: true,
                 ),
-                style: const TextStyle(fontSize: 23),
+                style: TextStyle(
+                    fontSize: 23, color: Theme.of(context).primaryColor),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapTitle(),
@@ -136,19 +152,31 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 onChanged: (value) => onChangedTitle(value),
                 keyboardType: TextInputType.text,
                 autocorrect: false,
+                enableSuggestions: false,
                 decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.all(5),
+                  // errorBorder: InputBorder.none,
+                  // focusedErrorBorder: InputBorder.none,
+
+                  isDense: true,
+                  contentPadding: const EdgeInsets.only(left: 8, right: 8),
+                  hintStyle: TextStyle(color: Theme.of(context).primaryColor),
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
-                  prefixIcon: const Icon(Icons.search),
+
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Theme.of(context).primaryColor,
+                    size: 50,
+                  ),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.center,
                     color: Theme.of(context).primaryColor,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.cancel,
-                      size: 25,
+                      size: 22,
+                      color: Theme.of(context).primaryColor,
                     ),
                     tooltip: "clear input",
                     onPressed: () {
@@ -165,17 +193,20 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
           ),
         ),
         ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 1 / 4),
+          constraints:
+              BoxConstraints(maxWidth: mediaQuery.size.width * 0.75 / 4),
           child: Container(
-            margin: const EdgeInsets.only(right: 20, top: 10),
-            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.only(right: 15, left: 5),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Theme.of(context).primaryColor)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: SizedBox(
               height: 40,
               child: TextField(
-                style: const TextStyle(fontSize: 20),
+                cursorColor: Theme.of(context).primaryColor,
+                style: TextStyle(
+                    fontSize: 20, color: Theme.of(context).primaryColor),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => onTapNumber(),
@@ -186,10 +217,15 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 onChanged: (value) => onChangedNumber(value),
                 onSubmitted: (submit) => onSubmittedNumber(submit, _foundHymns),
                 controller: _enteredHymnNumber,
-                decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(5),
-                    hintText: '#',
-                    border: InputBorder.none),
+                decoration: InputDecoration(
+                  isDense: true,
+                  contentPadding:
+                      const EdgeInsets.only(top: 8, left: 8, right: 8),
+                  hintText: '#',
+                  hintStyle: TextStyle(
+                      color: Theme.of(context).primaryColor, fontSize: 22),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),
@@ -294,15 +330,32 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     if (enteredUserHymn.isEmpty) {
       results = _staticHymns;
     } else {
-      results = _staticHymns
-          .where((hymnbook) =>
-              hymnbook.verses[0][0].toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-              hymnbook.verses[0][0].contains(enteredUserHymn))
-          .toList();
-      setState(() {
-        _foundHymns = results;
-      });
+      if (Provider.of<LanguageProvider>(context, listen: false).currentItem ==
+          LanguageItem.yoruba) {
+        results = _staticHymns
+            .where((hymnbook) =>
+                hymnbook.versesYoruba[0][0]
+                    .toLowerCase()
+                    .contains(enteredUserHymn) ||
+                hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+                hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
+            .toList();
+        setState(() {
+          _foundHymns = results;
+        });
+      } else {
+        results = _staticHymns
+            .where((hymnbook) =>
+                hymnbook.versesEnglish[0][0]
+                    .toLowerCase()
+                    .contains(enteredUserHymn) ||
+                hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
+                hymnbook.versesEnglish[0][0].contains(enteredUserHymn))
+            .toList();
+        setState(() {
+          _foundHymns = results;
+        });
+      }
     }
 
     _foundHymns = results;

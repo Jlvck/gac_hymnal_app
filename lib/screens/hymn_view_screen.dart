@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/hymn_book_provider.dart';
+import '../providers/language_provider.dart';
+
+import '../widgets/language_popup_menu.dart';
 import '../widgets/hymn_view_widget.dart';
 
 import '../model/hymn.dart';
+import '../model/language_item.dart';
 
 class HymnViewScreen extends StatefulWidget {
   final String id;
@@ -31,23 +35,19 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller =
-        PageController(initialPage: int.parse(widget.id) - 1);
+    final PageController controller = PageController(initialPage: pagenumber);
 
     return Scaffold(
       appBar: AppBar(
-        title: Align(
-          alignment: Alignment.center,
-          child: FittedBox(
-            fit: BoxFit.fill,
-            alignment: Alignment.centerRight,
-            child: Text(
-              "Hymn ${hymnList[pagenumber].id}",
-              softWrap: true,
-              overflow: TextOverflow.fade,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
+        centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.fill,
+          child: Text(
+            checkAppBarTitle(context, hymnList[pagenumber].id),
+            softWrap: true,
+            overflow: TextOverflow.fade,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
         elevation: 0,
@@ -67,7 +67,8 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                 },
               ),
             ),
-          )
+          ),
+          const LanguagePopUpMenu()
         ],
       ),
       body: PageView(
@@ -78,14 +79,26 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           });
         },
         controller: controller,
-        children: List.generate(500, (index) {
+        children: List.generate(hymnList.length, (index) {
           return HymnViewWidget(
-              hymnVerses: hymnList[index].verses,
-              hymnChorus: hymnList[index].chorus,
-              isChorus: hymnList[index].isChorus);
+            hymnYorubaVerses: hymnList[index].versesYoruba,
+            hymnYorubaChorus: hymnList[index].chorusYoruba,
+            hymnEnglishVerses: hymnList[index].versesEnglish,
+            hymnEnglishChorus: hymnList[index].chorusEnglish,
+          );
         }),
       ),
       backgroundColor: Colors.white,
     );
+  }
+
+  String checkAppBarTitle(BuildContext context, String id) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Iwe Orin $id';
+    } else {
+      return 'Hymn $id';
+    }
   }
 }

@@ -5,6 +5,7 @@ import 'package:page_transition/page_transition.dart';
 
 import 'providers/hymn_book_provider.dart';
 import 'providers/navigation_provider.dart';
+import 'providers/language_provider.dart';
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   final MaterialColor mycolor = MaterialColor(
     const Color.fromRGBO(0, 0, 102, 1).value,
     const <int, Color>{
-      50: Color.fromRGBO(0, 0, 105, 1),
+      50: Color.fromRGBO(49, 49, 181, 1),
       100: Color.fromRGBO(0, 0, 108, 1),
       200: Color.fromRGBO(1, 1, 113, 1),
       300: Color.fromRGBO(3, 3, 115, 1),
@@ -37,26 +38,35 @@ class MyApp extends StatelessWidget {
           create: (ctx) => HymnBookProvider(),
         ),
         ChangeNotifierProvider<NavigationProvider>(
-            create: (ctx) => NavigationProvider())
+            create: (ctx) => NavigationProvider()),
+        ChangeNotifierProvider(create: (ctx) => LanguageProvider())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
         theme: ThemeData(
-          useMaterial3: false,
+          drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+          listTileTheme: ListTileThemeData(tileColor: Colors.white),
+          cardTheme: CardTheme(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15))),
+          useMaterial3: true,
           scaffoldBackgroundColor: Colors.white,
+          dividerTheme: const DividerThemeData(color: Colors.transparent),
           appBarTheme: AppBarTheme(
+              iconTheme: const IconThemeData(color: Colors.white),
               elevation: 5,
               scrolledUnderElevation: 10,
               backgroundColor: mycolor,
               centerTitle: true,
               titleTextStyle: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              )),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.white)),
           primarySwatch: mycolor,
           secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
+          primaryColor: mycolor,
         ),
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
@@ -78,17 +88,15 @@ class _MyHomePageState extends State<MyHomePage> {
   String logo_1 = 'images/church_logo1.png';
   String logo_2 = 'images/church_logo2.png';
 
-  String name = 'images/church_logo2.png';
-
   @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: true,
       child: AnimatedSplashScreen.withScreenFunction(
         splash: Image.asset(
-          name,
+          logo_1,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).primaryColor,
         screenFunction: () async {
           Provider.of<HymnBookProvider>(context, listen: false)
               .setFavHymnList();

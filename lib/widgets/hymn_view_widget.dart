@@ -1,17 +1,25 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/language_provider.dart';
+
+import '../model/language_item.dart';
 
 class HymnViewWidget extends StatelessWidget {
-  final List<List<String>> hymnVerses;
-  final List<String> hymnChorus;
-  final bool isChorus;
+  final List<List<String>> hymnYorubaVerses;
+  final List<String>? hymnYorubaChorus;
+  final List<List<String>> hymnEnglishVerses;
+  final List<String>? hymnEnglishChorus;
 
-  const HymnViewWidget(
-      {super.key,
-      required this.hymnVerses,
-      required this.hymnChorus,
-      required this.isChorus});
+  const HymnViewWidget({
+    super.key,
+    required this.hymnYorubaVerses,
+    this.hymnYorubaChorus,
+    required this.hymnEnglishVerses,
+    this.hymnEnglishChorus,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +28,12 @@ class HymnViewWidget extends StatelessWidget {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
+    print('build hymn view widget');
 
     return Container(
       decoration: BoxDecoration(
           border: Border.symmetric(
-              vertical: BorderSide(color: Colors.black, width: 1))),
+              vertical: BorderSide(color: Colors.black, width: 0.5))),
       height: maxHeight,
       width: maxWidth,
       child: ListView(padding: EdgeInsets.zero, children: [
@@ -32,34 +41,33 @@ class HymnViewWidget extends StatelessWidget {
           padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: const ScrollPhysics(),
-          children: List.generate(hymnVerses.length, (index) {
+          children: List.generate(checkLength(context), (index) {
             return Align(
               alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     Text(
                       "${index + 1}",
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30),
+                          fontWeight: FontWeight.w900, fontSize: 30),
                     ),
-                    versesWidget(
-                      hymnVerses[index],
-                    ),
-                    if (isChorus) chorusWidget(hymnChorus)
+                    checkVerses(context, index),
+                    if (hymnYorubaChorus != null && hymnEnglishChorus != null)
+                      checkChorus(context)
                   ],
                 ),
               ),
             );
           }),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.all(20.0),
           child: Center(
             child: Text(
-              'Amin....',
-              textAlign: TextAlign.justify,
+              checkAmen(context),
+              textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
@@ -93,16 +101,16 @@ class HymnViewWidget extends StatelessWidget {
     );
   }
 
-  Widget chorusWidget(List<String> chorus) {
+  Widget chorusWidget(BuildContext context, List<String> chorus) {
     return Container(
       margin: const EdgeInsets.all(8),
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          const Text(
-            "Chorus",
+          Text(
+            checkChorusTitle(context),
             style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 fontSize: 20,
                 fontStyle: FontStyle.italic),
           ),
@@ -118,7 +126,9 @@ class HymnViewWidget extends StatelessWidget {
                   child: Text(
                     chorus[index],
                     style: const TextStyle(
-                        fontSize: 20, fontStyle: FontStyle.italic),
+                        fontSize: 20,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,
                     softWrap: true,
                     maxLines: 2,
@@ -130,5 +140,55 @@ class HymnViewWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  int checkLength(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return hymnYorubaVerses.length;
+    } else {
+      return hymnEnglishVerses.length;
+    }
+  }
+
+  String checkAmen(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Amin....';
+    } else {
+      return 'Amen...';
+    }
+  }
+
+  checkVerses(BuildContext context, int index) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return versesWidget(hymnYorubaVerses[index]);
+    } else {
+      return versesWidget(hymnEnglishVerses[index]);
+    }
+  }
+
+  checkChorus(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return chorusWidget(context, hymnYorubaChorus!);
+    } else {
+      return chorusWidget(context, hymnEnglishChorus!);
+    }
+  }
+
+  String checkChorusTitle(BuildContext context) {
+    LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    if (currentLanguage == LanguageItem.yoruba) {
+      return 'Ègbè';
+    } else {
+      return 'Chorus';
+    }
   }
 }

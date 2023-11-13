@@ -1,4 +1,4 @@
-import '../model/hymn.dart';
+import 'package:church/model/formerModels/hymn.dart';
 
 //Class that contains hymn text from hymn id 1 to 100
 class HymnText1to100 {
@@ -2090,7 +2090,7 @@ class HymnText1to100 {
       verses: [
         [
           "Ile-eko ojo 'simi,",
-          "mo ti fe O to;",
+          "A, mo ti fe O to;",
           "Inu mi dun mo daraya,",
           "Lati yo ayo Re",
         ],
@@ -2960,7 +2960,7 @@ class HymnText1to100 {
       id: '75',
       verses: [
         [
-          "Okan are, ile kan mbe,",
+          "Okan aare, ile kan mbe,",
           "L'ọna jinjin s' aiye iṣẹ;",
           "Ile t' ayida ko le de,",
           "Tani ko fẹ simi nibẹ?",
@@ -3931,7 +3931,7 @@ class HymnText1to100 {
       id: '99',
       verses: [
         [
-          "Ojo ati akoko nio.",
+          "Ojo ati akoko nlo.",
           "Nwon sun wa s' eti 'boji;",
           "Awa fere dubulę na,",
           "Ninu iho 'busun wa.",
