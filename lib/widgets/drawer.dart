@@ -41,7 +41,7 @@ class MainDrawer extends StatelessWidget {
                 DrawerHeader(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Container(
