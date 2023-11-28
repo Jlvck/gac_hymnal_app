@@ -7,8 +7,9 @@ import '../providers/hymn_book_provider.dart';
 
 import 'hymn_view_screen.dart';
 
+import '../widgets/main_text_field.dart';
+import '../widgets/displayed_hymn_list.dart';
 import '../widgets/drawer.dart';
-import '../widgets/hymn_list_view.dart';
 import '../widgets/language_popup_menu.dart';
 
 import '../model/hymn.dart';
@@ -91,154 +92,29 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 Container(
                     padding: const EdgeInsets.all(8),
                     color: Theme.of(context).primaryColor,
-                    child: mainTextField(mediaQuery, context)),
-                displayedHymnList(context)
+                    child: MainTextField(
+                      runFilter: _runFilter,
+                      enteredHymnNumber: _enteredHymnNumber,
+                      enteredHymnTitle: _enteredHymnTitle,
+                      foundHymns: _foundHymns,
+                      onTapTitle: _onTapTitle,
+                      onChangedTitle: _onChangedTitle,
+                      onChangedNumber: _onChangedNumber,
+                      onSubmittedNumber: _onSubmittedNumber,
+                      onTapNumber: _onTapNumber,
+                    )),
+                DisplayedHymnList(foundHymns: _foundHymns, scroll: _scroll)
               ],
             ),
           ),
         ));
   }
 
-  Flexible displayedHymnList(BuildContext context) {
-    return Flexible(
-      child: _foundHymns.isNotEmpty
-          ? Scrollbar(
-              thumbVisibility: false,
-              trackVisibility: false,
-              interactive: true,
-              controller: _scroll,
-              radius: const Radius.circular(4),
-              thickness: 10,
-              child: HymnListView(
-                hymnList: _foundHymns,
-                scroll: _scroll,
-              ))
-          : const Text(
-              'No results found',
-              style: TextStyle(fontSize: 24),
-            ),
-    );
-  }
-
-  Row mainTextField(MediaQueryData mediaQuery, BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: mediaQuery.size.width * 3 / 4),
-          child: Container(
-            margin: const EdgeInsets.only(
-              left: 15,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
-            ),
-            child: SizedBox(
-              height: 40,
-              child: TextField(
-                cursorColor: Theme.of(context).primaryColor,
-                textAlignVertical: TextAlignVertical.center,
-                textAlign: TextAlign.left,
-                strutStyle: const StrutStyle(
-                  forceStrutHeight: true,
-                ),
-                style: TextStyle(
-                    fontSize: 23, color: Theme.of(context).primaryColor),
-                onTapOutside: (event) =>
-                    FocusManager.instance.primaryFocus?.unfocus(),
-                onTap: () => onTapTitle(),
-                controller: _enteredHymnTitle,
-                onChanged: (value) => onChangedTitle(value),
-                keyboardType: TextInputType.text,
-                autocorrect: false,
-                enableSuggestions: false,
-                decoration: InputDecoration(
-                  // errorBorder: InputBorder.none,
-                  // focusedErrorBorder: InputBorder.none,
-
-                  isDense: true,
-                  contentPadding: const EdgeInsets.only(left: 8, right: 8),
-                  hintStyle: TextStyle(color: Theme.of(context).primaryColor),
-                  hintText: 'Search....',
-                  hintMaxLines: 1,
-                  hintTextDirection: TextDirection.ltr,
-
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Theme.of(context).primaryColor,
-                    size: 50,
-                  ),
-                  suffix: IconButton(
-                    padding: EdgeInsets.zero,
-                    alignment: Alignment.center,
-                    color: Theme.of(context).primaryColor,
-                    icon: Icon(
-                      Icons.cancel,
-                      size: 22,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    tooltip: "clear input",
-                    onPressed: () {
-                      setState(() {
-                        _enteredHymnTitle.clear();
-                        _runFilter(_enteredHymnTitle.text.toLowerCase());
-                      });
-                    },
-                  ),
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-        ),
-        ConstrainedBox(
-          constraints:
-              BoxConstraints(maxWidth: mediaQuery.size.width * 0.75 / 4),
-          child: Container(
-            margin: const EdgeInsets.only(right: 15, left: 5),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: SizedBox(
-              height: 40,
-              child: TextField(
-                cursorColor: Theme.of(context).primaryColor,
-                style: TextStyle(
-                    fontSize: 20, color: Theme.of(context).primaryColor),
-                onTapOutside: (event) =>
-                    FocusManager.instance.primaryFocus?.unfocus(),
-                onTap: () => onTapNumber(),
-                keyboardType: const TextInputType.numberWithOptions(
-                  decimal: false,
-                  signed: false,
-                ),
-                onChanged: (value) => onChangedNumber(value),
-                onSubmitted: (submit) => onSubmittedNumber(submit, _foundHymns),
-                controller: _enteredHymnNumber,
-                decoration: InputDecoration(
-                  isDense: true,
-                  contentPadding:
-                      const EdgeInsets.only(top: 8, left: 8, right: 8),
-                  hintText: '#',
-                  hintStyle: TextStyle(
-                      color: Theme.of(context).primaryColor, fontSize: 22),
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
   void _toScrollStart() {
     _scroll.jumpTo(0);
   }
 
-  void onTapTitle() {
+  void _onTapTitle() {
     if (_enteredHymnTitle.value.text.isEmpty &
         _enteredHymnNumber.value.text.isEmpty) {
       if (_scroll.hasClients) {
@@ -255,7 +131,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onChangedTitle(String value) {
+  void _onChangedTitle(String value) {
     if (value == '') {
       setState(() {
         _foundHymns = _staticHymns;
@@ -271,7 +147,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onTapNumber() {
+  void _onTapNumber() {
     if (_enteredHymnTitle.value.text.isEmpty &
         _enteredHymnNumber.value.text.isEmpty) {
       if (_scroll.hasClients) {
@@ -288,7 +164,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onChangedNumber(String value) {
+  void _onChangedNumber(String value) {
     if (value == '') {
       setState(() {
         _foundHymns = _staticHymns;
@@ -304,7 +180,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
-  void onSubmittedNumber(String submit, List<Hymn> hymnData) {
+  void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
     if (hymnData.any((hymn) => hymn.id == submit)) {
       Navigator.push(
               context,

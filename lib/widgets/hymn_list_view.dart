@@ -21,7 +21,8 @@ class HymnListView extends StatelessWidget {
   Widget build(BuildContext context) {
     print('build list_view context');
     return Card(
-      margin: const EdgeInsets.only(left: 4, right: 4, top: 0),
+      margin: const EdgeInsets.only(left: 4, right: 4, top: 0, bottom: 0),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       elevation: 10,
       child: Padding(
         padding: const EdgeInsets.only(top: 0, left: 8, right: 8, bottom: 0),

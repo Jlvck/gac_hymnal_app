@@ -85,8 +85,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String logo_1 = 'images/church_logo1.png';
-  String logo_2 = 'images/church_logo2.png';
+  String logo_1 = 'assets/images/church_logo1.png';
+  String logo_2 = 'assets/images/church_logo2.png';
 
   @override
   Widget build(BuildContext context) {

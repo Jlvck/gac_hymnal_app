@@ -5,6 +5,9 @@ import 'package:provider/provider.dart';
 
 import '../providers/language_provider.dart';
 
+import './hymn_verses_widget.dart';
+import './hymn_chorus_widget.dart';
+
 import '../model/language_item.dart';
 
 class HymnViewWidget extends StatelessWidget {
@@ -24,6 +27,14 @@ class HymnViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final MediaQueryData mediaQuery = MediaQuery.of(context);
+    final LanguageItem currentLanguage =
+        Provider.of<LanguageProvider>(context, listen: true).currentItem;
+    List<List<String>> currentHymn = currentLanguage == LanguageItem.yoruba
+        ? hymnYorubaVerses
+        : hymnEnglishVerses;
+    List<String>? currentChorus = currentLanguage == LanguageItem.yoruba
+        ? hymnYorubaChorus
+        : hymnEnglishChorus;
     double maxHeight = mediaQuery.size.height -
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
@@ -41,32 +52,37 @@ class HymnViewWidget extends StatelessWidget {
           padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: const ScrollPhysics(),
-          children: List.generate(checkLength(context), (index) {
-            return Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      "${index + 1}",
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w900, fontSize: 30),
-                    ),
-                    checkVerses(context, index),
-                    if (hymnYorubaChorus != null && hymnEnglishChorus != null)
-                      checkChorus(context)
-                  ],
+          children: List.generate(
+            currentHymn.length,
+            (index) {
+              return Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "${index + 1}",
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900, fontSize: 30),
+                      ),
+                      HymnVersesWidget(
+                        currentVerse: currentHymn[index],
+                      ),
+                      if (hymnYorubaChorus != null && hymnEnglishChorus != null)
+                        HymnChorusWidget(currentChorus: currentChorus!)
+                    ],
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            },
+          ),
         ),
         Padding(
           padding: EdgeInsets.all(20.0),
           child: Center(
             child: Text(
-              checkAmen(context),
+              currentLanguage == LanguageItem.yoruba ? "Amin..." : "Amen...",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontWeight: FontWeight.w900,
@@ -77,118 +93,5 @@ class HymnViewWidget extends StatelessWidget {
         ),
       ]),
     );
-  }
-
-  Widget versesWidget(List<String> verseNumber) {
-    return ListView(
-      clipBehavior: Clip.hardEdge,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      primary: false,
-      children: List.generate(verseNumber.length, (i) {
-        return Align(
-          alignment: Alignment.center,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              verseNumber[i],
-              style: const TextStyle(fontSize: 20),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        );
-      }),
-    );
-  }
-
-  Widget chorusWidget(BuildContext context, List<String> chorus) {
-    return Container(
-      margin: const EdgeInsets.all(8),
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Text(
-            checkChorusTitle(context),
-            style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 20,
-                fontStyle: FontStyle.italic),
-          ),
-          ListView(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            primary: false,
-            children: List.generate(chorus.length, (index) {
-              return Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    chorus[index],
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.w700),
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                    maxLines: 2,
-                  ),
-                ),
-              );
-            }),
-          ),
-        ],
-      ),
-    );
-  }
-
-  int checkLength(BuildContext context) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return hymnYorubaVerses.length;
-    } else {
-      return hymnEnglishVerses.length;
-    }
-  }
-
-  String checkAmen(BuildContext context) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return 'Amin....';
-    } else {
-      return 'Amen...';
-    }
-  }
-
-  checkVerses(BuildContext context, int index) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return versesWidget(hymnYorubaVerses[index]);
-    } else {
-      return versesWidget(hymnEnglishVerses[index]);
-    }
-  }
-
-  checkChorus(BuildContext context) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return chorusWidget(context, hymnYorubaChorus!);
-    } else {
-      return chorusWidget(context, hymnEnglishChorus!);
-    }
-  }
-
-  String checkChorusTitle(BuildContext context) {
-    LanguageItem currentLanguage =
-        Provider.of<LanguageProvider>(context, listen: true).currentItem;
-    if (currentLanguage == LanguageItem.yoruba) {
-      return 'Ègbè';
-    } else {
-      return 'Chorus';
-    }
   }
 }

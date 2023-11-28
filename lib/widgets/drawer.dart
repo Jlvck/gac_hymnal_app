@@ -50,7 +50,7 @@ class MainDrawer extends StatelessWidget {
                     margin: EdgeInsets.zero,
                     clipBehavior: Clip.hardEdge,
                     child: Image.asset(
-                      'images/church_image_drawer.png',
+                      'assets/images/church_image_drawer.png',
                       fit: BoxFit.contain,
                       alignment: Alignment.centerLeft,
                     ),

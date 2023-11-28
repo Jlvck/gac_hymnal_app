@@ -3060,7 +3060,7 @@ class HymnText51to100 {
     ),
     Hymn(
       id: '92',
-      versesYoruba: [
+      versesEnglish: [
         [
           "Silent night, holy night,",
           "All is calm, all is bright",
@@ -3095,7 +3095,7 @@ class HymnText51to100 {
           "Christ the Saviour is born.",
         ]
       ],
-      versesEnglish: [
+      versesYoruba: [
         [
           "Ni'dakeje, oru mimo,",
           "Ökün şu, 'molę de,",
@@ -3160,6 +3160,16 @@ class HymnText51to100 {
         "Calling for me, for me!",
         "Gently and long did He plead with my soul",
         "Calling for me, for me!"
+      ],
+      [
+        "Jesus my Saviour shall come from on high,",
+        "Sweet is the promise as weary years fly;",
+        "Oh, I shall see Him descending the sky,",
+        "Coming for me, for me!",
+        "Coming for me, for me!",
+        "Coming for me, for me!",
+        "Oh, I shall see Him descending the sky",
+        "Coming for me, for me!",
       ]
     ], versesYoruba: [
       [
