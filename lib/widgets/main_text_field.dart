@@ -31,14 +31,6 @@ class MainTextField extends StatefulWidget {
 
 class _MainTextFieldState extends State<MainTextField> {
   @override
-  void dispose() {
-    widget.enteredHymnTitle.dispose();
-    widget.enteredHymnNumber.dispose();
-
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return Row(

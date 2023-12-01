@@ -1,13 +1,12 @@
+import 'package:church/widgets/drawer_list_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:community_material_icon/community_material_icon.dart';
-import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../providers/navigation_provider.dart';
+import 'package:community_material_icon/community_material_icon.dart';
+
 import '../model/navigation_item.dart';
 import '../screens/hymn_book_screen.dart';
 import '../screens/favorites_screen.dart';
+import '../widgets/social_media_tile.dart';
 
 class MainDrawer extends StatelessWidget {
   final ScrollController _scroll = ScrollController();
@@ -17,7 +16,7 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    // final topPadding = MediaQuery.of(context).padding.top;
+    final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
       backgroundColor: Colors.white,
@@ -38,32 +37,36 @@ class MainDrawer extends StatelessWidget {
               controller: _scroll,
               padding: EdgeInsets.zero,
               children: [
+                Container(
+                  height: topPadding,
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).primaryColor),
+                  clipBehavior: Clip.hardEdge,
+                ),
                 DrawerHeader(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
-                  child: Container(
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(color: Colors.white),
-                    margin: EdgeInsets.zero,
-                    clipBehavior: Clip.hardEdge,
-                    child: Image.asset(
-                      'assets/images/church_image_drawer.png',
-                      fit: BoxFit.contain,
-                      alignment: Alignment.centerLeft,
-                    ),
+                  child: Image.asset(
+                    'assets/images/church_image_drawer.png',
+                    fit: BoxFit.contain,
+                    alignment: Alignment.centerLeft,
                   ),
                 ),
-                drawerListTile('Hymnbook', Icons.music_note,
-                    HymnBookScreen.routeName, NavigationItem.hymnbook, context),
-                drawerListTile(
-                    'Favorites',
-                    Icons.favorite,
-                    FavoritesScreen.routeName,
-                    NavigationItem.favorites,
-                    context),
+                const DrawerListTile(
+                  titleName: 'Hymnbook',
+                  titleIcon: Icons.music_note,
+                  routeName: HymnBookScreen.routeName,
+                  item: NavigationItem.hymnbook,
+                ),
+                const DrawerListTile(
+                  titleName: 'Favorites',
+                  titleIcon: Icons.favorite,
+                  routeName: FavoritesScreen.routeName,
+                  item: NavigationItem.favorites,
+                ),
                 ListTile(
                   horizontalTitleGap: 5,
                   tileColor: Colors.white,
@@ -76,139 +79,34 @@ class MainDrawer extends StatelessWidget {
                   contentPadding: const EdgeInsets.only(
                       top: 5, bottom: 0, left: 25, right: 20),
                 ),
-                drawerFollowWidget(
-                  context,
-                  'YouTube',
-                  '@gachq',
-                  CommunityMaterialIcons.youtube,
-                  Uri.parse('https://www.youtube.com/@gachq'),
+                SocialMediaTile(
+                  socialMedia: 'YouTube',
+                  accountName: '@gachq',
+                  socialIcon: CommunityMaterialIcons.youtube,
+                  linkText: Uri.parse('https://www.youtube.com/@gachq'),
                 ),
-                drawerFollowWidget(
-                  context,
-                  'Facebook',
-                  'Gac Headquarters',
-                  CommunityMaterialIcons.facebook,
-                  Uri.parse(
+                SocialMediaTile(
+                  socialMedia: 'Facebook',
+                  accountName: 'Gac Headquarters',
+                  socialIcon: CommunityMaterialIcons.facebook,
+                  linkText: Uri.parse(
                       "https://web.facebook.com/Gac-Headquarters-104257107601052/?ref=page_internal"),
                 ),
-                drawerFollowWidget(
-                    context,
-                    'Instagram',
-                    '@gachqs',
-                    CommunityMaterialIcons.instagram,
-                    Uri.parse('https://www.instagram.com/gachqs/')),
-                drawerFollowWidget(
-                    context,
-                    'Twitter',
-                    '@gachqs',
-                    CommunityMaterialIcons.twitter,
-                    Uri.parse('https://twitter.com/gachqs')),
+                SocialMediaTile(
+                    socialMedia: 'Instagram',
+                    accountName: '@gachqs',
+                    socialIcon: CommunityMaterialIcons.instagram,
+                    linkText: Uri.parse('https://www.instagram.com/gachqs/')),
+                SocialMediaTile(
+                    socialMedia: 'Twitter',
+                    accountName: '@gachqs',
+                    socialIcon: CommunityMaterialIcons.twitter,
+                    linkText: Uri.parse('https://twitter.com/gachqs')),
               ],
             ),
           ),
         )),
       ]),
-    );
-  }
-
-  _launchURL(Uri urltext) async {
-    final url = urltext;
-    if (await canLaunchUrl(url)) {
-      await launchUrl(
-        url,
-        mode: LaunchMode.externalApplication,
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  ListTile drawerListTile(String tileName, IconData tileIcon, String routeName,
-      NavigationItem item, BuildContext ctx) {
-    final provider = Provider.of<NavigationProvider>(ctx);
-    final currentItem = provider.navigationItem;
-    final isSelected = item == currentItem;
-    final colorTheme = Theme.of(ctx).secondaryHeaderColor;
-
-    return ListTile(
-      tileColor: Colors.white,
-      selected: isSelected,
-      selectedColor: colorTheme,
-      enabled: true,
-      iconColor: Theme.of(ctx).primaryColor,
-      hoverColor: Colors.black54,
-      splashColor: Colors.black54,
-      selectedTileColor: Colors.white,
-      horizontalTitleGap: 5,
-      contentPadding:
-          const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
-      visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
-      leading: Icon(
-        tileIcon,
-        size: 30,
-      ),
-      onTap: () {
-        provider.setNavigationItem(item);
-        Navigator.of(ctx).pushReplacementNamed(
-          routeName,
-        );
-      },
-      title: Text(
-        tileName,
-        style: TextStyle(
-            color: isSelected ? colorTheme : Theme.of(ctx).primaryColor,
-            fontSize: 20,
-            fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-
-  ListTile drawerFollowWidget(
-    BuildContext ctx,
-    String socialTitle,
-    String displayText,
-    IconData socialIcon,
-    Uri linkText,
-  ) {
-    return ListTile(
-      tileColor: Colors.white,
-      iconColor: Theme.of(ctx).primaryColor,
-      splashColor: Colors.black54,
-      horizontalTitleGap: 5,
-      minVerticalPadding: 1,
-      contentPadding:
-          const EdgeInsets.only(top: 5, bottom: 5, left: 20, right: 20),
-      visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
-      leading: Icon(
-        socialIcon,
-        size: 30,
-      ),
-      onTap: () {
-        _launchURL(linkText);
-      },
-      onLongPress: () {
-        Clipboard.setData(ClipboardData(text: linkText.toString())).then((_) {
-          Navigator.of(ctx).pop();
-          ScaffoldMessenger.of(ctx).showSnackBar(const SnackBar(
-              content: Text(
-            'Link copied to your clipboard',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          )));
-        });
-      },
-      title: Text(
-        socialTitle,
-        style: TextStyle(
-            color: Theme.of(ctx).primaryColor,
-            fontSize: 20,
-            fontWeight: FontWeight.bold),
-      ),
-      subtitle: Text(
-        displayText,
-        overflow: TextOverflow.ellipsis,
-        maxLines: 1,
-        style: TextStyle(color: Theme.of(ctx).primaryColor),
-      ),
     );
   }
 }
