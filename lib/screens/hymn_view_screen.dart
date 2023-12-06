@@ -11,6 +11,7 @@ import '../model/hymn.dart';
 import '../model/language_item.dart';
 
 class HymnViewScreen extends StatefulWidget {
+  static const String routeName = "/hymn_view";
   final String id;
   const HymnViewScreen({
     super.key,

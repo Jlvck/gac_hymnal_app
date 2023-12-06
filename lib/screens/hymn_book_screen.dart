@@ -70,7 +70,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     double maxWidth = mediaQuery.size.width;
     print('build screen');
     return Scaffold(
-        resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: false,
         drawer: MainDrawer(),
         appBar: AppBar(
           elevation: 0,
@@ -181,15 +181,15 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   }
 
   void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
+    FocusManager.instance.primaryFocus?.unfocus();
     if (hymnData.any((hymn) => hymn.id == submit)) {
-      Navigator.push(
-              context,
-              MaterialPageRoute(
-                // ignore: prefer_const_constructors
-                builder: (t) => HymnViewScreen(
-                  id: submit,
-                ),
-              ))
+      Navigator.of(context)
+          .push(MaterialPageRoute(
+            // ignore: prefer_const_constructors
+            builder: (t) => HymnViewScreen(
+              id: submit,
+            ),
+          ))
           .then((value) =>
               Provider.of<HymnBookProvider>(context, listen: false).notify());
       _enteredHymnNumber.clear();

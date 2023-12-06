@@ -2101,6 +2101,12 @@ class HymnText1to100 {
           "Bi ojo su dudu l'orun,",
           "Ninu re l' em'o wa",
         ],
+        [
+          "Ile-eko ojo 'simi",
+          "Mo yo lati ri O;",
+          "'Wo y' o ha koja l'ori mi",
+          "L'oni, l' airi 'bukun?"
+        ]
       ],
       isChorus: false,
       chorus: [''],

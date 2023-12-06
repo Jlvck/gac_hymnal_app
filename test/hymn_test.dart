@@ -13,8 +13,15 @@ void main() {
     List<Hymn> englishtestChorus =
         testHymnList.where((hymn) => hymn.chorusEnglish != null).toList();
     test('Testing Hymn(English & Yoruba) verses Length', () {
-      bool tes = testHymnList.every((element) =>
-          element.versesEnglish.length == element.versesYoruba.length);
+      bool tes = testHymnList.every((element) {
+        if (element.versesEnglish.length == element.versesYoruba.length) {
+          return true;
+        } else {
+          print(
+              "Hymn ${element.id}, Yoruba Verses Length ${element.versesYoruba.length} & English Verses Length ${element.versesEnglish.length}");
+          return false;
+        }
+      });
       expect(tes, true);
     });
 
@@ -28,6 +35,7 @@ void main() {
             (element.chorusEnglish != null && element.chorusYoruba != null)) {
           return true;
         } else {
+          print(element.id);
           return false;
         }
       });

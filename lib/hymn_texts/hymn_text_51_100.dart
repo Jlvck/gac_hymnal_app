@@ -214,6 +214,11 @@ class HymnText51to100 {
         "Alleluya ti ti aiye,",
         "Fun Omo on Emi Mimo.",
       ],
+      [
+        "Ogo ni f’Olo/go Meta",
+        "Alle/luya! Alle/luya!",
+        "Alle/luya! Alle/luya!",
+      ]
     ]),
     Hymn(id: '53', versesEnglish: [
       [
@@ -283,6 +288,12 @@ class HymnText51to100 {
         "Bi ojo su dudu l'orun,",
         "Ninu re l' em'o wa",
       ],
+      [
+        "Ile-eko ojo 'simi",
+        "Mo yo lati ri O;",
+        "'Wo y' o ha koja l'ori mi",
+        "L'oni, l' airi 'bukun?"
+      ]
     ]),
     Hymn(id: '54', versesEnglish: [
       [
@@ -614,8 +625,6 @@ class HymnText51to100 {
         "O Day of joy and light,",
         "O balm of care and sadness,",
         "Most beautiful, most bright;",
-      ],
-      [
         "On Thee, the high and lowly,",
         "Through ages join’d in tune,",
         "Sing, Holy Holy Holy,",
@@ -625,9 +634,7 @@ class HymnText51to100 {
         "On thee, at the Creation,",
         "The light first had its birth;",
         "On thee for our salvation",
-        "Christ rose from depths of earth;"
-      ],
-      [
+        "Christ rose from depths of earth;",
         "On thee our Lord victorious",
         "The Spirit sent from heaven;",
         "And thus on thee most glorious",
@@ -637,9 +644,7 @@ class HymnText51to100 {
         "Thou art a port protected",
         "From storms that round us rise;",
         "A garden intersected",
-        "With streams of Paradise;"
-      ],
-      [
+        "With streams of Paradise;",
         "Thou art a cooling fountain",
         "In life’s dry dreary sand;",
         "From thee, like Pisgah’s mountain,",
@@ -649,9 +654,7 @@ class HymnText51to100 {
         "To-day on weary nations",
         "The heavenly manna falls;",
         "To holy convocations",
-        "The silver trumpet calls;"
-      ],
-      [
+        "The silver trumpet calls;",
         "Where gospel-light is glowing",
         "With pure and radiant beams;",
         "And living water flowing",
@@ -661,13 +664,10 @@ class HymnText51to100 {
         "May we, new graces gaining",
         "From this our day of rest,",
         "Attain the rest remaining",
-        "To spirits of the blest."
-      ],
-      [
+        "To spirits of the blest.",
         "And there our voice upraising",
         "To Father and to Son",
-        "And Holy Ghost, be praising",
-        "Ever the Three in One."
+        "And Holy Ghost, be praising Ever the Three in One."
       ],
     ], versesYoruba: [
       [
@@ -727,8 +727,6 @@ class HymnText51to100 {
         "Thou art a day of rest",
         "A day we ought to render",
         "Undo our holy God",
-      ],
-      [
         "If other days bring sorrow",
         "“Tis Thou that comfort us",
         "Thou art a day of gladness",
@@ -738,9 +736,7 @@ class HymnText51to100 {
         "What a Blessed Lord’s day",
         "We will not work today",
         "We will suspend our duties",
-        "To other working days"
-      ],
-      [
+        "To other working days",
         "Thou art bright and beautiful",
         "Thou art a lovely day",
         "Other days of toiling",
@@ -750,9 +746,7 @@ class HymnText51to100 {
         "What a Blessed Lord’s day",
         "Doubtless we all shall say",
         "A day to give our Creator",
-        "Who, six days, gave to you"
-      ],
-      [
+        "Who, six days, gave to you",
         "We will suspend all our works",
         "To go and worship there",
         "We and our friends accompanied",
@@ -762,9 +756,7 @@ class HymnText51to100 {
         "What a Blessed Lord’s day",
         "Thy hour appeals to me",
         "Thou art the day of heaven",
-        "Thou art the type of heaven"
-      ],
-      [
+        "Thou art the type of heaven",
         "My Lord, O let me partake",
         "In everlasting rest",
         "That I may ever serve Thee",
@@ -817,9 +809,7 @@ class HymnText51to100 {
         "HEAD of the church triumphant,",
         "We joyfully adore Thee;",
         "Till Thou appear, Thy members here",
-        "Shall sing like those in glory:"
-      ],
-      [
+        "Shall sing like those in glory:",
         "We lift our hearts and voices,",
         "With bless’d anticipation,",
         "And cry aloud, and give to God",
@@ -829,9 +819,7 @@ class HymnText51to100 {
         "While in affliction’s furnace",
         "And passing through the fire,",
         "Thy love we praise in grateful lays",
-        "Which ever brings us nigher:"
-      ],
-      [
+        "Which ever brings us nigher:",
         "We clap our hands, exulting",
         "In Thine almighty favour:",
         "The love divine, that made us Thine,",
@@ -841,9 +829,7 @@ class HymnText51to100 {
         "Thou dost conduct Thy people",
         "Through torrents of temptation:",
         "Nor will we fear, while Thou art near",
-        "The fire of tribulation;"
-      ],
-      [
+        "The fire of tribulation;",
         "The world, with sin and Satan;",
         "In vain our march opposes,",
         "By Thee we shall break through them all,",
@@ -853,9 +839,7 @@ class HymnText51to100 {
         "By faith we see the glory",
         "To which Thou shalt restore us,",
         "The world despise, for that high prize",
-        "Which Thou hast set before us:"
-      ],
-      [
+        "Which Thou hast set before us:",
         "And, if Thou count us worthy,",
         "We each, with dying Stephen,",
         "Shall see Thee stand at God’s right hand",
@@ -1020,9 +1004,7 @@ class HymnText51to100 {
           "Jesus we assembled;",
           "On this Thy holy day;",
           "And we surround Thy throne,",
-          "On this Thy holy day;"
-        ],
-        [
+          "On this Thy holy day;",
           "Thou our friend in Heavens",
           "Our prayers shall come to Thee",
           "Look after our spirit",
@@ -1032,9 +1014,7 @@ class HymnText51to100 {
           "We must never backslide,",
           "On this Thy holy day;",
           "In reverence down we kneel,",
-          "On this Thy holy day;"
-        ],
-        [
+          "On this Thy holy day;",
           "Forgive our misconduct,",
           "Teach us that we may know",
           "The right way to serve thee",
@@ -1044,9 +1024,7 @@ class HymnText51to100 {
           "To Thy words we pay heed,",
           "On this Thy holy day;",
           "Bless the word we receive",
-          "On this Thy holy day;"
-        ],
-        [
+          "On this Thy holy day;",
           "Go with us when we go,",
           "Pour gift of salvation",
           "Deep into all our hearts",
@@ -2874,10 +2852,6 @@ class HymnText51to100 {
           "Accept our praises, our praises,",
           "Thou art worthy for glory."
         ],
-      ],
-      chorusEnglish: [
-        "Praise Him, Praise Him, Praise Him",
-        "Shout yet shout ye! And rejoice!"
       ],
       versesYoruba: [
         [
