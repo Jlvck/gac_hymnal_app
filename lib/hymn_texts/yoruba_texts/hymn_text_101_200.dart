@@ -1963,6 +1963,16 @@ class HymnText101to200 {
           "B'ara ko ago na,",
           "Igbagbo y'o mu.",
         ],
+        [
+          "Gba mo ba nre boji",
+          "Sinu ekuru",
+          "T ogo orun si nko",
+          "L eti bebe na",
+          "Un o gbekel oto re",
+          "Ni jakadi iku",
+          "Oluwa gb emi mi",
+          "S iye ailopin",
+        ]
       ],
       isChorus: false,
       chorus: [''],
@@ -2511,8 +2521,10 @@ class HymnText101to200 {
       ],
       isChorus: true,
       chorus: [
-        "Yo awon ti nşegbe, s'ajo eni nku,",
-        "Alanu ni Jesu, yio gbala.",
+        "Yo awon ti nşegbe,",
+        "s'ajo eni nku,",
+        "Alanu ni Jesu,",
+        "yio gbala.",
       ],
     ),
     Hymn(

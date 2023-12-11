@@ -1,6 +1,6 @@
 import '../model/hymn.dart';
 
-class HymnText51to100 {
+class HymnText101to150 {
   List<Hymn> hymnLyrics = [
     Hymn(
       id: '101',
@@ -3592,6 +3592,16 @@ class HymnText51to100 {
           "B'ara ko ago na,",
           "Igbagbo y'o mu.",
         ],
+        [
+          "Gba mo ba nre boji",
+          "Sinu ekuru",
+          "T ogo orun si nko",
+          "L eti bebe na",
+          "Un o gbekel oto re",
+          "Ni jakadi iku",
+          "Oluwa gb emi mi",
+          "S iye ailopin",
+        ]
       ],
     )
   ];
