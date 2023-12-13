@@ -1366,6 +1366,765 @@ class HymnText151to200 {
           "K' imolę wà.",
         ],
       ],
+    ),
+    Hymn(
+      id: '171',
+      versesEnglish: [
+        [
+          "Go forth and preach all my Gospel,",
+          "Make all the world my kindness",
+          "He who receives my word shall live",
+          "Who-ever shuns it shall perish."
+        ],
+        [
+          "I will show you my great wisdom,",
+          "And ye shall reveal my true word",
+          "In all these works which I have done",
+          "In all the works ye choose to do."
+        ],
+        [
+          "Heal the sick, and raise up the dead,",
+          "Satan in my name drive ye out,",
+          "My prophets, O, be not afraid,",
+          "Even if Greeks, Jews mock at you."
+        ],
+        [
+          "Teach the whole world all my orders",
+          "Lo, I am with you till the end",
+          "Reserve of power, I have with Me",
+          "I can destroy and also save."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Lo wasu ihinrere mi.",
+          "Mu gbogbo aiye gb' ore mi:",
+          "Enit' o gb' oro mi y' o là,",
+          "Enit' o ko yio segbe.",
+        ],
+        [
+          "Emi o f' oye nla han yin,",
+          "E o f' oro ooto Mi han;",
+          "Ni gbogbo işe ti mo se,",
+          "Ni gbogbo işe t' e o se.",
+        ],
+        [
+          "Lo wo ǎrun, lo j' oku nde,",
+          "F' oruko Mi l' eşu jade;",
+          "Ki woli Mi maşe bèrù.",
+          "Bi Griki ati Ju k' egan.",
+        ],
+        [
+          "Ko gbogbo aiye l' aşe Mi,",
+          "Mo wà lehin nyin de opin:",
+          "Lowo Mi ni gbogbo ipá,",
+          "Mo le pa, Mo si le gbala.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '172',
+      versesEnglish: [
+        [
+          "Thy kingdom come, O God,",
+          "Thy rule, O Christ, begin;",
+          "Break with Thine iron rod",
+          "The tyrannies of sin."
+        ],
+        [
+          "Where is Thy reign of peace,",
+          "And purity, and love?",
+          "When shall all hatred cease,",
+          "As in the realms above?"
+        ],
+        [
+          "When comes the promised time",
+          "That war comes the no more,",
+          "And lust, oppression, crime",
+          "Shall flee Thy face before?"
+        ],
+        [
+          "We pray Thee, Lord. Arise,",
+          "And come in Thy great might;",
+          "Revive our longing eyes",
+          "Which languish for Thy sight."
+        ],
+        [
+          "Men scorn Thy sacred name",
+          "And wolves devour Thy fold;",
+          "By many deeds of shame",
+          "We learn that love grows cold."
+        ],
+        [
+          "O’er heathen lands afar",
+          "Thick darkness broodeth yet:",
+          "Arise, O morning Star,",
+          "Arise, and never set."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Krist, ki 'joba Re de,",
+          "Ki ase Re bere:",
+          "F' opa- irin Re fo",
+          "Gbogbo ipá ese.",
+        ],
+        [
+          "Ijoba ife dá.",
+          "Ati t' alafia?",
+          "Gbawo ni irira",
+          "Yio tan bi t' orun?",
+        ],
+        [
+          "Akoko na ha da,",
+          "T' ote yio pari,",
+          "Ikà ati 'reje,",
+          "Pelu ifękufe?",
+        ],
+        [
+          "Oluwa jo, dide,",
+          "Wa n'nu agbara Re:",
+          "Fi ayo fun awa",
+          "Ti o ns' aferi Rę.",
+        ],
+        [
+          "Eda ngan Ooko Re.",
+          "Kooko nje agbo Re,",
+          "Iwa 'tiju pupo",
+          "Nfihan pe 'fe tutu.",
+        ],
+        [
+          "Ookun bo'lę sibę,",
+          "Ni ile keferi:",
+          "Dide Rawo ooro,",
+          "Dide, mase wo mo.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '173',
+      versesEnglish: [
+        [
+          "For My sake and the Gospel’s go",
+          "And tell Redemption’s story;",
+          "His heralds answer, “Be it so,",
+          "And Thine, Lord, all the glory!”",
+          "They preach His birth, His life, His cross,",
+          "The love of His atonement",
+          "For whom they count the world but loss,",
+          "His Easter, His enthronement."
+        ],
+        [
+          "Hark, hark, the trump of Jubilee",
+          "Proclaims to every nation,",
+          "From pole to pole, by land and sea,",
+          "Glad tidings of salvation;",
+          "As nearer draws the day of doom,",
+          "While still the battle rages,",
+          "The heavenly Dayspring through the gloom",
+          "Breaks on the night of ages."
+        ],
+        [
+          "Still on and on the anthems spread",
+          "Of Hallelujah voices,",
+          "In concert with the holy Dead",
+          "The warrior Church rejoice;",
+          "Earth and the Paradise of God",
+          "One triumph-song are singing."
+        ],
+        [
+          "He comes, whose Advent trumpet drowns",
+          "The last of Time’s evangel,",
+          "Emmanuel crowned with many crowns,",
+          "The Lord of saints and angels:",
+          "O life, Light, Love, the great I AM,",
+          "Triune, who changest never",
+          "The Throne of God and of the Lamb",
+          "Is Thine, and Thine forever."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "\"Tori Mi at' Ihinrere,",
+          "E lo so t' Irapada;",
+          "Awon onse Re nke\" \"Amin\"!",
+          "Tire ni gbogbo ogo,",
+          "Nwon nso t ibi, t'iya, t' iku,",
+          "Ife etutu nla Re",
+          "Nwon ka ohun aiye s' ofo.",
+          "T' ajinde on 'joba Re",
+        ],
+        [
+          "Gbo, gbo ipe ti Jubeli,",
+          "Ondun yi gbogb' aiye ka:",
+          "N' ile ati l'oju okun,",
+          "A ntan ihin igbala,",
+          "Bi ojo na ti nsunmo'le,",
+          "T' Ogun si ngbona janjan.",
+          "Imole ila-örun na",
+          "Y' o mo larin òkünün.",
+        ],
+        [
+          "Siwaju ati siwaju",
+          "Lao ma gbo Halleluya,",
+          "Ijo Ajagun y' o ma yo.",
+          "Pel' awon oku mimo:",
+          "A fo aso won n'nu eje.",
+          "Duru Wura nwon si ndun:",
+          "Aiye at' orun d' ohun pò.",
+          "Nwon nko orin işęgun.",
+        ],
+        [
+          "O de, Enit' a nw' ona Re,",
+          "Eni ikehin na de,",
+          "Immanueli t'O d' ade,",
+          "Oluwa awon mimo.",
+          "Iye, Imole at' ife.",
+          "Metalokan titi lai:",
+          "Tire ni ite Olorun",
+          "Ati t' Odo-agutan.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '174',
+      versesEnglish: [
+        [
+          "Jesus shall reign where’er the sun,",
+          "Doth his successive journeys run;",
+          "His kingdom stretch from shore to shore,",
+          "Till suns shall rise and set no more."
+        ],
+        [
+          "For Him shall endless prayer be made,",
+          "And praises throng to crown His head,",
+          "His name like sweet perfume shall rise,",
+          "With every morning sacrifice."
+        ],
+        [
+          "People and realms of every tongue",
+          "Dwell on His love with sweetest song;",
+          "And infant voices shall proclaim",
+          "Their young hosannas to His name."
+        ],
+        [
+          "Blessings abound where’er He reigns,",
+          "The prisoner leaps to lose his chains;",
+          "The weary find eternal rest!",
+          "And all the sons of want are blessed."
+        ],
+        [
+          "Let every creature rise, and bring",
+          "Its grateful honours to our King;",
+          "Angels descend with songs again;",
+          "And earth prolong the joyful strain."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Jesu y' o joba ni gbogbo",
+          "Ibit' a ba le ri oorun:",
+          "Joba Re y'o tan kakiri,",
+          "Joba Rę ki o nipekun.",
+        ],
+        [
+          "On l' a o má gbadura si,",
+          "Awon oba y' o pe l' Oba:",
+          "Oruko Re b' orun didun",
+          "Y' o ba ebo ooro goke.",
+        ],
+        [
+          "Gbogbo oniruru ede,",
+          "Y'o fi fe Re ko 'rin didun:",
+          "Awon omode o jewo",
+          "Pe, 'bukun won t' odo Re wa.",
+        ],
+        [
+          "'Bukun po nibit' On joba;",
+          "A tu awon onde sile;",
+          "Awon alaare ri 'simi:",
+          "Alaini si ri 'bukun gba.",
+        ],
+        [
+          "Ki gbogbo eda k' o dide,",
+          "Ki nwon f' ola fun Oba wa:",
+          "K'angel tun wa t'awon t'orin,",
+          "Ki gbogb' aiye jumo gbe 'rin.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '175',
+      versesEnglish: [
+        [
+          "Blow ye the trumpet, blow,",
+          "The gladly solemn sound;",
+          "Let all the nations know,",
+          "To earth’s remotest bound,",
+        ],
+        [
+          "Extol the Lamb of God,",
+          "The all-atoning Lamb:",
+          "Redemption by His blood",
+          "Throughout the world proclaim:",
+        ],
+        [
+          "Ye, who have sold for nought",
+          "Your heritage above,",
+          "Receive it back unbought,",
+          "The gift of Jesus’ love",
+        ],
+        [
+          "Jesus, our great High priest,",
+          "Hath full atonement made;",
+          "Ye mournful souls, be glad:",
+        ]
+      ],
+      chorusEnglish: [
+        "The year of Jubilee is come:",
+        "Return, ye ransom’d sinners, home.",
+        "The year of Jubilee is come:",
+        "Return, ye ransom’d sinners, home."
+      ],
+      versesYoruba: [
+        [
+          "E fun 'pe na kikan,",
+          "Ipe lhinrere,",
+          "K' o dún jade jado",
+          "L' eti gbogbo eda;",
+        ],
+        [
+          "Fun 'pe t' Odagutan",
+          "T' a ti pa s' etutu;",
+          "Je ki agbaiye mo",
+          "Agbara eje Re",
+        ],
+        [
+          "Enyin eru ese.",
+          "E so 'ra nyin d' omo.",
+          "Lowo Kristi Jesu",
+          "E gba omnira nyin.",
+        ],
+        [
+          "Olori Alufa",
+          "L' Olugbala işe",
+          "O fi 'ra Re rubo",
+          "Arukun, Aruda.",
+        ],
+      ],
+      chorusYoruba: [
+        "Odun dasile ti de:",
+        "Pada elese, e pada",
+        "Odun dasile ti de:",
+        "Pada elese, e pada",
+      ],
+    ),
+    Hymn(
+      id: '176',
+      versesEnglish: [
+        [
+          "Awake in His strength renewed",
+          "The battle cry take up again",
+          "All enemies shall be subdued",
+          "And Christ the Lord shall reign"
+        ],
+        [
+          "Too long His followers idly strode",
+          "By selfish creed and doctrine rent",
+          "Nor knew that for one Brotherhood’",
+          "His own short life was spent."
+        ],
+        [
+          "Unite and in His strength go on",
+          "Nor count a life as lost but gain",
+          "And soon the victory shall be won",
+          "For Jesus Christ must reign."
+        ],
+        [
+          "To dare and O for Him is meet",
+          "The struggle shall not be in vain",
+          "The trumpet shall not call 'Retreat'",
+          "For Jesus Christ must reign."
+        ]
+      ],
+      chorusEnglish: [
+        "For Christ must reign",
+        "For Christ must reign",
+        "Our hope in Him is not in vain",
+        "For Christ must reign",
+        "For Christ must reign",
+        "For Christ must reign",
+        "Our Hope in Him is not in vain",
+        "For Christ must reign."
+      ],
+      versesYoruba: [
+        [
+          "Ji so agbara re d' otun",
+          "Gbe 'hamora ogun re wo",
+          "Ao segun gbogbo ota",
+          "Kristi y'o si Joba.",
+        ],
+        [
+          "O ti pe t' awon omo Re",
+          "Ti nṣe 'yapa lori eko.",
+          "Nwon gbagbe pe l' ori 'sokan",
+          "Ni On lo aiye Re",
+        ],
+        [
+          "E papo li agbara Re,",
+          "Aiye nyin yio si je ere;",
+          "Laipe e o ni isegun,",
+          "Tori Krist' y'o Joba.\"",
+        ],
+        [
+          "O ye k'a şişe f' Oluwa;",
+          "Ise wa ko ni je lasan;",
+          "A ko gbodo pada s'ehin,",
+          "\"Tori Krist' y'o joba.",
+        ],
+      ],
+      chorusYoruba: [
+        "Krist' yo joba,",
+        "Krist' y'o joba,",
+        "Ireti wa n'nu Re ko yę:",
+        "Krist' y'o joba,",
+        "Krist' y'o joba,",
+        "Krist' y'o joba,",
+        "Ireti wa n'nu Re ko ye:",
+        "Krist' y'o joba.",
+      ],
+    ),
+    Hymn(
+      id: '177',
+      versesEnglish: [
+        [
+          "I love to tell the story",
+          "Of unseen things above,",
+          "Of Jesus and His glory",
+          "Of Jesus and His love;",
+          "I love to tell the story",
+          "Because I know it’s true",
+          "It satisfies my longings,",
+          "As nothing else would do."
+        ],
+        [
+          "I love to tell the story,",
+          "More wonderful it seems",
+          "Than all the golden fancies",
+          "Of all the golden dreams;",
+          "I love to tell the story,",
+          "It did so much for me,",
+          "And this is just the reason",
+          "I tell it now to thee."
+        ],
+        [
+          "I love to tell the story,",
+          "“Tis pleasant to repeat",
+          "What seems, each time I tell it,",
+          "More wonderfully sweet;",
+          "I love to tell the story",
+          "For some have never heard",
+          "The message of salvation",
+          "From God’s own holy Word."
+        ],
+        [
+          "I love to tell the story,",
+          "For those who know it best",
+          "Seem hungering and thirsting",
+          "To hear it, like the rest;",
+          "And when, in scenes of glory,",
+          "I sing the new, new song,",
+          "“Twill be the old, old story",
+          "That I have loved so long."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Mo fe maa so itan na,",
+          "Itan ohun t'orun;",
+          "Ti Jesu at' ogo Re,",
+          "Ati ife nla Re.",
+          "Mo fe maa so itan na,",
+          "Mo mo pe ooto ni:",
+          "Itan ti nfun ni l' ayo,",
+          "Ju ohun gbogbo lo.",
+        ],
+        [
+          "Mo fe maa so itan na,",
+          "Itan 'yanu julo.",
+          "O ga ju ero wa lo,",
+          "O jin ju okun lo,",
+          "Mo fę maa so itan na,",
+          "O seun pupo fun mi;",
+          "Eyi lo mu ki nma so",
+          "Fun gbogbo enia.",
+        ],
+        [
+          "Mo fę maa so itan na,",
+          "Ngo tun itan na so;",
+          "Didun ni lojojumo,",
+          "O nya mi l'enu si",
+          "Mo fe maa so itan na,",
+          "Pupo ni ko ti gbo;",
+          "Itan igbala kikun,",
+          "Lat' inu Oro Re.",
+        ],
+        [
+          "Mo fe maa so Itan na,",
+          "Opo li ongbe ngbe;",
+          "Nwon nşaferi lati gbo",
+          "Itan iyanu yi",
+          "'Gba mo ba de 'nu ogo,",
+          "Ngo ko orin titun;",
+          "Orin itan 'yanu yi,",
+          "Ni ngo maa ko titi.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '178',
+      versesEnglish: [
+        [
+          "The gospel bells are ringing,",
+          "Over land, from sea to sea;",
+          "Blessed news of free salvation",
+          "Do they offer you and me.",
+          "“For God so loved the world,",
+          "That His only Son He gave!",
+          "Whose’er believeth in Him",
+          "Everlasting life shall have”."
+        ],
+        [
+          "The gospel bells invite us",
+          "To a feast prepared for all;",
+          "Do not slight the invitation,",
+          "Nor reject the gracious call.",
+          "“I am the Bread of life;",
+          "Eat of Me, thou hungry soul;",
+          "Though your sins be red as crimson,",
+          "They shall be as white as wool”"
+        ],
+        [
+          "The gospel bells give warning,",
+          "As they sound from day to day,",
+          "Of the fate which doth awaits them",
+          "Who for ever will delay.",
+          "“Escape thou for thy life!",
+          "Tarry not in all the plain:",
+          "Nor behind! Thee look, oh, never,",
+          "Lest thou be consumed in pain”."
+        ],
+        [
+          "The gospel bells are joyful",
+          "As they echo far and wide,",
+          "Bearing notes of perfect pardon,",
+          "Through as Saviour crucified:",
+          "“Good tidings of great joy",
+          "To all people do I bring;",
+          "Unto you is born a Saviour,",
+          "Which is Christ, the Lord and King”."
+        ]
+      ],
+      chorusEnglish: [
+        "Gospel bells! How they ring,",
+        "Over land from sea to sea;",
+        "Gospel bells freely bring",
+        "Blessed news to you and me."
+      ],
+      versesYoruba: [
+        [
+          "Agogo 'hinrere nlu",
+          "Lati ilu de ilu,",
+          "Ihinrere 'gbala ofe",
+          "L' a fi nlo gbogb' enia;",
+          "Olorun f' araiye",
+          "T' O fi Omo Re fun wa,",
+          "Pe enikeni t'o gbagbo,",
+          "Y' o r' iye ainipekun.",
+        ],
+        [
+          "Agogo 'hinrere nlu,",
+          "O npe wa si ase na,",
+          "Maşe ko ipè ife yi,",
+          "Ma kegan or' ofe Re.",
+          "\"Emi l' on je iye\"",
+          "Wa je ninu onje na",
+          "B' ese re pon bi ododo",
+          "Nwon y'o funfun bi owu.",
+        ],
+        [
+          "Agogo na ma nkiko,",
+          "B'o ti ndún lojojumo.",
+          "Ewu ti nduro de awon",
+          "T' o ba se aiya won le;",
+          "S' asala f' emi rę",
+          "Má duro, má si lora.",
+          "Maşe bojuwo ehin re.",
+          "Ki two ma ba segbe.",
+        ],
+        [
+          "Agogo ayo l' eyi,",
+          "O npolowo ayo nla,",
+          "Onso t' idariji kikun,",
+          "Ti Jesu y'o fi fun wa,",
+          "Mo mu 'hin ayo wa.",
+          "Fun t' okunrin t' obirin,",
+          "A bi Olugbala fun wa,",
+          "On l' Oluwa at' Oba.",
+        ],
+      ],
+      chorusYoruba: [
+        "Agogo 'hinrere",
+        "Ti npolowo igbala,",
+        "Agogo 'hinrere",
+        "Ti o nmu igbala wa.",
+      ],
+    ),
+    Hymn(
+      id: '179',
+      versesEnglish: [
+        [
+          "There’s a call comes ringing o’er the restless wave,",
+          "Send the light, Send the light!",
+          "There are souls to rescue, there are souls to save,",
+          "Send the light, Send the light."
+        ],
+        [
+          "We have heard the Macedonian call today",
+          "Send the light! Send the light!",
+          "And a golden offering at the cross we lay,",
+          "Send the light! Send the light!"
+        ],
+        [
+          "Let us pray that grace may everywhere abound",
+          "Send the light! Send the light!",
+          "And a Christlike spirit everywhere be found,",
+          "Send the light! Send the light!"
+        ],
+        [
+          "Let us not grow weary in the work of love,",
+          "Send the light! Send the light!",
+          "Let us gather jewels for a crown above,",
+          "Send the light! Send the light!"
+        ]
+      ],
+      chorusEnglish: [
+        "Send the light, the blessed gospel light,",
+        "Let it shine from shore to shore,",
+        "Send the light! And let its radiant beams,",
+        "Light the world forever more."
+      ],
+      versesYoruba: [
+        [
+          "Ipe na ndun l' otun ati l' osi pe,",
+          "Tan 'mole, tan 'mole;",
+          "Opo l' o nku laini ireti orun,",
+          "Tan 'molę, tan 'molę.",
+        ],
+        [
+          "Awon t' o wa l' okunkun nke tantan pe",
+          "Tan 'mole, tan 'mole;",
+          "Mu won wa jeje s' ibi agbelebu,",
+          "Tan 'molę, tan mole.",
+        ],
+        [
+          "Je k' a gbadura k' or' ofę le joba,",
+          "Tan 'mole, tan 'mole:",
+          "Ki Emi Krist' joba ni ibi gbogbo",
+          "Tan 'mole, tan 'molę.",
+        ],
+        [
+          "Je k' a te 'ra mo ise t' o l' ere yi,",
+          "Tan 'mole, tan 'mole:",
+          "Ao gb' ade nikehin bi a foriti,",
+          "Tan 'mole, tan 'molę.",
+        ],
+      ],
+      chorusYoruba: [
+        "Tan 'mole ihinrere na,",
+        "Je k' o tan yi aiye ka:",
+        "Tan 'mole ihinrere na,",
+        "Je k' o tan yi aiye ka.",
+      ],
+    ),
+    Hymn(
+      id: '180',
+      versesEnglish: [
+        [
+          "The whole wide World for Jesus",
+          "This shall our Watchword be",
+          "Upon the highest mountain,",
+          "Down by the widest sea",
+          "The whole wide world for Jesus",
+          "To Him all men shall bow,",
+          "In city or in prairie",
+          "The world for Jesus now!"
+        ],
+        [
+          "The whole wide world for Jesus,",
+          "Inspires us with the thought",
+          "That every son of Adam",
+          "Should by His blood be bought;",
+          "The whole wide world for Jesus!",
+          "O faint not by the way!",
+          "The Cross shall surely conquer",
+          "In this our glorious day."
+        ],
+        [
+          "The whole wide world for Jesus",
+          "The marching order sound—",
+          "Go ye and preach the Gospel",
+          "Wherever man is found,",
+          "The whole wide world for Jesus!",
+          "Our banner is unfurled—",
+          "We battle now for Jesus,",
+          "And faith demands the world!"
+        ]
+      ],
+      chorusEnglish: [
+        "The whole wide world, the whole wide world",
+        "Proclaim the Gospel tidings through the whole wide world",
+        "Lift up the Cross for Jesus, His banner be unfurled-",
+        "Till every tongue confess Him through the whole wide world."
+      ],
+      versesYoruba: [
+        [
+          "Gbogb' aiye fun Jesu,",
+          "Li akomona wa,",
+          "Lori oke t'o ga ju,",
+          "Ati l'ori okun;",
+          "Gbogbo aiye fun Jesu,",
+          "Gbogbo eda y'o jewo",
+          "Ni ile tabi l'oko,",
+          "Jesu ni yo joba.",
+        ],
+        [
+          "Gbogbo aiye fun Jesu,",
+          "Eyi mu wa ranti;",
+          "Pe gbogbo iran Adam,",
+          "Lati we n'neje Re;",
+          "Gbogbo aiye fun Jesu,",
+          "Ma je ki o re nyin,",
+          "Awa ni y'o sá şe'gun,",
+          "Nipa agbelebu.",
+        ],
+        [
+          "Gbogbo aiye fun Jesu,",
+          "Je k'a tęsiwaju,",
+          "Lo wasu ihinrere,",
+          "Nibit' enia wà:",
+          "Gbogbo aiye fun Jesu,",
+          "Gbe asia soke,",
+          "Ao jà fun Jesu titi",
+          "Y'o joba gbogb' aiye.",
+        ],
+      ],
+      chorusYoruba: [
+        "Gbogbo aiye, gbogbo aiye,",
+        "Kede ihinrere yi gbogbo aiye ka",
+        "Gbe asia Re s'oke a ko gbodo fe:",
+        "Titi gbogb' ahon y'o jewo Re l'Oluwa.",
+      ],
     )
   ];
 }
