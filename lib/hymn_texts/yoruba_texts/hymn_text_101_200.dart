@@ -3491,8 +3491,6 @@ class HymnText101to200 {
           "Awon oluso si gba-gbo;",
           "Elese, iwo ki o gbo?",
           "Itan lyanu t' ife!",
-          "Iyanu! Iyanu! Iyanu!",
-          "Itan lyanu t' ife!",
         ],
         [
           "Itan Iyanu t' ife!",
@@ -3502,8 +3500,6 @@ class HymnText101to200 {
           "Lat' ori oke Kalfari,",
           "Lati orisun didan na,",
           "Lati işedale aiye;",
-          "Itan lyanu t' ife!",
-          "Iyanu! Iyanu! Iyanu!",
           "Itan lyanu t' ife!",
         ],
         [
@@ -3515,12 +3511,13 @@ class HymnText101to200 {
           "Pel' awon t' o saju wa lo",
           "Nwon nko orin ayo orun.",
           "Itan lyanu t' ife!",
-          "Iyanu! Iyanu! Iyanu!",
-          "Itan lyanu t' ife!",
         ],
       ],
-      isChorus: false,
-      chorus: [''],
+      isChorus: true,
+      chorus: [
+        "Iyanu! Iyanu! Iyanu!",
+        "Itan lyanu t' ife!",
+      ],
     ),
     Hymn(
       id: '190',
@@ -3926,8 +3923,7 @@ class HymnText101to200 {
         "A! Ife t'o wa mi,",
         "A! Eje t'o ra mi;",
         "Suru pelu ore-ofe Re",
-        "T'o fa mi pada bo wa",
-        "S'agbo!",
+        "T'o fa mi pada bo wa S'agbo!",
       ],
     ),
     Hymn(
