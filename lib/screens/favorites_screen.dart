@@ -26,6 +26,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     List<Hymn> favoriteHymnList =
         Provider.of<HymnBookProvider>(context, listen: true).favHymnList;
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 235, 228, 242),
       appBar: AppBar(
         centerTitle: true,
         title: const Text(

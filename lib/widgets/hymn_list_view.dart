@@ -20,23 +20,23 @@ class HymnListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('build list_view context');
-    return Card(
-      margin: const EdgeInsets.only(left: 4, right: 4, top: 0, bottom: 0),
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-      elevation: 10,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 0, left: 8, right: 8, bottom: 0),
-        child: ListView(
-          padding: const EdgeInsets.only(bottom: 5, top: 1),
-          controller: scroll,
-          physics: const BouncingScrollPhysics(),
-          primary: false,
-          shrinkWrap: true,
-          semanticChildCount: hymnList.length,
-          itemExtent: 50,
-          children: List.generate(hymnList.length, growable: true, (index) {
-            return Padding(
-                padding: const EdgeInsets.all(1),
+    return Padding(
+      padding: const EdgeInsets.only(top: 0, left: 12, right: 12, bottom: 0),
+      child: ListView(
+        padding: const EdgeInsets.only(bottom: 5, top: 1),
+        controller: scroll,
+        physics: const BouncingScrollPhysics(),
+        primary: false,
+        shrinkWrap: true,
+        semanticChildCount: hymnList.length,
+        itemExtent: 50,
+        children: List.generate(hymnList.length, growable: true, (index) {
+          return Padding(
+              padding: const EdgeInsets.all(1),
+              child: Container(
+                margin: EdgeInsets.zero,
+                padding: EdgeInsets.zero,
+                height: double.maxFinite,
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
@@ -51,70 +51,71 @@ class HymnListView extends StatelessWidget {
                             listen: false)
                         .notify());
                   },
-                  child: Container(
-                    margin: EdgeInsets.zero,
-                    padding: EdgeInsets.zero,
-                    height: double.maxFinite,
-                    child: ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      isThreeLine: false,
-                      dense: true,
-                      horizontalTitleGap: 10,
-                      minVerticalPadding: 2,
-                      minLeadingWidth: 50,
-                      titleAlignment: ListTileTitleAlignment.center,
-                      tileColor: Colors.white,
-                      leading: Container(
+                  child: ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    isThreeLine: false,
+                    dense: true,
+                    horizontalTitleGap: 10,
+                    minVerticalPadding: 2,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6)),
+                    minLeadingWidth: 50,
+                    titleAlignment: ListTileTitleAlignment.center,
+                    leading: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(6),
+                            bottomLeft: Radius.circular(6)),
                         color: Theme.of(context).primaryColor,
-                        height: double.maxFinite,
-                        // margin: EdgeInsets.all(2),
-                        padding: const EdgeInsets.all(2),
-                        width: 50,
-                        child: Center(
-                          child: FittedBox(
-                            child: Text(hymnList[index].id,
-                                softWrap: false,
-                                textAlign: TextAlign.right,
-                                style: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white)),
-                          ),
+                      ),
+                      height: double.maxFinite,
+                      // margin: EdgeInsets.all(2),
+                      padding: const EdgeInsets.all(2),
+                      width: 50,
+                      child: Center(
+                        child: FittedBox(
+                          child: Text(hymnList[index].id,
+                              softWrap: false,
+                              textAlign: TextAlign.right,
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
                         ),
                       ),
-                      title: Text(
-                        checkTitle(context, index),
-                        style: const TextStyle(
-                          fontSize: 20,
-                        ),
-                        softWrap: false,
-                        overflow: TextOverflow.ellipsis,
+                    ),
+                    title: Text(
+                      checkTitle(context, index),
+                      style: const TextStyle(
+                        fontSize: 20,
                       ),
-                      trailing: ChangeNotifierProvider.value(
-                        value: hymnList[index],
-                        child: Consumer<Hymn>(
-                          builder: (ctxx, hymnIcon, _) => IconButton(
-                            padding: const EdgeInsets.only(left: 0),
-                            icon: Icon(
-                              hymnIcon.isFavorites
-                                  ? Icons.favorite
-                                  : Icons.favorite_border,
-                            ),
-                            color: Theme.of(context).secondaryHeaderColor,
-                            onPressed: () {
-                              Provider.of<HymnBookProvider>(context,
-                                      listen: false)
-                                  .checkfav(hymnIcon.id, context);
-                              hymnIcon.toggleFav();
-                            },
+                      softWrap: false,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    trailing: ChangeNotifierProvider.value(
+                      value: hymnList[index],
+                      child: Consumer<Hymn>(
+                        builder: (ctxx, hymnIcon, _) => IconButton(
+                          padding: const EdgeInsets.only(left: 0),
+                          icon: Icon(
+                            hymnIcon.isFavorites
+                                ? Icons.favorite
+                                : Icons.favorite_border,
                           ),
+                          color: Theme.of(context).secondaryHeaderColor,
+                          onPressed: () {
+                            Provider.of<HymnBookProvider>(context,
+                                    listen: false)
+                                .checkfav(hymnIcon.id, context);
+                            hymnIcon.toggleFav();
+                          },
                         ),
                       ),
                     ),
                   ),
-                ));
-          }),
-        ),
+                ),
+              ));
+        }),
       ),
     );
   }

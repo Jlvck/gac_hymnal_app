@@ -72,6 +72,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         drawer: MainDrawer(),
+        backgroundColor: const Color.fromARGB(255, 235, 228, 242),
         appBar: AppBar(
           elevation: 0,
           centerTitle: true,
