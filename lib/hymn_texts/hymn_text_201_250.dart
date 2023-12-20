@@ -1063,6 +1063,12 @@ class HymnText201to250 {
           "To the truths we have embraced;",
           "And let others both their sweetness",
           "And their quickening virtue taste."
+        ],
+        [
+          "Give us grace to bear our witness",
+          "To the truths we have embraced,",
+          "And let others both their sweetness",
+          "And their quickening virtue taste.",
         ]
       ],
       versesYoruba: [
