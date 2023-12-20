@@ -1090,7 +1090,8 @@ class HymnText201to300 {
         "Ti O si mbowa;",
         "Emi ni Alfa at' Omega,",
         "Ipilęsę ati opin,",
-        "Olodumare, Olodumare\" l'Oluwa wi",
+        "Olodumare, Olodumare\"",
+        "l'Oluwa wi",
       ],
     ),
     Hymn(
