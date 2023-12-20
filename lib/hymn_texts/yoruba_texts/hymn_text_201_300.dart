@@ -122,7 +122,7 @@ class HymnText201to300 {
         [
           "Opo onje l'o fimbo okan mi,",
           "Sipa odo tutu l'O nto mi si;",
-          "Ire at'aanu Re y'o må tele mi,",
+          "Ire a//?t'aanu Re y'o må tele mi,",
           "Ko s'ohun rere ti y'o fa sehin.",
         ],
         [
@@ -178,16 +178,6 @@ class HymnText201to300 {
           "At' okan tronu,",
           "Fun awon ti a nko,",
           "L' ohun nla t' O ti se.",
-        ],
-        [
-          "Ba ni so, Oluwa,",
-          "Ohun to ye k' a so.",
-          "Gege bi oro Re,",
-          "Ni ki eko wa je",
-          "K' awon agutan Re",
-          "Lè maa mo ohun Re",
-          "Ibit' Onto won si",
-          "Ki nwon si lè maa yo.",
         ],
         [
           "Gbe 'nu wa, Oluwa,",
