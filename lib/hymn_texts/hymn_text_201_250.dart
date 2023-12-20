@@ -823,5 +823,544 @@ class HymnText201to250 {
         ],
       ],
     ),
+    Hymn(
+      id: '213',
+      versesEnglish: [
+        [
+          "Thou Bible everliving book!",
+          "Thy start is never known?",
+          "Nobody knows thy origin?",
+          "No one will know thy end?"
+        ],
+        [
+          "Thou art the Almighty’s secret,",
+          "Thou come from Heavenly King",
+          "Thou art the sword to kill death pains,",
+          "The true picture of God."
+        ],
+        [
+          "Thou art the Chief amongst all those",
+          "Books of the ancient times;",
+          "Thou point the way to salvation",
+          "To all saints on the earth."
+        ],
+        [
+          "Thou treasure of the trinity!",
+          "Of Great King on the throne!",
+          "Please make thyself known unto me",
+          "So that I doubt no more."
+        ],
+        [
+          "I want to read thee and they pray,",
+          "I want to learn from thee;",
+          "Thou great book of the ancient times!",
+          "Reveal me Jesus’ love."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Bibel' iwe aiyeraiye!",
+          "Tani le r' idi re?",
+          "Tani le so idide re?",
+          "Tani le r' opin re?",
+        ],
+        [
+          "Aşiri Olodumare;",
+          "Iko Oba orun;",
+          "Idà t' o pa oro iku;",
+          "Aworan Olorun.",
+        ],
+        [
+          "Okan ni o larin opo",
+          "Iwe aiye 'gbani,",
+          "Iwo l' o s' ona igbala",
+          "Di mimo f' araiye.",
+        ],
+        [
+          "Işura ti Metalokan,",
+          "Oba nla t' O gunwa;",
+          "Jo, tumo ara Re fun mi,",
+          "Ki nye şiyemeji",
+        ],
+        [
+          "Ki 'm' şi O pelu adura,",
+          "Ki 'm' k' eko n'nu rę",
+          "Iwo iwe aiyeraiye,",
+          "F' ife Jesu han mi.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '214',
+      versesEnglish: [
+        [
+          "Cling to the Bible though all else be taken",
+          "Lose not its precepts so precious and pure;",
+          "Souls that are sleeping its tidings awaken;",
+          "Life from the dead in its promises sure."
+        ],
+        [
+          "Cling to the Bible this jewel and treasure",
+          "Brings life eternal, and saves fallen man;",
+          "Surely its values no mortal can measure;",
+          "Seek for its blessing O soul while you can."
+        ],
+        [
+          "Lamp for the feet that in by-ways have wandered,",
+          "Guide for the Youth that would otherwise fall,",
+          "Hope for the sinner whose life has been squander’d,",
+          "Staff for the aged and best book of all."
+        ]
+      ],
+      chorusEnglish: [
+        "Cling to the Bible",
+        "Cling to the Bible",
+        "Cling to the Bible Our lamp",
+        "And our Guide."
+      ],
+      versesYoruba: [
+        [
+          "Ro mo Bibeli bi a gba nkan 'yoku.",
+          "Má so 'lana re ti o s'owon nu;",
+          "Ihin re nji gbogbo okan ti ntogbe,",
+          "Ileri re nso oku d' alaye.",
+        ],
+        [
+          "Ro mo Bibeli! oro 'yebiye yi,",
+          "Nfi iye ainipekun f' araiye;",
+          "O n'iye lori ju b'ęda ti rò lo",
+          "Wa ibukun re nigba t' o le ri.",
+        ],
+        [
+          "Fitila f' eni ti o ti şako lo,",
+          "Amona fun odo t' iba şubu:",
+          "'Reti elese t' aiye rè ti sonu,",
+          "Opa f' agba, Iwe t' o da julo.",
+        ],
+      ],
+      chorusYoruba: [
+        "Ro mo Bibeli",
+        "Ro mo Bibeli",
+        "Ro mo Bibeli",
+        "'Mole fese wa.",
+      ],
+    ),
+    Hymn(
+      id: '215',
+      versesEnglish: [
+        [
+          "O word, of words the sweetest,",
+          "O word, in which there lie",
+          "All promise, all fulfillment,",
+          "And end of mystery!",
+          "Lamenting, or rejoicing,",
+          "With doubt or terror nigh,",
+          "I hear the “Come!” of Jesus,",
+          "And to His cross I fly."
+        ],
+        [
+          "O soul! Why shouldst thou wander",
+          "From such a loving Friend?",
+          "Cling closer, closer to Him,",
+          "Stay with Him to the end;",
+          "Alas! I am so helpless,",
+          "So very full of sin,",
+          "For I am ever wandering,",
+          "And coming back again."
+        ],
+        [
+          "Oh, each time draw me nearer,",
+          "That soon the “come” may be",
+          "Naught but a gentle whisper,",
+          "To one close, close to Thee,",
+          "Then, over sea and mountain,",
+          "Far from or near my home,",
+          "I’ll take Thy hand and follow,",
+          "At that sweet whisper, “come!"
+        ]
+      ],
+      chorusEnglish: [
+        "“Come! Oh come to Me!",
+        "Come! Oh come to Me!",
+        "Weary, heavy-laden.",
+        "Come! Oh, come to Me!”"
+      ],
+      versesYoruba: [
+        [
+          "\"Wo oro t' o dun julo,",
+          "T' o kun fun ileri,",
+          "Ati imuse pelu,",
+          "Opin ohun 'Jinle.",
+          "Nigba ekun at'ayo,",
+          "Yemeji at'èrù.",
+          "Mo gbo Jesu wipe, wa,",
+          "Mo si lo sodo Re",
+        ],
+        [
+          "Okan mi; 'Wo y' o se lo",
+          "Kuro lod' Ore yi.",
+          "Sa sunmo timo-timo:",
+          "Baa gbé titi d' opin,",
+          "Ó şe: ailera mi po:",
+          "Mo kun f'ese pupo:",
+          "N'tor' emi ko le sako,",
+          "Lehin mo ba pada.",
+        ],
+        [
+          "Maa mu mi sunmo do Re",
+          "Ki \"Wa\" na ba le je",
+          "Ohûn ti a fo jeje",
+          "Feniti o sunmo O",
+          "Mo mbę loke tab' odo,",
+          "Lokere, nitost,",
+          "Emi o má tele O",
+          "'Gba mo ba gbo 'pe,",
+        ],
+      ],
+      chorusYoruba: [
+        "Wá, wá s'odo Mi;",
+        "Wá, wá s'odo Mi;",
+        "Alaare t'orun nwò̟.",
+        "Wá, wá sodo Mi",
+        "Wá, wá sodo Mi",
+      ],
+    ),
+    Hymn(
+      id: '216',
+      versesEnglish: [
+        [
+          "O how blest the hour, Lord Jesus",
+          "When we can to Thee draw near,",
+          "Promises so sweet and precious",
+          "From Thy gracious lips to hear."
+        ],
+        [
+          "Be with us this day to bless us,",
+          "That we may not hear in vain;",
+          "With the saving truths impress us",
+          "Which the words of life contain."
+        ],
+        [
+          "Open Thou our minds, and lead us ",
+          "Safely on our heavenward way;",
+          "With the lamp of truth precede us,",
+          "That we may not go astray."
+        ],
+        [
+          "Make us gentle, meek, and humble,",
+          "And yet bold in doing right;",
+          "Scatter darkness, lest we stumble;",
+          "Men walk safe in the light."
+        ],
+        [
+          "Lord endue Thy word from heaven",
+          "With such light, and love, and power,",
+          "That in us its silent leaven",
+          "May work on from hour to hour."
+        ],
+        [
+          "Give us grace to bear our witness",
+          "To the truths we have embraced;",
+          "And let others both their sweetness",
+          "And their quickening virtue taste."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "\"Bukun wakati na ti to,",
+          "Jesu, 'gbat' a sunmo O:",
+          "Lati gbo oro iyebiye!",
+          "Ti nti enu Re jade!",
+        ],
+        [
+          "Pelu wa loni, bukun wa,",
+          "K'a má j' olugbo lasan;",
+          "Te ooto Re mo wa laiya,",
+          "Ti mbę n'nu oro iye.",
+        ],
+        [
+          "Wo wa b'a ti nwa igbala,",
+          "Ti a joko l'ese Re:",
+          "A nreti ni iparoro,",
+          "Lati gb'ohun didun Re",
+        ],
+        [
+          "La wa n'iye, k'O si to wa,",
+          "L'alafia l'ona orun;",
+          "F'atupa, ooto saju wa,",
+          "Ki a ma ba sina lo.",
+        ],
+        [
+          "Se wa l'eni tutu pelę.",
+          "K'a maa f'igboiya s'ooto",
+          "L'ookun lo, k'a ma ba kose",
+          "Ko s'ewu lojojumo.",
+        ],
+        [
+          "F'imole, ife, agbara,",
+          "Fun oro Re lat' oke;",
+          "K'o maa şişe b'iwukara,",
+          "Ni inu wa titi lo.",
+        ],
+        [
+          "Ran wa lowo k'a le jeri",
+          "Si otito t'a dimu:",
+          "K'a si je k'awon elomi",
+          "To adun ooto na wo.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '217',
+      versesEnglish: [
+        [
+          "Saviour, like a shepherd lead us;",
+          "Much we need Thy tend’rest care;",
+          "In Thy pleasant pastures feed us,",
+          "For our use Thy folds prepare,"
+        ],
+        [
+          "We are Thine: do Thou befriend us,",
+          "Be the Guardian of our way;",
+          "Keep Thy flock, from sin defend us,",
+          "Seek us when we go astray;"
+        ],
+        [
+          "Early let us seek Thy favour,",
+          "Early let us do Thy will;",
+          "Blessed Lord and only Saviour,",
+          "With Thy love our bosoms fill,"
+        ]
+      ],
+      chorusEnglish: [
+        "Blessed Jesus, Blessed Jesus",
+        "Thou hast bought us, Thine we are.",
+        "Blessed Jesus, Blessed Jesus",
+        "Thou hast bought us, Thine we are."
+      ],
+      versesYoruba: [
+        [
+          "Oluso-aguntan to wa,",
+          "Awa fe itoju Re",
+          "Fun wa ni ibukun t'a nfe.",
+          "Si pese aye fun wa.",
+        ],
+        [
+          "Tire ni wa, fi wa s' orę",
+          "Maa şe amona fun wa,",
+          "Gba agbo Re lowo ese",
+          "Wá wa 'gbat' a ba şina.",
+        ],
+        [
+          "Je k' a tètè wa oju Re:",
+          "Je k' a têtè se 'fe Re:",
+          "Oluwa at' Olubukun,",
+          "Fi 'fe Re kun okan wa.",
+        ],
+      ],
+      chorusYoruba: [
+        "Jesu mimo: Jesu mimo,",
+        "O ra wa, Tire ni wa,",
+        "Jesu mimo, Jesu mimo.",
+        "Ora wa, Tire ni wa.",
+      ],
+    ),
+    Hymn(
+      id: '218',
+      versesEnglish: [
+        [
+          "What a friend we have in Jesus,",
+          "All our sins and griefs to bear!",
+          "What a privilege to carry",
+          "Ev’rything to God in pray’r!",
+          "Oh, what peace we often forfeit,",
+          "O what needless pain we bear!",
+          "All because we do not carry",
+          "Ev’rything to God in pray’r."
+        ],
+        [
+          "Have we trials and temptations?",
+          "Is there trouble anywhere?",
+          "We should never be discouraged,",
+          "Take it to the Lord in pray’r.",
+          "Can we find a friend so faithful,",
+          "Who will all our sorrows share?",
+          "Jesus knows our ev’ry weakness:",
+          "Take it to the Lord in prayer."
+        ],
+        [
+          "Are we weak and heavy laden,",
+          "Cumbered with a load of care?",
+          "Precious Saviour, still our refuge:",
+          "Take it to the Lord in prayer.",
+          "Do thy friends despise, forsake thee?",
+          "Take it to the Lord in prayer!",
+          "In His arms He’ll take and shield thee,",
+          "Thou wilt find a solace there."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ore wo l' a ni bi Jesu,",
+          "Ti O ru banuję wa;",
+          "Anfani wo lo po bayi,",
+          "Lati ma gbadura si;",
+          "Alafia pupo l' a nsonu,",
+          "A si ti je 'rora po.",
+          "Tori a ko nfi gbogbo nkan,",
+          "S' adura niwaju Re",
+        ],
+        [
+          "Idanwo ha wa fun wa bi?",
+          "A ha ni wahala bi?",
+          "A ko gbodo so 'reti nu.",
+          "Sa gbadura s' Oluwa,",
+          "Ko s' olooto pre bi Re",
+          "Ti o le ba wa daro:",
+          "Jesu ti mo ailera wa,",
+          "Sa gbadura s' Oluwa.",
+        ],
+        [
+          "Eru ha nwo wa l' orun bi?",
+          "Aniyan ha po fun wa?",
+          "Olugbala je aabo wa,",
+          "Sa gbadura s' Oluwa;",
+          "Awon ore ha så o ti,",
+          "Sa gbadura s' Oluwa,",
+          "Yo gbe o s' oke l' apa Re",
+          "Iwo yo is ni 'tunu.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '219',
+      versesEnglish: [
+        [
+          "Pray, always pray; the Holy Spirit pleads,",
+          "Within thee all thy daily, hourly needs."
+        ],
+        [
+          "Pray, always pray; beneath sin’s heaviest load",
+          "Prayer sees the blood from Jesus’ side that flow’d."
+        ],
+        [
+          "Pray, always pray: though weary, faint, and lone,",
+          "Prayer nestles by the Father’s sheltering throne."
+        ],
+        [
+          "Pray, always pray; amid the world’s turmoil",
+          "Prayer keeps the heart at rest, and nerves for toil."
+        ],
+        [
+          "Pray, always pray; if joys thy pathway throng,",
+          "Prayer strikes the harp, and sings the angels’ song."
+        ],
+        [
+          "Pray, always pray; if loved ones pass the veil,",
+          "Prayer drinks with them of springs that cannot fail."
+        ],
+        [
+          "All earthly things with earth shall fade away;",
+          "Prayer grasps eternity: pray, always pray."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Maa gbadura;Emi mbebe n'nu re.",
+          "Fun gbogbo aini re igbagbogbo.",
+        ],
+        [
+          "Må gbadura; l'abe eru ese.",
+          "Adura nri eje Jesu ti nşân.",
+        ],
+        [
+          "Mã gbadura; b'aare tile mu o",
+          "Adura ngbe wa s' eba te Baba.",
+        ],
+        [
+          "Maa gbadura; n'nu wahala aiye,",
+          "Adura l' o nfun okan n' isimi.",
+        ],
+        [
+          "Ma gbadura; b' ayo ba yi o ka,",
+          "Adura nlu harp, o nko rin Angel.",
+        ],
+        [
+          "Má gbadura b' awon t' o feran sun.",
+          "Adura mba won mu omi iye.",
+        ],
+        [
+          "Gbogb' ohun aiye y'o b' aiye koja,",
+          "Adura wà titi; ma gbadura.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '220',
+      versesEnglish: [
+        [
+          "From every stormy wind that blows,",
+          "From every swelling tide of woes,",
+          "There is a calm, a sure retreat;",
+          "‘Tis found beneath the mercy-seat."
+        ],
+        [
+          "There is a place where Jesus sheds",
+          "The oil of gladness on our heads;",
+          "A place than all beside more sweet;",
+          "It is the blood-stained mercy-seat."
+        ],
+        [
+          "There is a spot where spirits blend,",
+          "And friend holds fellowship with friend;",
+          "Though sundered far, by faith they meet",
+          "Around one common mercy-seat."
+        ],
+        [
+          "Ah, whither could we flee for aid,",
+          "When tempted, desolate dismayed?",
+          "Or how the hosts of hell defeat,",
+          "Had suffering saints no mercy-seat?"
+        ],
+        [
+          "There, there on eagle wing we soar,",
+          "And time and sense seem all no more,",
+          "And heaven comes down our souls to greet,",
+          "And glory crowns the mercy-seat."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ninu gbogbo iji ti nja,",
+          "Ninu gbogbo igbi 'ponju.",
+          "Abo kan mbe, ti o daju:",
+          "O wa l' abe itę anu.",
+        ],
+        [
+          "Ibi kan wa ti Jesu nda",
+          "Ororo ayo s' ori wa;",
+          "O dûn ju ibi gbogbo lo;",
+          "Ite anu t' a f' eje won.",
+        ],
+        [
+          "lbi kan wa fun idapo,",
+          "Nibi Ore npade ore",
+          "Lairi 'ra, nipa igbagbo,",
+          "Nwon y' ite-anu kanna ka",
+        ],
+        [
+          "A! nibo ni a ba sá si,",
+          "Nigba 'danwo at' iponju?",
+          "A ba şe le bori eşu,",
+          "B'oşepe ko si 'te-anu?",
+        ],
+        [
+          "A! bi idi l' a fo sibę.",
+          "B' enipe aiye ko si mo.",
+          "Orun wa pade okan wa",
+          "Ogo si bo ite-anu.",
+        ],
+      ],
+    )
   ];
 }
