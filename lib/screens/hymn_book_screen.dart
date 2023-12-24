@@ -103,6 +103,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                       onChangedNumber: _onChangedNumber,
                       onSubmittedNumber: _onSubmittedNumber,
                       onTapNumber: _onTapNumber,
+                      reset: _reset,
                     )),
                 DisplayedHymnList(foundHymns: _foundHymns, scroll: _scroll)
               ],
@@ -181,6 +182,12 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     }
   }
 
+  void _reset() {
+    setState(() {
+      _foundHymns = _staticHymns;
+    });
+  }
+
   void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
     FocusManager.instance.primaryFocus?.unfocus();
     if (hymnData.any((hymn) => hymn.id == submit)) {
@@ -204,7 +211,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   void _runFilter(String enteredUserHymn) {
     List<Hymn> results = [];
 
-    if (enteredUserHymn.isEmpty) {
+    if (enteredUserHymn.isEmpty ||
+        enteredUserHymn == "/" ||
+        enteredUserHymn == "") {
       results = _staticHymns;
     } else {
       if (Provider.of<LanguageProvider>(context, listen: false).currentItem ==

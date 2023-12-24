@@ -11,19 +11,20 @@ class MainTextField extends StatefulWidget {
   final Function onTapNumber;
   final Function onChangedNumber;
   final Function onSubmittedNumber;
+  final Function reset;
 
-  const MainTextField({
-    super.key,
-    required this.foundHymns,
-    required this.enteredHymnTitle,
-    required this.enteredHymnNumber,
-    required this.runFilter,
-    required this.onTapTitle,
-    required this.onChangedTitle,
-    required this.onTapNumber,
-    required this.onChangedNumber,
-    required this.onSubmittedNumber,
-  });
+  const MainTextField(
+      {super.key,
+      required this.foundHymns,
+      required this.enteredHymnTitle,
+      required this.enteredHymnNumber,
+      required this.runFilter,
+      required this.onTapTitle,
+      required this.onChangedTitle,
+      required this.onTapNumber,
+      required this.onChangedNumber,
+      required this.onSubmittedNumber,
+      required this.reset});
 
   @override
   State<MainTextField> createState() => _MainTextFieldState();
@@ -94,8 +95,7 @@ class _MainTextFieldState extends State<MainTextField> {
                     onPressed: () {
                       setState(() {
                         widget.enteredHymnTitle.clear();
-                        widget.runFilter(
-                            widget.enteredHymnTitle.text.toLowerCase());
+                        widget.reset();
                       });
                     },
                   ),
