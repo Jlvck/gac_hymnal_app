@@ -93,10 +93,8 @@ class _MainTextFieldState extends State<MainTextField> {
                     ),
                     tooltip: "clear input",
                     onPressed: () {
-                      setState(() {
-                        widget.enteredHymnTitle.clear();
-                        widget.reset();
-                      });
+                      widget.enteredHymnTitle.clear();
+                      widget.reset();
                     },
                   ),
                   border: InputBorder.none,
