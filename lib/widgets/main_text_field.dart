@@ -69,7 +69,7 @@ class _MainTextFieldState extends State<MainTextField> {
                 decoration: InputDecoration(
                   // errorBorder: InputBorder.none,
                   // focusedErrorBorder: InputBorder.none,
-
+                  isCollapsed: true,
                   isDense: true,
                   contentPadding: const EdgeInsets.only(left: 8, right: 8),
                   hintStyle: TextStyle(color: Theme.of(context).primaryColor),

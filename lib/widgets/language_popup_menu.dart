@@ -5,16 +5,23 @@ import '../providers/language_provider.dart';
 import '../model/language_item.dart';
 
 class LanguagePopUpMenu extends StatelessWidget {
-  const LanguagePopUpMenu({super.key});
+  final Function? clearControllers;
+  const LanguagePopUpMenu({super.key, this.clearControllers});
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
       enableFeedback: true,
       icon: const Icon(Icons.language),
-      onSelected: (value) =>
-          Provider.of<LanguageProvider>(context, listen: false)
-              .setLanguageItem(value),
+      onSelected: (value) {
+        Provider.of<LanguageProvider>(
+          context,
+          listen: false,
+        ).setLanguageItem(value);
+        if (clearControllers != null) {
+          clearControllers!();
+        }
+      },
       itemBuilder: (context) {
         return const [
           PopupMenuItem(

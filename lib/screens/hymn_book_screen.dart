@@ -81,7 +81,11 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             screenName,
             overflow: TextOverflow.visible,
           ),
-          actions: const [LanguagePopUpMenu()],
+          actions: [
+            LanguagePopUpMenu(
+              clearControllers: clearControllers,
+            )
+          ],
         ),
         body: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),
@@ -114,6 +118,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   void _toScrollStart() {
     _scroll.jumpTo(0);
+  }
+
+  void clearControllers() {
+    _enteredHymnTitle.clear();
+    _enteredHymnNumber.clear();
+    _reset();
+    print('controllers cleared');
   }
 
   void _onTapTitle() {
