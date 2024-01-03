@@ -14,12 +14,15 @@ class LanguagePopUpMenu extends StatelessWidget {
       enableFeedback: true,
       icon: const Icon(Icons.language),
       onSelected: (value) {
-        Provider.of<LanguageProvider>(
-          context,
-          listen: false,
-        ).setLanguageItem(value);
-        if (clearControllers != null) {
-          clearControllers!();
+        if (value !=
+            Provider.of<LanguageProvider>(context, listen: false).currentItem) {
+          Provider.of<LanguageProvider>(
+            context,
+            listen: false,
+          ).setLanguageItem(value);
+          if (clearControllers != null) {
+            clearControllers!();
+          }
         }
       },
       itemBuilder: (context) {

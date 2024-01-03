@@ -14,7 +14,7 @@ class LanguageProvider extends ChangeNotifier {
       _currentItem = selectedLanguage;
     }
 
-    print(_currentItem);
+    print("Currnet Language is $_currentItem");
 
     notifyListeners();
   }
