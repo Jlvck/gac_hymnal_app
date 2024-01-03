@@ -20,3 +20,5 @@
 
 //7. Read on how to update apps on play console.
 
+//8. Implement ValuNotifier for Ephemeral State Management
+
