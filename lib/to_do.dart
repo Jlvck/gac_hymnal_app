@@ -22,3 +22,5 @@
 
 //8. Implement ValuNotifier for Ephemeral State Management
 
+//9. Use HeroWidget to animate to hymnwiew from hymn_list
+
