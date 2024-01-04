@@ -68,7 +68,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    print('build screen');
+    print('build hymn book screen');
     return Scaffold(
         resizeToAvoidBottomInset: false,
         drawer: MainDrawer(),
