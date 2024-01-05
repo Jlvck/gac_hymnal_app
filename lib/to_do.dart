@@ -20,6 +20,6 @@
 
 //7. Read on how to update apps on play console.
 
-//8. Implement ValuNotifier for Ephemeral State Management
+//8. Implement ValuNotifier for Ephemeral State Management[completed]
 
-//9. Add bottom view padding to main text field
+//9. Add bottom viewInsets padding to main text field[completed]
