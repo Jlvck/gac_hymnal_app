@@ -5,7 +5,7 @@
 
 //2. Grid View of hymns(a card design).. 
 //...for Landscape View Mode to have a responsive app....
-//....(present design looks ugly in tablet sized devices)
+//....(present design looks ugly in tablet sized devices)[completed]
 
 //3. Constraint Size for maintext field
 
