@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:church/model/hymn.dart';
 import '../widgets/hymn_list_view.dart';
+import '../widgets/hymn_grid_view.dart';
 
 class DisplayedHymnList extends StatelessWidget {
   final List<Hymn> foundHymns;
@@ -19,10 +20,11 @@ class DisplayedHymnList extends StatelessWidget {
               controller: scroll,
               radius: const Radius.circular(4),
               thickness: 10,
-              child: HymnListView(
-                hymnList: foundHymns,
-                scroll: scroll,
-              ))
+              child: OrientationBuilder(builder: (context, orientation) {
+                return orientation == Orientation.portrait
+                    ? HymnListView(hymnList: foundHymns, scroll: scroll)
+                    : HymnGridView(hymnList: foundHymns, scroll: scroll);
+              }))
           : const Text(
               'No results found',
               style: TextStyle(fontSize: 24),

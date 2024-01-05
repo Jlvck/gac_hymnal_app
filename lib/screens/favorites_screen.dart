@@ -5,6 +5,7 @@ import '../providers/hymn_book_provider.dart';
 import '../widgets/language_popup_menu.dart';
 import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
+import '../widgets/hymn_grid_view.dart';
 import '../model/hymn.dart';
 
 class FavoritesScreen extends StatefulWidget {
@@ -45,10 +46,13 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               controller: _favscroll,
               radius: const Radius.circular(4),
               thickness: 10,
-              child: HymnListView(
-                hymnList: favoriteHymnList,
-                scroll: _favscroll,
-              ))
+              child: OrientationBuilder(builder: (context, orientation) {
+                return orientation == Orientation.portrait
+                    ? HymnListView(
+                        hymnList: favoriteHymnList, scroll: _favscroll)
+                    : HymnGridView(
+                        hymnList: favoriteHymnList, scroll: _favscroll);
+              }))
           : const Center(
               child: Text('No Favorites added'),
             ),

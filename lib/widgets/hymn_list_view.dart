@@ -23,7 +23,7 @@ class HymnListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 12, right: 12, bottom: 0),
       child: ListView(
-        padding: const EdgeInsets.only(bottom: 5, top: 1),
+        padding: const EdgeInsets.only(bottom: 5, top: 5),
         controller: scroll,
         physics: const BouncingScrollPhysics(),
         primary: false,
@@ -87,8 +87,7 @@ class HymnListView extends StatelessWidget {
                     title: Text(
                       checkTitle(context, index),
                       style: const TextStyle(
-                        fontSize: 20,
-                      ),
+                          fontSize: 20, fontWeight: FontWeight.w400),
                       softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),
