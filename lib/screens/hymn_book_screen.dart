@@ -31,7 +31,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   final ScrollController _scroll = ScrollController();
 
   List<Hymn> _staticHymns = [];
-  List<Hymn> _foundHymns = [];
+  final ValueNotifier<List<Hymn>> _foundHymns = ValueNotifier(<Hymn>[]);
 
   @override
   void initState() {
@@ -44,11 +44,11 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
     _staticHymns = preHymn.hymnList;
 
-    _foundHymns = _foundHymns.isEmpty &&
+    _foundHymns.value = _foundHymns.value.isEmpty &&
             _enteredHymnNumber.value.text.isEmpty &&
             _enteredHymnTitle.value.text.isEmpty
         ? _staticHymns
-        : _foundHymns;
+        : _foundHymns.value;
 
     super.didChangeDependencies();
   }
@@ -58,6 +58,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     _enteredHymnNumber.dispose();
     _enteredHymnTitle.dispose();
     _scroll.dispose();
+    _foundHymns.dispose();
     super.dispose();
   }
 
@@ -68,7 +69,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    print('build hymn book screen');
+
+    print('build hymnbook screen');
     return Scaffold(
         resizeToAvoidBottomInset: false,
         drawer: MainDrawer(),
@@ -101,7 +103,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                       runFilter: _runFilter,
                       enteredHymnNumber: _enteredHymnNumber,
                       enteredHymnTitle: _enteredHymnTitle,
-                      foundHymns: _foundHymns,
+                      foundHymns: _foundHymns.value,
                       onTapTitle: _onTapTitle,
                       onChangedTitle: _onChangedTitle,
                       onChangedNumber: _onChangedNumber,
@@ -109,7 +111,14 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                       onTapNumber: _onTapNumber,
                       reset: _reset,
                     )),
-                DisplayedHymnList(foundHymns: _foundHymns, scroll: _scroll)
+                ValueListenableBuilder(
+                    valueListenable: _foundHymns,
+                    builder: (BuildContext context, value, child) {
+                      return DisplayedHymnList(
+                          foundHymns: value, scroll: _scroll);
+                    }),
+                // DisplayedHymnList(
+                //     foundHymns: _foundHymns.value, scroll: _scroll)
               ],
             ),
           ),
@@ -146,9 +155,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   void _onChangedTitle(String value) {
     if (value == '') {
-      setState(() {
-        _foundHymns = _staticHymns;
-      });
+      _foundHymns.value = _staticHymns;
+
       if (_scroll.hasClients) {
         _toScrollStart();
       }
@@ -179,9 +187,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   void _onChangedNumber(String value) {
     if (value == '') {
-      setState(() {
-        _foundHymns = _staticHymns;
-      });
+      _foundHymns.value = _staticHymns;
+
       if (_scroll.hasClients) {
         _toScrollStart();
       }
@@ -194,9 +201,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   }
 
   void _reset() {
-    setState(() {
-      _foundHymns = _staticHymns;
-    });
+    _foundHymns.value = _staticHymns;
   }
 
   void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
@@ -212,7 +217,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
           .then((value) =>
               Provider.of<HymnBookProvider>(context, listen: false).notify());
       _enteredHymnNumber.clear();
-      _foundHymns = _staticHymns;
+      _foundHymns.value = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();
     } else {
       return;
@@ -237,9 +242,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
                 hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
             .toList();
-        setState(() {
-          _foundHymns = results;
-        });
+
+        _foundHymns.value = results;
       } else {
         results = _staticHymns
             .where((hymnbook) =>
@@ -249,12 +253,11 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
                 hymnbook.versesEnglish[0][0].contains(enteredUserHymn))
             .toList();
-        setState(() {
-          _foundHymns = results;
-        });
+
+        _foundHymns.value = results;
       }
     }
 
-    _foundHymns = results;
+    _foundHymns.value = results;
   }
 }

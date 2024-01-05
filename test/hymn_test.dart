@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use, depend_on_referenced_packages
-
 import 'package:test/test.dart';
 import 'package:church/providers/hymn_book_provider.dart';
 import 'package:church/model/hymn.dart';
@@ -12,6 +10,11 @@ void main() {
         testHymnList.where((hymn) => hymn.chorusYoruba != null).toList();
     List<Hymn> englishtestChorus =
         testHymnList.where((hymn) => hymn.chorusEnglish != null).toList();
+
+    // test("Testing for number of Hymn", () {
+    // //Change
+    //   expect(testHymnList.length, 300);
+    // });
     test('Testing Hymn(English & Yoruba) verses Length', () {
       bool tes = testHymnList.every((element) {
         if (element.versesEnglish.length == element.versesYoruba.length) {

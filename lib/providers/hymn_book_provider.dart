@@ -46,6 +46,7 @@ class HymnBookProvider with ChangeNotifier {
         duration: const Duration(seconds: 1),
       ));
     } else {
+      addPrefFav(id);
       ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
         content: Text(
           'Hymn $id favorited',
@@ -56,9 +57,6 @@ class HymnBookProvider with ChangeNotifier {
         closeIconColor: Colors.white,
         duration: const Duration(seconds: 1),
       ));
-
-      addPrefFav(id);
-      notifyListeners();
     }
     addListtoSharedPref(favStringList);
   }
