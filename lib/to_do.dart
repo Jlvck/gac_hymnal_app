@@ -7,7 +7,7 @@
 //...for Landscape View Mode to have a responsive app....
 //....(present design looks ugly in tablet sized devices)[completed]
 
-//3. Constraint Size for maintext field
+//3. Constraint Size for maintext field[optional...might not be needed]
 
 //4. Complete 500 hymns with both lang and write more test...
 //...to check integrity of the hymns_data
@@ -16,7 +16,7 @@
  
 //6. The Repo for this project is a mess, I need to work on it...
 //...don't forget to add a license to the repo(Man must guide always....
-//....never loose guard).
+//....never loose guard).[License added but there is still alot of work to be done on the repo]
 
 //7. Read on how to update apps on play console.
 
