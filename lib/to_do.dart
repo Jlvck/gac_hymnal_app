@@ -22,4 +22,7 @@
 
 //8. Implement ValuNotifier for Ephemeral State Management[completed]
 
+
 //9. Add bottom viewInsets padding to main text field[ignored..not needed at all]
+
+//10. Create Dark Theme 
