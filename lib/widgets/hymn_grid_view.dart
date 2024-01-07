@@ -66,7 +66,7 @@ class HymnGridView extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Padding(
                         padding: const EdgeInsets.only(
-                            right: 10, left: 10, bottom: 2, top: 2),
+                            right: 10, left: 10, bottom: 0, top: 2),
                         child: Text(
                           checkTitle(context, index),
                           // textScaler: TextScaler.noScaling,
