@@ -1,7 +1,7 @@
 import '../model/hymn.dart';
 
 class HymnText151to200 {
-  List<Hymn> hymnLyrics = [
+  List<Hymn> hymnLyrics = <Hymn>[
     Hymn(
       id: '151',
       versesEnglish: [
