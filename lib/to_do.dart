@@ -10,7 +10,7 @@
 //3. Constraint Size for maintext field[optional...might not be needed]
 
 //4. Complete 500 hymns with both lang and write more test...
-//...to check integrity of the hymns_data
+//...to check integrity of the hymns_data[350 done remaining 150]
 
 //5. I must write at least 2 widget_test.
  
