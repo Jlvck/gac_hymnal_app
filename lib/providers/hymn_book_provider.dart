@@ -7,6 +7,7 @@ import '../hymn_texts/hymn_text_101_150.dart';
 import '../hymn_texts/hymn_text_151_200.dart';
 import '../hymn_texts/hymn_text_201_250.dart';
 import '../hymn_texts/hymn_text_251_300.dart';
+import '../hymn_texts/hymn_text_301_350.dart';
 import '../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
@@ -115,6 +116,7 @@ class HymnBookProvider with ChangeNotifier {
     ...HymnText101to150().hymnLyrics,
     ...HymnText151to200().hymnLyrics,
     ...HymnText201to250().hymnLyrics,
-    ...HymnText251to300().hymnLyrics
+    ...HymnText251to300().hymnLyrics,
+    ...HymnText301to350().hymnLyrics,
   ];
 }

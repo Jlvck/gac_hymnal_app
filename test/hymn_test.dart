@@ -11,10 +11,10 @@ void main() {
     List<Hymn> englishtestChorus =
         testHymnList.where((hymn) => hymn.chorusEnglish != null).toList();
 
-    // test("Testing for number of Hymn", () {
-    // //Change
-    //   expect(testHymnList.length, 300);
-    // });
+    test("Testing for number of Hymn", () {
+      //Change
+      expect(testHymnList.length, 350);
+    });
     test('Testing Hymn(English & Yoruba) verses Length', () {
       bool tes = testHymnList.every((element) {
         if (element.versesEnglish.length == element.versesYoruba.length) {
