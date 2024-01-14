@@ -1675,7 +1675,7 @@ class HymnText1to50 {
         [
           "Awa mbe n'nu ibu ife t'o ra wa pada;",
           "Ogo f' Olorun Halleluya!",
-          "Awa y'o iye goke lo s'oke orun",
+          "Awa y'o fi iye goke lo s'oke orun",
           "Ogo f' Olorun Halleluya!",
         ],
         [
