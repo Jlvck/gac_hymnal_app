@@ -113,7 +113,6 @@ class HymnGridView extends StatelessWidget {
                                 hymnIcon.isFavorites
                                     ? Icons.favorite
                                     : Icons.favorite_border,
-                                applyTextScaling: false,
                               ),
                               color: Theme.of(context).secondaryHeaderColor,
                               onPressed: () {
