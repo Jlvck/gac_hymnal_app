@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import '../providers/hymn_book_provider.dart';
 
 import 'hymn_view_screen.dart';
-
 import '../widgets/main_text_field.dart';
 import '../widgets/displayed_hymn_list.dart';
 import '../widgets/drawer.dart';
@@ -76,9 +75,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         drawer: MainDrawer(),
         backgroundColor: const Color.fromARGB(255, 235, 228, 242),
         appBar: AppBar(
-          elevation: 0,
-          centerTitle: true,
-          backgroundColor: Theme.of(context).primaryColor,
+          // elevation: 0,
+          // centerTitle: true,
+          // backgroundColor: Theme.of(context).primaryColor,
           title: const Text(
             screenName,
             overflow: TextOverflow.visible,

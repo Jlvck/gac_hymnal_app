@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
+import './theme_class.dart';
+
 import 'providers/hymn_book_provider.dart';
 import 'providers/navigation_provider.dart';
 import 'providers/language_provider.dart';
@@ -45,29 +47,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
-        theme: ThemeData(
-          drawerTheme: const DrawerThemeData(backgroundColor: Colors.white),
-          listTileTheme: const ListTileThemeData(tileColor: Colors.white),
-          cardTheme: CardTheme(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15))),
-          useMaterial3: true,
-          scaffoldBackgroundColor: Colors.white,
-          dividerTheme: const DividerThemeData(color: Colors.transparent),
-          appBarTheme: AppBarTheme(
-              iconTheme: const IconThemeData(color: Colors.white),
-              elevation: 5,
-              scrolledUnderElevation: 10,
-              backgroundColor: mycolor,
-              centerTitle: true,
-              titleTextStyle: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
-                  color: Colors.white)),
-          primarySwatch: mycolor,
-          secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
-          primaryColor: mycolor,
-        ),
+        theme: ThemeClass.lightTheme,
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
           FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),

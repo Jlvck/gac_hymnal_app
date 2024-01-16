@@ -44,9 +44,7 @@ class _MainTextFieldState extends State<MainTextField> {
               left: 15,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
-            ),
+                borderRadius: BorderRadius.circular(20), color: Colors.white),
             child: SizedBox(
               height: 40,
               child: TextField(
@@ -59,8 +57,7 @@ class _MainTextFieldState extends State<MainTextField> {
                 strutStyle: const StrutStyle(
                   forceStrutHeight: true,
                 ),
-                style: TextStyle(
-                    fontSize: 23, color: Theme.of(context).primaryColor),
+                style: Theme.of(context).primaryTextTheme.titleMedium,
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => widget.onTapTitle(),
@@ -80,10 +77,12 @@ class _MainTextFieldState extends State<MainTextField> {
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
 
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Theme.of(context).primaryColor,
-                    size: 50,
+                  prefixIcon: FittedBox(
+                    child: Icon(
+                      Icons.search,
+                      color: Theme.of(context).primaryColor,
+                      size: 50,
+                    ),
                   ),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
