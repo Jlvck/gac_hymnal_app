@@ -47,7 +47,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const MyHomePage(),
         title: 'GAC Hymnal(Adigbe Branch)',
+        themeMode: ThemeMode.system,
         theme: ThemeClass.lightTheme,
+        darkTheme: ThemeClass.darkTheme,
         routes: {
           HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
           FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),

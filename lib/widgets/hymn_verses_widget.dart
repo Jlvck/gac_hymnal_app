@@ -19,7 +19,9 @@ class HymnVersesWidget extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               currentVerse[i],
-              style: const TextStyle(fontSize: 20),
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onBackground),
               textAlign: TextAlign.center,
             ),
           ),

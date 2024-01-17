@@ -53,6 +53,9 @@ class HymnListView extends StatelessWidget {
                   },
                   child: ListTile(
                     contentPadding: EdgeInsets.zero,
+                    tileColor: Theme.of(context).colorScheme.primaryContainer,
+                    selectedColor:
+                        Theme.of(context).colorScheme.primaryContainer,
                     isThreeLine: false,
                     dense: true,
                     horizontalTitleGap: 10,
@@ -86,8 +89,10 @@ class HymnListView extends StatelessWidget {
                     ),
                     title: Text(
                       checkTitle(context, index),
-                      style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.w400),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: Theme.of(context).colorScheme.onBackground),
                       softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),

@@ -23,14 +23,14 @@ class DrawerListTile extends StatelessWidget {
     ).navigationItem;
     final isSelected = item == currentItem;
     return ListTile(
-      tileColor: Colors.white,
+      tileColor: Colors.transparent,
       selected: isSelected,
       selectedColor: Theme.of(context).secondaryHeaderColor,
       enabled: true,
-      iconColor: Theme.of(context).primaryColor,
+      iconColor: Theme.of(context).colorScheme.primary,
       hoverColor: Colors.black54,
       splashColor: Colors.black54,
-      selectedTileColor: Colors.white,
+      selectedTileColor: Colors.transparent,
       horizontalTitleGap: 5,
       contentPadding:
           const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
@@ -51,7 +51,7 @@ class DrawerListTile extends StatelessWidget {
         style: TextStyle(
             color: isSelected
                 ? Theme.of(context).secondaryHeaderColor
-                : Theme.of(context).primaryColor,
+                : Theme.of(context).colorScheme.primary,
             fontSize: 20,
             fontWeight: FontWeight.bold),
       ),

@@ -39,9 +39,9 @@ class HymnGridView extends StatelessWidget {
         ),
         children: List.generate(hymnList.length, growable: true, (index) {
           return Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(6)),
-                color: Colors.white),
+                color: Theme.of(context).colorScheme.primaryContainer),
             padding: EdgeInsets.zero,
             margin: EdgeInsets.zero,
             height: 110,
@@ -70,10 +70,11 @@ class HymnGridView extends StatelessWidget {
                         child: Text(
                           checkTitle(context, index),
                           // textScaler: TextScaler.noScaling,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 15,
-                          ),
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15,
+                              color:
+                                  Theme.of(context).colorScheme.onBackground),
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
                         ),

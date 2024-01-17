@@ -25,9 +25,11 @@ class DisplayedHymnList extends StatelessWidget {
                     ? HymnListView(hymnList: foundHymns, scroll: scroll)
                     : HymnGridView(hymnList: foundHymns, scroll: scroll);
               }))
-          : const Text(
+          : Text(
               'No results found',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(
+                  fontSize: 24,
+                  color: Theme.of(context).colorScheme.onBackground),
             ),
     );
   }

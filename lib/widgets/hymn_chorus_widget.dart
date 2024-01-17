@@ -23,10 +23,11 @@ class HymnChorusWidget extends StatelessWidget {
         children: [
           Text(
             currentLanguage == LanguageItem.yoruba ? 'Ègbè' : 'Chorus',
-            style: const TextStyle(
+            style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
-                fontStyle: FontStyle.italic),
+                fontStyle: FontStyle.italic,
+                color: Theme.of(context).colorScheme.onBackground),
           ),
           ListView(
             shrinkWrap: true,
@@ -39,10 +40,11 @@ class HymnChorusWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     currentChorus[index],
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 20,
                         fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                        color: Theme.of(context).colorScheme.onBackground),
                     textAlign: TextAlign.center,
                     softWrap: true,
                     maxLines: 2,

@@ -39,6 +39,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
     final PageController controller = PageController(initialPage: pagenumber);
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         centerTitle: true,
         title: FittedBox(
@@ -89,7 +90,6 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           );
         }),
       ),
-      backgroundColor: Colors.white,
     );
   }
 

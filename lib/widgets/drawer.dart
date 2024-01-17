@@ -19,11 +19,16 @@ class MainDrawer extends StatelessWidget {
     final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
-      backgroundColor: Colors.white,
-      shadowColor: Colors.white,
-      surfaceTintColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.background,
+      shadowColor: Theme.of(context).colorScheme.background,
+      surfaceTintColor: Theme.of(context).colorScheme.background,
       clipBehavior: Clip.hardEdge,
       child: Column(children: [
+        Container(
+          height: topPadding,
+          decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+          clipBehavior: Clip.hardEdge,
+        ),
         Expanded(
             child: Scrollbar(
           thumbVisibility: false,
@@ -32,22 +37,17 @@ class MainDrawer extends StatelessWidget {
           controller: _scroll,
           thickness: 5,
           child: ScrollConfiguration(
-            behavior: const ScrollBehavior().copyWith(overscroll: false),
+            behavior: const ScrollBehavior().copyWith(
+                overscroll: false, physics: const ClampingScrollPhysics()),
             child: ListView(
               controller: _scroll,
               padding: EdgeInsets.zero,
               children: [
-                Container(
-                  height: topPadding,
-                  decoration:
-                      BoxDecoration(color: Theme.of(context).primaryColor),
-                  clipBehavior: Clip.hardEdge,
-                ),
                 DrawerHeader(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.transparent,
                   ),
                   child: Image.asset(
                     'assets/images/church_image_drawer.png',
@@ -69,12 +69,14 @@ class MainDrawer extends StatelessWidget {
                 ),
                 ListTile(
                   horizontalTitleGap: 5,
-                  tileColor: Colors.white,
+                  tileColor: Colors.transparent,
                   title: Text(
                     'Follow us',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                        color: Theme.of(context).primaryColor, fontSize: 20),
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: 20,
+                    ),
                   ),
                   contentPadding: const EdgeInsets.only(
                       top: 5, bottom: 0, left: 25, right: 20),

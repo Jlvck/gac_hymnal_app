@@ -44,11 +44,13 @@ class _MainTextFieldState extends State<MainTextField> {
               left: 15,
             ),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.white),
+              borderRadius: BorderRadius.circular(20),
+              color: Theme.of(context).colorScheme.primaryContainer,
+            ),
             child: SizedBox(
               height: 40,
               child: TextField(
-                cursorColor: Theme.of(context).primaryColor,
+                cursorColor: Theme.of(context).colorScheme.primary,
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
                 // expands: true,
@@ -72,7 +74,10 @@ class _MainTextFieldState extends State<MainTextField> {
                   isCollapsed: true,
                   isDense: true,
                   contentPadding: const EdgeInsets.only(left: 8, right: 8),
-                  hintStyle: TextStyle(color: Theme.of(context).primaryColor),
+                  hintStyle: Theme.of(context)
+                      .primaryTextTheme
+                      .titleMedium
+                      ?.copyWith(color: Theme.of(context).colorScheme.primary),
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
@@ -80,18 +85,18 @@ class _MainTextFieldState extends State<MainTextField> {
                   prefixIcon: FittedBox(
                     child: Icon(
                       Icons.search,
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).colorScheme.primary,
                       size: 50,
                     ),
                   ),
                   suffix: IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.center,
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                     icon: Icon(
                       Icons.cancel,
                       size: 22,
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                     tooltip: "clear input",
                     onPressed: () {
@@ -111,17 +116,17 @@ class _MainTextFieldState extends State<MainTextField> {
           child: Container(
             margin: const EdgeInsets.only(right: 15, left: 5),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.primaryContainer,
               borderRadius: BorderRadius.circular(10),
             ),
             child: SizedBox(
               height: 40,
               child: TextField(
-                cursorColor: Theme.of(context).primaryColor,
+                cursorColor: Theme.of(context).colorScheme.primary,
                 maxLines: 1,
                 minLines: 1,
-                style: TextStyle(
-                    fontSize: 20, color: Theme.of(context).primaryColor),
+                style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
+                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
                 onTapOutside: (event) =>
                     FocusManager.instance.primaryFocus?.unfocus(),
                 onTap: () => widget.onTapNumber(),
@@ -139,7 +144,8 @@ class _MainTextFieldState extends State<MainTextField> {
                       const EdgeInsets.only(top: 8, left: 5, right: 2),
                   hintText: '#',
                   hintStyle: TextStyle(
-                      color: Theme.of(context).primaryColor, fontSize: 22),
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: 22),
                   border: InputBorder.none,
                 ),
               ),

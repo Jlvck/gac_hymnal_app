@@ -31,8 +31,9 @@ class SocialMediaTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: Colors.white,
-      iconColor: Theme.of(context).primaryColor,
+      tileColor: Colors.transparent,
+      selectedTileColor: Colors.transparent,
+      iconColor: Theme.of(context).colorScheme.primary,
       splashColor: Colors.black54,
       horizontalTitleGap: 5,
       minVerticalPadding: 1,
@@ -59,7 +60,7 @@ class SocialMediaTile extends StatelessWidget {
       title: Text(
         socialMedia,
         style: TextStyle(
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.primary,
             fontSize: 20,
             fontWeight: FontWeight.bold),
       ),
@@ -67,7 +68,7 @@ class SocialMediaTile extends StatelessWidget {
         accountName,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: TextStyle(color: Theme.of(context).primaryColor),
+        style: TextStyle(color: Theme.of(context).colorScheme.primary),
       ),
     );
   }

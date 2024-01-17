@@ -63,8 +63,10 @@ class HymnViewWidget extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "${index + 1}",
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w900, fontSize: 30),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 30,
+                            color: Theme.of(context).colorScheme.onBackground),
                       ),
                       HymnVersesWidget(
                         currentVerse: currentHymn[index],
@@ -87,7 +89,8 @@ class HymnViewWidget extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
-                  fontStyle: FontStyle.italic),
+                  fontStyle: FontStyle.italic,
+                  color: Theme.of(context).colorScheme.onBackground),
             ),
           ),
         ),

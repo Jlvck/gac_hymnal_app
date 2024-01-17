@@ -18,30 +18,99 @@ class ThemeClass {
   );
 
   static ThemeData lightTheme = ThemeData(
-    brightness: Brightness.light,
-    drawerTheme: const DrawerThemeData(backgroundColor: Colors.white),
-    listTileTheme: const ListTileThemeData(tileColor: Colors.white),
-    primaryTextTheme: const TextTheme(
-      //TextField text style(Light)
-      titleMedium: TextStyle(
-          fontSize: 23, color: Colors.black, fontWeight: FontWeight.normal),
-    ),
-    cardTheme: CardTheme(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
-    useMaterial3: true,
-    scaffoldBackgroundColor: const Color.fromARGB(255, 235, 228, 242),
-    dividerTheme: const DividerThemeData(color: Colors.transparent),
-    //App Bar Theme(light)
-    appBarTheme: AppBarTheme(
-        iconTheme: const IconThemeData(color: Colors.white),
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        backgroundColor: mycolor.shade400,
-        centerTitle: true,
-        titleTextStyle: const TextStyle(
-            fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white)),
-    primarySwatch: mycolor,
-    secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
-    primaryColor: mycolor.shade400,
-  );
+      brightness: Brightness.light,
+      drawerTheme: const DrawerThemeData(backgroundColor: Colors.white),
+      listTileTheme: const ListTileThemeData(tileColor: Colors.white),
+      primaryTextTheme: const TextTheme(
+        //TextField text style(Light)
+        //Change text Color to white for dark theme
+        titleMedium: TextStyle(
+            fontSize: 23, color: Colors.black, fontWeight: FontWeight.normal),
+      ),
+      cardTheme: CardTheme(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+      useMaterial3: true,
+      //change to black for dark theme
+      scaffoldBackgroundColor: const Color.fromARGB(255, 235, 228, 242),
+      dividerTheme: const DividerThemeData(color: Colors.transparent),
+      //App Bar Theme(light)
+      appBarTheme: AppBarTheme(
+          iconTheme: const IconThemeData(color: Colors.white),
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          backgroundColor: mycolor.shade400,
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white)),
+      primarySwatch: mycolor,
+      secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
+      primaryColor: mycolor.shade400,
+      colorScheme: ColorScheme(
+        brightness: Brightness.light,
+        //change color to white for darktheme
+        primary: mycolor.shade400,
+        onPrimary: Colors.white,
+        secondary: Colors.black,
+        onSecondary: Colors.white,
+        //color used for drawer background &
+        //hymnview background scaffold(black in dark)
+        background: Colors.white,
+        // color for text..change to white in dark
+        onBackground: Colors.black,
+        error: const Color.fromARGB(255, 255, 0, 0),
+        onError: Colors.white,
+        surface: Colors.white,
+        onSurface: Colors.black,
+        //change to Color.rgbo(32,32,32,1) for dark theme
+        primaryContainer: Colors.white,
+      ));
+  static ThemeData darkTheme = ThemeData(
+      brightness: Brightness.dark,
+      drawerTheme: const DrawerThemeData(backgroundColor: Colors.black),
+      listTileTheme: const ListTileThemeData(tileColor: Colors.black),
+      primaryTextTheme: const TextTheme(
+        //TextField text style(Light)
+        //Change text Color to white for dark theme
+        titleMedium: TextStyle(
+            fontSize: 23, color: Colors.white, fontWeight: FontWeight.normal),
+      ),
+      cardTheme: CardTheme(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
+      useMaterial3: true,
+      //change to black for dark theme
+      scaffoldBackgroundColor: Colors.black,
+      dividerTheme: const DividerThemeData(color: Colors.transparent),
+      //App Bar Theme(light)
+      appBarTheme: AppBarTheme(
+          iconTheme: const IconThemeData(color: Colors.white),
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          backgroundColor: mycolor.shade400,
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white)),
+      primarySwatch: mycolor,
+      secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
+      primaryColor: mycolor.shade400,
+      colorScheme: const ColorScheme(
+        brightness: Brightness.dark,
+        //change color to white for darktheme
+        primary: Colors.white,
+        onPrimary: Colors.black,
+        secondary: Colors.black,
+        onSecondary: Colors.white,
+        //color used for drawer background &
+        //hymnview background scaffold(black in dark)
+        background: Colors.black,
+        // color for text..change to white in dark
+        onBackground: Colors.white,
+        error: Color.fromARGB(255, 255, 0, 0),
+        onError: Colors.white,
+        surface: Colors.white,
+        onSurface: Colors.black,
+        //change to Color.rgbo(32,32,32,1) for dark theme
+        primaryContainer: Color.fromRGBO(32, 32, 32, 1),
+      ));
 }
