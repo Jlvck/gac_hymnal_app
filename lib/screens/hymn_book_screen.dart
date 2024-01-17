@@ -2,7 +2,7 @@ import 'package:church/model/language_item.dart';
 import 'package:church/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:toggle_switch/toggle_switch.dart';
 import '../providers/hymn_book_provider.dart';
 
 import 'hymn_view_screen.dart';
@@ -83,9 +83,41 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             overflow: TextOverflow.visible,
           ),
           actions: [
+            Padding(
+              padding: const EdgeInsets.only(left: 5.0, right: 5),
+              child: FittedBox(
+                child: ToggleSwitch(
+                  minWidth: 30.0,
+                  minHeight: 30.0,
+                  initialLabelIndex: 0,
+                  cornerRadius: 10.0,
+                  activeFgColor: Colors.white,
+                  inactiveBgColor: Colors.grey,
+                  inactiveFgColor: Colors.white,
+                  totalSwitches: 2,
+
+                  icons: [
+                    Icons.dark_mode,
+                    Icons.light_mode,
+                  ],
+                  iconSize: 30.0,
+                  activeBgColors: [
+                    [Colors.black45, Colors.black26],
+                    [Colors.yellow, Colors.orange]
+                  ],
+                  animate:
+                      true, // with just animate set to true, default curve = Curves.easeIn
+                  curve: Curves
+                      .bounceInOut, // animate must be set to true when using custom curve
+                  onToggle: (index) {
+                    print('switched to: $index');
+                  },
+                ),
+              ),
+            ),
             LanguagePopUpMenu(
               clearControllers: clearControllers,
-            )
+            ),
           ],
         ),
         body: SingleChildScrollView(
