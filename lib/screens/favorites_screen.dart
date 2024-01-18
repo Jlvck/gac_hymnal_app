@@ -7,6 +7,7 @@ import '../widgets/drawer.dart';
 import '../widgets/hymn_list_view.dart';
 import '../widgets/hymn_grid_view.dart';
 import '../model/hymn.dart';
+import '../widgets/toggle_theme_switch.dart';
 
 class FavoritesScreen extends StatefulWidget {
   static const routeName = "/favorites_screen";
@@ -33,7 +34,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
           screenName,
           overflow: TextOverflow.visible,
         ),
-        actions: const [LanguagePopUpMenu()],
+        actions: const [ToggleThemeSwitch(), LanguagePopUpMenu()],
       ),
       drawer: MainDrawer(),
       body: favoriteHymnList.isNotEmpty

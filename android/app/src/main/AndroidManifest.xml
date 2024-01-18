@@ -9,6 +9,7 @@
         </intent>
     </queries>
    <application
+        android:enableOnBackInvokedCallback="true"
         android:label="GAC Hymnal (Adigbe Branch)"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

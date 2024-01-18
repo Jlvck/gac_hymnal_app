@@ -25,11 +25,11 @@ void main() async {
     ChangeNotifierProvider<ThemeProvider>(
       create: (ctx) => ThemeProvider(),
     ),
-  ], child: MyApp()));
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();

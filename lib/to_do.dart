@@ -1,7 +1,7 @@
 //I JUST CREATED THIS FILE TO WRITE THINGS I NEED TO COMPLETE LATER ON 
 //IN THE PROJECT
 
-//1. Page_transitons for every pushing of pages
+//1. Page_transitons for every pushing of pages[completed]
 
 //2. Grid View of hymns(a card design).. 
 //...for Landscape View Mode to have a responsive app....
@@ -25,4 +25,4 @@
 
 //9. Add bottom viewInsets padding to main text field[ignored..not needed at all]
 
-//10. Create Dark Theme 
+//10. Create Dark Theme [completed]
