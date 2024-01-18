@@ -80,9 +80,9 @@ class ThemeClass {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       useMaterial3: true,
       //change to black for dark theme
-      scaffoldBackgroundColor: Colors.black,
+      scaffoldBackgroundColor: const Color.fromRGBO(32, 32, 32, 1),
       dividerTheme: const DividerThemeData(color: Colors.transparent),
-      //App Bar Theme(light)
+      //App Bar Theme(black)
       appBarTheme: AppBarTheme(
           iconTheme: const IconThemeData(color: Colors.white),
           elevation: 0,
@@ -96,21 +96,21 @@ class ThemeClass {
       primaryColor: mycolor.shade400,
       colorScheme: const ColorScheme(
         brightness: Brightness.dark,
-        //change color to white for darktheme
+        //change color to black for lighttheme
         primary: Colors.white,
         onPrimary: Colors.black,
         secondary: Colors.black,
         onSecondary: Colors.white,
         //color used for drawer background &
-        //hymnview background scaffold(black in dark)
+        //hymnview background scaffold(white in light)
         background: Colors.black,
-        // color for text..change to white in dark
+        // black in light
         onBackground: Colors.white,
         error: Color.fromARGB(255, 255, 0, 0),
         onError: Colors.white,
         surface: Colors.white,
         onSurface: Colors.black,
-        //change to Color.rgbo(32,32,32,1) for dark theme
+        //white for light theme
         primaryContainer: Color.fromRGBO(32, 32, 32, 1),
       ));
 }

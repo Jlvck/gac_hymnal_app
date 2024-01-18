@@ -8,12 +8,54 @@ import './theme_class.dart';
 import 'providers/hymn_book_provider.dart';
 import 'providers/navigation_provider.dart';
 import 'providers/language_provider.dart';
+import 'providers/theme_provider.dart';
+
 import 'screens/hymn_book_screen.dart';
 import 'screens/favorites_screen.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  await Future.sync(() => WidgetsFlutterBinding.ensureInitialized());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<HymnBookProvider>(
+      create: (ctx) => HymnBookProvider(),
+    ),
+    ChangeNotifierProvider<NavigationProvider>(
+        create: (ctx) => NavigationProvider()),
+    ChangeNotifierProvider(create: (ctx) => LanguageProvider()),
+    ChangeNotifierProvider<ThemeProvider>(
+      create: (ctx) => ThemeProvider(),
+    ),
+  ], child: MyApp()));
+}
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    var brightness =
+        WidgetsBinding.instance.platformDispatcher.platformBrightness;
+    Provider.of<ThemeProvider>(context, listen: false).setTheme(brightness);
+    super.didChangePlatformBrightness();
+  }
+
   final MaterialColor mycolor = MaterialColor(
     const Color.fromRGBO(0, 0, 102, 1).value,
     const <int, Color>{
@@ -30,31 +72,42 @@ class MyApp extends StatelessWidget {
     },
   );
 
-  MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<HymnBookProvider>(
-          create: (ctx) => HymnBookProvider(),
-        ),
-        ChangeNotifierProvider<NavigationProvider>(
-            create: (ctx) => NavigationProvider()),
-        ChangeNotifierProvider(create: (ctx) => LanguageProvider())
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const MyHomePage(),
-        title: 'GAC Hymnal(Adigbe Branch)',
-        themeMode: ThemeMode.system,
-        theme: ThemeClass.lightTheme,
-        darkTheme: ThemeClass.darkTheme,
-        routes: {
-          HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
-          FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(),
+      title: 'GAC Hymnal(Adigbe Branch)',
+      themeMode: Provider.of<ThemeProvider>(context, listen: true).themeMode,
+      theme: ThemeClass.lightTheme,
+      darkTheme: ThemeClass.darkTheme,
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case ("/"):
+            return PageTransition(
+                child: const HymnBookScreen(),
+                type: PageTransitionType.fade,
+                duration: const Duration(milliseconds: 300));
+          case (HymnBookScreen.routeName):
+            return PageTransition(
+                child: const HymnBookScreen(),
+                type: PageTransitionType.fade,
+                duration: const Duration(milliseconds: 300));
+          case (FavoritesScreen.routeName):
+            return PageTransition(
+                child: const FavoritesScreen(),
+                type: PageTransitionType.fade,
+                duration: const Duration(milliseconds: 300));
+          default:
+            return PageTransition(
+                child: const HymnBookScreen(),
+                type: PageTransitionType.fade,
+                duration: const Duration(milliseconds: 300));
+        }
+
+        // HymnBookScreen.routeName: (ctx) => const HymnBookScreen(),
+        // FavoritesScreen.routeName: (ctx) => const FavoritesScreen(),
+      },
     );
   }
 }
@@ -80,11 +133,19 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         backgroundColor: Theme.of(context).primaryColor,
         screenFunction: () async {
-          Provider.of<HymnBookProvider>(context, listen: false)
-              .setFavHymnList();
+          await Future.sync(() {
+            final Brightness brightness =
+                WidgetsBinding.instance.platformDispatcher.platformBrightness;
+            Provider.of<ThemeProvider>(context, listen: false)
+                .setTheme(brightness);
+            Provider.of<HymnBookProvider>(context, listen: false)
+                .setFavHymnList();
+          });
+
           return const HymnBookScreen();
         },
-        pageTransitionType: PageTransitionType.leftToRightWithFade,
+        animationDuration: const Duration(milliseconds: 200),
+        pageTransitionType: PageTransitionType.fade,
       ),
     );
   }

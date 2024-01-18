@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '../model/hymn.dart';
 import '../model/language_item.dart';
@@ -41,7 +42,7 @@ class HymnGridView extends StatelessWidget {
           return Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(6)),
-                color: Theme.of(context).colorScheme.primaryContainer),
+                color: Theme.of(context).colorScheme.background),
             padding: EdgeInsets.zero,
             margin: EdgeInsets.zero,
             height: 110,
@@ -49,11 +50,13 @@ class HymnGridView extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (t) => HymnViewScreen(
-                            id: hymnList[index].id,
-                          ),
-                        ))
+                        PageTransition(
+                            childCurrent: this,
+                            child: HymnViewScreen(
+                              id: hymnList[index].id,
+                            ),
+                            type: PageTransitionType.rightToLeftWithFade,
+                            duration: const Duration(milliseconds: 300)))
                     .then((value) =>
                         Provider.of<HymnBookProvider>(context, listen: false)
                             .notify());

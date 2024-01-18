@@ -1,6 +1,8 @@
 import 'package:church/model/language_item.dart';
 import 'package:church/providers/language_provider.dart';
+import 'package:church/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import '../providers/hymn_book_provider.dart';
@@ -89,20 +91,26 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 child: ToggleSwitch(
                   minWidth: 30.0,
                   minHeight: 30.0,
-                  initialLabelIndex: 0,
+                  initialLabelIndex:
+                      Provider.of<ThemeProvider>(context, listen: true)
+                                  .currentBrigtness ==
+                              Brightness.dark
+                          ? 0
+                          : 1,
                   cornerRadius: 10.0,
                   activeFgColor: Colors.white,
                   inactiveBgColor: Colors.grey,
                   inactiveFgColor: Colors.white,
                   totalSwitches: 2,
 
-                  icons: [
+                  icons: const [
                     Icons.dark_mode,
                     Icons.light_mode,
                   ],
                   iconSize: 30.0,
+
                   activeBgColors: [
-                    [Colors.black45, Colors.black26],
+                    const [Colors.black45, Colors.black26],
                     [Colors.yellow, Colors.orange]
                   ],
                   animate:
@@ -110,7 +118,20 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                   curve: Curves
                       .bounceInOut, // animate must be set to true when using custom curve
                   onToggle: (index) {
-                    print('switched to: $index');
+                    switch (index) {
+                      case 0:
+                        {
+                          Provider.of<ThemeProvider>(context, listen: false)
+                              .setTheme(Brightness.dark);
+                        }
+                        break;
+                      case 1:
+                        {
+                          Provider.of<ThemeProvider>(context, listen: false)
+                              .setTheme(Brightness.light);
+                        }
+                        break;
+                    }
                   },
                 ),
               ),
@@ -239,11 +260,12 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     FocusManager.instance.primaryFocus?.unfocus();
     if (hymnData.any((hymn) => hymn.id == submit)) {
       Navigator.of(context)
-          .push(MaterialPageRoute(
-            // ignore: prefer_const_constructors
-            builder: (t) => HymnViewScreen(
+          .push(PageTransition(
+            type: PageTransitionType.fade,
+            child: HymnViewScreen(
               id: submit,
             ),
+            duration: const Duration(milliseconds: 300),
           ))
           .then((value) =>
               Provider.of<HymnBookProvider>(context, listen: false).notify());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '../model/hymn.dart';
 import '../model/language_item.dart';
@@ -40,22 +41,22 @@ class HymnListView extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          // ignore: prefer_const_constructors
-                          builder: (t) => HymnViewScreen(
-                            id: hymnList[index].id,
-                          ),
-                        )).then((value) => Provider.of<HymnBookProvider>(
                             context,
-                            listen: false)
-                        .notify());
+                            PageTransition(
+                                childCurrent: this,
+                                child: HymnViewScreen(
+                                  id: hymnList[index].id,
+                                ),
+                                type: PageTransitionType.rightToLeftWithFade,
+                                duration: const Duration(milliseconds: 300)))
+                        .then((value) => Provider.of<HymnBookProvider>(context,
+                                listen: false)
+                            .notify());
                   },
                   child: ListTile(
                     contentPadding: EdgeInsets.zero,
-                    tileColor: Theme.of(context).colorScheme.primaryContainer,
-                    selectedColor:
-                        Theme.of(context).colorScheme.primaryContainer,
+                    tileColor: Theme.of(context).colorScheme.background,
+                    selectedColor: Theme.of(context).colorScheme.background,
                     isThreeLine: false,
                     dense: true,
                     horizontalTitleGap: 10,

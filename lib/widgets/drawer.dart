@@ -19,9 +19,9 @@ class MainDrawer extends StatelessWidget {
     final topPadding = MediaQuery.of(context).padding.top;
     return Drawer(
       width: 3 / 4 * width,
-      backgroundColor: Theme.of(context).colorScheme.background,
-      shadowColor: Theme.of(context).colorScheme.background,
-      surfaceTintColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+      shadowColor: Theme.of(context).colorScheme.primaryContainer,
+      surfaceTintColor: Theme.of(context).colorScheme.primaryContainer,
       clipBehavior: Clip.hardEdge,
       child: Column(children: [
         Container(
