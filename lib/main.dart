@@ -86,22 +86,22 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           case ("/"):
             return PageTransition(
                 child: const HymnBookScreen(),
-                type: PageTransitionType.fade,
+                type: PageTransitionType.rightToLeftWithFade,
                 duration: const Duration(milliseconds: 300));
           case (HymnBookScreen.routeName):
             return PageTransition(
                 child: const HymnBookScreen(),
-                type: PageTransitionType.fade,
+                type: PageTransitionType.rightToLeftWithFade,
                 duration: const Duration(milliseconds: 300));
           case (FavoritesScreen.routeName):
             return PageTransition(
                 child: const FavoritesScreen(),
-                type: PageTransitionType.fade,
+                type: PageTransitionType.rightToLeftWithFade,
                 duration: const Duration(milliseconds: 300));
           default:
             return PageTransition(
                 child: const HymnBookScreen(),
-                type: PageTransitionType.fade,
+                type: PageTransitionType.rightToLeftWithFade,
                 duration: const Duration(milliseconds: 300));
         }
 
@@ -144,7 +144,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
           return const HymnBookScreen();
         },
-        animationDuration: const Duration(milliseconds: 200),
+        duration: 2500,
+        animationDuration: const Duration(milliseconds: 500),
+        splashTransition: SplashTransition.fadeTransition,
         pageTransitionType: PageTransitionType.fade,
       ),
     );
