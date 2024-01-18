@@ -1110,5 +1110,261 @@ class HymnText351to400 {
         ],
       ],
     ),
+    Hymn(
+      id: "367",
+      versesEnglish: [
+        [
+          "O Lord my God, when I in awesome wonder,",
+          "Consider all the worlds thy hands have made;",
+          "I see the stars, I hear the rolling thunder,",
+          "Thy power throughout the universe displayed:",
+        ],
+        [
+          "When through the woods and forest glades I wander",
+          "And hear the birds sing sweetly in the trees,",
+          "When I look down from lofty mountain grandeur,",
+          "And hear the brook and feel the gentle breeze:",
+        ],
+        [
+          "And when I think how God, his Son not sparing,",
+          "Sent him to die, I scarce can take it in;",
+          "That on the cross, my burdens gladly bearing,",
+          "He bled and died to take away my sin:",
+        ],
+        [
+          "When Christ shall come with shouts of acclamation,",
+          "To take me home, what joy will fill my heart!",
+          "Then I will bow in humble adoration,",
+          "And there proclaim, my God, how great thou art!",
+        ]
+      ],
+      chorusEnglish: [
+        "Then sings my soul, my Saviour God, to thee:",
+        "How great thou art! How great thou art!",
+        "Then sings my soul, my Saviour God, to thee:",
+        "How great thou art! How great thou art!",
+      ],
+      versesYoruba: [
+        [
+          "Olorun mi, iyanu ni ona Re;",
+          "Gbogbo 'se owo re lo nrohin re;",
+          "Irawo ntan, oorun ati aara nla",
+          "Owo agbara nla re lo da won.",
+        ],
+        [
+          "Igi igbo at'eiye oju orun",
+          "Nwon nko'rin iyin si eleda won;",
+          "Awon oke, at'orisun omi nla,",
+          "Gbogbo won njeri si ise nla re",
+        ],
+        [
+          "Nini ife, Olorun fi omo re,",
+          "Se etutu fun ese araiye",
+          "Lori igi, O ta eje re sile,",
+          "Iku re, lo f' iye si okan mi",
+        ],
+        [
+          "Lehin eyi, jesu y' o tun pada wa,",
+          "Lati ko awon ayanfe lo 'le",
+          "Bawo ni ayo wa y'o ha ti po to",
+          "Gba t'aba f' oju ri titobi re",
+        ],
+      ],
+      chorusYoruba: [
+        "Ko'rin ayo s'Oluwa okan mi",
+        "Titobi ni Olorun wa;",
+        "Ko'rin ayo s'Oluwa okan mi",
+        "Titobi ni Olorun wa;",
+      ],
+    ),
+    Hymn(
+      id: '368',
+      versesEnglish: [
+        [
+          "There’s one above all earthly friends",
+          "Whose love all earthly love transcends,",
+          "It is my Lord and Christ divine,",
+          "My Lord because, I know He’s mine."
+        ],
+        [
+          "He’s mine because He died for me",
+          "He saved my soul He set me free,",
+          "With joy I worship at His shrine,",
+          "And cry, “Praise God, “I know He’s mine."
+        ],
+        [
+          "He’s mine because He’s in my heart,",
+          "And never, never will we part,",
+          "Just as the branch is to the vine,",
+          "I’m joined to Christ, I know He’s mine."
+        ],
+        [
+          "Some day upon the streets of gold",
+          "Mine eyes His glory shall behold",
+          "Then while His arms around me twine,",
+          "I’ll cry for joy, “I know He’s mine."
+        ]
+      ],
+      chorusEnglish: [
+        "I know He’s mine, this Friend so dear,",
+        "He lives with me He’s ever near;",
+        "Ten thousand charms, around Him shine,",
+        "And, best of all, I know He’s mine."
+      ],
+      versesYoruba: [
+        [
+          "Kristi mimo Oluwa mi",
+          "Ife re ju t'araiye lo",
+          "Ore otito li o je",
+          "Mo mo pe Oluwa mi ni",
+        ],
+        [
+          "Temi ni O sa ku fun mi",
+          "O gba mi O si da mi n'de",
+          "Pelu ayo ni mo nke pe",
+          "\"Ogo ni fun Olorun mi\"",
+        ],
+        [
+          "T'emi ni O ngbe okan mi",
+          "A ki y'o pinya tit'aiye",
+          "Bi eka l'ara Ajara",
+          "Beni mo je l' ara Kristi",
+        ],
+        [
+          "L'ojo kan ni'lu didan ni",
+          "Oju mi y'o ri ogo Re",
+          "Nigbana ngo ro mo l'orun",
+          "Ngo fo f'ayo p'On je temi",
+        ],
+      ],
+      chorusYoruba: [
+        "On je t' emi, ore mi owon",
+        "O mba mi gbe nigba gbogbo",
+        "Ogo didan, wa yi I ka",
+        "Ju gbogbo re, On je temi",
+      ],
+    ),
+    Hymn(
+      id: '369',
+      versesEnglish: [
+        [
+          "My life, my love I give to Thee,",
+          "Thou Lamb of God who died for me;",
+          "Oh, may I ever faithful be,",
+          "My Saviour and my God!"
+        ],
+        [
+          "I now believe Thou dost receive,",
+          "For Thou hast died that I might live;",
+          "And now henceforth I’ll trust in Thee,",
+          "My Saviour and my God!"
+        ],
+        [
+          "O Thou who died on Calvary,",
+          "To save my soul and make me free,",
+          "I’ll consecrate my life to Thee’",
+          "My Saviour and my God."
+        ]
+      ],
+      chorusEnglish: [
+        "I’ll live for Him who died for me,",
+        "How happy then my life shall be!",
+        "I’ll live for Him who died for me,",
+        "My Saviour and my God!"
+      ],
+      versesYoruba: [
+        [
+          "Mo f' aiye at' ife mi fun,",
+          "Od'agutan t' O ku fun mi,",
+          "Jęki nle je olotito;",
+          "Jesu Olorun mi.",
+        ],
+        [
+          "Mo gbagbo pe Iwo ngbani,",
+          "'Tori 'Wo kuk' emi le la;",
+          "Emi y'o si gbękęle O:",
+          "Jesu Olorun mi.",
+        ],
+        [
+          "Iwo t' O ku ni Kalfari;",
+          "Lati So mi d' ominira,",
+          "Mo y' ara mi s'oto fun O;",
+          "Jesu Olorun mi.",
+        ],
+      ],
+      chorusYoruba: [
+        "Ngo wa f' enit' O ku fun mi",
+        "Aiye mi y' o si dun pupo,",
+        "Ngo wa f'enit O ku fun mi:",
+        "Jesu Olorun mi.",
+      ],
+    ),
+    Hymn(
+      id: '370',
+      versesEnglish: [
+        [
+          "I am bought not with riches,",
+          "Neither silver nor gold,",
+          "But Christ hath redeemed me,",
+          "I am safe in His fold:",
+          "In the Book of His Kingdom",
+          "With its pages so fair,",
+          "Through Jesus my Saviour,",
+          "My name’s written there."
+        ],
+        [
+          "My sins, they were many,",
+          "Like the sands of the sea,",
+          "But the blood of my Saviour,",
+          "Is sufficient for me",
+          "For His promise is written",
+          "In bright letters that glow",
+          "Tho’ your sins be as scarlet,",
+          "I will make them like snow."
+        ],
+        [
+          "Oh that beautiful city,",
+          "With its mansions of light,",
+          "With its glorified beings,",
+          "In pure garments of white;",
+          "Where no evil thing cometh",
+          "To despoil what is fair,",
+          "Where the angels are watching",
+          "My name’s written there."
+        ]
+      ],
+      chorusEnglish: [
+        "My name’s written there",
+        "On the page white and fair,",
+        "In the Book of God’s kingdom",
+        "My name’s written there."
+      ],
+      versesYoruba: [
+        [
+          "Oluwa nko bere fun fadaka on wura;",
+          "Ngo jijakadi f' orun, ngo si wo 'nu agbo?",
+          "N'nu iwe ijoba Re, ti o lewa pupo",
+          "So fun mi, Oluwa mi Ooko mi ha wa n' be?",
+        ],
+        [
+          "Oluwa, eşe mi po bi iyanrin okun,",
+          "Sugbon eje Re, Jesu, ti to fun gbogbo rè,",
+          "'Tori 'Wo ti se 'leri ninu oro Re 'pe,",
+          "\"B' eşe re pon b' ododo, Ngo fo won fún bi sno\".",
+        ],
+        [
+          "Ni'lu daradara ni at' opo 'bugbe re,",
+          "Nibit' awon mimo wà nin'aso funfun won,",
+          "T'ohun eri ko le de lati b'ewa rę ję.",
+          "'Bit'awon Angeli nşo, Ooko mi ha wa n'bę?",
+        ],
+      ],
+      chorusYoruba: [
+        "Ooko mi ha wa n' bę?",
+        "Ninu iwe nla ni,",
+        "Iwe ti ijoba Re:",
+        "Ooko mi ha wa n' bę?",
+      ],
+    )
   ];
 }

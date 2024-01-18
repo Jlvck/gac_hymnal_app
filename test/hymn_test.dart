@@ -13,7 +13,7 @@ void main() {
 
     test("Testing for number of Hymn", () {
       //Change
-      expect(testHymnList.length, 366);
+      expect(testHymnList.length, 370);
     });
     test('Testing Hymn(English & Yoruba) verses Length', () {
       bool tes = testHymnList.every((element) {
