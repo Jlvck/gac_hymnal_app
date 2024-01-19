@@ -2,6 +2,7 @@ import 'package:church/widgets/drawer_list_tile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../model/navigation_item.dart';
 import '../screens/hymn_book_screen.dart';
@@ -26,6 +27,8 @@ class MainDrawer extends StatelessWidget {
       child: Column(children: [
         Container(
           height: topPadding,
+          margin: EdgeInsets.zero,
+          padding: EdgeInsets.zero,
           decoration: BoxDecoration(color: Theme.of(context).primaryColor),
           clipBehavior: Clip.hardEdge,
         ),
@@ -43,16 +46,29 @@ class MainDrawer extends StatelessWidget {
               controller: _scroll,
               padding: EdgeInsets.zero,
               children: [
-                DrawerHeader(
-                  margin: EdgeInsets.zero,
-                  padding: EdgeInsets.zero,
-                  decoration: const BoxDecoration(
-                    color: Colors.transparent,
-                  ),
-                  child: Image.asset(
-                    'assets/images/church_image_drawer.png',
-                    fit: BoxFit.contain,
-                    alignment: Alignment.centerLeft,
+                InkWell(
+                  onTap: () async {
+                    final Uri url = Uri.parse("https://gacworldwide.org/");
+                    if (await canLaunchUrl(url)) {
+                      await launchUrl(
+                        url,
+                        mode: LaunchMode.externalApplication,
+                      );
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: DrawerHeader(
+                    margin: EdgeInsets.zero,
+                    padding: const EdgeInsets.only(left: 20),
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                    ),
+                    child: Image.asset(
+                      "assets/images/icon_image.png",
+                      fit: BoxFit.contain,
+                      alignment: Alignment.centerLeft,
+                    ),
                   ),
                 ),
                 const DrawerListTile(

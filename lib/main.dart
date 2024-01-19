@@ -77,7 +77,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
-      title: 'GAC Hymnal(Adigbe Branch)',
+      title: 'GAC Hymnal',
       themeMode: Provider.of<ThemeProvider>(context, listen: true).themeMode,
       theme: ThemeClass.lightTheme,
       darkTheme: ThemeClass.darkTheme,
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
       canPop: true,
       child: AnimatedSplashScreen.withScreenFunction(
         splash: Image.asset(
-          logo_1,
+          "assets/images/icon_image.png",
         ),
         backgroundColor: Theme.of(context).primaryColor,
         screenFunction: () async {
