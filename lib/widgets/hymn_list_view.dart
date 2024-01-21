@@ -47,7 +47,7 @@ class HymnListView extends StatelessWidget {
                                 child: HymnViewScreen(
                                   id: hymnList[index].id,
                                 ),
-                                type: PageTransitionType.rightToLeftWithFade,
+                                type: PageTransitionType.fade,
                                 duration: const Duration(milliseconds: 300)))
                         .then((value) => Provider.of<HymnBookProvider>(context,
                                 listen: false)

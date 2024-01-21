@@ -56,22 +56,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     super.didChangePlatformBrightness();
   }
 
-  final MaterialColor mycolor = MaterialColor(
-    const Color.fromRGBO(0, 0, 102, 1).value,
-    const <int, Color>{
-      50: Color.fromRGBO(49, 49, 181, 1),
-      100: Color.fromRGBO(0, 0, 108, 1),
-      200: Color.fromRGBO(1, 1, 113, 1),
-      300: Color.fromRGBO(3, 3, 115, 1),
-      400: Color.fromRGBO(0, 0, 102, 1),
-      500: Color.fromRGBO(0, 0, 102, 1),
-      600: Color.fromRGBO(0, 0, 102, 1),
-      700: Color.fromRGBO(0, 0, 102, 1),
-      800: Color.fromRGBO(0, 0, 102, 1),
-      900: Color.fromRGBO(0, 0, 102, 1),
-    },
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
