@@ -3361,13 +3361,6 @@ class HymnText301to400 {
           "Tori Kristi duro l'enu ona,",
           "O si pe mi pe \"Wa maa bo.\"",
         ],
-        [
-          "L'ojo kan ni 'lu didan ni",
-          "Oju mi y'o ri ogo Re",
-          "Nigbana ngo ro mo l' orun.",
-          "Ngo fo l'ayo p' On je temi",
-          "On je temi, ore mi owon,",
-        ],
       ],
       isChorus: true,
       chorus: [

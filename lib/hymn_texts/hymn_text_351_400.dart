@@ -1365,6 +1365,2182 @@ class HymnText351to400 {
         "Iwe ti ijoba Re:",
         "Ooko mi ha wa n' bę?",
       ],
+    ),
+    Hymn(
+      id: '371',
+      versesEnglish: [
+        [
+          "I can hear my Saviour calling",
+          "I can hear my Saviour calling,",
+          "I can hear my Saviour calling",
+          "“Take thy cross and follow, follow Me”"
+        ],
+        [
+          "I’ll go with Him through the garden,",
+          "I’ll go with Him through the garden,",
+          "I’ll go with Him through the garden,",
+          "I’ll go with Him, with Him all the way."
+        ],
+        [
+          "I’ll go with Him through the judgment,",
+          "I’ll go with Him through the judgment,",
+          "I’ll go with Him through the judgment,",
+          "I’ll go with Him, with Him all the way."
+        ],
+        [
+          "He will give me grace and glory,",
+          "He will give me grace and glory,",
+          "He will give me grace and glory,",
+          "And go with me, with me all the way."
+        ]
+      ],
+      chorusEnglish: [
+        "Where He leads me I will follow,",
+        "Where He leads me I will follow,",
+        "Where He leads me I will follow,",
+        "I’ll go with Him, with Him all the way."
+      ],
+      versesYoruba: [
+        [
+          "Mo gbo Olugbala mi npe",
+          "Mo gbo Olugbala mi npe",
+          "Mo gbo Olugbala mi npe",
+          "Gb'agbelebu re si tele Mi.",
+        ],
+        [
+          "Em' o ba koja ogba ni,",
+          "Em' o ba koja ogba ni,",
+          "Em' o ba koja ogba ni,",
+          "Em' o tele, tle titi lai.",
+        ],
+        [
+          "Em' o ba koja idajo,",
+          "Em' o ba koja idajo,",
+          "Em' o ba koja idajo",
+          "Em' o tele, tele titi lai.",
+        ],
+        [
+          "Y'o fun mi l'ore at' ogo,",
+          "Y'o fun mi l'ore at' ogo,",
+          "Y'o fun mi l'ore at' ogo,",
+          "Y'o je temi, temi titi lai.",
+        ],
+      ],
+      chorusYoruba: [
+        "Ona t' O la l' emi' o rin",
+        "Ona t' O la l' emi' o rin,",
+        "Ona t' O la l' emi' o rin;",
+        "Em' o tele, tele titi lai.",
+      ],
+    ),
+    Hymn(
+      id: '372',
+      versesEnglish: [
+        [
+          "I have a Friend who is ever nigh,",
+          "Whether I sleep or wake;",
+          "Ever He guards with a watchful eye,",
+          "He knoweth the way that I take."
+        ],
+        [
+          "I have a friend who is always near,",
+          "One who will ne’er forsake;",
+          "What tho’ my pathway be dark and drear,",
+          "He knoweth the way that I take."
+        ],
+        [
+          "I have a Friend who will guide me on",
+          "Until the shadows break,",
+          "Leading me on, till my crown is won,",
+          "He knoweth the way that I take."
+        ]
+      ],
+      chorusEnglish: [
+        "He knoweth the way that I take,",
+        "And keep me when asleep or awake;",
+        "And leads me for His own name’s sake",
+        "He knoweth the way that I take."
+      ],
+      versesYoruba: [
+        [
+          "Mo l'Ore kan t'o wa ni 'tosi,",
+          "L' osan ati l'oru,",
+          "O nfi oju Re so mi titi;",
+          "O mo ona ti emi ngba.",
+        ],
+        [
+          "Mo ni Orę kan t'o sunmo mi,",
+          "Ko je ko mi silę,",
+          "Bi ona mi tile ş'okunkun,",
+          "O mo ona ti emi ngba.",
+        ],
+        [
+          "Mo l'Orę kan ti y'o mã to mi,",
+          "Tit' opin y'o fi de,",
+          "O nto mi titi ngo fi d' ade;",
+          "O mo ona ti emi ngba.",
+        ],
+      ],
+      chorusYoruba: [
+        "O mo ona ti emi ngba,",
+        "O si npa mi mo l' osan l'oru,",
+        "O nto mi li oruko Re:",
+        "O mo ona ti emi ngba."
+      ],
+    ),
+    Hymn(id: '373', versesEnglish: [
+      [
+        "My happy heart is singing",
+        "My heav’nly Father’s love;",
+        "He sends so many blessings",
+        "Like sunbeams from above."
+      ],
+      [
+        "Tho other joys may fail me",
+        "And sorrows may befall,",
+        "My Saviour will be with me",
+        "And He is best of all."
+      ],
+      [
+        "O let me tell to others",
+        "The story of His grace,",
+        "Rejoicing in His service",
+        "Until I see His face."
+      ],
+      [
+        "And when I view the glories",
+        "Within the Jasper wall,",
+        "I’ll sing with all the ransomed,",
+        "My Saviour’s best of all."
+      ],
+    ], chorusEnglish: [
+      "But Jesus is the best of all;",
+      "Yes, Jesus is the best of all",
+      "Of all the joys that may surround me,",
+      "That best of all is Jesus."
+    ], versesYoruba: [
+      [
+        "Okan ayo mi nko'rin,",
+        "Ife Baba orun,",
+        "O ran opo ibukun;",
+        "B'ōrun lat' oke wá.",
+      ],
+      [
+        "B' ayo miran gbogbo pin,",
+        "Ti 'banuję si de,",
+        "Jesu yio pelu mi;",
+        "On si san pupo ju",
+      ],
+      [
+        "Ngo so fun elomiran,",
+        "Itan - or' - ofę Re:",
+        "Ngo má yo n'nu isin Rè,",
+        "Titri ngo r' oju Re",
+      ],
+      [
+        "Gba mo ba si ri ogo,",
+        "Ninu odi Jasper;",
+        "Ngo ko'rin Irapada,",
+        "P' Olugbala san ju.",
+      ],
+    ], chorusYoruba: [
+      "Sugbon Jesu l'o san julo.",
+      "Beni Jesu l'o san julo;",
+      "N'nu gbogbo ayo l'o yi mi ka.",
+      "Jesu nikan l'o julo.",
+    ]),
+    Hymn(
+      id: '374',
+      versesEnglish: [
+        [
+          "Thee will I love, my Strength, my Tower;",
+          "Thee will I love, my Joy, my Crown;",
+          "Thee will I love with all my power,",
+          "In all Thy works, and Thee alone:",
+          "Thee will I love till sacred fire",
+          "Fills my whole soul with pure desire."
+        ],
+        [
+          "I thank Thee, uncreated Sun,",
+          "Than Thy bright beams on me have shined;",
+          "I thank Thee, who hast overthrown",
+          "My foes, and heal’d my wounded mind:",
+          "I thank Thee, whose enlivening voice",
+          "Bids my freed heart in Thee rejoice."
+        ],
+        [
+          "Uphold me in the doubtful race,",
+          "Nor suffer me again to stray;",
+          "Strengthen my feet with heavenly grace",
+          "Still to press forward in Thy way:",
+          "That all my powers, with all their might,",
+          "In Thy sole glory may unite."
+        ],
+        [
+          "Thee will I love, my joy, my crown;",
+          "Thee will I love, my Lord, my God;",
+          "Thee will I love, beneath Thy frown",
+          "Or smile Thy scepter or Thy rod;",
+          "What though my flesh and heart decay,",
+          "Thee shall I love in endless day."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ngo feran Re, 'wo odi mi;",
+          "Ngo fẹran Rẹ, 'wo ayọ mi;",
+          "Ngo fẹran Rẹ, patapata,",
+          "Ngo fẹran Rẹ, tor' iṣẹ Rẹ,",
+          "Ngo fẹran Rẹ, tit' ọkan mi,",
+          "Y'o fi kun ifẹ rere",
+        ],
+        [
+          "Wọ Ọrun mi, gba ọpẹ mi,",
+          "Fun 'mọlẹ Rẹ t'o fi fun mi,",
+          "Gba ọpẹ mi, 'wọ l' O gba mi",
+          "L'ọwọ awọn ti nṣ'ọta mi;",
+          "Gba ọpẹ mi, fun ohun Rẹ",
+          "T'o mu mi yọ lọpọlọpọ",
+        ],
+        [
+          "N'nu ire-ije nu laiye,",
+          "Ma ṣe alabojuto mi;",
+          "Fi agbara fun ẹsẹ mi,",
+          "Ki nle t' ẹsẹ m' ọna rere;",
+          "Ki mba le f' ipa mi gbogbo,",
+          "F' orukọ Rẹ t' o l' ogo han",
+        ],
+        [
+          "Ngo fẹran Rẹ, 'Wọ ade mi;",
+          "Ngo fẹran Rẹ, Oluwa mi:",
+          "Ngo fẹran Rẹ nigbagbogbo,",
+          "L'ọjọ ibi, l'ọjọ ire,",
+          "'Gbati ọjọ iku ba de,",
+          "Ngo fẹran Rẹ titi lailai",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '375',
+      versesEnglish: [
+        [
+          "How sweet the name of Jesus sounds",
+          "In a believer’s ear!",
+          "It soothes his sorrows, heals his wounds,",
+          "And drives away his fear."
+        ],
+        [
+          "It makes the wounded spirit whole,",
+          "And calms the troubled breast;",
+          "‘Tis manna to the hungry soul,",
+          "And to the weary, rest."
+        ],
+        [
+          "Dear name! the rock on which I build,",
+          "My shield and hiding place;",
+          "My never-failing treasury, filled",
+          "With boundless stores of grace!"
+        ],
+        [
+          "Jesus, my Shepherd, Husband, Friend,",
+          "My Prophet, Priest and King,",
+          "My Lord, my Life, my Way, my End,",
+          "Accept the praise I bring."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "B' oruko Jesu ti dun to,",
+          "L'eti onigbagbo!",
+          "O tan 'banuje on ogbe,",
+          "O le èrú rè lo.",
+        ],
+        [
+          "O wo okan r'o gbogbę san,",
+          "O mu aiya balę;",
+          "Manna ni fun okan ebi,",
+          "Isimi f' alaarę.",
+        ],
+        [
+          "Apata ti mo ko'le le,",
+          "Ibi isadi mi,",
+          "Ile işura mi t' o kun,",
+          "F' opo ore-ofę.",
+        ],
+        [
+          "Jesu, Oko mi, Orę mi,",
+          "Woli mi, Oba mi:",
+          "Alufa mi Ona, Iye,",
+          "Gba orin iyin mi."
+        ]
+      ],
+    ),
+    Hymn(
+      id: '376',
+      versesEnglish: [
+        [
+          "LOVE dine, all love excelling,",
+          "Joy of heaven, to earth come down,",
+          "Fix in us Thy humble dwelling,",
+          "All Thy faithful mercies crown:",
+          "Jesus, Thou art all compassion,",
+          "Pure unbounded love Thou art;",
+          "Visit us with Thy salvation,",
+          "Enter every trembling heart."
+        ],
+        [
+          "Come, Almighty to deliver,",
+          "Let us all Thy grace receive;",
+          "Suddenly return, and never,",
+          "Never more Thy temples leave.",
+          "Thee we would be always blessing;",
+          "Serve Thee as Thy hosts above;",
+          "Pray, and praise Thee without ceasing;",
+          "Glory in Thy perfect love."
+        ],
+        [
+          "Finish then Thy new creation,",
+          "Pure and spotless let us be:",
+          "Let us see Thy great Salvation,",
+          "Perfectly restored in Thee.",
+          "Changed from glory into glory,",
+          "Till in heaven we take our place:",
+          "Till we cast our corns before Thee.",
+          "Lost in wonder, love and praise."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ife orun, alailegbe,",
+          "Ayo orun, sokalę;",
+          "Fi okan wa şe 'bugbe Re;",
+          "Şe aşetan ănu Re,",
+          "Jesu, iwo ni alaanu",
+          "Iwo l' onibu ife:",
+          "Fi igbala Re be wa wo",
+          "M' okan eru wa duro.",
+        ],
+        [
+          "Wa Olodumare, gba wa,",
+          "Fun wa, l' ore-ofę Re:",
+          "L'ojiji ni k' O pada wa,",
+          "Má si fi wa silę mo:",
+          "Iwo l'a o ma yin titi,",
+          "Bi nwọn ti nşe ni orun;",
+          "Iyin wa ki yio l' opin,",
+          "A o s'ogo n'nu 'fe Rę.",
+        ],
+        [
+          "Ş'aşepe awa ęda Rç.",
+          "Jek'a wa lailabawon;",
+          "K' a ri titobi 'gbala Rę,",
+          "Li aritan ninu Rę.",
+          "Mu wa l' at' ogo de ogo,",
+          "Titi de ibugbe wa;",
+          "Titi awa o fi wolę,",
+          "N' iyanu ifę lyin.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '377',
+      versesEnglish: [
+        [
+          "THERE is a name I love to hear;",
+          "I love to sing its worth;",
+          "It sounds like music in mine ear,",
+          "The sweetest name on earth."
+        ],
+        [
+          "It tells me of the Lamb of God",
+          "Who died to set me free;",
+          "It tells me of His precious blood,",
+          "The sinner’s perfect plea."
+        ],
+        [
+          "It tells me of a Father’s smile",
+          "Beaming upon His child;",
+          "It cheers me through this little while,",
+          "Through desert, waste, and wild."
+        ],
+        [
+          "Jesus, the name I love so well,",
+          "The name I love to hear;",
+          "No saint on earth its worth can tell,",
+          "No heart conceive how dear."
+        ],
+        [
+          "This name shall shed its fragrance still",
+          "Along this thorny road,",
+          "Shall sweetly smooth the rugged hill,",
+          "That leads me up to God."
+        ],
+        [
+          "And there with all the blood-bought throng",
+          "From sin and sorrow free,",
+          "I’ll sing the new eternal song",
+          "Of Jesus’ love to me."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Oruko kan mbe ti mo fe,",
+          "Mo fe må ko'riun Re:",
+          "Iro didun. ni l' eti mi,",
+          "Oruko didun ni.",
+        ],
+        [
+          "O so ifę Olugbala,",
+          "T'O ku lati ra mi;",
+          "O so teje Re 'yebiye,",
+          "Etutu f' elese.",
+        ],
+        [
+          "O so ti lyonu Baba,",
+          "Ti O ni s' omo Re",
+          "Om' ara mi ya, lati la",
+          "Aginju aiye ja.",
+        ],
+        [
+          "Jesu, oruko ti mo fę.",
+          "T' o si dùn l'eti mi;",
+          "Ko s' eni mimo kan l'aiye,",
+          "T' o mo b' O ti po to.",
+        ],
+        [
+          "Oruko yi j' ōrun didun,",
+          "L' ona egún t' a nrin;",
+          "Yio tun ona yangi şe,",
+          "T' o lo sod' Olorun.",
+        ],
+        [
+          "Nibę pelu awon mimo,",
+          "Ti nwon bo nin' eşe",
+          "Emi o ko 'rin titun ni,",
+          "T' ife Jesu si mi.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '378',
+      versesEnglish: [
+        [
+          "When this passing world is done,",
+          "When has sunk yon glaring sun",
+          "When we stand with Christ in glory.",
+          "Looking o’er life’s finishe’d story,",
+          "Then, Lord, shall I fully know,",
+          "Not till then how much I owe."
+        ],
+        [
+          "When I stand before the throne,",
+          "Dress’d in beauty not my own;",
+          "When I see Thee as Thou art,",
+          "Love Thee with unsinning heart;",
+          "Then, Lord, shall I fully know,",
+          "Not till then, how much I owe."
+        ],
+        [
+          "When the praise of heaven I hear,",
+          "Loud as thunders to the ear,",
+          "Loud as many water’s noise,",
+          "Sweet as harp’s melodious voice;",
+          "Then, Lord, shall I fully know,",
+          "Not till then, how much I owe."
+        ],
+        [
+          "Even on earth, as through a glass,",
+          "Darkly, let Thy glory pass;",
+          "Make forgiveness feel so sweet,",
+          "Make Thy Spirit’s help so meet;",
+          "Even on earth, Lord, make me know",
+          "Something of how much I owe."
+        ],
+        [
+          "Chosen not for good in me,",
+          "Waken’d up from wrath to flee,",
+          "Hidden in the Saviour’s side,",
+          "By the Spirit sanctified,",
+          "Teach me, Lord, on earth to show,",
+          "By my love, how much I owe."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "'Gbat' aiye yi ba koja,",
+          "Ti oorun rè ba si wo,",
+          "Ti a ba wo 'nu ogo,",
+          "T' a bojuwo ehin wa;",
+          "'Gbana, Oluwa, ngo mò,",
+          "Bi 'gbese mi ti po to.",
+        ],
+        [
+          "'Gba mo ba de 'b' ite Re",
+          "L' ewa ti ki şe t'emi;",
+          "'Gba mo ri O b' O ti ri,",
+          "Ti mo fe O l' afetan:",
+          "'Gbana Oluwa, ngo mo di",
+          "Bi 'gbese mi ti po to.",
+        ],
+        [
+          "'Gba mba ngbo orin orun,",
+          "T'o ndún bí ohun aara,",
+          "Bi iro omi pupo:",
+          "T' o si ndún b' ohun duru;",
+          "'Gbana Oluwa, ngo mo,",
+          "Bi 'gbese mi ti po to.",
+        ],
+        [
+          "Oluwa, jo, Je k' a ri",
+          "Ojiji Re, l' aiye yi;",
+          "K' a mo adun 'dariji,",
+          "Pelu iranwo Emi;",
+          "Ki ntilę mò l' aiye yi,",
+          "Dię ninu 'gbese mi.",
+        ],
+        [
+          "Ore-ofę l' o yan mi,",
+          "L' o yo mi ninu ewu;",
+          "Jesu l'Olugbala mi,",
+          "Emi so mi di mimo,",
+          "Ko mi, ki nfi hàn l'aiye,",
+          "Bi 'gbese mi ti po to!",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '379',
+      versesEnglish: [
+        [
+          "HARK! my soul, it is the Lord;",
+          "“Tis thy Saviour, hear His word;",
+          "Jesus speaks, and speaks to thee;",
+          "“Say, poor sinner, lov’st thou Me?"
+        ],
+        [
+          "I deliver’d thee when bound,",
+          "And when bleeding, heal’d thy wound;",
+          "Sought thee wandering, set thee right.",
+          "Turn’d thy darkness into light."
+        ],
+        [
+          "Can a woman’s tender care",
+          "Cease towards the child she bare?",
+          "Yes, she may forgetful be,",
+          "Yet will I remember thee."
+        ],
+        [
+          "Mine is n unchanging love,",
+          "Higher than the heights above,",
+          "Deeper than the depths beneath,",
+          "Free and faithful, strong as death."
+        ],
+        [
+          "Thou shalt see my glory soon,",
+          "When the work of grace is done:",
+          "Partner of My throne shalt be;",
+          "Say, poor sinner, lov’st thou Me?"
+        ],
+        [
+          "Lord, it is my chief complaint",
+          "That my love is cold and faint:",
+          "Yet I love Thee, and adore;",
+          "Oh for grace to love Thee more!"
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Okan mi, Oluwa ni,",
+          "Jesu re ni, gb'oro Re:",
+          "Jesu nso, O mba o so.",
+          "Pe, elese 'wo fę Mi?",
+        ],
+        [
+          "'Gbat a dè o, Mo dá o,",
+          "O gb' ogbe, Mo wo o san;",
+          "'Gb' o şako, Mo mu o bo,",
+          "Mo s' ookun re d' imolę.",
+        ],
+        [
+          "Kikę iya ha le mo",
+          "Si omo re ti o bi?",
+          "L'otito o le gbagbe,",
+          "Sugbon Em' o ranti re.",
+        ],
+        [
+          "Ife t'Emi kii ye lai,",
+          "O ga rekoja orun;",
+          "O si jin ju okun lo.",
+          "Ife alailegbę ni",
+        ],
+        [
+          "'Wo fere r' ogo Mi na,",
+          "Gb' ise ore-ofę tan;",
+          "'Wo o ba Mi gunwa po,",
+          "Wi, elese, 'wo fe Mi?",
+        ],
+        [
+          "Olori aroye mi",
+          "Ni pe ife mi tutu:",
+          "Sugbon mo fe O Jesu,",
+          "A! mba le fę o ju 'yi!",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '380',
+      versesEnglish: [
+        [
+          "More love to Thee, O Christ",
+          "More love to Thee,",
+          "Hear Thou the prayer I make",
+          "On bended knee;",
+          "This is my earnest plea",
+          "More love, O Christ, to Thee",
+          "More love to Thee!",
+          "More love to Thee!"
+        ],
+        [
+          "Once earthly joy I craved",
+          "Sought peace and rest;",
+          "Now Thee alone I seek,",
+          "Give what is best!",
+          "This all my prayer shall be",
+          "More love, O Christ, to Thee,",
+          "More love to Thee!",
+          "More love to Thee!"
+        ],
+        [
+          "Let sorrow do its work,",
+          "Send grief and pain;",
+          "Sweet are Thy Messengers",
+          "Sweet their refrain,",
+          "When they can sing with me",
+          "More love, O Christ, to Thee,",
+          "More love to Thee!",
+          "More love to Thee!"
+        ],
+        [
+          "Then shall my latest breath",
+          "Whisper Thy praise;",
+          "This be the parting cry",
+          "My heart shall raise",
+          "This still its prayer shall be",
+          "More love, O Christ, to Thee,",
+          "More love to Thee!",
+          "More love to Thee!"
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ki nfe O si, Kristi! Ki nfe O si:",
+          "Gb' adura ti mo ngba lor'ekun mi,",
+          "Eyi ni ębę mi: - Ki nfę O si Kristi!",
+          "Ki nfe O si! ki nfe O si!",
+        ],
+        [
+          "Leekan, ohun aiye ni mo ntoro:",
+          "Nisisiyi, 'Wo nikan ni mo nwa;",
+          "Eyi l'adura mi- ki nfę O si, Kristi!",
+          "Ki nfę O si, ki nfę O si!",
+        ],
+        [
+          "Je ki 'banuje de, at' irora,",
+          "Didun l'ojişe Re, at' işe won,",
+          "'Gba nwon mba mi k'orin, ki nfę o si Kristi!",
+          "Ki nfę O si! ki nfę O si!",
+        ],
+        [
+          "Nję opin emi mi y'o jiyin Re.",
+          "Eyi ni y' o je oro 'kehin rè,",
+          "Adura na o je:- Ki nfe O si Kristi!",
+          "Ki nfe O si! Ki nfe O si!",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '381',
+      versesEnglish: [
+        [
+          "He gave me a ransom",
+          "Of all the debts I owe",
+          "As He gave me a smile He beamed",
+          "Saying Don’t forget Me”."
+        ],
+        [
+          "He gave me a ransom",
+          "He paid the debts I owe,",
+          "As He gave me a smile He beamed",
+          "Saying “Remember Me”."
+        ],
+        [
+          "The ransom, I would keep,",
+          "Though the debts are rid off,",
+          "It tells the love of Him who paid",
+          "The debts on my behalf."
+        ],
+        [
+          "I behold and I smiled,",
+          "I look again, I wept",
+          "His love’s testimony for me",
+          "For aye I’ll cherish it."
+        ],
+        [
+          "Tis no more a ransom",
+          "But it’s a remembrance,",
+          "That all the burden of my debts",
+          "Emmanuel ransomed."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "O fun mi l'edidi,",
+          "'Gbese nla ti mo je:",
+          "B' o ti fun mi. O si rerin:",
+          "Pe, \"maşe gbagbe Mi\"!",
+        ],
+        [
+          "Ofun mi l'edidi,",
+          "O san igbese na;",
+          "B'o ti fun mi, O si rerin",
+          "Wipe, \"maa ranti Mi\"!",
+        ],
+        [
+          "Ngo p'edidi nă mo,",
+          "B'igbese tile tan;",
+          "O nso ifę Enit' o san",
+          "Igbese na fun mi",
+        ],
+        [
+          "Mo wò, mo si ręrin;",
+          "Mo tun wò, mo sokun;",
+          "Eri ife Rè si mi ni,",
+          "Ngo toju rè titi.",
+        ],
+        [
+          "Ki tun ş' edidi mo,",
+          "Sugbon iranti ni!",
+          "Pe gbogbo igbese mi, ni",
+          "Emmanueli san.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '382',
+      versesEnglish: [
+        [
+          "I’ve found a friend in Jesus",
+          "He’s everything to me",
+          "He’s the fairest of ten thousand to my soul!",
+          "The Lily of the Valley, in Him alone I see",
+          "All I need to cleanse and make me fully whole;",
+          "In sorrow He’s my comfort, in trouble He’s my stay;",
+          "He tells me ev’ry care on Him to roll.",
+          "He’s the Lily of the Valley",
+          "“The Bright and Morning Star!”",
+          "He’s the fairest of ten thousand to my soul!"
+        ],
+        [
+          "He all my grief has taken,",
+          "And all my sorrows borne;",
+          "In temptation He’s my strong and mighty tower;",
+          "I’ve all for Him forsaken, I’ve all my idols torn",
+          "From my heart and now He keeps me by His power.",
+          "Though all the world forsake me, and Satan tempt me sore,",
+          "Through Jesus I shall safely reach the goal.",
+          "He’s the Lily of the Valley",
+          "“The Bright and Morning Star!”",
+          "He’s the fairest of ten thousand to my soul!."
+        ],
+        [
+          "He’ll never, never leave me, nor yet forsake me here,",
+          "While I live by faith, and do His blessed will;",
+          "A wall of fire about me, I’ve nothing now to fear;",
+          "With His manna, He my hungry soul shall fill.",
+          "When crown’d at last in glory, I’ll see His blessed face,",
+          "Where rivers of delight shall ever roll.",
+          "He’s the Lily of the Valley",
+          "“The Bright and Morning Star!”",
+          "He’s the fairest of ten thousand to my soul!."
+        ]
+      ],
+      chorusEnglish: [
+        "In sorrow He’s my comfort, in trouble He’s my stay;",
+        "He tells me ev’ry care on Him to roll.",
+        "He’s the Lily of the Valley",
+        "“The Bright and Morning Star!",
+        "He’s the fairest of ten Thousand to my soul!."
+      ],
+      versesYoruba: [
+        [
+          "Mo ti ni Jesu l'ore,",
+          "O j' ohun gbogbo fu mi,",
+          "On nikan l' arewa ti okan mi fe,",
+          "On ni Itanna ipado,",
+          "On ni Enikan na",
+          "T' O le we mi nu kuro nin' ese mi;",
+          "Olutunu mi l' O je",
+          "N'nu gbogbo wahala,",
+          "O ni ki nk' aniyan mi l' On l'ori;",
+          "On n' Itanna ipa'do",
+          "Irawo owuro;",
+          "On nikan l' Arewa ti okan mi fe.",
+        ],
+        [
+          "O gbe gbogbo banuje",
+          "At' irora mi ru;",
+          "O j'odi agbara mi n' igba idanwo,",
+          "'Tori Re mo k' ohun gbogbo,",
+          "Ti mo ti fe sile,",
+          "O si f' agbara Re gbe okan mi ro;",
+          "Bi aiye tile ko mi,",
+          "Ti Satan dan mi wo,",
+          "Jesu y'o mu mi de opin irin mi;",
+          "On n' Itanna ipa'do",
+          "Irawo owuro",
+          "On nikan l' Arewa ti okan mi fe",
+        ],
+        [
+          "On ki y'o fi mi sile,",
+          "Be k' y'o ko mi nihin,",
+          "N' iwon ti mba f' igbagbo p' ofin Re mo;",
+          "O j'odi ina yi mi ka,",
+          "Ng' ki y'o berukeru,",
+          "Y' o fi manna Re b' okan mi t' ebi npa;",
+          "Gba mba d' ade n'ikehin,",
+          "Ngo r'oju bukun Re",
+          "Ti adun Re y'o ma san titi lai.",
+          "On n'Itanna ipa'do,",
+          "Irawo owuro,",
+          "On nikan l' Arewa ti okan mi fe.",
+        ],
+      ],
+      chorusYoruba: [
+        "Olutunu mi l' O je",
+        "N'nu gbogbo wahala,",
+        "O ni ki nk'aniyan mi l' On l'ori;",
+        "On ni Itanna ipa'do",
+        "Irawo owuro;",
+        "On nikan l'Arewa ti okan mi fe.",
+      ],
+    ),
+    Hymn(
+      id: '383',
+      versesEnglish: [
+        [
+          "Grace! ‘tis a charming sound,",
+          "Harmonious to the ear,",
+          "Heav’n with the echo shall resound",
+          "And all the earth shall hear."
+        ],
+        [
+          "“T was grace that wrote my name",
+          "In Thy eternal book,",
+          "“T was grace that give me to the Lamb,",
+          "Who all my sorrows took."
+        ],
+        [
+          "Grace taught my wand’ring feet",
+          "To tread the heave’nly road;",
+          "And new supplies each hour I meet,",
+          "While pressing on to God."
+        ],
+        [
+          "Grace taught my soul to pray,",
+          "And made mine eyes o’er flow;",
+          "“T was grace which kept me to this day,",
+          "And will not let me go."
+        ],
+        [
+          "Oh, let Thy grace inspire",
+          "My soul with strength Divine!",
+          "May all my powers to Thee aspire",
+          "And all my days be Thine."
+        ]
+      ],
+      chorusEnglish: [
+        "Saved by grace alone!",
+        "This is all my plea:",
+        "Jesus died for all mankind,",
+        "And Jesus died for me."
+      ],
+      versesYoruba: [
+        [
+          "Ore-ofe! Ohùn",
+          "Adun ni l'eti wa:",
+          "Gbohun-gbohun rẹ y'o gba ọrun kan,",
+          "Aiye o gbọ pẹlu.",
+        ],
+        [
+          "Ore-ọfẹ l'o kọ",
+          "Orukọ mi l'ọrun;",
+          "L'o fi mi fun Ọdagutan,",
+          "T'O gba iya mi jẹ.",
+        ],
+        [
+          "Ore-ọfẹ tọ mi",
+          "S' ọna alafia;",
+          "O ntọju mi l'ojojumọ,",
+          "Ni irin ajo mi.",
+        ],
+        [
+          "Ore-ọfẹ kọ mi",
+          "Bi a ti 'gbadura;",
+          "O pa mi mọ titi d' oni,",
+          "Ko si jẹ ki nṣako.",
+        ],
+        [
+          "Je k' ore-ọfẹ yi",
+          "F'agbara f' ọkan mi;",
+          "Ki nle fi gbogbo ipa mi",
+          "At' ọjọ mi fun Ọ.",
+        ],
+      ],
+      chorusYoruba: [
+        "Ore-ọfẹ sa,",
+        "N' igbẹkẹle mi;",
+        "Jesu ku fun araiye,",
+        "O ku fun mi pẹlu.",
+      ],
+    ),
+    Hymn(
+      id: '384',
+      versesEnglish: [
+        [
+          "There’s not a Friend like the lowly Jesus:",
+          "No, not one! no, not one!",
+          "None else could heal all our souls’ diseases:",
+          "No, not one! no, not one!"
+        ],
+        [
+          "No friend like Him is so high and holy,",
+          "No, not one! no, not one!",
+          "And yet no friend is so meek and lowly,",
+          "No, not one! no, not one!"
+        ],
+        [
+          "There’s not an hour that He is not near us,",
+          "No, not one! no, not one!",
+          "No night so dark, but His love can cheer us,",
+          "No, not one! no, not one!"
+        ],
+        [
+          "Did ever saint find this Friend forsake him?",
+          "No, not one! no, not one!",
+          "Or sinner find that He would not take him?",
+          "No, not one! no, not one!"
+        ],
+        [
+          "Was e’er a gift like the Savior given?",
+          "No, not one! no, not one!",
+          "Will He refuse us the bliss of heaven?",
+          "No, not one! no, not one!"
+        ]
+      ],
+      chorusEnglish: [
+        "Jesus knows all about our struggles;",
+        "He will guide ’til the day is done:",
+        "There’s not a Friend like the lowly Jesus:",
+        "No, not one! no, not one!"
+      ],
+      versesYoruba: [
+        [
+          "K'o s'ore bi Jesu Onirele:",
+          "Ko s'okan! ko s'okan!",
+          "Ko s'elomi t'o le w'okan wa san,",
+          "Ko s'okan! ko s'okan!",
+        ],
+        [
+          "Ko s'orę bi Re to ga ni Mimo,",
+          "Ko s'okan! ko s'okan!",
+          "Ko s'ore to tutu, t'o ni 'relę,",
+          "Ko s'okan! ko s'okan!",
+        ],
+        [
+          "Ko s'akoko ti On ko sunmo wa,",
+          "Ko s'okan! ko s'okan!",
+          "Ko s'ooru ti 'fe Rè ko tu won n'nu",
+          "Ko s'okan! ko s'okan!",
+        ],
+        [
+          "Enikan ha ti r'oré yi nko 'ni?",
+          "Ko s'okan! ko s'okan!",
+          "Tab' elese ri ko ni gba on la!",
+          "Ko s'okan! ko s'okan!",
+        ],
+        [
+          "Ebun kan ha wà bi ti Jesu wa?",
+          "Ko s'okan! ko s'okan!",
+          "Y'o ha ko fun wa k' a n'ile l'orun?",
+          "Kò je ko! Ko je ko!",
+        ],
+      ],
+      chorusYoruba: [
+        "Jesu mo gbogbo idamu wa,",
+        "Y'o toju wa d'opin ojo:",
+        "Ko s'orę bi Jesu Onirelę,",
+        "Ko s'okan! ko s'okan!",
+      ],
+    ),
+    Hymn(
+      id: '385',
+      versesEnglish: [
+        [
+          "I must needs go home by the way of the cross,",
+          "There’s no other way but this;",
+          "I shall ne’er get sight of the Gates of light",
+          "If the way of the cross I miss."
+        ],
+        [
+          "I must needs go on in the blood – sprinkled way",
+          "The path that the Saviour trod,",
+          "If I ever climb to the heights sublime,",
+          "Where the soul is at home with God."
+        ],
+        [
+          "Then I bid farewell to the way of the world,",
+          "To walk in it never – more;",
+          "For my Lord says “come,” and I seek my home,",
+          "Where He waits at the open door."
+        ],
+      ],
+      chorusEnglish: [
+        "The way of the cross leads home;",
+        "The way of the cross leads home;",
+        "It is sweet to know, as I no-ward go,",
+        "The way of the cross leads home."
+      ],
+      versesYoruba: [
+        [
+          "On' agbelebu ni mo ni ba l'o 'le,",
+          "Ko tun si ona mii mo:",
+          "Nko ni de enu ona ogo nã",
+          "Bi mo ba so ona yi nu.",
+        ],
+        [
+          "Mo ni lati rin l'ona t'a f'eje won,",
+          "Ona t'Olugbala rin;",
+          "Bi mo ba fe goke lo si orun,",
+          "Nibiti okàn gbe nsimi",
+        ],
+        [
+          "'Gbana ngo ki aiye pe \"Odigbose\"",
+          "Nkò tun rin l'ona rè mo:",
+          "Tori Kristi duro l'enu ona,",
+          "O si pe mi pe \"Wa maa bo.\"",
+        ],
+      ],
+      chorusYoruba: [
+        "Ona Agbelebu yi,",
+        "Lo lo si ile ogo (tara)",
+        "O dun ki nmo bi mo ti nrin lo pe",
+        "On nikan l'ona ile.",
+      ],
+    ),
+    Hymn(
+      id: '386',
+      versesEnglish: [
+        [
+          "Jesus, Thy boundless love to me",
+          "No thought can reach, no tongue declare:",
+          "O knit my thankful heart to Thee,",
+          "And reign without a rival there:",
+          "Thine wholly, Thine alone, I am,",
+          "Be Thou alone my constant flame."
+        ],
+        [
+          "O grant that nothing in my soul",
+          "May dwell but Thy pure love alone;",
+          "O may Thy love possess me whole,",
+          "My joy, my treasure, and my crown:",
+          "Strange flames far from my heart remove;",
+          "My every act, word, thought, be love."
+        ],
+        [
+          "O Love, how cheering is Thy ray;",
+          "All pain before Thy presence flies,",
+          "Care, anguish, sorrow, melt away,",
+          "Where’er Thy healing beams arise:",
+          "O Jesus, nothing may I see,",
+          "Nothing desire, or seek, but Thee."
+        ],
+        [
+          "Unwearied may I this pursue,",
+          "Dauntless to the high prize aspire;",
+          "Hourly within my soul renew",
+          "This holy flame, this heavenly fire;",
+          "And day and night be all my care",
+          "To guard the sacred treasure there."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Jesu, ailopin ife Re.",
+          "Ko si b'e ti le rohin Re:",
+          "S'okan èpè mi ni Tire,",
+          "K'O si nikan joba nibe!",
+          "Tirę ni mi, patapata,",
+          "Maa mu fe mi gbona titi.",
+        ],
+        [
+          "Maşe jeki ohunkohun",
+          "Gba mi l'okan ju 'fe Re lo:",
+          "Kife Re gba gbogb' okan mi!",
+          "K'o j'ayo, 'şura, ade mi!",
+          "Mu 'fekufe jinna si mi;",
+          "K'ife j'oro at' işe mi.",
+        ],
+        [
+          "Itanşan. 'fe fun mi l'ayo!",
+          "Irora sá niwaju Re:",
+          "Aniyan, 'banuję, y'o lo,",
+          "Nibi 'tanşan 'wosan re de;",
+          "Jesu, jowo ma ję ki nlé",
+          "Ohunkohun kan lehin Re",
+        ],
+        [
+          "Je ki maa lepa Ife yi",
+          "Atere giga, l'alsaare:",
+          "So Ina mimo yt d'otun,",
+          "N'nu emi mi lojojumo.",
+          "K'ajo ml, losan loru Je",
+          "Lati so 'sura owo na.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '387',
+      versesEnglish: [
+        [
+          "I need Thee ev’ry hour,",
+          "Most gracious Lord",
+          "No tender voice like Thine",
+          "Can peace afford."
+        ],
+        [
+          "I need Thee every hour,",
+          "Stay Thou near by;",
+          "Temptations lose their power",
+          "When Thou art nigh."
+        ],
+        [
+          "I need Thee every hour,",
+          "In joy or pain,",
+          "Come quickly and abide,",
+          "Or life in vain."
+        ],
+        [
+          "I need Thee every hour,",
+          "Teach me Thy will;",
+          "And Thy rich promises",
+          "In me fulfill"
+        ],
+        [
+          "I need Thee every hour,",
+          "Most Holy One;",
+          "Oh, make me Thine indeed,",
+          "Thou blessed Son."
+        ]
+      ],
+      chorusEnglish: [
+        "I need Thee, Oh, I need Thee,",
+        "Ev’ry hour I need Thee;",
+        "Oh, bless me now, my Saviour,",
+        "I Come to Thee;"
+      ],
+      versesYoruba: [
+        [
+          "Mo fe O n'gbagbogbo,",
+          "Oluwa Oloore,",
+          "Ko s' ohun ti nfun ni",
+          "L'alafin bi Tire:",
+        ],
+        [
+          "Mo fe O n'ngbagbogbo,",
+          "Maşe Jina si mi;",
+          "Idanwo ko n'ipá",
+          "Gbat' O wa nitosi.",
+        ],
+        [
+          "Mo fe O n'gbagbogbo,",
+          "L'ayo tab' irora;",
+          "Yara wa ba mi gbe,",
+          "K'aiye mi má j'asan.",
+        ],
+        [
+          "Mo fe O n'gbagbogbo,",
+          "Ko mi ni ifę Re:",
+          "K'O jek Ileri Rę",
+          "Ko se si mi l'ara.",
+        ],
+        [
+          "Mo fe O n'gbagbogbo,",
+          "'Wo Ologo julo:",
+          "Şe mi n'Tire 'tooto:",
+          "Omo Alabukun.",
+        ],
+      ],
+      chorusYoruba: [
+        "Mo fe O, A! mo fę O.",
+        "Ni wakati gbogbo,",
+        "Bukun mi Olugbala,",
+        "Mo wa s'odo Re.",
+      ],
+    ),
+    Hymn(
+      id: '388',
+      versesEnglish: [
+        [
+          "Jesus, my Lord, my God, my All",
+          "Hear me, blest Savior, when I call;",
+          "Hear me, and from Thy dwelling place,",
+          "Pour down the riches of Thy grace."
+        ],
+        [
+          "Jesus, too late I Thee have sought",
+          "How can I love Thee as I ought?",
+          "And how extol Thy matchless fame,",
+          "The glorious beauty of Thy name"
+        ],
+        [
+          "Jesus, what didst Thou find in me,",
+          "That Thou hast dealt so loving?",
+          "How great the joy that Thou hast brought",
+          "So far exceeding hope or though!"
+        ],
+        [
+          "Jesus, of Thee shall be my song,",
+          "To Thee my heart and soul belong,",
+          "All that I have or am is Thine",
+          "And Thou, blest Saviour Thou art mine."
+        ]
+      ],
+      chorusEnglish: [
+        "Jesus, my Lord, I Thee adore,",
+        "Oh make me love Thee more and more."
+      ],
+      versesYoruba: [
+        [
+          "Jesu Oluwa, Oba mi,",
+          "Gbohun mi nigbati mo npe,",
+          "Gbohun mi lati 'bugbe Rẹ,",
+          "Rọjo ore-ọfẹ silẹ;",
+        ],
+        [
+          "Jesu, mo ti jafara ju,",
+          "Ngo ṣe le fẹ Ọ b'o ti yẹ?",
+          "Em' o ṣe le gb' ogo Rẹ ga,",
+          "Ati ẹwa orukọ Rẹ.",
+        ],
+        [
+          "Jesu, kil'o ri ninu mi,",
+          "Ti 'fẹ na fi pọ to bayi?",
+          "Ore Rẹ si mi ti pọ to!",
+          "O ta gbogbo ero mi yọ!",
+        ],
+        [
+          "Jesu, 'Wọ o jẹ orin mi,",
+          "Tirẹ l'aiya at' ọkan mi:",
+          "Tirẹ ni gbogbo ini mi:",
+          "Olugbala, 'Wọ ni temi:",
+        ],
+      ],
+      chorusYoruba: [
+        "Oluwa mi, mo fẹran Rẹ,",
+        "Jẹ ki nle maa fẹran Rẹ si.",
+      ],
+    ),
+    Hymn(
+      id: '389',
+      versesEnglish: [
+        [
+          "Sweet is the promise, 'I will not forget thee',",
+          "Nothing can molest or turn my soul away;",
+          "E’en though the night be dark within the valley,",
+          "Just beyond is shining as eternal day."
+        ],
+        [
+          "How can I show my gratitude to Jesus?",
+          "Full His love unfailing and His tender care;",
+          "I will proclaim to others His salvation,",
+          "That they may accept Him and His promise share."
+        ],
+        [
+          "Trusting the promise, 'I will not forget thee',",
+          "Onward will I go with songs of joy and praise;",
+          "Though earth desire me, though my friends forsake me,",
+          "Jesus will be near me, gladdening my days."
+        ],
+        [
+          "When at the golden portals I am standing,",
+          "All my tribulations, all my sorrows past,",
+          "How sweet to hear the blessed proclamation:",
+          "'Enter, faithful servant, welcome home at last.'"
+        ]
+      ],
+      chorusEnglish: [
+        "I will not forget thee or leave thee,",
+        "In My hands I’ll hold thee, in My arms I’ll fold thee.",
+        "I will not forget thee or leave thee.",
+        "I am Thy Redeemer, I will care for thee."
+      ],
+      versesYoruba: [
+        [
+          "Gbo b'O ti wi \"Emi ki y'o gbagbe re\",",
+          "Ko si ohun t'o le damu okan mi;",
+          "Bi mo tilę nrin ni afonifoji,",
+          "Imolę aiyeraiye kò ni pę mo.",
+        ],
+        [
+          "Emi o şe fi imoore han fun?",
+          "Ife at'itoju Rè po lori mi,",
+          "Ngo maa rohin igbala Rè kakiri,",
+          "Ki nwon le ni ipin n'nu ileri Re.",
+        ],
+        [
+          "Ngo romo ileri yi bi mo ti nlo.",
+          "\"Emi ko gbagbe re, nko fi o sile",
+          "Ngo maa tesiwaju, ngo si maa Ko'rin;",
+          "Bi aiye nkegan mi, Jesu sunmo mi",
+        ],
+        [
+          "'Gbati mo ba gunle s'ebute ogo,",
+          "Tidamu on 'ponju mi si koja lo,",
+          "Y'o ti dun to lati gb'ohun Rè didûn;",
+          "Kabo omo rere, s'inu ayo re",
+        ]
+      ],
+      chorusYoruba: [
+        "Emi ki yio gbagbe rẹ lai,",
+        "Mo gbe o l'apa, mo f'owo mi di o mu;",
+        "Emi ki yio gbagbe rẹ lai,",
+        "Emi Olugbala y'o se 'toju re.",
+      ],
+    ),
+    Hymn(
+      id: '390',
+      versesEnglish: [
+        [
+          "A friend of Jesus, oh, what bliss!",
+          "That one so weak as I",
+          "Should ever have a friend like this",
+          "To lead me to the sky."
+        ],
+        [
+          "A friend when other friendships cease",
+          "A friend when others fail;",
+          "A friend who gives me joy and peace,",
+          "A friend who will prevail."
+        ],
+        [
+          "A friend to lead me in the dark.",
+          "A friend who knows the way;",
+          "A friend to steer my weak, frail bark",
+          "A friend my debts to pay."
+        ],
+        [
+          "A friend when sickness lays me low,",
+          "A friend when death draws near,",
+          "A friend as though the vale I go,",
+          "A friend to help and cheer."
+        ],
+        [
+          "A friend when life’s rough voyage is o’er,",
+          "A friend when death is past;",
+          "A friend to greet on heaven’s shore",
+          "A friend when home at last."
+        ]
+      ],
+      chorusEnglish: [
+        "Friendship with Jesus,",
+        "Fellowship divine;",
+        "Oh, what blessed sweet communion,",
+        "Jesus is a friend of mine"
+      ],
+      versesYoruba: [
+        [
+          "Ore Jesu! Iro didun,",
+          "F'alailera b'emi;",
+          "Pe mo ti yan Jesu l'orę,",
+          "Ti y'o mu mi re 'le.",
+        ],
+        [
+          "Orę ododo ni Jesu,",
+          "Orę miran nkùnà;",
+          "Orę ti nmu ayo mi kun,",
+          "Ore ti o nşegun.",
+        ],
+        [
+          "Orę ti nşe Amona mi,",
+          "Ti nfi ona han mi;",
+          "Ore to mo ailera mi,",
+          "Ti nsan Igbese mi",
+        ],
+        [
+          "Orę mi nigba mo s'aisan,",
+          "Ati nigba iku;",
+          "Ore ti y'o mu mi laa já,",
+          "Ti y'o ran mi lowo.",
+        ],
+        [
+          "Orę mi lehin aiye yi,",
+          "Tiku p'oju mi de;",
+          "Ore ti y'o wa pade mi,",
+          "Ni ile mi l'oke.",
+        ]
+      ],
+      chorusYoruba: [
+        "Temi ti Jesu Orę mi owon,",
+        "Idapo ti o dun julo,",
+        "Jesu di orę mi lai.",
+      ],
+    ),
+    Hymn(
+      id: '392',
+      versesEnglish: [
+        [
+          "We give Thee but Thine own,",
+          "Whate’er the gift may be:",
+          "All that we have is Thine alone,",
+          "A trust, O Lord, from Thee."
+        ],
+        [
+          "May we Thy bounties thus",
+          "As stewards true receive,",
+          "And gladly as Thou blessest us,",
+          "To Thee our first-fruits give."
+        ],
+        [
+          "Oh hearts are bruised and dead,",
+          "And homes are bare and cold,",
+          "And lambs, for whom the Shepherd bled,",
+          "Are straying from the fold."
+        ],
+        [
+          "To comfort and to bless,",
+          "To find a balm for woe,",
+          "To tend the lone and fatherless",
+          "Is angels’ work below."
+        ],
+        [
+          "The captive to release,",
+          "To God the lost to bring,",
+          "To teach the way of life and peace,",
+          "It is a Christ like thing."
+        ],
+        [
+          "And we believe Thy word,",
+          "Though dim our faith may be;",
+          "Whate’er for Thine we do, O Lord,",
+          "We do it unto Thee."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ohun t'a fi'fun O,",
+          "Tirę ni Oluwa;",
+          "Gbogbo ohun ti a si ni,",
+          "Owo Rę l' o ti wa.",
+        ],
+        [
+          "Je k' a gba ebun Re,",
+          "Bi iriju rere;",
+          "Bi O si ti mbukun wa to,",
+          "Be l' a o fi fun O.",
+        ],
+        [
+          "Opo ni işé nşe,",
+          "Ti nwon ko r' onje je:",
+          "Opo l' o si ti şako lo.",
+          "Kuro l' agbo Jesu,",
+        ],
+        [
+          "K'a maa tu ni ninu,",
+          "K' a maa re ni l' ekun,",
+          "K' a maa bo alaini baba,",
+          "N' işe t' a ba mă șe.",
+        ],
+        [
+          "K'a tú onde s'llę,",
+          "K'a f' ona iye han,",
+          "K' a ko ni l'ona Olorun,",
+          "B' Iwa Kristi l' o ri",
+        ],
+        [
+          "A gba oro Re gbo,",
+          "Busi igbagbo wa;",
+          "Ohun t' a şe fun eni Re.",
+          "Jesu, a şe fun O.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: "392",
+      versesEnglish: [
+        [
+          "All to Jesus I surrender,",
+          "All to Him I freely give,",
+          "I will ever love and trust Him,",
+          "In His presence daily live.",
+        ],
+        [
+          "All to Jesus I surrender,",
+          "Humbly at His feet I bow:",
+          "Worldly pleasures all forsaken",
+          "Take me, Jesus, take me now.",
+        ],
+        [
+          "All to Jesus I surrender,",
+          "Make me, Saviour, wholly Thine;",
+          "Let the Holy Spirit witness",
+          "I am Thine and Thou art  mine.",
+        ],
+        [
+          "All to Jesus I surrender:",
+          "Lord, I give myself to Thee,",
+          "Fill me with Thy love and power,",
+          "Let Thy blessing fall on me.",
+        ],
+        [
+          "All to Jesus I surrender:",
+          "Now I feel the sacred flame;",
+          "Oh the joy of full salvation:",
+          "Glory, glory to His name.",
+        ]
+      ],
+      chorusEnglish: [
+        "I surrender all,",
+        "I surrender all,",
+        "All to Thee, my blessed Saviour,",
+        "I surrender all.",
+      ],
+      versesYoruba: [
+        [
+          "Mo fi gbogbo re fun Jesu,",
+          "Patapata laiku kan",
+          "Ngo maa fe, ngo si gbekele,",
+          "Ngo wa lodo Re titi",
+        ],
+        [
+          "Mo fi gbogbo re fun Jesu,",
+          "Mo fi 'rele wole fun,",
+          "Mo fi 'gbadun aiye s'ile;",
+          "Gba mi Jesu, si gba mi.",
+        ],
+        [
+          "Mo fi gbogbo re fun Jesu,",
+          "Se mi ni Tire nikan;",
+          "Jeki nkun Fun Emi Mimo",
+          "Ki nmo pe 'Wo je temi.",
+        ],
+        [
+          "Mo fi gbogbo re fun Jesu,",
+          "Mo fi ara mi fun O;",
+          "Fi 'fe at' agbara kun mi,",
+          "Ki 'bukun Re ba le mi.",
+        ],
+        [
+          "Mo fi gbogbo re fun Jesu,",
+          "Mo mo p'Emi ba le mi;",
+          "A! Ayo igbala kikun;",
+          "Ogo, ogo f'ooko Re.",
+        ],
+      ],
+      chorusYoruba: [
+        "Mo fi gbogbo re,",
+        "Mo fi gbogbo re,",
+        "Fun O, Olugbala mi, ni",
+        "Mo fi nwon sile",
+      ],
+    ),
+    Hymn(
+      id: '393',
+      versesEnglish: [
+        [
+          "Guide me, O Thou great Jehovah,",
+          "Pilgrim thro’ this barren land;",
+          "I am weak but Thou art mighty:",
+          "Hold me with Thy powerful hand;",
+          "Bread of heaven, Bread of heaven,",
+          "Feed me till I want no more."
+        ],
+        [
+          "Open now the crystal fountain,",
+          "Whence the healing waters flow;",
+          "Let the fiery, cloudy pillar",
+          "Lead me all my journey through:",
+          "Strong Deliverer, Strong Deliverer,",
+          "Be Thou still my strength and shield."
+        ],
+        [
+          "When I tread the verge of Jordan",
+          "Bid my anxious fears subside;",
+          "Bear me through the swelling current,",
+          "Land me safe on Canaan’s side:",
+          "Songs of praises, Songs of praises",
+          "I will ever give to Thee."
+        ],
+      ],
+      versesYoruba: [
+        [
+          "Maa toju mi, Jehofah nla,",
+          "Ero l' aiye osi yi;",
+          "Emi ko l'okun, Iwo ni,",
+          "F' ow' agbara di mi mu:",
+          "Onje orun, onje orun,",
+          "Maa bo mi titi lailai.",
+        ],
+        [
+          "S' ilekun isun ogo ni,",
+          "Orisun imarale:",
+          "Jeki imole Re orun",
+          "Se amona mi jale;",
+          "Olugbala, Olugbala,",
+          "S' agbara at' asa mi.",
+        ],
+        [
+          "'Gba mo ba te eba Jordan,",
+          "F' okan eru mi bale;",
+          "Iwo t' O ti segun iku,",
+          "Mu mi gun;le Kenaan je.",
+          "Orin iyin, orin iyin",
+          "L' emi o fun O titi.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '394',
+      versesEnglish: [
+        [
+          "O Jesus, I have promised",
+          "To serve Thee to the end;",
+          "Be Thou for ever near me,",
+          "My Master and my Friend;",
+          "I shall not fear the battle",
+          "If Thou art by my side,",
+          "Nor wander from the pathway",
+          "If Thou wilt be my Guide."
+        ],
+        [
+          "Oh let me feel Thee near me:",
+          "The world is ever near;",
+          "I see the sights that dazzle,",
+          "The tempting sounds I hear;",
+          "My foes are ever near me,",
+          "Around me and within;",
+          "But, Jesus, draw Thou nearer,",
+          "And shield my soul from sin."
+        ],
+        [
+          "Oh let me hear The speaking",
+          "In accents clear and still,",
+          "Above the storms of passion,",
+          "The murmurs of self-will;",
+          "Oh speak to re-assure me,",
+          "To hasten, or control;",
+          "Oh speak, and make me listen,",
+          "Thou Guardian of my soul."
+        ],
+        [
+          "O Jesus, Thou hast promised",
+          "To all who follow Thee;",
+          "That where Thou art in glory",
+          "There shall Thy servant be;",
+          "And, Jesus, I have promised",
+          "To serve Thee to the end!",
+          "Oh give me grace to follow,",
+          "My Master and my Friend."
+        ],
+        [
+          "Oh let me see Thy Foot marks",
+          "And in them plant mine own:",
+          "My hope to follow duly",
+          "Is in Thy strength alone,",
+          "Oh guide me, call me, draw me,",
+          "Uphold me to the end;",
+          "And then in heaven receive me,",
+          "My Saviour and my Friend."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Mo ti se 'leri, Jesu,",
+          "Lati sin O d' opin;",
+          "Mã wà l'odo mi titi,",
+          "Baba mi, Orę mi,",
+          "Emi k' y' o beru ogun,",
+          "B' Iwo ba sunmo mi,",
+          "Emi ki y' o si şina,",
+          "B' O ba f' ona han mi.",
+        ],
+        [
+          "Jęki nmo p' O sunmo mi,",
+          "Tor' ibaję aiye;",
+          "Aiye fę gba okan mi,",
+          "Aiye fę tan mi ję;",
+          "Ota yi mi kakiri,",
+          "L' ode ati ninu;",
+          "Sugbon Jesu, sunmo mi,",
+          "D' abo bo okan mi.",
+        ],
+        [
+          "Jęki emi k' o maa gbo",
+          "Ohun Re, Jesu mi,",
+          "Ninu igbi aiye yi,",
+          "Titi nigba gbogbo;",
+          "So, k' O f' okan mi balę",
+          "Te 'ri okan mi ba;",
+          "So k'emi le gbọ Tire.",
+          "'Wo Olutoju mi.",
+        ],
+        [
+          "Wo ti şe 'leri, Jesu,",
+          "F' awon to tele O.",
+          "Pe ibikibi t'O wa,",
+          "L' awon yio si wa;",
+          "Mo ti şe 'leri, Jesu,",
+          "Lati sin O d' opin;",
+          "Ję ki nma to O lehin,",
+          "Baba mi, Orę mi",
+        ],
+        [
+          "Ję ki nmă ri 'pasę Rę,",
+          "Ki nle mă tele O:",
+          "Agbara Re nikan ni,",
+          "Ti mba le tele O,",
+          "To mi, pè mi, si fà mi,",
+          "Di mi mu de opin;",
+          "Si gbà mi si odo Rę.",
+          "Baba mi, Orę mi",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '395',
+      versesEnglish: [
+        [
+          "Love others as thyself",
+          "This is the law of God",
+          "His being crucified has proved this",
+          "That He loves us so much."
+        ],
+        [
+          "Love others as thyself",
+          "In warfare and in peace",
+          "He has taught us to love our foes",
+          "Love should replace hatred."
+        ],
+        [
+          "Love others as thyself",
+          "Jesus is warning thee",
+          "We must heed this and get prepared",
+          "And we should love ourselves."
+        ],
+        [
+          "Love others as thyself,",
+          "And also thy neghbours;",
+          "Including all that surround you",
+          "Love also all thy foes."
+        ],
+        [
+          "We must love our comrades",
+          "Just as Jesus loves us;",
+          "Even Jesus loves all His foes",
+          "He also prayed for them."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "\"Fe enikeji re,\"",
+          "Aşe Oluwa ni;",
+          "O sá f' ara Rè s' apere.",
+          "Ni fife t' O fe wa",
+        ],
+        [
+          "\"Fe enikeji re.\"",
+          "N' ire tabi n' ija;",
+          "O ko wa pe k' a f' ota wa,",
+          "K'a f' öre san ibi.",
+        ],
+        [
+          "\"Fe enikeji re,\"",
+          "Oluwa nke tantan:",
+          "O ye ki gbogbo wa mura,",
+          "K' a f' enikeji wa.",
+        ],
+        [
+          "Fe enikeji re.",
+          "At' aladugbo re,",
+          "Pelu gbogb' eni yi o ka,",
+          "At' ota rę pelu.",
+        ],
+        [
+          "K' af' enikeji wa,",
+          "Bi Jesu ti fe wa,",
+          "Jesu sa f' awon ota Rè,",
+          "O si sure fun won.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '396',
+      versesEnglish: [
+        [
+          "Brethren let us jointly walk on,",
+          "With the love and with the peace",
+          "Needless to continue asking;",
+          "Is it good to stop quarrel?",
+          "In unity in unity, with joy love shall multiply."
+        ],
+        [
+          "As we are walking home let us,",
+          "Help each other on the way",
+          "Enemies are watching us on",
+          "The ways are filled for foes traps",
+          "It’s our duty, it’s our duty",
+          "To bear each others laden."
+        ],
+        [
+          "When we examine how Father",
+          "Forgive us continuously",
+          "Brethren, it is unbefitting",
+          "Not to forsake quarelling",
+          "We remove it, we remove it,",
+          "Anything that can cause wrath."
+        ],
+        [
+          "Let us now exalt our brethren,",
+          "Than our-selves be exalted",
+          "We for-sake all the malevolence",
+          "And our hearts be filled with love",
+          "It will ease us, it will ease us,",
+          "If we concord in this world."
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Ara, e je k'a jumo rin",
+          "N' ife on alafia;",
+          "A ha le mă tun bere pé,",
+          "O to k' a ba f' ija mo?",
+          "Ni irepo, ni irepo,",
+          "L' ayo, ife y' o fi po.",
+        ],
+        [
+          "B'a ti nrin lo sile jek' a",
+          "Ran 'ra wa lowo l' ona;",
+          "Ota ká wa nibi gbogbo;",
+          "S' ona ghogbo l' a dekun,",
+          "Işe wa ni, işe wa ni",
+          "K' a mã ran 'ra wa l' erù.",
+        ],
+        [
+          "Nigbat' a r'ohun Baba şe,",
+          "T' O ti fiji, t' O nfiji,",
+          "Ara, ko to k'a wa k'o ko",
+          "Lati ma f' ija silę?",
+          "K' a mu kuro, ka mu kuro,",
+          "Ohun 'ba mu 'binu wa.",
+        ],
+        [
+          "K' a gb' omonikeji wa ga,",
+          "Ju b' a ba ti gbe 'ra wa;",
+          "K' a fi keeta gbogbo silę,",
+          "K' ọkàn wa si kun fun 'fe",
+          "Yio rò wa, yio rò wa,",
+          "B' a wà n' irepo l' aiye.",
+        ],
+      ],
+    ),
+    Hymn(
+      id: '397',
+      versesEnglish: [
+        [
+          "Christ, our mighty Captain, leads against the foe,",
+          "We will never falter when He bids us go:",
+          "Tho’ His righteous purpose we may never know",
+          "Yet we’ll follow all the way."
+        ],
+        [
+          "Satan’s fearful on-slaughts cannot make us yield,",
+          "While we trust in Christ, our Buckler and our Shield;",
+          "Pressing ever on the Spirit’s sword we wield,",
+          "And we follow all the way."
+        ],
+        [
+          "Let our glorious banner ever be unfurled",
+          "From its mighty stronghold evil shall be hurled;",
+          "Christ, our mighty Captain, overcomes the world,",
+          "And we follow all the way."
+        ],
+        [
+          "Fierce the battle rages, but ‘twill not be long,",
+          "Then triumphant shall we join the blessed throng,",
+          "Joyfully uniting in the victor’s song",
+          "If we follow all the way."
+        ]
+      ],
+      chorusEnglish: [
+        "Forward! Forward! ‘tis the Lord’s command",
+        "Forward! Forward! to the promised land;",
+        "We are sure to win with Christ, our King!"
+      ],
+      versesYoruba: [
+        [
+          "Kristi Balogun wa niwaju ogun,",
+          "B' O ba ran wa n'işe a kò ni beru;",
+          "Bi ohun t' O fę şe ko tile ye wa,",
+          "Sibę a o tele titi d'opin.",
+        ],
+        [
+          "Gbogbo ifeju eşu ko le mi wa,",
+          "Bi Kristi je Asa at' Apata wa;",
+          "A o mă fi ida emi bi a ti nlo.",
+          "A o mă tele titi.",
+        ],
+        [
+          "E jeki a gbe asia wa s'oke,",
+          "Ibi kò le de ibiti O ba wa;",
+          "Kristi Balogun wa ti segun aiye,",
+          "A o mã tele titi.",
+        ],
+        [
+          "B' ogun na tilę le, kò ni pé pari,",
+          "Nigbana, a o dapo pel' awon mimo.",
+          "Lati fi ayo ko orin işęgun,",
+          "Bi a ba tele titi.",
+        ],
+      ],
+      chorusYoruba: [
+        "Te siwa ju! l' aşe Oluwa,",
+        "Te siwa ju! si 'le 'leri na:",
+        "Te siwa ju; ko orin s'oke,",
+        "Pelu Kristi isegun da ju.",
+      ],
+    ),
+    Hymn(
+      id: '398',
+      versesEnglish: [
+        [
+          "Rise, ye children of salvation,",
+          "All who cleave to Christ the Head;",
+          "Wake arise, O mighty nation,",
+          "Ere the foe on Zion tread."
+        ],
+        [
+          "Saints and heroes long before us,",
+          "Firmly on this ground have stood;",
+          "See their banners waving o’er us",
+          "Conquerors through Jesus’ blood."
+        ],
+        [
+          "Deathless we are all unfearing",
+          "Life laid up with Christ in God,",
+          "In the morn of His appearing",
+          "Floweth forth a glory flood."
+        ],
+        [
+          "Soon we all shall stand before Him",
+          "See and know our glorious Lord,",
+          "Soon in joy and light adore Him",
+          "Each receiving his reward."
+        ]
+      ],
+      chorusEnglish: [
+        "Pour it forth a mighty anthem,",
+        "Pour it forth a mighty anthem,",
+        "Like the thunders of the sea,",
+        "Thro’ the blood of Christ our ransom",
+        "More than conquerors are we,",
+        "More than conquerors are we,",
+        "More than conquerors are we,",
+        "Thro’ the blood of Christ our ransom,",
+        "More than conquerors are we."
+      ],
+      versesYoruba: [
+        [
+          "E dide omo Igbala,",
+          "Enyin t' e fe Oluwa;",
+          "Dide ilu Alagbara,",
+          "Ki ota to de Sion.",
+        ],
+        [
+          "Egbę mimo ti igbani,",
+          "Ti nwon ti rin ona yi:",
+          "W' asia won t' o nfe lele,",
+          "A segun nipa Kristi.",
+        ],
+        [
+          "A ti gbe 'ku mi ni 'şegun.",
+          "Iye wa mbę ninu Krist',",
+          "L' ojo 'farahan Oluwa,",
+          "A o ho iho ayo.",
+        ],
+        [
+          "L' aipe a o de 'bi itę Re:",
+          "A o sí mo Oba ogo,",
+          "Nibę a o ke Kabiyesi,",
+          "Gbogbo wa y' o gba ere.",
+        ],
+      ],
+      chorusYoruba: [
+        "F' agbara re k' orin kikan",
+        "F' agbara re k' orin kikan",
+        "Bi iro omi okun,",
+        "Nipa eję Kristi Jesu,",
+        "Awa ju asegun lo",
+        "Awa ju asegun lo,",
+        "Awa ju asegun lo",
+        "Nipa eje Kristi Jesu,",
+        "Awa ju asegun lo.",
+      ],
+    ),
+    Hymn(
+      id: '399',
+      versesEnglish: [
+        [
+          "When you start for the land of heavenly rest,",
+          "Keep close to Jesus all the way;",
+          "For He is the Guide, and He knows the way best,",
+          "Keep close to Jesus, all the way."
+        ],
+        [
+          "Never mind the storms or trials as you go,",
+          "Keep close to Jesus all the way;",
+          "Tis a comfort and joy His favour to know,",
+          "Keep close to Jesus all the way."
+        ],
+        [
+          "To be safe from the darts of the evil one,",
+          "Keep close to Jesus all the way;",
+          "Take the shield of faith till the victory is won,",
+          "Keep close to Jesus all the way."
+        ],
+        [
+          "We shall reach our home in heaven by and by,",
+          "Keep close to Jesus all the way;",
+          "Where to those we love we’ll never say “good-bye”",
+          "Keep close to Jesus all the way."
+        ]
+      ],
+      chorusEnglish: [
+        "Keep close to Jesus,",
+        "Keep close to Jesus,",
+        "Keep close to Jesus all the way;",
+        "By day or by night never turn from the right,",
+        "Keep close to Jesus all the way."
+      ],
+      versesYoruba: [
+        [
+          "Gbati o ba nlo s' ile simi orun,",
+          "Sunmo Jesu titi d'opin;",
+          "'Tori On ni Oluto t' o m' ona ju,",
+          "Sunmo Jesu titi d' opin.",
+        ],
+        [
+          "Mase ronu wahala at'iponju,",
+          "Sunmo Jesu titi d' opin;",
+          "O dara lati ri oju - rere Re,",
+          "Sunmo Jesu titi d' opin",
+        ],
+        [
+          "Ki o ba le bo l'owo ofa esu,",
+          "Sunmo Jesu titi d' opin,",
+          "Gbe apata igbagbo fun isegun,",
+          "Sunmo Jesu titi d' opin.",
+        ],
+        [
+          "Awa yo de 'le wa orun nigbose,",
+          "Sunmo Jesu titi d'opin;",
+          "Nibiti a ki wipe, o digbose,",
+          "Sunmo Jesu titi d'opin.",
+        ],
+      ],
+      chorusYoruba: [
+        "F' aramo Jesu, F' aramo Jesu,",
+        "Sunmo Jesu titi d' opin,",
+        "L' osan tabi l' oru mase ya kuro,",
+        "Sunmo Jesu titi d' opin.",
+      ],
+    ),
+    Hymn(
+      id: '400',
+      versesEnglish: [
+        [
+          "“Christian, seek not yet repose”",
+          "Hear thy guardian angel say;",
+          "Thou art in the midst of foes;",
+          "“Watch and pray”."
+        ],
+        [
+          "Principalities and powers,",
+          "Mustering their unseen array,",
+          "Wait for thy unguarded hours:",
+          "“Watch and pray”"
+        ],
+        [
+          "Gird thy heavenly armour on,",
+          "Wear it ever night and day;",
+          "Ambush’d lies the evil one;",
+          "“Watch and pray”"
+        ],
+        [
+          "Hear the victors who o’ercame;",
+          "Still they mark each warrior’s way;",
+          "All with one sweet voice exclaim,",
+          "“Watch and pray”."
+        ],
+        [
+          "Hear, above all, hear thy Lord,",
+          "Him Thou lovest to obey;",
+          "Hide within thy heart His word,",
+          "“Watch and pray”."
+        ],
+        [
+          "Watch, as if on that alone",
+          "Hung the issue of the day;",
+          "Pray, that help may be sent down:",
+          "“Watch and pray”"
+        ]
+      ],
+      versesYoruba: [
+        [
+          "Kristian, mase jafara,",
+          "Gbo b' Angeli rę ti nwi;",
+          "Ni arin ota l' o wa",
+          "Mă şora.",
+        ],
+        [
+          "Ogun orun – apadi,",
+          "T' a kò ri nko 'ra won jo,",
+          "Nwon nso Ijafara rę;",
+          "Mã şora.",
+        ],
+        [
+          "Wo hamora - orun re,",
+          "Wo l'osan ati l' oru;",
+          "Eşu ba; o ndodę rę:",
+          "Mã şora.",
+        ],
+        [
+          "Awon t' o segun şāju,",
+          "Nwon nwò wa b' awa ti nja;",
+          "Nwon nfi ohùn kan wipe,",
+          "Mã şora.",
+        ],
+        [
+          "Gbo b' Oluwa rę ti wi,",
+          "Eniti iwo fęran;",
+          "F' oro Rè si okan re:",
+          "Mã şora.",
+        ],
+        [
+          "Mã şora bi enipe,",
+          "Nibę ni 'şegun re wa;",
+          "Gbadura fun 'ranlowo;",
+          "Mã şora.",
+        ],
+      ],
     )
   ];
 }
