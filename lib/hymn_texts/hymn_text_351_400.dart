@@ -2796,7 +2796,7 @@ class HymnText351to400 {
       ],
     ),
     Hymn(
-      id: '392',
+      id: '391',
       versesEnglish: [
         [
           "We give Thee but Thine own,",

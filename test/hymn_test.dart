@@ -1,16 +1,35 @@
 import 'package:test/test.dart';
 import 'package:church/providers/hymn_book_provider.dart';
 import 'package:church/model/hymn.dart';
-// import 'package:collection/equality.dart';
+import 'package:collection/collection.dart';
 
 void main() {
   group('TESTING HYMN DATA INTEGRITY ', () {
+    List<int> num = [];
     List<Hymn> testHymnList = HymnBookProvider().hymnList;
     List<Hymn> yorubatestChorus =
         testHymnList.where((hymn) => hymn.chorusYoruba != null).toList();
     List<Hymn> englishtestChorus =
         testHymnList.where((hymn) => hymn.chorusEnglish != null).toList();
 
+    test('Testing the integrity of hymn number arrangement', () {
+      List<int> number = List.generate(testHymnList.length, (index) {
+        int value = index + 1;
+
+        return value;
+      });
+
+      List<int> hymnNumber = List.generate(testHymnList.length, (index) {
+        int value = int.parse(testHymnList[index].id);
+        if (num.contains(value)) {
+          print("This Hymn number $value is a duplicate");
+        }
+        num.add(value);
+        return value;
+      });
+
+      expect(const IterableEquality().equals(number, hymnNumber), true);
+    });
     test("Testing for number of Hymn", () {
       //Change
       expect(testHymnList.length, 400);
