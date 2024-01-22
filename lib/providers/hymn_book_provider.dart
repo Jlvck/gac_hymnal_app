@@ -10,6 +10,8 @@ import '../hymn_texts/hymn_text_251_300.dart';
 import '../hymn_texts/hymn_text_301_350.dart';
 import '../hymn_texts/hymn_text_351_400.dart';
 import '../hymn_texts/hymn_text_401_450.dart';
+import '../hymn_texts/hymn_text_451_500.dart';
+
 import '../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
@@ -17,16 +19,16 @@ class HymnBookProvider with ChangeNotifier {
 
   List<String> favStringList = [];
 
+  void notify() {
+    notifyListeners();
+  }
+
   //adding an id to favorite list of id
   void addPrefFav(String id) {
     favStringList.add(id);
   }
 
-  void notify() {
-    notifyListeners();
-  }
-
-  //removing an id to favorite list of id
+  //removing an id from favorite list of id
   void removePrefFav(String id) {
     favStringList.remove(id);
   }
@@ -121,6 +123,7 @@ class HymnBookProvider with ChangeNotifier {
     ...HymnText251to300().hymnLyrics,
     ...HymnText301to350().hymnLyrics,
     ...HymnText351to400().hymnLyrics,
-    ...HymnText401to450().hymnLyrics
+    ...HymnText401to450().hymnLyrics,
+    ...HymnText451to500().hymnLyrics,
   ];
 }
