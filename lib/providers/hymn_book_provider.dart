@@ -9,6 +9,7 @@ import '../hymn_texts/hymn_text_201_250.dart';
 import '../hymn_texts/hymn_text_251_300.dart';
 import '../hymn_texts/hymn_text_301_350.dart';
 import '../hymn_texts/hymn_text_351_400.dart';
+import '../hymn_texts/hymn_text_401_450.dart';
 import '../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
@@ -120,5 +121,6 @@ class HymnBookProvider with ChangeNotifier {
     ...HymnText251to300().hymnLyrics,
     ...HymnText301to350().hymnLyrics,
     ...HymnText351to400().hymnLyrics,
+    ...HymnText401to450().hymnLyrics
   ];
 }

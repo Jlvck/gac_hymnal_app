@@ -30,9 +30,9 @@ void main() {
 
       expect(const IterableEquality().equals(number, hymnNumber), true);
     });
-    test("Testing for number of Hymn", () {
+    test("Testing for number of Hymns", () {
       //Change
-      expect(testHymnList.length, 400);
+      expect(testHymnList.length, 450);
     });
     test('Testing Hymn(English & Yoruba) verses Length', () {
       bool tes = testHymnList.every((element) {
