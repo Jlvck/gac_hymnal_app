@@ -2106,8 +2106,13 @@ class HymnText401to500 {
           "Ile didan, didan yi",
         ],
       ],
-      isChorus: false,
-      chorus: [''],
+      isChorus: true,
+      chorus: [
+        'Ile didan yi?',
+        "Ile mimo yi,",
+        "Ile igbala wa,",
+        "Ibugbe ogo",
+      ],
     ),
     Hymn(
       id: '453',
@@ -3710,8 +3715,13 @@ class HymnText401to500 {
           "Jesu yo tun pada wa.",
         ],
       ],
-      isChorus: false,
-      chorus: [''],
+      isChorus: true,
+      chorus: [
+        'Jesu mbo, Oku yio jinde',
+        "Awon ore yo pade wa",
+        "Ho iho ayo na ka bi gbogbo",
+        "Jesu yo tun pada wa"
+      ],
     ),
     Hymn(
       id: '495',

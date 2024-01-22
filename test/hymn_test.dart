@@ -21,8 +21,8 @@ void main() {
 
       List<int> hymnNumber = List.generate(testHymnList.length, (index) {
         int value = int.parse(testHymnList[index].id);
-        if (num.contains(value)) {
-          print("This Hymn number $value is a duplicate");
+        if (num.contains(value) || value > 500) {
+          print("The defaulting Hymn number is  $value");
         }
         num.add(value);
         return value;
@@ -32,7 +32,7 @@ void main() {
     });
     test("Testing for number of Hymns", () {
       //Change
-      expect(testHymnList.length, 450);
+      expect(testHymnList.length, 500);
     });
     test('Testing Hymn(English & Yoruba) verses Length', () {
       bool tes = testHymnList.every((element) {
@@ -57,7 +57,7 @@ void main() {
             (element.chorusEnglish != null && element.chorusYoruba != null)) {
           return true;
         } else {
-          print(element.id);
+          print("The defaulting hymn number is ${element.id}");
           return false;
         }
       });
