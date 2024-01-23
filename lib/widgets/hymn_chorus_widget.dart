@@ -21,6 +21,7 @@ class HymnChorusWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
+          //Text for chorus or Egbe
           Text(
             currentLanguage == LanguageItem.yoruba ? 'Ègbè' : 'Chorus',
             style: TextStyle(

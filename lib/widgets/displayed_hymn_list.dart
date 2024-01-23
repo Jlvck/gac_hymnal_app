@@ -22,8 +22,14 @@ class DisplayedHymnList extends StatelessWidget {
               thickness: 10,
               child: OrientationBuilder(builder: (context, orientation) {
                 return orientation == Orientation.portrait
-                    ? HymnListView(hymnList: foundHymns, scroll: scroll)
-                    : HymnGridView(hymnList: foundHymns, scroll: scroll);
+                    ? Semantics(
+                        label: "Portrait view",
+                        child:
+                            HymnListView(hymnList: foundHymns, scroll: scroll))
+                    : Semantics(
+                        label: "Landscape view",
+                        child:
+                            HymnGridView(hymnList: foundHymns, scroll: scroll));
               }))
           : Text(
               'No results found',

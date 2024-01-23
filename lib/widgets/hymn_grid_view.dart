@@ -22,7 +22,6 @@ class HymnGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('build list_view context');
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 12, right: 12, bottom: 0),
       child: GridView(
@@ -39,100 +38,103 @@ class HymnGridView extends StatelessWidget {
           mainAxisExtent: 110,
         ),
         children: List.generate(hymnList.length, growable: true, (index) {
-          return Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(6)),
-                color: Theme.of(context).colorScheme.background),
-            padding: EdgeInsets.zero,
-            margin: EdgeInsets.zero,
-            height: 110,
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                        context,
-                        PageTransition(
-                            childCurrent: this,
-                            child: HymnViewScreen(
-                              id: hymnList[index].id,
-                            ),
-                            type: PageTransitionType.fade,
-                            duration: const Duration(milliseconds: 300)))
-                    .then((value) =>
-                        Provider.of<HymnBookProvider>(context, listen: false)
-                            .notify());
-              },
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            right: 10, left: 10, bottom: 0, top: 2),
-                        child: Text(
-                          checkTitle(context, index),
-                          // textScaler: TextScaler.noScaling,
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15,
-                              color:
-                                  Theme.of(context).colorScheme.onBackground),
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
+          return Semantics(
+            label: "Hymn number${index + 1}",
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(6)),
+                  color: Theme.of(context).colorScheme.background),
+              padding: EdgeInsets.zero,
+              margin: EdgeInsets.zero,
+              height: 110,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          childCurrent: this,
+                          child: HymnViewScreen(
+                            id: hymnList[index].id,
+                          ),
+                          type: PageTransitionType.fade,
+                          duration: const Duration(milliseconds: 300)));
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              right: 10, left: 10, bottom: 0, top: 2),
+                          child: Text(
+                            checkTitle(context, index),
+                            // textScaler: TextScaler.noScaling,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15,
+                                color:
+                                    Theme.of(context).colorScheme.onBackground),
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 30,
-                    padding: EdgeInsets.only(left: 10, right: 5),
-                    margin: EdgeInsets.zero,
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(6),
-                            bottomRight: Radius.circular(6))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Center(
-                          child: FittedBox(
-                            child: Text(hymnList[index].id,
-                                softWrap: false,
-                                textAlign: TextAlign.right,
-                                style: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white)),
-                          ),
-                        ),
-                        ChangeNotifierProvider.value(
-                          value: hymnList[index],
-                          child: Consumer<Hymn>(
-                            builder: (ctxx, hymnIcon, _) => IconButton(
-                              padding: EdgeInsets.zero,
-                              alignment: Alignment.centerRight,
-                              icon: Icon(
-                                hymnIcon.isFavorites
-                                    ? Icons.favorite
-                                    : Icons.favorite_border,
-                                applyTextScaling: false,
-                              ),
-                              color: Theme.of(context).secondaryHeaderColor,
-                              onPressed: () {
-                                Provider.of<HymnBookProvider>(context,
-                                        listen: false)
-                                    .checkfav(hymnIcon.id, context);
-                                hymnIcon.toggleFav();
-                              },
+                    Container(
+                      height: 30,
+                      padding: EdgeInsets.only(left: 10, right: 5),
+                      margin: EdgeInsets.zero,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(6),
+                              bottomRight: Radius.circular(6))),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Center(
+                            child: FittedBox(
+                              child: Text(hymnList[index].id,
+                                  softWrap: false,
+                                  textAlign: TextAlign.right,
+                                  style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white)),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                          Semantics(
+                            label: "Favorites button",
+                            child: ChangeNotifierProvider.value(
+                              value: hymnList[index],
+                              child: Consumer<Hymn>(
+                                builder: (ctxx, hymnIcon, _) => IconButton(
+                                  padding: EdgeInsets.zero,
+                                  alignment: Alignment.centerRight,
+                                  icon: Icon(
+                                    hymnIcon.isFavorites
+                                        ? Icons.favorite
+                                        : Icons.favorite_border,
+                                    applyTextScaling: false,
+                                  ),
+                                  color: Theme.of(context).secondaryHeaderColor,
+                                  onPressed: () {
+                                    Provider.of<HymnBookProvider>(context,
+                                            listen: false)
+                                        .checkfav(hymnIcon.id, context);
+                                    hymnIcon.toggleFav();
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           );

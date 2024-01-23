@@ -27,39 +27,42 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   Widget build(BuildContext context) {
     List<Hymn> favoriteHymnList =
         Provider.of<HymnBookProvider>(context, listen: true).favHymnList;
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          screenName,
-          overflow: TextOverflow.visible,
+    return Semantics(
+      label: "Favorites Screen",
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text(
+            screenName,
+            overflow: TextOverflow.visible,
+          ),
+          actions: const [ToggleThemeSwitch(), LanguagePopUpMenu()],
         ),
-        actions: const [ToggleThemeSwitch(), LanguagePopUpMenu()],
-      ),
-      drawer: MainDrawer(),
-      body: favoriteHymnList.isNotEmpty
-          ? RawScrollbar(
-              thumbColor: Theme.of(context).secondaryHeaderColor,
-              thumbVisibility: false,
-              trackVisibility: false,
-              interactive: true,
-              controller: _favscroll,
-              radius: const Radius.circular(4),
-              thickness: 10,
-              child: OrientationBuilder(builder: (context, orientation) {
-                return orientation == Orientation.portrait
-                    ? HymnListView(
-                        hymnList: favoriteHymnList, scroll: _favscroll)
-                    : HymnGridView(
-                        hymnList: favoriteHymnList, scroll: _favscroll);
-              }))
-          : Center(
-              child: Text(
-                'No Favorites added',
-                style: TextStyle(
-                    color: Theme.of(context).colorScheme.onBackground),
+        drawer: MainDrawer(),
+        body: favoriteHymnList.isNotEmpty
+            ? RawScrollbar(
+                thumbColor: Theme.of(context).secondaryHeaderColor,
+                thumbVisibility: false,
+                trackVisibility: false,
+                interactive: true,
+                controller: _favscroll,
+                radius: const Radius.circular(4),
+                thickness: 10,
+                child: OrientationBuilder(builder: (context, orientation) {
+                  return orientation == Orientation.portrait
+                      ? HymnListView(
+                          hymnList: favoriteHymnList, scroll: _favscroll)
+                      : HymnGridView(
+                          hymnList: favoriteHymnList, scroll: _favscroll);
+                }))
+            : Center(
+                child: Text(
+                  'No Favorites added',
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.onBackground),
+                ),
               ),
-            ),
+      ),
     );
   }
 }

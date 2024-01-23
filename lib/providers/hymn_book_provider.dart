@@ -15,13 +15,10 @@ import '../hymn_texts/hymn_text_451_500.dart';
 import '../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
+  //sharedpref key for favList
   static const String prefKey = "favList";
 
   List<String> favStringList = [];
-
-  void notify() {
-    notifyListeners();
-  }
 
   //adding an id to favorite list of id
   void addPrefFav(String id) {

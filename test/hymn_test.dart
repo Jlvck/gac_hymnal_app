@@ -21,9 +21,7 @@ void main() {
 
       List<int> hymnNumber = List.generate(testHymnList.length, (index) {
         int value = int.parse(testHymnList[index].id);
-        if (num.contains(value) || value > 500) {
-          print("The defaulting Hymn number is  $value");
-        }
+        if (num.contains(value) || value > 500) {}
         num.add(value);
         return value;
       });
@@ -39,8 +37,8 @@ void main() {
         if (element.versesEnglish.length == element.versesYoruba.length) {
           return true;
         } else {
-          print(
-              "Hymn ${element.id}, Yoruba Verses Length ${element.versesYoruba.length} & English Verses Length ${element.versesEnglish.length}");
+          // print(
+          //     "Hymn ${element.id}, Yoruba Verses Length ${element.versesYoruba.length} & English Verses Length ${element.versesEnglish.length}");
           return false;
         }
       });
@@ -57,7 +55,7 @@ void main() {
             (element.chorusEnglish != null && element.chorusYoruba != null)) {
           return true;
         } else {
-          print("The defaulting hymn number is ${element.id}");
+          // print("The defaulting hymn number is ${element.id}");
           return false;
         }
       });

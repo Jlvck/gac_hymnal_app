@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:church/model/hymn.dart';
 
 class MainTextField extends StatefulWidget {
+  //The Longer textField is taged Title
+  //The Shorter textField is taged number
+
   final List<Hymn> foundHymns;
   final TextEditingController enteredHymnTitle;
   final TextEditingController enteredHymnNumber;
@@ -53,7 +56,6 @@ class _MainTextFieldState extends State<MainTextField> {
                 cursorColor: Theme.of(context).colorScheme.primary,
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
-                // expands: true,
                 maxLines: 1,
                 minLines: 1,
                 strutStyle: const StrutStyle(
@@ -69,8 +71,6 @@ class _MainTextFieldState extends State<MainTextField> {
                 autocorrect: false,
                 enableSuggestions: false,
                 decoration: InputDecoration(
-                  // errorBorder: InputBorder.none,
-                  // focusedErrorBorder: InputBorder.none,
                   isCollapsed: true,
                   isDense: true,
                   contentPadding: const EdgeInsets.only(left: 8, right: 8),
@@ -81,7 +81,6 @@ class _MainTextFieldState extends State<MainTextField> {
                   hintText: 'Search....',
                   hintMaxLines: 1,
                   hintTextDirection: TextDirection.ltr,
-
                   prefixIcon: FittedBox(
                     child: Icon(
                       Icons.search,
@@ -89,20 +88,23 @@ class _MainTextFieldState extends State<MainTextField> {
                       size: 50,
                     ),
                   ),
-                  suffix: IconButton(
-                    padding: EdgeInsets.zero,
-                    alignment: Alignment.center,
-                    color: Theme.of(context).colorScheme.primary,
-                    icon: Icon(
-                      Icons.cancel,
-                      size: 22,
+                  suffix: Semantics(
+                    label: "Clear Button",
+                    child: IconButton(
+                      padding: EdgeInsets.zero,
+                      alignment: Alignment.center,
                       color: Theme.of(context).colorScheme.primary,
+                      icon: Icon(
+                        Icons.cancel,
+                        size: 22,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      tooltip: "clear input",
+                      onPressed: () {
+                        widget.enteredHymnTitle.clear();
+                        widget.reset();
+                      },
                     ),
-                    tooltip: "clear input",
-                    onPressed: () {
-                      widget.enteredHymnTitle.clear();
-                      widget.reset();
-                    },
                   ),
                   border: InputBorder.none,
                 ),

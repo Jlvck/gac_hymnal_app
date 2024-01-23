@@ -69,8 +69,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-
-    print('build hymnbook screen');
     return Scaffold(
         resizeToAvoidBottomInset: false,
         drawer: MainDrawer(),
@@ -97,6 +95,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 Container(
                     padding: const EdgeInsets.all(8),
                     color: Theme.of(context).primaryColor,
+                    //TextField
                     child: MainTextField(
                       runFilter: _runFilter,
                       enteredHymnNumber: _enteredHymnNumber,
@@ -109,14 +108,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                       onTapNumber: _onTapNumber,
                       reset: _reset,
                     )),
+                //List of Hymns displayed controlled by a value listener
                 ValueListenableBuilder(
                     valueListenable: _foundHymns,
                     builder: (BuildContext context, value, child) {
                       return DisplayedHymnList(
                           foundHymns: value, scroll: _scroll);
                     }),
-                // DisplayedHymnList(
-                //     foundHymns: _foundHymns.value, scroll: _scroll)
               ],
             ),
           ),
@@ -131,7 +129,6 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     _enteredHymnTitle.clear();
     _enteredHymnNumber.clear();
     _reset();
-    print('controllers cleared');
   }
 
   void _onTapTitle() {
@@ -213,8 +210,8 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
             ),
             duration: const Duration(milliseconds: 300),
           ))
-          .then((value) =>
-              Provider.of<HymnBookProvider>(context, listen: false).notify());
+          .then(
+              (value) => Provider.of<HymnBookProvider>(context, listen: false));
       _enteredHymnNumber.clear();
       _foundHymns.value = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();

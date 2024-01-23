@@ -39,8 +39,6 @@ class HymnViewWidget extends StatelessWidget {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    print('build hymn view widget');
-
     return Container(
       decoration: BoxDecoration(
           border: Border.symmetric(
@@ -61,6 +59,7 @@ class HymnViewWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: <Widget>[
+                      //Hymn Verse Number
                       Text(
                         "${index + 1}",
                         style: TextStyle(
@@ -68,9 +67,11 @@ class HymnViewWidget extends StatelessWidget {
                             fontSize: 30,
                             color: Theme.of(context).colorScheme.onBackground),
                       ),
+                      //Hymn Verse of the Hymn
                       HymnVersesWidget(
                         currentVerse: currentHymn[index],
                       ),
+                      //Chorus if available
                       if (hymnYorubaChorus != null && hymnEnglishChorus != null)
                         HymnChorusWidget(currentChorus: currentChorus!)
                     ],
@@ -80,6 +81,7 @@ class HymnViewWidget extends StatelessWidget {
             },
           ),
         ),
+        //text for Amin or Amen depending on the current language choice
         Padding(
           padding: EdgeInsets.all(20.0),
           child: Center(

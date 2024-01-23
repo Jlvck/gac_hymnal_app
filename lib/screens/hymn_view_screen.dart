@@ -38,57 +38,60 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
   Widget build(BuildContext context) {
     final PageController controller = PageController(initialPage: pagenumber);
 
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-      appBar: AppBar(
-        centerTitle: true,
-        title: FittedBox(
-          fit: BoxFit.fill,
-          child: Text(
-            checkAppBarTitle(context, hymnList[pagenumber].id),
-            softWrap: true,
-            overflow: TextOverflow.fade,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-        elevation: 0,
-        actions: [
-          ChangeNotifierProvider.value(
-            value: hymnList[pagenumber],
-            child: Consumer<Hymn>(
-              builder: (ctx, hymnIcon, _) => IconButton(
-                icon: Icon(hymnIcon.isFavorites
-                    ? Icons.favorite
-                    : Icons.favorite_border),
-                color: Theme.of(context).secondaryHeaderColor,
-                onPressed: () {
-                  hymnIcon.toggleFav();
-                  Provider.of<HymnBookProvider>(context, listen: false)
-                      .checkfav(hymnIcon.id, context);
-                },
-              ),
+    return Semantics(
+      label: "Hymn Number ${widget.id}",
+      child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+        appBar: AppBar(
+          centerTitle: true,
+          title: FittedBox(
+            fit: BoxFit.fill,
+            child: Text(
+              checkAppBarTitle(context, hymnList[pagenumber].id),
+              softWrap: true,
+              overflow: TextOverflow.fade,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-          const LanguagePopUpMenu()
-        ],
-      ),
-      body: PageView(
-        clipBehavior: Clip.hardEdge,
-        onPageChanged: (value) {
-          setState(() {
-            pagenumber = value;
-          });
-        },
-        controller: controller,
-        children: List.generate(hymnList.length, (index) {
-          return HymnViewWidget(
-            hymnYorubaVerses: hymnList[index].versesYoruba,
-            hymnYorubaChorus: hymnList[index].chorusYoruba,
-            hymnEnglishVerses: hymnList[index].versesEnglish,
-            hymnEnglishChorus: hymnList[index].chorusEnglish,
-          );
-        }),
+          elevation: 0,
+          actions: [
+            ChangeNotifierProvider.value(
+              value: hymnList[pagenumber],
+              child: Consumer<Hymn>(
+                builder: (ctx, hymnIcon, _) => IconButton(
+                  icon: Icon(hymnIcon.isFavorites
+                      ? Icons.favorite
+                      : Icons.favorite_border),
+                  color: Theme.of(context).secondaryHeaderColor,
+                  onPressed: () {
+                    hymnIcon.toggleFav();
+                    Provider.of<HymnBookProvider>(context, listen: false)
+                        .checkfav(hymnIcon.id, context);
+                  },
+                ),
+              ),
+            ),
+            const LanguagePopUpMenu()
+          ],
+        ),
+        body: PageView(
+          clipBehavior: Clip.hardEdge,
+          onPageChanged: (value) {
+            setState(() {
+              pagenumber = value;
+            });
+          },
+          controller: controller,
+          children: List.generate(hymnList.length, (index) {
+            return HymnViewWidget(
+              hymnYorubaVerses: hymnList[index].versesYoruba,
+              hymnYorubaChorus: hymnList[index].chorusYoruba,
+              hymnEnglishVerses: hymnList[index].versesEnglish,
+              hymnEnglishChorus: hymnList[index].chorusEnglish,
+            );
+          }),
+        ),
       ),
     );
   }
