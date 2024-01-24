@@ -129,7 +129,8 @@ email: jonaruthan@gmail.com.
 
 whatsapp: +2348106295605.
 
-twitter: @jlvck_dart. https://x.com/jlvck_dart?s=21
+twitter: @jlvck_dart. https://x.com/jlvck_dart
+
 
 
 
