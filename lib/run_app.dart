@@ -4,14 +4,14 @@ import 'package:page_transition/page_transition.dart';
 
 import './theme_class.dart';
 
-import 'providers/hymn_book_provider.dart';
-import 'providers/navigation_provider.dart';
-import 'providers/language_provider.dart';
-import 'providers/theme_provider.dart';
+import 'features/hymn/presentation/controllers/hymn_book_provider.dart';
+import 'features/hymn/presentation/controllers/navigation_provider.dart';
+import 'features/hymn/presentation/controllers/language_provider.dart';
+import 'features/hymn/presentation/controllers/theme_provider.dart';
 
-import 'screens/hymn_book_screen.dart';
-import 'screens/favorites_screen.dart';
-import 'screens/splash_screen.dart';
+import 'features/hymn/presentation/screens/hymn_book_screen.dart';
+import 'features/hymn/presentation/screens/favorites_screen.dart';
+import 'features/hymn/presentation/screens/splash_screen.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({

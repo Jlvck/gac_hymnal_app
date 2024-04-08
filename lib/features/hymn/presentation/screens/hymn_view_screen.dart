@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/hymn_book_provider.dart';
-import '../providers/language_provider.dart';
+import '../controllers/hymn_book_provider.dart';
+import '../controllers/language_provider.dart';
 
-import '../widgets/language_popup_menu.dart';
-import '../widgets/hymn_view_widget.dart';
+import '../../../../widgets/language_popup_menu.dart';
+import '../../../../widgets/hymn_view_widget.dart';
 
-import '../model/hymn.dart';
-import '../model/language_item.dart';
+import '../../../../model/hymn.dart';
+import '../../../../model/language_item.dart';
 
 class HymnViewScreen extends StatefulWidget {
   static const String routeName = "/hymn_view";

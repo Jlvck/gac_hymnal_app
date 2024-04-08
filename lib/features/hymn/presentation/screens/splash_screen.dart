@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/hymn_book_provider.dart';
-import '../providers/theme_provider.dart';
+import '../controllers/hymn_book_provider.dart';
+import '../controllers/theme_provider.dart';
 
 import 'hymn_book_screen.dart';
 

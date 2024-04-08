@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/language_item.dart';
+import '../../../../model/language_item.dart';
 
 class LanguageProvider extends ChangeNotifier {
   LanguageItem _currentItem = LanguageItem.yoruba;

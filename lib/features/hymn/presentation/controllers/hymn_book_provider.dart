@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../hymn_texts/hymn_text_1_50.dart';
-import '../hymn_texts/hymn_text_51_100.dart';
-import '../hymn_texts/hymn_text_101_150.dart';
-import '../hymn_texts/hymn_text_151_200.dart';
-import '../hymn_texts/hymn_text_201_250.dart';
-import '../hymn_texts/hymn_text_251_300.dart';
-import '../hymn_texts/hymn_text_301_350.dart';
-import '../hymn_texts/hymn_text_351_400.dart';
-import '../hymn_texts/hymn_text_401_450.dart';
-import '../hymn_texts/hymn_text_451_500.dart';
+import '../../../../hymn_texts/hymn_text_1_50.dart';
+import '../../../../hymn_texts/hymn_text_51_100.dart';
+import '../../../../hymn_texts/hymn_text_101_150.dart';
+import '../../../../hymn_texts/hymn_text_151_200.dart';
+import '../../../../hymn_texts/hymn_text_201_250.dart';
+import '../../../../hymn_texts/hymn_text_251_300.dart';
+import '../../../../hymn_texts/hymn_text_301_350.dart';
+import '../../../../hymn_texts/hymn_text_351_400.dart';
+import '../../../../hymn_texts/hymn_text_401_450.dart';
+import '../../../../hymn_texts/hymn_text_451_500.dart';
 
-import '../model/hymn.dart';
+import '../../../../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
   //sharedpref key for favList

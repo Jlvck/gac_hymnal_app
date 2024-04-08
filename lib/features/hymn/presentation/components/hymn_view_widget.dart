@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 
 import '../providers/language_provider.dart';
 
-import './hymn_verses_widget.dart';
-import './hymn_chorus_widget.dart';
+import 'hymn_verses_widget.dart';
+import 'hymn_chorus_widget.dart';
 
 import '../model/language_item.dart';
 

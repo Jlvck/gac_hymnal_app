@@ -7,7 +7,7 @@ import '../model/hymn.dart';
 import '../model/language_item.dart';
 import '../providers/hymn_book_provider.dart';
 import '../providers/language_provider.dart';
-import '../screens/hymn_view_screen.dart';
+import '../features/hymn/presentation/screens/hymn_view_screen.dart';
 
 class HymnGridView extends StatelessWidget {
   final List<Hymn> hymnList;

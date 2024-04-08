@@ -1,18 +1,18 @@
 import 'package:church/model/language_item.dart';
-import 'package:church/providers/language_provider.dart';
+import 'package:church/features/hymn/presentation/controllers/language_provider.dart';
 import 'package:church/widgets/toggle_theme_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '../providers/hymn_book_provider.dart';
+import '../controllers/hymn_book_provider.dart';
 
 import 'hymn_view_screen.dart';
-import '../widgets/main_text_field.dart';
-import '../widgets/displayed_hymn_list.dart';
-import '../widgets/drawer.dart';
-import '../widgets/language_popup_menu.dart';
+import '../../../../widgets/main_text_field.dart';
+import '../../../../widgets/displayed_hymn_list.dart';
+import '../../../../widgets/drawer.dart';
+import '../../../../widgets/language_popup_menu.dart';
 
-import '../model/hymn.dart';
+import '../../../../model/hymn.dart';
 
 class HymnBookScreen extends StatefulWidget {
   static const routeName = '/hymn_category';

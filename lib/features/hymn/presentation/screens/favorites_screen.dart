@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import '../providers/hymn_book_provider.dart';
-import '../widgets/language_popup_menu.dart';
-import '../widgets/drawer.dart';
-import '../widgets/hymn_list_view.dart';
-import '../widgets/hymn_grid_view.dart';
-import '../model/hymn.dart';
-import '../widgets/toggle_theme_switch.dart';
+import '../controllers/hymn_book_provider.dart';
+import '../../../../widgets/language_popup_menu.dart';
+import '../../../../widgets/drawer.dart';
+import '../../../../widgets/hymn_list_view.dart';
+import '../../../../widgets/hymn_grid_view.dart';
+import '../../../../model/hymn.dart';
+import '../../../../widgets/toggle_theme_switch.dart';
 
 class FavoritesScreen extends StatefulWidget {
   static const routeName = "/favorites_screen";
