@@ -5,7 +5,7 @@ class MainTextField extends StatefulWidget {
   //The Longer textField is taged Title
   //The Shorter textField is taged number
 
-  final List<Hymn> foundHymns;
+  final List<HymnNotifier> foundHymns;
   final TextEditingController enteredHymnTitle;
   final TextEditingController enteredHymnNumber;
   final Function runFilter;

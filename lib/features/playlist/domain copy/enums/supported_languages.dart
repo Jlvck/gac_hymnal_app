@@ -1,0 +1,4 @@
+enum SupportedLanguage {
+  english,
+  yoruba,
+}

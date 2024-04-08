@@ -6,10 +6,10 @@ import 'package:collection/collection.dart';
 void main() {
   group('TESTING HYMN DATA INTEGRITY ', () {
     List<int> num = [];
-    List<Hymn> testHymnList = HymnBookProvider().hymnList;
-    List<Hymn> yorubatestChorus =
+    List<HymnNotifier> testHymnList = HymnBookProvider().hymnList;
+    List<HymnNotifier> yorubatestChorus =
         testHymnList.where((hymn) => hymn.chorusYoruba != null).toList();
-    List<Hymn> englishtestChorus =
+    List<HymnNotifier> englishtestChorus =
         testHymnList.where((hymn) => hymn.chorusEnglish != null).toList();
 
     test('Testing the integrity of hymn number arrangement', () {

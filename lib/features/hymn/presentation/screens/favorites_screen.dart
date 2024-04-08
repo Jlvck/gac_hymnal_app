@@ -1,13 +1,13 @@
+import 'package:church/features/hymn/presentation/components/drawer.dart';
+import 'package:church/features/hymn/presentation/components/hymn_grid_view.dart';
+import 'package:church/features/hymn/presentation/components/hymn_list_view.dart';
+import 'package:church/features/hymn/presentation/components/language_popup_menu.dart';
+import 'package:church/features/hymn/presentation/components/toggle_theme_switch.dart';
+import 'package:church/model/hymn.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import '../controllers/hymn_book_provider.dart';
-import '../../../../widgets/language_popup_menu.dart';
-import '../../../../widgets/drawer.dart';
-import '../../../../widgets/hymn_list_view.dart';
-import '../../../../widgets/hymn_grid_view.dart';
-import '../../../../model/hymn.dart';
-import '../../../../widgets/toggle_theme_switch.dart';
 
 class FavoritesScreen extends StatefulWidget {
   static const routeName = "/favorites_screen";
@@ -25,7 +25,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    List<Hymn> favoriteHymnList =
+    List<HymnNotifier> favoriteHymnList =
         Provider.of<HymnBookProvider>(context, listen: true).favHymnList;
     return Semantics(
       label: "Favorites Screen",

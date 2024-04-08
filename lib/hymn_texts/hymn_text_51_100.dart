@@ -1,8 +1,8 @@
 import '../model/hymn.dart';
 
 class HymnText51to100 {
-  List<Hymn> hymnLyrics = <Hymn>[
-    Hymn(id: '51', versesEnglish: [
+  List<HymnNotifier> hymnLyrics = <HymnNotifier>[
+    HymnNotifier(id: '51', versesEnglish: [
       [
         "I will sing the wondrous story",
         "Of the Christ who died for me;",
@@ -63,7 +63,7 @@ class HymnText51to100 {
       "Ngo b'awon mimo korin na,",
       "'Gbat'a ba pade loke.",
     ]),
-    Hymn(id: '52', versesEnglish: [
+    HymnNotifier(id: '52', versesEnglish: [
       [
         "The strain upraise of joy and praise, Alleluia!",
         "To the glory of their King shall the ransomed people sing.",
@@ -220,7 +220,7 @@ class HymnText51to100 {
         "Alle/luya! Alle/luya!",
       ]
     ]),
-    Hymn(id: '53', versesEnglish: [
+    HymnNotifier(id: '53', versesEnglish: [
       [
         "I cherish thee, my Sunday School,",
         "Oh, how precious thou art;",
@@ -295,7 +295,7 @@ class HymnText51to100 {
         "L'oni, l' airi 'bukun?"
       ]
     ]),
-    Hymn(id: '54', versesEnglish: [
+    HymnNotifier(id: '54', versesEnglish: [
       [
         "Do not sinful action,",
         "Speak no angry word;",
@@ -382,7 +382,7 @@ class HymnText51to100 {
         "Si ma se rere.",
       ]
     ]),
-    Hymn(
+    HymnNotifier(
       id: '55',
       versesEnglish: [
         [
@@ -461,7 +461,7 @@ class HymnText51to100 {
         ]
       ],
     ),
-    Hymn(id: '56', versesEnglish: [
+    HymnNotifier(id: '56', versesEnglish: [
       [
         "One there is above all others",
         "Oh, how He loves!",
@@ -544,7 +544,7 @@ class HymnText51to100 {
         "A ! O fę wa ! ",
       ],
     ]),
-    Hymn(id: '57', versesEnglish: [
+    HymnNotifier(id: '57', versesEnglish: [
       [
         "O Thou who makest souls to shine",
         "With light from brighter worlds above,",
@@ -619,7 +619,7 @@ class HymnText51to100 {
         "La o mo ohun ti aiku je.",
       ]
     ]),
-    Hymn(id: '58', versesEnglish: [
+    HymnNotifier(id: '58', versesEnglish: [
       [
         "O Day of rest and gladness,",
         "O Day of joy and light,",
@@ -721,7 +721,7 @@ class HymnText51to100 {
         "N' iyin Mẹtalọkan",
       ]
     ]),
-    Hymn(id: '59', versesEnglish: [
+    HymnNotifier(id: '59', versesEnglish: [
       [
         "What a blessed Lord’s day",
         "Thou art a day of rest",
@@ -804,7 +804,7 @@ class HymnText51to100 {
         "Pelu enia Re.",
       ]
     ]),
-    Hymn(id: '60', versesEnglish: [
+    HymnNotifier(id: '60', versesEnglish: [
       [
         "HEAD of the church triumphant,",
         "We joyfully adore Thee;",
@@ -887,7 +887,7 @@ class HymnText51to100 {
         "Lati pe wa lọ s' ọrun.",
       ]
     ]),
-    Hymn(
+    HymnNotifier(
       id: '61',
       versesEnglish: [
         [
@@ -942,7 +942,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '62',
       versesEnglish: [
         [
@@ -997,7 +997,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '63',
       versesEnglish: [
         [
@@ -1064,7 +1064,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '64',
       versesEnglish: [
         [
@@ -1119,7 +1119,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(id: '65', versesEnglish: [
+    HymnNotifier(id: '65', versesEnglish: [
       [
         "Happy is the Sabbath day for me",
         "All its bells and its sermon,",
@@ -1170,7 +1170,7 @@ class HymnText51to100 {
         "K'O sọ ọkan mi d'ominira.",
       ],
     ]),
-    Hymn(id: '66', versesEnglish: [
+    HymnNotifier(id: '66', versesEnglish: [
       [
         "O Thou God of Heaven",
         "Thou hast six days to work,",
@@ -1245,7 +1245,7 @@ class HymnText51to100 {
         "Mu wa de 'simi Rę.",
       ],
     ]),
-    Hymn(id: '67', versesEnglish: [
+    HymnNotifier(id: '67', versesEnglish: [
       [
         "Sweet is the work, my God, my king",
         "To praise Thy name, give thanks, and sing,",
@@ -1308,7 +1308,7 @@ class HymnText51to100 {
         "Lati ṣe 'fẹ Rẹ titi lai.",
       ],
     ]),
-    Hymn(
+    HymnNotifier(
       id: '68',
       versesEnglish: [
         [
@@ -1363,7 +1363,7 @@ class HymnText51to100 {
         "Ninu ogba Re l'aiye",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '69',
       versesEnglish: [
         [
@@ -1427,7 +1427,7 @@ class HymnText51to100 {
         "Mo se tan fun ise, Jesu",
       ],
     ),
-    Hymn(id: '70', versesEnglish: [
+    HymnNotifier(id: '70', versesEnglish: [
       [
         "Ye servants of the Lord,",
         "Each in his office wait,",
@@ -1490,7 +1490,7 @@ class HymnText51to100 {
         "Larin egbe Angel.",
       ],
     ]),
-    Hymn(id: '71', versesEnglish: [
+    HymnNotifier(id: '71', versesEnglish: [
       [
         "Take my life, and let it be",
         "Consecrated, Lord, to Thee;",
@@ -1565,7 +1565,7 @@ class HymnText51to100 {
         "Ki m' je Tire titi lai. ",
       ],
     ]),
-    Hymn(
+    HymnNotifier(
       id: '72',
       versesEnglish: [
         [
@@ -1658,7 +1658,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '73',
       versesEnglish: [
         [
@@ -1725,7 +1725,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '74',
       versesEnglish: [
         [
@@ -1792,7 +1792,7 @@ class HymnText51to100 {
         "Titi Oluwa y'o fi de.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '75',
       versesEnglish: [
         [
@@ -1858,7 +1858,7 @@ class HymnText51to100 {
         "Duro, duro, sa rọju, maṣe kun!",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '76',
       versesEnglish: [
         [
@@ -1949,7 +1949,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '77',
       versesEnglish: [
         [
@@ -2040,7 +2040,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '78',
       versesEnglish: [
         [
@@ -2107,7 +2107,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '79',
       versesEnglish: [
         [
@@ -2186,7 +2186,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '80',
       versesEnglish: [
         [
@@ -2253,7 +2253,7 @@ class HymnText51to100 {
         "Gba enikan la loni.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '81',
       versesEnglish: [
         [
@@ -2320,7 +2320,7 @@ class HymnText51to100 {
         "Şe mi l'ohun-elo loni, Baba",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '82',
       versesEnglish: [
         [
@@ -2387,7 +2387,7 @@ class HymnText51to100 {
         "Lati ko alikama s'aba",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '83',
       versesEnglish: [
         [
@@ -2465,7 +2465,7 @@ class HymnText51to100 {
         "Orin mi ni l'osan ati l'oru.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '84',
       versesEnglish: [
         [
@@ -2552,7 +2552,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '85',
       versesEnglish: [
         [
@@ -2603,7 +2603,7 @@ class HymnText51to100 {
         "Fun Kristi Oba titun",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '86',
       versesEnglish: [
         [
@@ -2678,7 +2678,7 @@ class HymnText51to100 {
         "Ogo fun Oba t'a bi",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '87',
       versesEnglish: [
         [
@@ -2744,7 +2744,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '88',
       versesEnglish: [
         [
@@ -2809,7 +2809,7 @@ class HymnText51to100 {
         "Oruko wo l'o dun to yi - Emmanuel.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '89',
       versesEnglish: [
         [
@@ -2896,7 +2896,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '90',
       versesEnglish: [
         [
@@ -2961,7 +2961,7 @@ class HymnText51to100 {
         "Ẹ wa k'a lọ juba Kristi Oluwa.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '91',
       versesEnglish: [
         [
@@ -3032,7 +3032,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '92',
       versesEnglish: [
         [
@@ -3104,7 +3104,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(id: '93', versesEnglish: [
+    HymnNotifier(id: '93', versesEnglish: [
       [
         "Jesus my Saviour to Bethlehem came,",
         "Born in a manager to sorrow and shame;",
@@ -3191,7 +3191,7 @@ class HymnText51to100 {
         "Onpada bo fun mi.",
       ],
     ]),
-    Hymn(
+    HymnNotifier(
       id: '94',
       versesEnglish: [
         [
@@ -3271,7 +3271,7 @@ class HymnText51to100 {
         "Ogo f' Olorun l'oke.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '95',
       versesEnglish: [
         [
@@ -3349,7 +3349,7 @@ class HymnText51to100 {
         "Si ko ese mi lo.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '96',
       versesEnglish: [
         [
@@ -3416,7 +3416,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '97',
       versesEnglish: [
         [
@@ -3503,7 +3503,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '98',
       versesEnglish: [
         [
@@ -3582,7 +3582,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '99',
       versesEnglish: [
         [
@@ -3661,7 +3661,7 @@ class HymnText51to100 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '100',
       versesEnglish: [
         [

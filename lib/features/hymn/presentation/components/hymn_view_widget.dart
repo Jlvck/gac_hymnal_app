@@ -1,14 +1,14 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:church/features/hymn/presentation/controllers/language_provider.dart';
+import 'package:church/model/language_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/language_provider.dart';
 
 import 'hymn_verses_widget.dart';
 import 'hymn_chorus_widget.dart';
 
-import '../model/language_item.dart';
 
 class HymnViewWidget extends StatelessWidget {
   final List<List<String>> hymnYorubaVerses;

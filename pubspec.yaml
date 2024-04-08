@@ -47,6 +47,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.11
   collection: ^1.18.0
+  flutter_riverpod: ^2.5.1
 
 dev_dependencies:
   flutter_test:

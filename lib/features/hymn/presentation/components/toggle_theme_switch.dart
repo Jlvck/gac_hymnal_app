@@ -1,8 +1,8 @@
+import 'package:church/features/hymn/presentation/controllers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-import '../providers/theme_provider.dart';
 
 class ToggleThemeSwitch extends StatelessWidget {
   const ToggleThemeSwitch({super.key});

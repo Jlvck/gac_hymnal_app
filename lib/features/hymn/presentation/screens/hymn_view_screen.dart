@@ -1,11 +1,10 @@
+import 'package:church/features/hymn/presentation/components/hymn_view_widget.dart';
+import 'package:church/features/hymn/presentation/components/language_popup_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../controllers/hymn_book_provider.dart';
 import '../controllers/language_provider.dart';
-
-import '../../../../widgets/language_popup_menu.dart';
-import '../../../../widgets/hymn_view_widget.dart';
 
 import '../../../../model/hymn.dart';
 import '../../../../model/language_item.dart';
@@ -23,7 +22,7 @@ class HymnViewScreen extends StatefulWidget {
 }
 
 class _HymnViewScreenState extends State<HymnViewScreen> {
-  List<Hymn> hymnList = [];
+  List<HymnNotifier> hymnList = [];
   int pagenumber = 0;
 
   @override
@@ -58,7 +57,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           actions: [
             ChangeNotifierProvider.value(
               value: hymnList[pagenumber],
-              child: Consumer<Hymn>(
+              child: Consumer<HymnNotifier>(
                 builder: (ctx, hymnIcon, _) => IconButton(
                   icon: Icon(hymnIcon.isFavorites
                       ? Icons.favorite

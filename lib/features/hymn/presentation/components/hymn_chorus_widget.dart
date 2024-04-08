@@ -1,8 +1,7 @@
+import 'package:church/features/hymn/presentation/controllers/language_provider.dart';
+import 'package:church/model/language_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/language_provider.dart';
-
-import '../model/language_item.dart';
 
 class HymnChorusWidget extends StatelessWidget {
   final List<String> currentChorus;

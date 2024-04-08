@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Hymn with ChangeNotifier {
+class HymnNotifier with ChangeNotifier {
   final String id;
   final List<List<String>> versesYoruba;
   final List<String>? chorusYoruba;
@@ -13,7 +13,7 @@ class Hymn with ChangeNotifier {
     notifyListeners();
   }
 
-  Hymn(
+  HymnNotifier(
       {required this.id,
       required this.versesYoruba,
       this.chorusYoruba,

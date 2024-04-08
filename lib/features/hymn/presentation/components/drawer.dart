@@ -1,13 +1,13 @@
-import 'package:church/widgets/drawer_list_tile.dart';
+import 'package:church/features/hymn/presentation/components/drawer_list_tile.dart';
+import 'package:church/features/hymn/presentation/components/social_media_tile.dart';
+import 'package:church/features/hymn/presentation/screens/favorites_screen.dart';
+import 'package:church/features/hymn/presentation/screens/hymn_book_screen.dart';
+import 'package:church/model/navigation_item.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import '../model/navigation_item.dart';
-import '../features/hymn/presentation/screens/hymn_book_screen.dart';
-import '../features/hymn/presentation/screens/favorites_screen.dart';
-import '../widgets/social_media_tile.dart';
 
 class MainDrawer extends StatelessWidget {
   final ScrollController _scroll = ScrollController();

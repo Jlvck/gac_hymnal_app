@@ -1,16 +1,19 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:church/features/hymn/presentation/controllers/hymn_book_provider.dart';
+import 'package:church/features/hymn/presentation/controllers/language_provider.dart';
+import 'package:church/features/hymn/presentation/screens/hymn_view_screen.dart';
+import 'package:church/model/language_item.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '../model/hymn.dart';
-import '../model/language_item.dart';
-import '../providers/hymn_book_provider.dart';
-import '../providers/language_provider.dart';
-import '../features/hymn/presentation/screens/hymn_view_screen.dart';
+
+import '../../../../model/hymn.dart';
+
+// import '../../../playlist/domain copy/entities/hymn.dart';
 
 class HymnGridView extends StatelessWidget {
-  final List<Hymn> hymnList;
+  final List<HymnNotifier> hymnList;
 
   final ScrollController scroll;
 
@@ -109,7 +112,7 @@ class HymnGridView extends StatelessWidget {
                             label: "Favorites button",
                             child: ChangeNotifierProvider.value(
                               value: hymnList[index],
-                              child: Consumer<Hymn>(
+                              child: Consumer<HymnNotifier>(
                                 builder: (ctxx, hymnIcon, _) => IconButton(
                                   padding: EdgeInsets.zero,
                                   alignment: Alignment.centerRight,

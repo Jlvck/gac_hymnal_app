@@ -1,8 +1,8 @@
 import '../model/hymn.dart';
 
 class HymnText151to200 {
-  List<Hymn> hymnLyrics = <Hymn>[
-    Hymn(
+  List<HymnNotifier> hymnLyrics = <HymnNotifier>[
+    HymnNotifier(
       id: '151',
       versesEnglish: [
         [
@@ -92,7 +92,7 @@ class HymnText151to200 {
         "Jesu fe an' emi.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '152',
       versesEnglish: [
         [
@@ -147,7 +147,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '153',
       versesEnglish: [
         [
@@ -214,7 +214,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '154',
       versesEnglish: [
         [
@@ -281,7 +281,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '155',
       versesEnglish: [
         [
@@ -336,7 +336,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '156',
       versesEnglish: [
         [
@@ -391,7 +391,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '157',
       versesEnglish: [
         [
@@ -466,7 +466,7 @@ class HymnText151to200 {
         "Ina Re nwo wa san.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '158',
       versesEnglish: [
         [
@@ -519,7 +519,7 @@ class HymnText151to200 {
         "Mbę ninu Eję Jesu.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '159',
       versesEnglish: [
         [
@@ -586,7 +586,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '160',
       versesEnglish: [
         [
@@ -653,7 +653,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '161',
       versesEnglish: [
         [
@@ -732,7 +732,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '162',
       versesEnglish: [
         [
@@ -799,7 +799,7 @@ class HymnText151to200 {
         "Ko si lehin eję Jesu.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '163',
       versesEnglish: [
         [
@@ -868,7 +868,7 @@ class HymnText151to200 {
         "A we o n'nu eje Od' agutan?",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '164',
       versesEnglish: [
         [
@@ -955,7 +955,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '165',
       versesEnglish: [
         [
@@ -1017,7 +1017,7 @@ class HymnText151to200 {
         "yio gbala.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '166',
       versesEnglish: [
         [
@@ -1088,7 +1088,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '167',
       versesEnglish: [
         [
@@ -1143,7 +1143,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '168',
       versesEnglish: [
         [
@@ -1198,7 +1198,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '169',
       versesEnglish: [
         [
@@ -1288,7 +1288,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '170',
       versesEnglish: [
         [
@@ -1367,7 +1367,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '171',
       versesEnglish: [
         [
@@ -1422,7 +1422,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '172',
       versesEnglish: [
         [
@@ -1501,7 +1501,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '173',
       versesEnglish: [
         [
@@ -1586,7 +1586,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '174',
       versesEnglish: [
         [
@@ -1653,7 +1653,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '175',
       versesEnglish: [
         [
@@ -1719,7 +1719,7 @@ class HymnText151to200 {
         "Pada elese, e pada",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '176',
       versesEnglish: [
         [
@@ -1794,7 +1794,7 @@ class HymnText151to200 {
         "Krist' y'o joba.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '177',
       versesEnglish: [
         [
@@ -1881,7 +1881,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '178',
       versesEnglish: [
         [
@@ -1980,7 +1980,7 @@ class HymnText151to200 {
         "Ti o nmu igbala wa.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '179',
       versesEnglish: [
         [
@@ -2047,7 +2047,7 @@ class HymnText151to200 {
         "Je k' o tan yi aiye ka.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '180',
       versesEnglish: [
         [
@@ -2126,7 +2126,7 @@ class HymnText151to200 {
         "Titi gbogb' ahon y'o jewo Re l'Oluwa.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '181',
       versesEnglish: [
         [
@@ -2194,7 +2194,7 @@ class HymnText151to200 {
         "Jesu wa pelu wa de opin.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '182',
       versesEnglish: [
         [
@@ -2261,7 +2261,7 @@ class HymnText151to200 {
         "Yin Oruko Re titi",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '183',
       versesEnglish: [
         [
@@ -2348,7 +2348,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '184',
       versesEnglish: [
         [
@@ -2450,7 +2450,7 @@ class HymnText151to200 {
         "Ojo ti a o de ade lodo Re",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '185',
       versesEnglish: [
         [
@@ -2536,7 +2536,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '186',
       versesEnglish: [
         [
@@ -2639,7 +2639,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '187',
       versesEnglish: [
         [
@@ -2728,7 +2728,7 @@ class HymnText151to200 {
         "Wo inu Re, iwo y' o si ri 'wosan.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '188',
       versesEnglish: [
         [
@@ -2795,7 +2795,7 @@ class HymnText151to200 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '189',
       versesEnglish: [
         [
@@ -2870,7 +2870,7 @@ class HymnText151to200 {
         "Itan lyanu t' ife!",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '190',
       versesEnglish: [
         [
@@ -2940,7 +2940,7 @@ class HymnText151to200 {
         "Kristi ngba 'won elese.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '191',
       versesEnglish: [
         [
@@ -3007,7 +3007,7 @@ class HymnText151to200 {
         "M' okan gbogbo wa soji.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '192',
       versesEnglish: [
         [
@@ -3075,7 +3075,7 @@ class HymnText151to200 {
         "So fun Jesu nikan",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '193',
       versesEnglish: [
         [
@@ -3156,7 +3156,7 @@ class HymnText151to200 {
         "Emi y'o je Tire.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '194',
       versesEnglish: [
         [
@@ -3224,7 +3224,7 @@ class HymnText151to200 {
         "Yo gba o loni;",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '195',
       versesEnglish: [
         [
@@ -3291,7 +3291,7 @@ class HymnText151to200 {
         "Gba mi bi mo ti ri.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '196',
       versesEnglish: [
         [
@@ -3358,7 +3358,7 @@ class HymnText151to200 {
         "Oro 'yanu t' iye.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '197',
       versesEnglish: [
         [
@@ -3461,7 +3461,7 @@ class HymnText151to200 {
         "Jesu: Jesu: Jesu.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '198',
       versesEnglish: [
         [
@@ -3528,7 +3528,7 @@ class HymnText151to200 {
         "Sugbon ojo l' antoro.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '199',
       versesEnglish: [
         [
@@ -3627,7 +3627,7 @@ class HymnText151to200 {
         "T'o fa mi pada bo wa S'agbo!",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '200',
       versesEnglish: [
         [

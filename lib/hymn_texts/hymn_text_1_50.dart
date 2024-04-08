@@ -1,8 +1,8 @@
 import '../model/hymn.dart';
 
 class HymnText1to50 {
-  List<Hymn> hymnLyrics = <Hymn>[
-    Hymn(
+  List<HymnNotifier> hymnLyrics = <HymnNotifier>[
+    HymnNotifier(
       id: '1',
       versesYoruba: [
         [
@@ -105,7 +105,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(id: '2', versesYoruba: [
+    HymnNotifier(id: '2', versesYoruba: [
       [
         "Oluwa mi, mo njade lo.",
         "Lati se ise ojo mi.",
@@ -180,7 +180,7 @@ class HymnText1to50 {
         "And closely walk with Thee to heaven.",
       ]
     ]),
-    Hymn(
+    HymnNotifier(
       id: '3',
       versesYoruba: [
         [
@@ -247,7 +247,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(id: '4', versesYoruba: [
+    HymnNotifier(id: '4', versesYoruba: [
       [
         "Wa s'adura ooro,",
         "Kunle k'a gbadura,",
@@ -298,7 +298,7 @@ class HymnText1to50 {
         "With Thee to watch and pray.",
       ]
     ]),
-    Hymn(
+    HymnNotifier(
       id: '5',
       versesYoruba: [
         [
@@ -341,7 +341,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(id: '6', versesYoruba: [
+    HymnNotifier(id: '6', versesYoruba: [
       [
         "Baba mi, gbo t' emi",
         "Wo ni Alaabo mi",
@@ -392,7 +392,7 @@ class HymnText1to50 {
         "Only Thine for ever."
       ]
     ]),
-    Hymn(id: '7', versesYoruba: [
+    HymnNotifier(id: '7', versesYoruba: [
       [
         "Ninu gbogbo ewu oru,",
         "Oluwa l'o so mi:",
@@ -443,7 +443,7 @@ class HymnText1to50 {
         "Thy glorious face at last.",
       ]
     ]),
-    Hymn(id: '8', versesYoruba: [
+    HymnNotifier(id: '8', versesYoruba: [
       [
         "Krist, Ologo, Olola,",
         "Iwo Imole aiye,",
@@ -494,7 +494,7 @@ class HymnText1to50 {
         "Shining to the perfect day."
       ],
     ]),
-    Hymn(id: '9', versesYoruba: [
+    HymnNotifier(id: '9', versesYoruba: [
       [
         "Jesu, Oorun ododo,",
         "Iwo imolę ife.",
@@ -577,7 +577,7 @@ class HymnText1to50 {
         "Safely rest.",
       ],
     ]),
-    Hymn(id: '10', versesYoruba: [
+    HymnNotifier(id: '10', versesYoruba: [
       [
         "Ogo f'Olorun l'ale yi",
         "Fun gbogbo ōre imole",
@@ -640,7 +640,7 @@ class HymnText1to50 {
         "Praise Father, Son and Holy Ghost.",
       ],
     ]),
-    Hymn(id: '11', versesYoruba: [
+    HymnNotifier(id: '11', versesYoruba: [
       [
         "Ife Re da wa si l'oni",
         "L'are a si dubulę,",
@@ -675,7 +675,7 @@ class HymnText1to50 {
         "O let us all rest in Thee. "
       ],
     ]),
-    Hymn(id: '12', versesYoruba: [
+    HymnNotifier(id: '12', versesYoruba: [
       [
         "Wa ba mi gbe ale fere le tan:",
         "Okunkun nşu; Oluwa, ba mi gbe;",
@@ -750,7 +750,7 @@ class HymnText1to50 {
         "In life, in death, O Lord, abide with me. ",
       ],
     ]),
-    Hymn(id: '13', versesYoruba: [
+    HymnNotifier(id: '13', versesYoruba: [
       [
         "Iwo Imole okan mi,",
         "Li odo Rę oru ko si,",
@@ -825,7 +825,7 @@ class HymnText1to50 {
         "We lose ourselves in heaven above. ",
       ],
     ]),
-    Hymn(id: '14', versesYoruba: [
+    HymnNotifier(id: '14', versesYoruba: [
       [
         "L'oju ale 'gbat' orun wo,",
         "Nwon gbe abirun w' odo Rę,",
@@ -912,7 +912,7 @@ class HymnText1to50 {
         "And in Thy mercy heal us all. ",
       ],
     ]),
-    Hymn(id: '15', versesYoruba: [
+    HymnNotifier(id: '15', versesYoruba: [
       [
         "'Wo imole larin ookun aiye,",
         "Må sin mi lo.",
@@ -963,7 +963,7 @@ class HymnText1to50 {
         "Which I have loved long since, and lost awhile. ",
       ],
     ]),
-    Hymn(id: '16', versesYoruba: [
+    HymnNotifier(id: '16', versesYoruba: [
       [
         "Jesu, bukun wa k'a to lo:",
         "Gbin oro Re si aiya wa,",
@@ -1062,7 +1062,7 @@ class HymnText1to50 {
         "O gentle Jesus, be our light. ",
       ]
     ]),
-    Hymn(id: '17', versesYoruba: [
+    HymnNotifier(id: '17', versesYoruba: [
       [
         "K'a to sun Olugbala wa,",
         "Fun wa n' ibukun alę :",
@@ -1125,7 +1125,7 @@ class HymnText1to50 {
         "Breaks in everlasting light. ",
       ],
     ]),
-    Hymn(id: '18', versesYoruba: [
+    HymnNotifier(id: '18', versesYoruba: [
       [
         "Oluwa ojo yi ti d'opin",
         "Okunkun si de l' aşe Re",
@@ -1189,7 +1189,7 @@ class HymnText1to50 {
         "Till all Thy creatures own Thy sway. ",
       ],
     ]),
-    Hymn(id: '19', versesYoruba: [
+    HymnNotifier(id: '19', versesYoruba: [
       [
         "Baba, a tun pade l'ooko Jesu,",
         "A si wa teriba lab' ese Re",
@@ -1240,7 +1240,7 @@ class HymnText1to50 {
         "Open blest mercy’s gate, and take us in.",
       ],
     ]),
-    Hymn(id: '20', versesYoruba: [
+    HymnNotifier(id: '20', versesYoruba: [
       [
         "A gboju s' oke si O.",
         "At' owo, ati okan",
@@ -1279,7 +1279,7 @@ class HymnText1to50 {
         "Awakened, let us praise Thee.",
       ],
     ]),
-    Hymn(
+    HymnNotifier(
       id: '21',
       versesYoruba: [
         [
@@ -1382,7 +1382,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(id: '22', versesYoruba: [
+    HymnNotifier(id: '22', versesYoruba: [
       [
         "Ojo oni koja lo;",
         "A dupę, Oluwa;",
@@ -1448,7 +1448,7 @@ class HymnText1to50 {
         "And guard and save us from them all.",
       ],
     ]),
-    Hymn(id: '23', versesYoruba: [
+    HymnNotifier(id: '23', versesYoruba: [
       [
         "Ooro didan ti rekoja",
         "Wawa l' akoko na fo lo; ",
@@ -1511,7 +1511,7 @@ class HymnText1to50 {
         "Art Lord of all.",
       ]
     ]),
-    Hymn(id: '24', versesYoruba: [
+    HymnNotifier(id: '24', versesYoruba: [
       [
         "Ki nto sun, fun oore t' oni",
         "T' Olorun",
@@ -1581,7 +1581,7 @@ class HymnText1to50 {
         "Counted in their number.",
       ],
     ]),
-    Hymn(
+    HymnNotifier(
       id: '25',
       versesYoruba: [
         [
@@ -1663,7 +1663,7 @@ class HymnText1to50 {
         "Is just the same today.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '26',
       versesYoruba: [
         [
@@ -1731,7 +1731,7 @@ class HymnText1to50 {
         "Glory to God, halleluyah!"
       ],
     ),
-    Hymn(id: '27', versesYoruba: [
+    HymnNotifier(id: '27', versesYoruba: [
       [
         "Fi iyin fun! Jesu Olurapada wa",
         "Ki aiye k'okiki ife Re nla",
@@ -1794,7 +1794,7 @@ class HymnText1to50 {
         "Jesus lives, the mighty and strong to save.",
       ],
     ]),
-    Hymn(id: '28', versesYoruba: [
+    HymnNotifier(id: '28', versesYoruba: [
       [
         "Em' o yin Oluwa fun ife Re,",
         "A we mi nin' eje Olurapada;",
@@ -1855,7 +1855,7 @@ class HymnText1to50 {
       "Oh, glory, glory, glory to the Lamb,",
       "I am washed in the blood of my Redeemer."
     ]),
-    Hymn(id: '29', versesYoruba: [
+    HymnNotifier(id: '29', versesYoruba: [
       [
         "E yin oba ogo, on ni olorun;",
         "Yin fun 'se yanu ti o ti fihan,",
@@ -1912,7 +1912,7 @@ class HymnText1to50 {
       "All His works shall praise Him,",
       "Bless the Lord, my soul."
     ]),
-    Hymn(id: '30', versesYoruba: [
+    HymnNotifier(id: '30', versesYoruba: [
       [
         "B' oruko Jesu ti dun to",
         "Ogo ni fun oruko Re",
@@ -1973,7 +1973,7 @@ class HymnText1to50 {
       "Blessed be the name! Blessed be the name!",
       "Blessed be the name of the Lord!"
     ]),
-    Hymn(id: '31', versesYoruba: [
+    HymnNotifier(id: '31', versesYoruba: [
       [
         "Kristi ni ipin mi titi,",
         "On l' O ngba mi nin' ese. ",
@@ -2024,7 +2024,7 @@ class HymnText1to50 {
       "I am saved by His grace",
       "And I have the witness within."
     ]),
-    Hymn(
+    HymnNotifier(
       id: '32',
       versesYoruba: [
         [
@@ -2151,7 +2151,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '33',
       versesYoruba: [
         [
@@ -2218,7 +2218,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '34',
       versesYoruba: [
         [
@@ -2273,7 +2273,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '35',
       versesYoruba: [
         [
@@ -2340,7 +2340,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '36',
       versesYoruba: [
         [
@@ -2407,7 +2407,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '37',
       versesYoruba: [
         [
@@ -2486,7 +2486,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '38',
       versesYoruba: [
         [
@@ -2565,7 +2565,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '39',
       versesYoruba: [
         [
@@ -2644,7 +2644,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '40',
       versesYoruba: [
         [
@@ -2715,7 +2715,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '41',
       versesYoruba: [
         [
@@ -2807,7 +2807,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '42',
       versesYoruba: [
         [
@@ -2868,7 +2868,7 @@ class HymnText1to50 {
         "Great things He hath done.",
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '43',
       versesYoruba: [
         [
@@ -2983,7 +2983,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '44',
       versesYoruba: [
         [
@@ -3038,7 +3038,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '45',
       versesYoruba: [
         [
@@ -3093,7 +3093,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '46',
       versesYoruba: [
         [
@@ -3160,7 +3160,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '47',
       versesYoruba: [
         [
@@ -3263,7 +3263,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '48',
       versesYoruba: [
         [
@@ -3354,7 +3354,7 @@ class HymnText1to50 {
         ],
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '49',
       versesYoruba: [
         [
@@ -3440,7 +3440,7 @@ class HymnText1to50 {
         ]
       ],
     ),
-    Hymn(
+    HymnNotifier(
       id: '50',
       versesYoruba: [
         [

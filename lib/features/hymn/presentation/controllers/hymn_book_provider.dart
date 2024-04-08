@@ -14,6 +14,8 @@ import '../../../../hymn_texts/hymn_text_451_500.dart';
 
 import '../../../../model/hymn.dart';
 
+
+
 class HymnBookProvider with ChangeNotifier {
   //sharedpref key for favList
   static const String prefKey = "favList";
@@ -72,13 +74,13 @@ class HymnBookProvider with ChangeNotifier {
   // Screen Function for the Slash screen which works by setting saved
   //shared preferences intance of a list of saved favorite hymn ids
   void setFavHymnList() async {
-    List<Hymn> pre = [];
+    List<HymnNotifier> pre = [];
     SharedPreferences prefs = await SharedPreferences.getInstance();
     favStringList = prefs.getStringList(prefKey) ?? [];
     List<String> fav = favStringList;
 
     //validating function of list of hymns that are saved as favorites
-    for (Hymn hymn in _hymnBook) {
+    for (HymnNotifier hymn in _hymnBook) {
       if (fav.contains(hymn.id)) {
         hymn.isFavorites = true;
         pre.add(hymn);
@@ -93,25 +95,25 @@ class HymnBookProvider with ChangeNotifier {
 
   //search operations function required to fetch hymn from
   //the original hymn
-  Hymn getHymn(String hymnNumber) {
+  HymnNotifier getHymn(String hymnNumber) {
     return _hymnBook.firstWhere((hymn) => hymn.id == hymnNumber);
   }
 
   //Returning List of Favavorite Hymn List to Favorite Screen
-  List<Hymn> get favHymnList {
-    List<Hymn> favList =
+  List<HymnNotifier> get favHymnList {
+    List<HymnNotifier> favList =
         _hymnBook.where((hymn) => hymn.isFavorites == true).toList();
 
     return favList;
   }
 
   //Returning a copy of original List
-  List<Hymn> get hymnList {
+  List<HymnNotifier> get hymnList {
     return [..._hymnBook];
   }
 
   //The Original List of Hymn
-  List<Hymn> _hymnBook = [
+  List<HymnNotifier> _hymnBook = [
     ...HymnText1to50().hymnLyrics,
     ...HymnText51to100().hymnLyrics,
     ...HymnText101to150().hymnLyrics,

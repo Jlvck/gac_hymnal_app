@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/navigation_provider.dart';
-import '../model/navigation_item.dart';
+import '../../../../model/navigation_item.dart';
+import '../controllers/navigation_provider.dart';
 
 class DrawerListTile extends StatelessWidget {
   final String titleName;

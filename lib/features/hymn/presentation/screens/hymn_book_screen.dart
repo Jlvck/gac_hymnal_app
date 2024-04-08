@@ -1,16 +1,16 @@
+import 'package:church/features/hymn/presentation/components/displayed_hymn_list.dart';
+import 'package:church/features/hymn/presentation/components/drawer.dart';
+import 'package:church/features/hymn/presentation/components/language_popup_menu.dart';
+import 'package:church/features/hymn/presentation/components/main_text_field.dart';
+import 'package:church/features/hymn/presentation/components/toggle_theme_switch.dart';
 import 'package:church/model/language_item.dart';
 import 'package:church/features/hymn/presentation/controllers/language_provider.dart';
-import 'package:church/widgets/toggle_theme_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '../controllers/hymn_book_provider.dart';
 
 import 'hymn_view_screen.dart';
-import '../../../../widgets/main_text_field.dart';
-import '../../../../widgets/displayed_hymn_list.dart';
-import '../../../../widgets/drawer.dart';
-import '../../../../widgets/language_popup_menu.dart';
 
 import '../../../../model/hymn.dart';
 
@@ -30,8 +30,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
 
   final ScrollController _scroll = ScrollController();
 
-  List<Hymn> _staticHymns = [];
-  final ValueNotifier<List<Hymn>> _foundHymns = ValueNotifier(<Hymn>[]);
+  List<HymnNotifier> _staticHymns = [];
+  final ValueNotifier<List<HymnNotifier>> _foundHymns =
+      ValueNotifier(<HymnNotifier>[]);
 
   @override
   void initState() {
@@ -113,7 +114,9 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                     valueListenable: _foundHymns,
                     builder: (BuildContext context, value, child) {
                       return DisplayedHymnList(
-                          foundHymns: value, scroll: _scroll);
+                        foundHymns: value,
+                        scroll: _scroll,
+                      );
                     }),
               ],
             ),
@@ -199,7 +202,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
     _foundHymns.value = _staticHymns;
   }
 
-  void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
+  void _onSubmittedNumber(String submit, List<HymnNotifier> hymnData) {
     FocusManager.instance.primaryFocus?.unfocus();
     if (hymnData.any((hymn) => hymn.id == submit)) {
       Navigator.of(context)
@@ -221,7 +224,7 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   }
 
   void _runFilter(String enteredUserHymn) {
-    List<Hymn> results = [];
+    List<HymnNotifier> results = [];
 
     if (enteredUserHymn.isEmpty ||
         enteredUserHymn == "/" ||
