@@ -1,4 +1,4 @@
-import 'package:church/features/hymn/presentation/screens/hymn_english_screen.dart';
+import 'package:church/features/hymn/presentation/screens/dummy_screens/hymn_english_screen.dart';
 import 'package:flutter/material.dart';
 
 class DummyYorubaScreen extends StatelessWidget {
