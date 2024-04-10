@@ -1,4 +1,4 @@
-import 'package:church/features/hymn/presentation/screens/dummy_screens/hymn_english_screen.dart';
+import 'package:church/features/hymn/presentation/screens/dummy_screens/hymn_yoruba_screen.dart';
 import 'package:flutter/material.dart';
 
 class DummyYorubaScreen extends StatelessWidget {
@@ -40,7 +40,7 @@ class DummyYorubaScreen extends StatelessWidget {
           ListTile(
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => HymnEnglishScreen()));
+                  MaterialPageRoute(builder: (context) => HymnYorubaScreen()));
             },
             isThreeLine: true,
             title: Text("Hymn 001"),
