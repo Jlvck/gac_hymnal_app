@@ -5,10 +5,8 @@ import 'package:church/model/language_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
 import 'hymn_verses_widget.dart';
 import 'hymn_chorus_widget.dart';
-
 
 class HymnViewWidget extends StatelessWidget {
   final List<List<String>> hymnYorubaVerses;
@@ -68,7 +66,7 @@ class HymnViewWidget extends StatelessWidget {
                             color: Theme.of(context).colorScheme.onBackground),
                       ),
                       //Hymn Verse of the Hymn
-                      HymnVersesWidget(
+                      EachHymnVerseWidget(
                         currentVerse: currentHymn[index],
                       ),
                       //Chorus if available

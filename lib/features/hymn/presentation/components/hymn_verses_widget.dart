@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class HymnVersesWidget extends StatelessWidget {
+class EachHymnVerseWidget extends StatelessWidget {
   final List<String> currentVerse;
 
-  const HymnVersesWidget({super.key, required this.currentVerse});
+  const EachHymnVerseWidget({super.key, required this.currentVerse});
 
   @override
   Widget build(BuildContext context) {

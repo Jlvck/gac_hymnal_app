@@ -1,5 +1,4 @@
-import 'package:church/features/hymn/presentation/screens/dummy_screens/dummy_english_screen.dart';
-import 'package:church/features/hymn/presentation/screens/dummy_screens/dummy_yoruba_screen.dart';
+import 'package:church/features/hymn/presentation/screens/dummy_screens/view_all_hymns_screen.dart';
 import 'package:flutter/material.dart';
 
 class DummyOnbaordingScreen extends StatelessWidget {
@@ -25,24 +24,28 @@ class DummyOnbaordingScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => DummyEnglishScreen(),
+                    builder: (context) => ViewAllHymnsScreen(
+                      language: AppSupportedLanguages.english,
+                    ),
                   ));
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white),
-                child: const Text("English"),
+                child: Text(AppSupportedLanguages.english.description),
               ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => DummyYorubaScreen(),
+                    builder: (context) => ViewAllHymnsScreen(
+                      language: AppSupportedLanguages.yoruba,
+                    ),
                   ));
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: Colors.blue),
-                child: const Text("Yoruba"),
+                child: Text(AppSupportedLanguages.yoruba.description),
               ),
             ],
           ),
