@@ -15,7 +15,6 @@ class DummyYorubaScreen extends StatelessWidget {
               Navigator.of(context).pop();
             },
             child: SizedBox(
-              height: 300,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
