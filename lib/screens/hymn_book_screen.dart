@@ -1,6 +1,6 @@
-import 'package:church/model/language_item.dart';
-import 'package:church/providers/language_provider.dart';
-import 'package:church/widgets/toggle_theme_switch.dart';
+import 'package:gac_hymnal_app/model/language_item.dart';
+import 'package:gac_hymnal_app/providers/language_provider.dart';
+import 'package:gac_hymnal_app/widgets/toggle_theme_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';

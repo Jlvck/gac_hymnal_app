@@ -104,7 +104,7 @@ class HymnText351to400 {
         ],
         [
           "He is gone. Towards the goal",
-          "World and church must onward roll:",
+          "World and gac_hymnal_app must onward roll:",
           "Far behind we leave the past;",
           "Forward are our glances cast;",
           "Still His words before us range",
@@ -561,8 +561,8 @@ class HymnText351to400 {
         [
           "Come as the dove, and spread Thy wings",
           "The wings of peaceful love;",
-          "And let Thy church on earth become",
-          "Bless’d as the church above."
+          "And let Thy gac_hymnal_app on earth become",
+          "Bless’d as the gac_hymnal_app above."
         ],
         [
           "Spirit Divine, attend our prayers;",

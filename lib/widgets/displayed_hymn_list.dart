@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:church/model/hymn.dart';
+import 'package:gac_hymnal_app/model/hymn.dart';
 import '../widgets/hymn_list_view.dart';
 import '../widgets/hymn_grid_view.dart';
 

@@ -415,7 +415,7 @@ class HymnText151to200 {
         [
           "Thou dying Lamb, Thy precious blood.",
           "Shall never loose its pow’r",
-          "Till all the ransom’d Church of God",
+          "Till all the ransom’d gac_hymnal_app of God",
           "Be saved, to sin no more."
         ]
       ],
@@ -1528,7 +1528,7 @@ class HymnText151to200 {
           "Still on and on the anthems spread",
           "Of Hallelujah voices,",
           "In concert with the holy Dead",
-          "The warrior Church rejoice;",
+          "The warrior gac_hymnal_app rejoice;",
           "Earth and the Paradise of God",
           "One triumph-song are singing."
         ],

@@ -1,6 +1,6 @@
 {
-    "name": "church",
-    "short_name": "church",
+    "name": "gac_hymnal_app",
+    "short_name": "gac_hymnal_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

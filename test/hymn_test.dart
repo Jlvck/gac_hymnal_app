@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
-import 'package:church/providers/hymn_book_provider.dart';
-import 'package:church/model/hymn.dart';
+import 'package:gac_hymnal_app/providers/hymn_book_provider.dart';
+import 'package:gac_hymnal_app/model/hymn.dart';
 import 'package:collection/collection.dart';
 
 void main() {

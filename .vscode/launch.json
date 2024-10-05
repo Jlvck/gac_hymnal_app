@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "church",
+            "name": "gac_hymnal_app",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "church (profile mode)",
+            "name": "gac_hymnal_app (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "church (release mode)",
+            "name": "gac_hymnal_app (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

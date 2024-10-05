@@ -1,4 +1,4 @@
-import 'package:church/widgets/drawer_list_tile.dart';
+import 'package:gac_hymnal_app/widgets/drawer_list_tile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';

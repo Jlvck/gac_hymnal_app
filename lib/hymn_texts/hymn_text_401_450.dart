@@ -18,7 +18,7 @@ class HymnText401to450 {
           "Brothers, Lift your voices: loud your anthems raise."
         ],
         [
-          "Like a mighty army moves the church of God.",
+          "Like a mighty army moves the gac_hymnal_app of God.",
           "Brothers, we are treading where the saints have trod,",
           "We are not divided, all one body we",
           "One in hope and doctrine, one in charity."
@@ -26,8 +26,8 @@ class HymnText401to450 {
         [
           "Crowns and thrones may perish,",
           "Kingdoms rise and wane;",
-          "But the church of Jesus constant will remain:",
-          "Gates of hell can never ‘gainst that church prevail;",
+          "But the gac_hymnal_app of Jesus constant will remain:",
+          "Gates of hell can never ‘gainst that gac_hymnal_app prevail;",
           "We have Christ’s own promise, and that cannot fail."
         ],
         [
@@ -778,7 +778,7 @@ class HymnText401to450 {
         ],
         [
           "Step in the ranks you are need-ed there,",
-          "Cling to the Church and God will bless",
+          "Cling to the gac_hymnal_app and God will bless",
           "He is the hope of the whole wide world",
           "For the cause of righteousness."
         ]
@@ -791,7 +791,7 @@ class HymnText401to450 {
         "But they hope and trust, looking ev-er",
         "On the path the saints before have trod,",
         "And as they march a-long their faith grows",
-        "Strong in the Church of the liv-ing God."
+        "Strong in the gac_hymnal_app of the liv-ing God."
       ],
       versesYoruba: [
         [
@@ -3179,7 +3179,7 @@ class HymnText401to450 {
           "Christ is made the sure foundation",
           "Christ the head and Corner-stone,",
           "Chosen of the Lord, and precious",
-          "Binding all the church in one;",
+          "Binding all the gac_hymnal_app in one;",
           "Holy Zion’s help for ever.",
           "And her confidence alone"
         ],
@@ -3312,7 +3312,7 @@ class HymnText401to450 {
         [
           "Great is the Lord our God,",
           "And let His praise be great;",
-          "He makes His churches His abode,",
+          "He makes His gac_hymnal_appes His abode,",
           "His most delightful seat."
         ],
         [

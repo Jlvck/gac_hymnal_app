@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:church/model/hymn.dart';
+import 'package:gac_hymnal_app/model/hymn.dart';
 
 class MainTextField extends StatefulWidget {
   //The Longer textField is taged Title

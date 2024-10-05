@@ -1,7 +1,7 @@
-# church(GAC HYMNAL APP)
+# gac_hymnal_app(GAC HYMNAL APP)
  This repo was used in the development of GAC Hymnal app on Google Play Store.
 
- https://play.google.com/store/apps/details?id=com.jlvck.church.test
+ https://play.google.com/store/apps/details?id=com.jlvck.gac_hymnal_app.test
 
 
 
@@ -70,9 +70,9 @@ Getting Started
   
   Copy code
   
-  git clone https://github.com/jlvck/church.git
+  git clone https://github.com/jlvck/gac_hymnal_app.git
   
-  cd church
+  cd gac_hymnal_app
   
   Install Dependencies
   
@@ -100,7 +100,7 @@ License
 
 
 
-This project is licensed under the MIT License. https://github.com/Jlvck/church?tab=MIT-1-ov-file#readme
+This project is licensed under the MIT License. https://github.com/Jlvck/gac_hymnal_app?tab=MIT-1-ov-file#readme
 
 
 
@@ -118,7 +118,7 @@ Special thanks to contributors who have participated in this project:
 
 
 
-Hymn data sourced from The Official Hymnbook of Gospel Apostolic Church.
+Hymn data sourced from The Official Hymnbook of Gospel Apostolic gac_hymnal_app.
 
 
 Contact For inquiries or support, please contact us through 
@@ -141,24 +141,24 @@ Screenshots:
 
 
 
-<img width="108" alt="Screenshot_1705974793" src="https://github.com/Jlvck/church/assets/114338344/e72aa45c-b224-4682-9247-de16c2353c69">                         <img width="108" alt="Screenshot_1705973715" src="https://github.com/Jlvck/church/assets/114338344/7cfc1ee0-0c47-43aa-a72e-83063768b0a7">
+<img width="108" alt="Screenshot_1705974793" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/e72aa45c-b224-4682-9247-de16c2353c69">                         <img width="108" alt="Screenshot_1705973715" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/7cfc1ee0-0c47-43aa-a72e-83063768b0a7">
 
 
 
-<img width="221" alt="Screenshot_1705974107" src="https://github.com/Jlvck/church/assets/114338344/3cc096a6-5ca7-4693-80de-74db0c79836a">
+<img width="221" alt="Screenshot_1705974107" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/3cc096a6-5ca7-4693-80de-74db0c79836a">
 
 
-<img width="221" alt="Screenshot_1705974055" src="https://github.com/Jlvck/church/assets/114338344/06b1b662-398b-403e-8184-e92b701b68c2">
-
-
-
-
+<img width="221" alt="Screenshot_1705974055" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/06b1b662-398b-403e-8184-e92b701b68c2">
 
 
 
 
 
-<img width="108" alt="Screenshot_1705975243" src="https://github.com/Jlvck/church/assets/114338344/5fd48653-ef2b-45c0-92f7-7167e8b67bb1">               <img width="108" alt="Screenshot_1705975308" src="https://github.com/Jlvck/church/assets/114338344/5639229c-1d3c-410a-a2de-4542739241e2">
+
+
+
+
+<img width="108" alt="Screenshot_1705975243" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/5fd48653-ef2b-45c0-92f7-7167e8b67bb1">               <img width="108" alt="Screenshot_1705975308" src="https://github.com/Jlvck/gac_hymnal_app/assets/114338344/5639229c-1d3c-410a-a2de-4542739241e2">
  
 
 

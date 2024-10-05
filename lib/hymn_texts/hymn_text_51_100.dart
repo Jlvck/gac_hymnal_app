@@ -554,7 +554,7 @@ class HymnText51to100 {
       [
         "Do thou Thy benediction give",
         "On all who teach, on all who learn,",
-        "That al Thy church may holier live,",
+        "That al Thy gac_hymnal_app may holier live,",
         "And every lamp more brightly burn."
       ],
       [
@@ -806,7 +806,7 @@ class HymnText51to100 {
     ]),
     Hymn(id: '60', versesEnglish: [
       [
-        "HEAD of the church triumphant,",
+        "HEAD of the gac_hymnal_app triumphant,",
         "We joyfully adore Thee;",
         "Till Thou appear, Thy members here",
         "Shall sing like those in glory:",
@@ -1087,7 +1087,7 @@ class HymnText51to100 {
         ],
         [
           "Hosanna in the highest strain",
-          "The church on earth can raise;",
+          "The gac_hymnal_app on earth can raise;",
           "The highest heavens in which He reigns",
           "Shall give Him nobler praise."
         ],
@@ -1198,7 +1198,7 @@ class HymnText51to100 {
       [
         "This day is all holy",
         "It is meet to take rest,",
-        "To worship in Thy church, O Lord",
+        "To worship in Thy gac_hymnal_app, O Lord",
         "To hear Thy holy word."
       ],
       [
@@ -1314,7 +1314,7 @@ class HymnText51to100 {
         [
           "With joy shall we serve the Lord or Saviour,",
           "With love shall we use our hands to do",
-          "Any work that He assigns to His Church;",
+          "Any work that He assigns to His gac_hymnal_app;",
           "Faithfully we shall all do our work."
         ],
         [

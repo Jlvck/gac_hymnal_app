@@ -3752,7 +3752,7 @@ class HymnText301to350 {
           "Hallelujah!",
           "Hark, His gracious lips bestow,",
           "Hallelujah!",
-          "Blessings on His church below.",
+          "Blessings on His gac_hymnal_app below.",
           "Hallelujah!"
         ],
         [
