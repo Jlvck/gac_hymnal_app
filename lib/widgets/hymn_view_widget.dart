@@ -39,10 +39,7 @@ class HymnViewWidget extends StatelessWidget {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.symmetric(
-              vertical: BorderSide(color: Colors.black, width: 0.5))),
+    return SizedBox(
       height: maxHeight,
       width: maxWidth,
       child: ListView(padding: EdgeInsets.zero, children: [
