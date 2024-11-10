@@ -43,7 +43,7 @@ class HymnGridView extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(6)),
-                  color: Theme.of(context).colorScheme.background),
+                  color: Theme.of(context).colorScheme.surface),
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
               height: 110,
@@ -74,8 +74,7 @@ class HymnGridView extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 15,
-                                color:
-                                    Theme.of(context).colorScheme.onBackground),
+                                color: Theme.of(context).colorScheme.onSurface),
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                           ),

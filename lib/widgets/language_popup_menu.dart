@@ -14,7 +14,7 @@ class LanguagePopUpMenu extends StatelessWidget {
       child: PopupMenuButton(
         enableFeedback: true,
         icon: const Icon(Icons.language),
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
         onSelected: (value) {
           if (value !=
               Provider.of<LanguageProvider>(context, listen: false)
@@ -36,8 +36,8 @@ class LanguagePopUpMenu extends StatelessWidget {
                 label: "Yoruba Language",
                 child: Text(
                   'Yoruba',
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.onBackground),
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.onSurface),
                 ),
               ),
             ),
@@ -48,7 +48,7 @@ class LanguagePopUpMenu extends StatelessWidget {
                   child: Text(
                     'English',
                     style: TextStyle(
-                        color: Theme.of(context).colorScheme.onBackground),
+                        color: Theme.of(context).colorScheme.onSurface),
                   ),
                 ))
           ];

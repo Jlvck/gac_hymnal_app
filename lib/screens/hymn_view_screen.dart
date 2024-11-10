@@ -14,6 +14,7 @@ import '../model/language_item.dart';
 class HymnViewScreen extends StatefulWidget {
   static const String routeName = "/hymn_view";
   final String id;
+
   const HymnViewScreen({
     super.key,
     required this.id,
@@ -23,15 +24,16 @@ class HymnViewScreen extends StatefulWidget {
   State<HymnViewScreen> createState() => _HymnViewScreenState();
 }
 
-class _HymnViewScreenState extends State<HymnViewScreen> {
-  late Hymn currentHymn;
+class _HymnViewScreenState extends State<HymnViewScreen>
+    with WidgetsBindingObserver {
+  late List<Hymn> hymnList;
   final Duration _colorDuration = Duration(milliseconds: 100);
   double widthFactor = 0.2;
   double factorTrigger = 0.3;
   late ScrollController controller;
-  bool colorChange = false;
+  ValueNotifier<bool> colorChange = ValueNotifier(false);
+  ValueNotifier<bool> ignoreTouch = ValueNotifier(false);
   late double screenWidth;
-  bool ignoreTouch = false;
   late double leftScrollExtent;
   late double rightScrollExtent;
   int pageNumber = 0;
@@ -39,36 +41,60 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
   double oldOffset = 0.0;
   @override
   void initState() {
+    print("init");
     pageNumber = int.tryParse(widget.id) != null ? int.parse(widget.id) - 1 : 0;
+    hymnList = Provider.of<HymnBookProvider>(context, listen: false).hymnList;
+
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void didChangeDependencies() {
-    currentHymn = Provider.of<HymnBookProvider>(context, listen: false)
-        .getHymn(widget.id.toString());
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    print("did change dependencies");
+    MediaQueryData mediaQuery = MediaQuery.of(context);
     screenWidth = mediaQuery.size.width;
     leftScrollExtent = screenWidth * widthFactor;
     rightScrollExtent = screenWidth * widthFactor * 2;
-
     controller = ScrollController(
-      keepScrollOffset: true,
-      initialScrollOffset: leftScrollExtent,
-    );
-
+        initialScrollOffset: leftScrollExtent, keepScrollOffset: false);
     super.didChangeDependencies();
+  }
+
+  @override
+  void didChangeMetrics() {
+    // TODO: implement didChangeMetrics
+
+    super.didChangeMetrics();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      controller.animateTo(widthFactor * MediaQuery.of(context).size.width,
+          duration: Duration(microseconds: 1), curve: Curves.easeInOut);
+
+      print("moved to set offset");
+    });
   }
 
   @override
   void dispose() {
     controller.dispose();
-
+    ignoreTouch.dispose();
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
+  }
+
+  bool checkLeftSideExtent() {
+    return controller.offset <= (factorTrigger * leftScrollExtent);
+  }
+
+  bool checkRightSideExtent() {
+    return controller.offset >=
+        ((leftScrollExtent * 2) - (factorTrigger * leftScrollExtent));
   }
 
   @override
   Widget build(BuildContext context) {
+    print("Build");
+
     List<Widget> list = <Widget>[
       SizedBox(
           width: leftScrollExtent,
@@ -76,31 +102,39 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
               ? null
               : UnconstrainedBox(
                   alignment: Alignment.centerRight,
-                  child: AnimatedContainer(
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          color: colorChange ? Colors.blue : Colors.grey,
-                          borderRadius: BorderRadius.circular(5)),
-                      height: 50,
-                      duration: _colorDuration,
-                      curve: Curves.easeInOut,
+                  child: ValueListenableBuilder(
+                      valueListenable: colorChange,
                       child: Center(
                           child: Text(
                         "$pageNumber",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
-                      ))),
+                      )),
+                      builder: (context, colorLeft, child) {
+                        return AnimatedContainer(
+                            margin: EdgeInsets.all(5),
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                                color: colorLeft && checkLeftSideExtent()
+                                    ? Theme.of(context).primaryColor
+                                    : Theme.of(context).colorScheme.tertiary,
+                                borderRadius: BorderRadius.circular(5)),
+                            height: 50,
+                            duration: _colorDuration,
+                            curve: Curves.easeInOut,
+                            child: child);
+                      }),
                 )),
       GestureDetector(
         onHorizontalDragEnd: (details) {
           if (controller.offset < leftScrollExtent) {
             final double currentOffset = controller.offset;
-            setState(() {
-              ignoreTouch = true;
-            });
+
+            ignoreTouch.value = true;
+            colorChange.value = false;
 
             controller
                 .animateTo(leftScrollExtent,
@@ -112,25 +146,19 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                     pageNumber != 0) {
                   setState(() {
                     pageNumber = pageNumber - 1;
-
-                    currentHymn =
-                        Provider.of<HymnBookProvider>(context, listen: false)
-                            .getHymn((pageNumber + 1).toString());
-
-                    ignoreTouch = false;
                   });
+
+                  ignoreTouch.value = false;
                 } else {
-                  setState(() {
-                    ignoreTouch = false;
-                  });
+                  ignoreTouch.value = false;
                 }
               },
             );
           } else if (controller.offset > leftScrollExtent) {
             final double currentOffset = controller.offset;
-            setState(() {
-              ignoreTouch = true;
-            });
+
+            ignoreTouch.value = true;
+            colorChange.value = false;
 
             controller
                 .animateTo(leftScrollExtent,
@@ -144,22 +172,16 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
                     pageNumber != (499)) {
                   setState(() {
                     pageNumber = pageNumber + 1;
-                    currentHymn =
-                        Provider.of<HymnBookProvider>(context, listen: false)
-                            .getHymn((pageNumber + 1).toString());
-                    ignoreTouch = false;
                   });
+
+                  ignoreTouch.value = false;
                 } else {
-                  setState(() {
-                    ignoreTouch = false;
-                  });
+                  ignoreTouch.value = false;
                 }
               },
             );
           } else {
-            setState(() {
-              ignoreTouch = false;
-            });
+            ignoreTouch.value = false;
           }
         },
         onHorizontalDragUpdate: (details) {
@@ -167,22 +189,23 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
               controller.offset >=
                   ((leftScrollExtent * 2) -
                       (factorTrigger * leftScrollExtent))) {
-            setState(() {
-              colorChange = true;
-            });
-            // HapticFeedback.lightImpact();
+            if (colorChange.value != true) {
+              colorChange.value = true;
+              HapticFeedback.lightImpact();
+            }
           } else {
-            setState(() {
-              colorChange = false;
-            });
+            if (colorChange.value != false) {
+              colorChange.value = false;
+              HapticFeedback.lightImpact();
+            }
           }
           controller.jumpTo(controller.position.pixels - details.delta.dx);
         },
         child: HymnViewWidget(
-          hymnYorubaVerses: currentHymn.versesYoruba,
-          hymnEnglishVerses: currentHymn.versesEnglish,
-          hymnEnglishChorus: currentHymn.chorusEnglish,
-          hymnYorubaChorus: currentHymn.chorusYoruba,
+          hymnYorubaVerses: hymnList[pageNumber].versesYoruba,
+          hymnEnglishVerses: hymnList[pageNumber].versesEnglish,
+          hymnEnglishChorus: hymnList[pageNumber].chorusEnglish,
+          hymnYorubaChorus: hymnList[pageNumber].chorusYoruba,
         ),
       ),
       SizedBox(
@@ -191,27 +214,34 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
               ? null
               : UnconstrainedBox(
                   alignment: Alignment.centerLeft,
-                  child: AnimatedContainer(
-                      duration: _colorDuration,
-                      curve: Curves.easeInOut,
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                          color: colorChange ? Colors.blue : Colors.grey,
-                          borderRadius: BorderRadius.circular(5)),
-                      height: 50,
+                  child: ValueListenableBuilder(
+                      valueListenable: colorChange,
                       child: Center(
                           child: Text(
                         "${pageNumber + 2}",
                         style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ))),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      )),
+                      builder: (context, colorRight, child) {
+                        return AnimatedContainer(
+                            duration: _colorDuration,
+                            curve: Curves.easeInOut,
+                            margin: EdgeInsets.all(5),
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                                color: colorRight && checkRightSideExtent()
+                                    ? Theme.of(context).primaryColor
+                                    : Theme.of(context).colorScheme.tertiary,
+                                borderRadius: BorderRadius.circular(5)),
+                            height: 50,
+                            child: child);
+                      }),
                 )),
     ];
     return Semantics(
-      label: "Hymn Number ${widget.id}",
+      label: "Hymn Number ${hymnList[pageNumber].id}",
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         appBar: AppBar(
@@ -219,7 +249,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           title: FittedBox(
             fit: BoxFit.fill,
             child: Text(
-              checkAppBarTitle(context, currentHymn.id),
+              checkAppBarTitle(context, hymnList[pageNumber].id),
               softWrap: true,
               overflow: TextOverflow.fade,
               textAlign: TextAlign.center,
@@ -229,7 +259,7 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
           elevation: 0,
           actions: [
             ChangeNotifierProvider.value(
-              value: currentHymn,
+              value: hymnList[pageNumber],
               child: Consumer<Hymn>(
                 builder: (ctx, hymnIcon, _) => IconButton(
                   icon: Icon(hymnIcon.isFavorites
@@ -247,17 +277,20 @@ class _HymnViewScreenState extends State<HymnViewScreen> {
             const LanguagePopUpMenu()
           ],
         ),
-        body: IgnorePointer(
-          ignoring: ignoreTouch,
-          child: ListView.builder(
-            controller: controller,
-            scrollDirection: Axis.horizontal,
-            clipBehavior: Clip.hardEdge,
-            itemCount: list.length,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) => list[index],
-          ),
-        ),
+        body: Builder(builder: (context) {
+          return ValueListenableBuilder(
+              valueListenable: ignoreTouch,
+              child: ListView(
+                controller: controller,
+                scrollDirection: Axis.horizontal,
+                clipBehavior: Clip.hardEdge,
+                physics: NeverScrollableScrollPhysics(),
+                children: [...list],
+              ),
+              builder: (context, ignore, child) {
+                return IgnorePointer(ignoring: ignore, child: child);
+              });
+        }),
       ),
     );
   }

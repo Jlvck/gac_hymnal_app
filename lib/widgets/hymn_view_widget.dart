@@ -62,7 +62,7 @@ class HymnViewWidget extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 30,
-                            color: Theme.of(context).colorScheme.onBackground),
+                            color: Theme.of(context).colorScheme.onSurface),
                       ),
                       //Hymn Verse of the Hymn
                       HymnVersesWidget(
@@ -89,7 +89,7 @@ class HymnViewWidget extends StatelessWidget {
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
-                  color: Theme.of(context).colorScheme.onBackground),
+                  color: Theme.of(context).colorScheme.onSurface),
             ),
           ),
         ),
