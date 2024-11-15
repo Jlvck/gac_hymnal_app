@@ -1,7 +1,6 @@
 # gac_hymnal_app(GAC HYMNAL APP)
- This repo was used in the development of GAC Hymnal app on Google Play Store.
-
- https://play.google.com/store/apps/details?id=com.jlvck.gac_hymnal_app.test
+ This repo was used in the development of GAC Hymnal app on Google Play 
+https://play.google.com/store/apps/details?id=com.gac.hymnal.app
 
 
 
