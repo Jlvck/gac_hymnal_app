@@ -58,8 +58,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             : Center(
                 child: Text(
                   'No Favorites added',
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.onBackground),
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.onSurface),
                 ),
               ),
       ),

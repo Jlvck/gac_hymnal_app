@@ -24,12 +24,11 @@ class ThemeProvider extends ChangeNotifier {
       currentTheme = ThemeMode.light;
       currentBrigtness = Brightness.light;
       notifyListeners();
-    } else {
-      if (brightness == Brightness.dark && brightness != currentBrigtness) {
-        currentTheme = ThemeMode.dark;
-        currentBrigtness = Brightness.dark;
-        notifyListeners();
-      }
+    } else if (brightness == Brightness.dark &&
+        brightness != currentBrigtness) {
+      currentTheme = ThemeMode.dark;
+      currentBrigtness = Brightness.dark;
+      notifyListeners();
     }
   }
 }

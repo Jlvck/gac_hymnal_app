@@ -39,10 +39,7 @@ class HymnViewWidget extends StatelessWidget {
         AppBar().preferredSize.height -
         mediaQuery.padding.top;
     double maxWidth = mediaQuery.size.width;
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.symmetric(
-              vertical: BorderSide(color: Colors.black, width: 0.5))),
+    return SizedBox(
       height: maxHeight,
       width: maxWidth,
       child: ListView(padding: EdgeInsets.zero, children: [
@@ -65,7 +62,7 @@ class HymnViewWidget extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 30,
-                            color: Theme.of(context).colorScheme.onBackground),
+                            color: Theme.of(context).colorScheme.onSurface),
                       ),
                       //Hymn Verse of the Hymn
                       HymnVersesWidget(
@@ -92,7 +89,7 @@ class HymnViewWidget extends StatelessWidget {
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
-                  color: Theme.of(context).colorScheme.onBackground),
+                  color: Theme.of(context).colorScheme.onSurface),
             ),
           ),
         ),

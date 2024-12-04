@@ -53,8 +53,8 @@ class HymnListView extends StatelessWidget {
                     },
                     child: ListTile(
                       contentPadding: EdgeInsets.zero,
-                      tileColor: Theme.of(context).colorScheme.background,
-                      selectedColor: Theme.of(context).colorScheme.background,
+                      tileColor: Theme.of(context).colorScheme.surface,
+                      selectedColor: Theme.of(context).colorScheme.surface,
                       isThreeLine: false,
                       dense: true,
                       horizontalTitleGap: 10,
@@ -90,7 +90,7 @@ class HymnListView extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w400,
-                            color: Theme.of(context).colorScheme.onBackground),
+                            color: Theme.of(context).colorScheme.onSurface),
                         softWrap: false,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -130,9 +130,9 @@ class HymnListView extends StatelessWidget {
     LanguageItem currentLanguage =
         Provider.of<LanguageProvider>(context, listen: true).currentItem;
     if (currentLanguage == LanguageItem.yoruba) {
-      return hymnList[index].versesYoruba[0][0];
+      return hymnList[index].hymnTitleYoruba;
     } else {
-      return hymnList[index].versesEnglish[0][0];
+      return hymnList[index].hymnTitleEnglish;
     }
   }
 }

@@ -47,24 +47,27 @@ class ThemeClass {
       secondaryHeaderColor: const Color.fromARGB(255, 255, 0, 0),
       primaryColor: mycolor.shade400,
       colorScheme: ColorScheme(
-        brightness: Brightness.light,
-        //change color to white for darktheme
-        primary: mycolor.shade400,
-        onPrimary: Colors.white,
-        secondary: Colors.black,
-        onSecondary: Colors.white,
-        //color used for drawer background &
-        //hymnview background scaffold(black in dark)
-        background: Colors.white,
-        // color for text..change to white in dark
-        onBackground: Colors.black,
-        error: const Color.fromARGB(255, 255, 0, 0),
-        onError: Colors.white,
-        surface: Colors.white,
-        onSurface: Colors.black,
-        //change to Color.rgbo(32,32,32,1) for dark theme
-        primaryContainer: Colors.white,
-      ));
+          brightness: Brightness.light,
+
+          //change color to white for darktheme
+          primary: mycolor.shade400,
+          onPrimary: Colors.white,
+          secondary: Colors.black,
+          onSecondary: Colors.white,
+          error: const Color.fromARGB(255, 255, 0, 0),
+          onError: Colors.white,
+
+          //background color for text(black in dark theme)
+          surface: Colors.white,
+
+          //Text color (white in dark theme)
+          onSurface: Colors.black,
+
+          //change to Color.rgbo(32,32,32,1) for dark theme
+          primaryContainer: Colors.white,
+
+          //Color used for the side number boxes
+          tertiary: const Color.fromARGB(255, 116, 116, 116)));
   static ThemeData darkTheme = ThemeData(
       brightness: Brightness.dark,
       drawerTheme: const DrawerThemeData(backgroundColor: Colors.black),
@@ -79,9 +82,11 @@ class ThemeClass {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       useMaterial3: true,
+
       //change to black for dark theme
       scaffoldBackgroundColor: const Color.fromRGBO(32, 32, 32, 1),
       dividerTheme: const DividerThemeData(color: Colors.transparent),
+
       //App Bar Theme(black)
       appBarTheme: AppBarTheme(
           iconTheme: const IconThemeData(color: Colors.white),
@@ -96,21 +101,26 @@ class ThemeClass {
       primaryColor: mycolor.shade400,
       colorScheme: const ColorScheme(
         brightness: Brightness.dark,
+
         //change color to black for lighttheme
         primary: Colors.white,
+
         onPrimary: Colors.black,
         secondary: Colors.black,
         onSecondary: Colors.white,
-        //color used for drawer background &
-        //hymnview background scaffold(white in light)
-        background: Colors.black,
-        // black in light
-        onBackground: Colors.white,
         error: Color.fromARGB(255, 255, 0, 0),
         onError: Colors.white,
-        surface: Colors.white,
-        onSurface: Colors.black,
+
+        //background color for text(white in light theme)
+        surface: Colors.black,
+
+        //Text color (black in light theme)
+        onSurface: Colors.white,
+
         //white for light theme
         primaryContainer: Color.fromRGBO(32, 32, 32, 1),
+
+        //Color used for the side number boxes
+        tertiary: Color.fromARGB(255, 85, 85, 85),
       ));
 }

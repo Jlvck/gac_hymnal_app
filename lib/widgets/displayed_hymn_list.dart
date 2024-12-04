@@ -34,8 +34,7 @@ class DisplayedHymnList extends StatelessWidget {
           : Text(
               'No results found',
               style: TextStyle(
-                  fontSize: 24,
-                  color: Theme.of(context).colorScheme.onBackground),
+                  fontSize: 24, color: Theme.of(context).colorScheme.onSurface),
             ),
     );
   }

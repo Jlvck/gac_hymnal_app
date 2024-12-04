@@ -28,7 +28,7 @@ class HymnChorusWidget extends StatelessWidget {
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
                 fontStyle: FontStyle.italic,
-                color: Theme.of(context).colorScheme.onBackground),
+                color: Theme.of(context).colorScheme.onSurface),
           ),
           ListView(
             shrinkWrap: true,
@@ -45,7 +45,7 @@ class HymnChorusWidget extends StatelessWidget {
                         fontSize: 20,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.onBackground),
+                        color: Theme.of(context).colorScheme.onSurface),
                     textAlign: TextAlign.center,
                     softWrap: true,
                     maxLines: 2,

@@ -7,6 +7,8 @@ class Hymn with ChangeNotifier {
   final List<List<String>> versesEnglish;
   final List<String>? chorusEnglish;
   bool isFavorites = false;
+  final String hymnTitleEnglish;
+  final String hymnTitleYoruba;
 
   void toggleFav() {
     isFavorites = !isFavorites;
@@ -18,5 +20,7 @@ class Hymn with ChangeNotifier {
       required this.versesYoruba,
       this.chorusYoruba,
       required this.versesEnglish,
-      this.chorusEnglish});
+      this.chorusEnglish})
+      : hymnTitleEnglish = versesEnglish[0][0],
+        hymnTitleYoruba = versesYoruba[0][0];
 }

@@ -43,7 +43,7 @@ class HymnGridView extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(6)),
-                  color: Theme.of(context).colorScheme.background),
+                  color: Theme.of(context).colorScheme.surface),
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
               height: 110,
@@ -74,8 +74,7 @@ class HymnGridView extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 15,
-                                color:
-                                    Theme.of(context).colorScheme.onBackground),
+                                color: Theme.of(context).colorScheme.onSurface),
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -147,9 +146,9 @@ class HymnGridView extends StatelessWidget {
     LanguageItem currentLanguage =
         Provider.of<LanguageProvider>(context, listen: true).currentItem;
     if (currentLanguage == LanguageItem.yoruba) {
-      return hymnList[index].versesYoruba[0][0];
+      return hymnList[index].hymnTitleYoruba;
     } else {
-      return hymnList[index].versesEnglish[0][0];
+      return hymnList[index].hymnTitleEnglish;
     }
   }
 }

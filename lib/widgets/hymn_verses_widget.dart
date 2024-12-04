@@ -20,8 +20,7 @@ class HymnVersesWidget extends StatelessWidget {
             child: Text(
               currentVerse[i],
               style: TextStyle(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onBackground),
+                  fontSize: 20, color: Theme.of(context).colorScheme.onSurface),
               textAlign: TextAlign.center,
             ),
           ),
