@@ -35,7 +35,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
   ValueNotifier<bool> ignoreTouch = ValueNotifier(false);
   late double screenWidth;
   late double leftScrollExtent;
-  late double rightScrollExtent;
+
   int pageNumber = 0;
 
   double oldOffset = 0.0;
@@ -55,7 +55,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
     MediaQueryData mediaQuery = MediaQuery.of(context);
     screenWidth = mediaQuery.size.width;
     leftScrollExtent = screenWidth * widthFactor;
-    rightScrollExtent = screenWidth * widthFactor * 2;
+
     controller = ScrollController(
         initialScrollOffset: leftScrollExtent, keepScrollOffset: false);
     super.didChangeDependencies();
@@ -82,12 +82,12 @@ class _HymnViewScreenState extends State<HymnViewScreen>
     super.dispose();
   }
 
-  bool checkLeftSideExtent() {
-    return controller.offset <= (factorTrigger * leftScrollExtent);
+  bool checkLeftSideExtent(double offset) {
+    return offset <= (factorTrigger * leftScrollExtent);
   }
 
-  bool checkRightSideExtent() {
-    return controller.offset >=
+  bool checkRightSideExtent(double offset) {
+    return offset >=
         ((leftScrollExtent * 2) - (factorTrigger * leftScrollExtent));
   }
 
@@ -118,7 +118,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                             margin: EdgeInsets.all(5),
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                                color: colorLeft && checkLeftSideExtent()
+                                color: colorLeft &&
+                                        checkLeftSideExtent(controller.offset)
                                     ? Theme.of(context).primaryColor
                                     : Theme.of(context).colorScheme.tertiary,
                                 borderRadius: BorderRadius.circular(5)),
@@ -142,8 +143,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                     curve: Curves.easeInOut)
                 .then(
               (value) {
-                if (currentOffset <= (factorTrigger * leftScrollExtent) &&
-                    pageNumber != 0) {
+                if (checkLeftSideExtent(currentOffset) && pageNumber != 0) {
                   setState(() {
                     pageNumber = pageNumber - 1;
                   });
@@ -166,9 +166,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                     curve: Curves.easeInOut)
                 .then(
               (value) {
-                if (currentOffset >=
-                        ((leftScrollExtent * 2) -
-                            (factorTrigger * leftScrollExtent)) &&
+                if (checkRightSideExtent(currentOffset) &&
                     pageNumber != (499)) {
                   setState(() {
                     pageNumber = pageNumber + 1;
@@ -185,10 +183,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
           }
         },
         onHorizontalDragUpdate: (details) {
-          if (controller.offset <= (factorTrigger * leftScrollExtent) ||
-              controller.offset >=
-                  ((leftScrollExtent * 2) -
-                      (factorTrigger * leftScrollExtent))) {
+          final double offset = controller.offset;
+          if (checkLeftSideExtent(offset) || checkRightSideExtent(offset)) {
             if (colorChange.value != true) {
               colorChange.value = true;
               HapticFeedback.lightImpact();
@@ -210,7 +206,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
       ),
       SizedBox(
           width: leftScrollExtent,
-          child: pageNumber == 499
+          child: pageNumber == (hymnList.length - 1)
               ? null
               : UnconstrainedBox(
                   alignment: Alignment.centerLeft,
@@ -231,7 +227,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                             margin: EdgeInsets.all(5),
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                                color: colorRight && checkRightSideExtent()
+                                color: colorRight &&
+                                        checkRightSideExtent(controller.offset)
                                     ? Theme.of(context).primaryColor
                                     : Theme.of(context).colorScheme.tertiary,
                                 borderRadius: BorderRadius.circular(5)),

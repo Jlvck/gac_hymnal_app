@@ -130,9 +130,9 @@ class HymnListView extends StatelessWidget {
     LanguageItem currentLanguage =
         Provider.of<LanguageProvider>(context, listen: true).currentItem;
     if (currentLanguage == LanguageItem.yoruba) {
-      return hymnList[index].versesYoruba[0][0];
+      return hymnList[index].hymnTitleYoruba;
     } else {
-      return hymnList[index].versesEnglish[0][0];
+      return hymnList[index].hymnTitleEnglish;
     }
   }
 }

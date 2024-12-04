@@ -232,22 +232,22 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
           LanguageItem.yoruba) {
         results = _staticHymns
             .where((hymnbook) =>
-                hymnbook.versesYoruba[0][0]
+                hymnbook.hymnTitleYoruba
                     .toLowerCase()
                     .contains(enteredUserHymn) ||
                 hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-                hymnbook.versesYoruba[0][0].contains(enteredUserHymn))
+                hymnbook.hymnTitleYoruba.contains(enteredUserHymn))
             .toList();
 
         _foundHymns.value = results;
       } else {
         results = _staticHymns
             .where((hymnbook) =>
-                hymnbook.versesEnglish[0][0]
+                hymnbook.hymnTitleEnglish
                     .toLowerCase()
                     .contains(enteredUserHymn) ||
                 hymnbook.id.toLowerCase().contains(enteredUserHymn) ||
-                hymnbook.versesEnglish[0][0].contains(enteredUserHymn))
+                hymnbook.hymnTitleEnglish.contains(enteredUserHymn))
             .toList();
 
         _foundHymns.value = results;
