@@ -41,7 +41,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
   double oldOffset = 0.0;
   @override
   void initState() {
-    print("init");
+    // print("init");
     pageNumber = int.tryParse(widget.id) != null ? int.parse(widget.id) - 1 : 0;
     hymnList = Provider.of<HymnBookProvider>(context, listen: false).hymnList;
 
@@ -51,7 +51,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
 
   @override
   void didChangeDependencies() {
-    print("did change dependencies");
+    // print("did change dependencies");
     MediaQueryData mediaQuery = MediaQuery.of(context);
     screenWidth = mediaQuery.size.width;
     leftScrollExtent = screenWidth * widthFactor;
@@ -70,7 +70,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
       controller.animateTo(widthFactor * MediaQuery.of(context).size.width,
           duration: Duration(microseconds: 1), curve: Curves.easeInOut);
 
-      print("moved to set offset");
+      // print("moved to set offset");
     });
   }
 
@@ -93,7 +93,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
 
   @override
   Widget build(BuildContext context) {
-    print("Build");
+    // print("Build");
 
     List<Widget> list = <Widget>[
       SizedBox(
