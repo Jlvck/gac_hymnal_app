@@ -22,14 +22,14 @@ class HymnChorusWidget extends StatelessWidget {
       child: Column(
         children: [
           //Text for chorus or Egbe
-          Text(
-            currentLanguage == LanguageItem.yoruba ? 'Ègbè' : 'Chorus',
-            style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 20,
-                fontStyle: FontStyle.italic,
-                color: Theme.of(context).colorScheme.onSurface),
-          ),
+          // Text(
+          //   currentLanguage == LanguageItem.yoruba ? 'Ègbè' : 'Chorus',
+          //   style: TextStyle(
+          //       fontWeight: FontWeight.w900,
+          //       fontSize: 20,
+          //       fontStyle: FontStyle.italic,
+          //       color: Theme.of(context).colorScheme.onSurface),
+          // ),
           ListView(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),

@@ -38,9 +38,9 @@ class HymnBookProvider with ChangeNotifier {
       ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
         content: Text(
           'Hymn $id unfavorited',
-          style: const TextStyle(
+          style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 255, 0, 0)),
+              color: Theme.of(ctx).secondaryHeaderColor),
         ),
         backgroundColor: Colors.white,
         showCloseIcon: true,
@@ -52,7 +52,8 @@ class HymnBookProvider with ChangeNotifier {
       ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
         content: Text(
           'Hymn $id favorited',
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         backgroundColor: Theme.of(ctx).secondaryHeaderColor,
         showCloseIcon: true,
