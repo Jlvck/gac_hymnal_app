@@ -106,6 +106,7 @@ class _HymnListViewState extends State<HymnListView>
                       minLeadingWidth: 50,
                       titleAlignment: ListTileTitleAlignment.center,
                       leading: Container(
+                        margin: EdgeInsets.zero,
                         decoration: BoxDecoration(
                           borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(6),
