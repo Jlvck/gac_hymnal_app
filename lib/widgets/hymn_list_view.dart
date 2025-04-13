@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:gac_hymnal_app/widgets/animated_icon_button_widget.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '../model/hymn.dart';
 import '../model/language_item.dart';
-import '../providers/hymn_book_provider.dart';
+
 import '../providers/language_provider.dart';
 import '../screens/hymn_view_screen.dart';
 
-class HymnListView extends StatelessWidget {
+class HymnListView extends StatefulWidget {
   final List<Hymn> hymnList;
-
   final ScrollController scroll;
 
   const HymnListView({
@@ -19,18 +19,60 @@ class HymnListView extends StatelessWidget {
   });
 
   @override
+  State<HymnListView> createState() => _HymnListViewState();
+}
+
+class _HymnListViewState extends State<HymnListView>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  static const Duration _animationDuration = Duration(milliseconds: 300);
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+        vsync: this,
+        duration: _animationDuration,
+        reverseDuration: _animationDuration);
+
+    _animation = Tween<double>(begin: 24.0, end: 30).animate(
+        CurvedAnimation(parent: _controller, curve: Curves.bounceInOut));
+
+    Future.delayed(
+      Duration(seconds: 2),
+      () {
+        _controller.forward().then(
+          (value) async {
+            await Future.delayed(Duration(milliseconds: 200));
+            _controller.reverse();
+          },
+        );
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 12, right: 12, bottom: 0),
       child: ListView(
         padding: const EdgeInsets.only(bottom: 5, top: 5),
-        controller: scroll,
+        controller: widget.scroll,
         physics: const BouncingScrollPhysics(),
         primary: false,
         shrinkWrap: true,
-        semanticChildCount: hymnList.length,
+        semanticChildCount: widget.hymnList.length,
         itemExtent: 50,
-        children: List.generate(hymnList.length, growable: true, (index) {
+        children:
+            List.generate(widget.hymnList.length, growable: true, (index) {
           return Semantics(
             label: "Hymn number ${index + 1}",
             child: Padding(
@@ -44,9 +86,9 @@ class HymnListView extends StatelessWidget {
                       Navigator.push(
                           context,
                           PageTransition(
-                              childCurrent: this,
+                              childCurrent: widget,
                               child: HymnViewScreen(
-                                id: hymnList[index].id,
+                                id: widget.hymnList[index].id,
                               ),
                               type: PageTransitionType.fade,
                               duration: const Duration(milliseconds: 300)));
@@ -75,7 +117,7 @@ class HymnListView extends StatelessWidget {
                         width: 50,
                         child: Center(
                           child: FittedBox(
-                            child: Text(hymnList[index].id,
+                            child: Text(widget.hymnList[index].id,
                                 softWrap: false,
                                 textAlign: TextAlign.right,
                                 style: const TextStyle(
@@ -94,28 +136,9 @@ class HymnListView extends StatelessWidget {
                         softWrap: false,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      trailing: Semantics(
-                        label: "Favorite button",
-                        child: ChangeNotifierProvider.value(
-                          value: hymnList[index],
-                          child: Consumer<Hymn>(
-                            builder: (ctxx, hymnIcon, _) => IconButton(
-                              padding: const EdgeInsets.only(left: 0),
-                              icon: Icon(
-                                hymnIcon.isFavorites
-                                    ? Icons.favorite
-                                    : Icons.favorite_border,
-                              ),
-                              color: Theme.of(context).secondaryHeaderColor,
-                              onPressed: () {
-                                Provider.of<HymnBookProvider>(context,
-                                        listen: false)
-                                    .checkfav(hymnIcon.id, context);
-                                hymnIcon.toggleFav();
-                              },
-                            ),
-                          ),
-                        ),
+                      trailing: AnimatedIconButtonWidget(
+                        animation: _animation,
+                        hymn: widget.hymnList[index],
                       ),
                     ),
                   ),
@@ -130,9 +153,9 @@ class HymnListView extends StatelessWidget {
     LanguageItem currentLanguage =
         Provider.of<LanguageProvider>(context, listen: true).currentItem;
     if (currentLanguage == LanguageItem.yoruba) {
-      return hymnList[index].hymnTitleYoruba;
+      return widget.hymnList[index].hymnTitleYoruba;
     } else {
-      return hymnList[index].hymnTitleEnglish;
+      return widget.hymnList[index].hymnTitleEnglish;
     }
   }
 }
