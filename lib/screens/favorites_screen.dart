@@ -50,10 +50,16 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                 thickness: 10,
                 child: OrientationBuilder(builder: (context, orientation) {
                   return orientation == Orientation.portrait
-                      ? HymnListView(
-                          hymnList: favoriteHymnList, scroll: _favscroll)
-                      : HymnGridView(
-                          hymnList: favoriteHymnList, scroll: _favscroll);
+                      ? Semantics(
+                          label: 'Portrait View',
+                          child: HymnListView(
+                              hymnList: favoriteHymnList, scroll: _favscroll),
+                        )
+                      : Semantics(
+                          label: 'Landscape View',
+                          child: HymnGridView(
+                              hymnList: favoriteHymnList, scroll: _favscroll),
+                        );
                 }))
             : Center(
                 child: Text(

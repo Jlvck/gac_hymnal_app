@@ -6,9 +6,10 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '../providers/hymn_book_provider.dart';
 
+import '../widgets/hymn_grid_view.dart';
+import '../widgets/hymn_list_view.dart';
 import 'hymn_view_screen.dart';
 import '../widgets/main_text_field.dart';
-import '../widgets/displayed_hymn_list.dart';
 import '../widgets/drawer.dart';
 import '../widgets/language_popup_menu.dart';
 
@@ -111,9 +112,39 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
                 //List of Hymns displayed controlled by a value listener
                 ValueListenableBuilder(
                     valueListenable: _foundHymns,
-                    builder: (BuildContext context, value, child) {
-                      return DisplayedHymnList(
-                          foundHymns: value, scroll: _scroll);
+                    builder: (BuildContext context, foundHymns, child) {
+                      return Flexible(
+                        child: foundHymns.isNotEmpty
+                            ? Scrollbar(
+                                thumbVisibility: false,
+                                trackVisibility: false,
+                                interactive: true,
+                                controller: _scroll,
+                                radius: const Radius.circular(4),
+                                thickness: 10,
+                                child: OrientationBuilder(
+                                    builder: (context, orientation) {
+                                  return orientation == Orientation.portrait
+                                      ? Semantics(
+                                          label: "Portrait view",
+                                          child: HymnListView(
+                                              hymnList: foundHymns,
+                                              scroll: _scroll))
+                                      : Semantics(
+                                          label: "Landscape view",
+                                          child: HymnGridView(
+                                              hymnList: foundHymns,
+                                              scroll: _scroll));
+                                }))
+                            : Text(
+                                'No results found',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface),
+                              ),
+                      );
                     }),
               ],
             ),
@@ -202,16 +233,13 @@ class _HymnBookScreenState extends State<HymnBookScreen> {
   void _onSubmittedNumber(String submit, List<Hymn> hymnData) {
     FocusManager.instance.primaryFocus?.unfocus();
     if (hymnData.any((hymn) => hymn.id == submit)) {
-      Navigator.of(context)
-          .push(PageTransition(
-            type: PageTransitionType.fade,
-            child: HymnViewScreen(
-              id: submit,
-            ),
-            duration: const Duration(milliseconds: 300),
-          ))
-          .then(
-              (value) => Provider.of<HymnBookProvider>(context, listen: false));
+      Navigator.of(context).push(PageTransition(
+        type: PageTransitionType.fade,
+        child: HymnViewScreen(
+          id: submit,
+        ),
+        duration: const Duration(milliseconds: 300),
+      ));
       _enteredHymnNumber.clear();
       _foundHymns.value = _staticHymns;
       FocusManager.instance.primaryFocus?.unfocus();

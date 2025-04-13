@@ -16,7 +16,7 @@ import '../model/hymn.dart';
 
 class HymnBookProvider with ChangeNotifier {
   //sharedpref key for favList
-  static const String prefKey = "favList";
+  static const String prefFavKey = "favList";
 
   List<String> favStringList = [];
 
@@ -38,9 +38,9 @@ class HymnBookProvider with ChangeNotifier {
       ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
         content: Text(
           'Hymn $id unfavorited',
-          style: const TextStyle(
+          style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 255, 0, 0)),
+              color: Theme.of(ctx).secondaryHeaderColor),
         ),
         backgroundColor: Colors.white,
         showCloseIcon: true,
@@ -52,7 +52,8 @@ class HymnBookProvider with ChangeNotifier {
       ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
         content: Text(
           'Hymn $id favorited',
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         backgroundColor: Theme.of(ctx).secondaryHeaderColor,
         showCloseIcon: true,
@@ -66,7 +67,7 @@ class HymnBookProvider with ChangeNotifier {
   //overwrite the saved shared preferences intance with another
   void addListtoSharedPref(List<String> fav) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList(prefKey, favStringList);
+    prefs.setStringList(prefFavKey, favStringList);
   }
 
   // Screen Function for the Slash screen which works by setting saved
@@ -74,7 +75,7 @@ class HymnBookProvider with ChangeNotifier {
   void setFavHymnList() async {
     List<Hymn> pre = [];
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    favStringList = prefs.getStringList(prefKey) ?? [];
+    favStringList = prefs.getStringList(prefFavKey) ?? [];
     List<String> fav = favStringList;
 
     //validating function of list of hymns that are saved as favorites
@@ -89,6 +90,20 @@ class HymnBookProvider with ChangeNotifier {
 
     _hymnBook = pre;
     notifyListeners();
+  }
+
+  Future<bool> checkFavHymnListStrings(String id) async {
+    List<String> fav = [];
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    fav = prefs.getStringList(prefFavKey) ?? [];
+
+    if (fav.contains(id)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   //search operations function required to fetch hymn from

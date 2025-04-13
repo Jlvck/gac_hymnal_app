@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gac_hymnal_app/widgets/animated_icon_button_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/hymn_book_provider.dart';
@@ -25,33 +26,52 @@ class HymnViewScreen extends StatefulWidget {
 }
 
 class _HymnViewScreenState extends State<HymnViewScreen>
-    with WidgetsBindingObserver {
+    with WidgetsBindingObserver, SingleTickerProviderStateMixin {
   late List<Hymn> hymnList;
+
   final Duration _colorDuration = Duration(milliseconds: 100);
+
   double widthFactor = 0.2;
   double factorTrigger = 0.3;
+
   late ScrollController controller;
+
   ValueNotifier<bool> colorChange = ValueNotifier(false);
   ValueNotifier<bool> ignoreTouch = ValueNotifier(false);
+
   late double screenWidth;
   late double leftScrollExtent;
 
   int pageNumber = 0;
-
   double oldOffset = 0.0;
+
+  late AnimationController _animationController;
+  late Animation<double> _animation;
+
+  static const Duration _animationDuration = Duration(milliseconds: 300);
   @override
   void initState() {
-    // print("init");
     pageNumber = int.tryParse(widget.id) != null ? int.parse(widget.id) - 1 : 0;
     hymnList = Provider.of<HymnBookProvider>(context, listen: false).hymnList;
 
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+
+    _animationController = AnimationController(
+        vsync: this,
+        duration: _animationDuration,
+        reverseDuration: _animationDuration);
+
+    _animation = Tween<double>(begin: 24.0, end: 30.0).animate(CurvedAnimation(
+        parent: _animationController, curve: Curves.bounceInOut));
+
+    _triggerAnimation(
+      Duration(milliseconds: 3000),
+    );
   }
 
   @override
   void didChangeDependencies() {
-    // print("did change dependencies");
     MediaQueryData mediaQuery = MediaQuery.of(context);
     screenWidth = mediaQuery.size.width;
     leftScrollExtent = screenWidth * widthFactor;
@@ -63,14 +83,10 @@ class _HymnViewScreenState extends State<HymnViewScreen>
 
   @override
   void didChangeMetrics() {
-    // TODO: implement didChangeMetrics
-
     super.didChangeMetrics();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       controller.animateTo(widthFactor * MediaQuery.of(context).size.width,
           duration: Duration(microseconds: 1), curve: Curves.easeInOut);
-
-      // print("moved to set offset");
     });
   }
 
@@ -78,6 +94,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
   void dispose() {
     controller.dispose();
     ignoreTouch.dispose();
+    _animationController.dispose();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
@@ -91,11 +108,31 @@ class _HymnViewScreenState extends State<HymnViewScreen>
         ((leftScrollExtent * 2) - (factorTrigger * leftScrollExtent));
   }
 
+  void _triggerAnimation(Duration delayDuration) {
+    Future.delayed(
+      delayDuration,
+      () {
+        _animationController.forward().then(
+          (value) async {
+            await Future.delayed(Duration(milliseconds: 200));
+            _animationController.reverse();
+          },
+        );
+      },
+    );
+  }
+
+  Future<bool> _checkHymnProviderFavListStrings(String checkingID) async {
+    bool fav = await Provider.of<HymnBookProvider>(context, listen: false)
+        .checkFavHymnListStrings(checkingID);
+
+    return fav;
+  }
+
   @override
   Widget build(BuildContext context) {
-    // print("Build");
-
     List<Widget> list = <Widget>[
+      //Left Side Number Box
       SizedBox(
           width: leftScrollExtent,
           child: pageNumber == 0
@@ -129,6 +166,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                             child: child);
                       }),
                 )),
+      //Center Text Widget wrapped with GestureDetector
       GestureDetector(
         onHorizontalDragEnd: (details) {
           if (controller.offset < leftScrollExtent) {
@@ -142,11 +180,17 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                     duration: Duration(milliseconds: 200),
                     curve: Curves.easeInOut)
                 .then(
-              (value) {
+              (value) async {
                 if (checkLeftSideExtent(currentOffset) && pageNumber != 0) {
                   setState(() {
                     pageNumber = pageNumber - 1;
                   });
+                  _animationController.reset();
+                  bool fav = await _checkHymnProviderFavListStrings(
+                      '${pageNumber + 1}');
+                  if (fav) {
+                    _triggerAnimation(Duration(milliseconds: 1000));
+                  }
 
                   ignoreTouch.value = false;
                 } else {
@@ -165,13 +209,18 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                     duration: Duration(milliseconds: 200),
                     curve: Curves.easeInOut)
                 .then(
-              (value) {
+              (value) async {
                 if (checkRightSideExtent(currentOffset) &&
                     pageNumber != (499)) {
                   setState(() {
                     pageNumber = pageNumber + 1;
                   });
-
+                  _animationController.reset();
+                  bool fav = await _checkHymnProviderFavListStrings(
+                      '${pageNumber + 1}');
+                  if (fav) {
+                    _triggerAnimation(Duration(milliseconds: 1000));
+                  }
                   ignoreTouch.value = false;
                 } else {
                   ignoreTouch.value = false;
@@ -197,6 +246,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
           }
           controller.jumpTo(controller.position.pixels - details.delta.dx);
         },
+
+        //Hymn text Widget
         child: HymnViewWidget(
           hymnYorubaVerses: hymnList[pageNumber].versesYoruba,
           hymnEnglishVerses: hymnList[pageNumber].versesEnglish,
@@ -204,6 +255,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
           hymnYorubaChorus: hymnList[pageNumber].chorusYoruba,
         ),
       ),
+      //right side number box
       SizedBox(
           width: leftScrollExtent,
           child: pageNumber == (hymnList.length - 1)
@@ -255,22 +307,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
           ),
           elevation: 0,
           actions: [
-            ChangeNotifierProvider.value(
-              value: hymnList[pageNumber],
-              child: Consumer<Hymn>(
-                builder: (ctx, hymnIcon, _) => IconButton(
-                  icon: Icon(hymnIcon.isFavorites
-                      ? Icons.favorite
-                      : Icons.favorite_border),
-                  color: Theme.of(context).secondaryHeaderColor,
-                  onPressed: () {
-                    hymnIcon.toggleFav();
-                    Provider.of<HymnBookProvider>(context, listen: false)
-                        .checkfav(hymnIcon.id, context);
-                  },
-                ),
-              ),
-            ),
+            AnimatedIconButtonWidget(
+                hymn: hymnList[pageNumber], animation: _animation),
             const LanguagePopUpMenu()
           ],
         ),

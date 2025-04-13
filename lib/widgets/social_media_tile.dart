@@ -49,12 +49,15 @@ class SocialMediaTile extends StatelessWidget {
       },
       onLongPress: () {
         Clipboard.setData(ClipboardData(text: linkText.toString())).then((_) {
-          Navigator.of(context).pop();
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text(
-            'Link copied to your clipboard',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          )));
+          if (context.mounted) {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            Navigator.of(context).pop();
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text(
+              'Link copied to your clipboard',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )));
+          }
         });
       },
       title: Text(

@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 
 class ThemeClass {
   static final MaterialColor mycolor = MaterialColor(
-    const Color.fromRGBO(0, 0, 102, 1).value,
+    400,
     const <int, Color>{
       50: Color.fromRGBO(49, 49, 181, 1),
       100: Color.fromRGBO(0, 0, 108, 1),
