@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:gac_hymnal_app/widgets/animated_icon_button_widget.dart';
 import 'package:provider/provider.dart';
 
@@ -65,9 +65,11 @@ class _HymnViewScreenState extends State<HymnViewScreen>
     _animation = Tween<double>(begin: 24.0, end: 30.0).animate(CurvedAnimation(
         parent: _animationController, curve: Curves.bounceInOut));
 
-    _triggerAnimation(
-      Duration(milliseconds: 3000),
-    );
+    if (hymnList[pageNumber].isFavorites) {
+      _triggerAnimation(
+        Duration(milliseconds: 3000),
+      );
+    }
   }
 
   @override
@@ -188,7 +190,7 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                   _animationController.reset();
                   bool fav = await _checkHymnProviderFavListStrings(
                       '${pageNumber + 1}');
-                  if (fav) {
+                  if (fav & context.mounted) {
                     _triggerAnimation(Duration(milliseconds: 1000));
                   }
 
@@ -218,7 +220,8 @@ class _HymnViewScreenState extends State<HymnViewScreen>
                   _animationController.reset();
                   bool fav = await _checkHymnProviderFavListStrings(
                       '${pageNumber + 1}');
-                  if (fav) {
+
+                  if (fav & context.mounted) {
                     _triggerAnimation(Duration(milliseconds: 1000));
                   }
                   ignoreTouch.value = false;
@@ -236,12 +239,12 @@ class _HymnViewScreenState extends State<HymnViewScreen>
           if (checkLeftSideExtent(offset) || checkRightSideExtent(offset)) {
             if (colorChange.value != true) {
               colorChange.value = true;
-              HapticFeedback.lightImpact();
+              // HapticFeedback.lightImpact();
             }
           } else {
             if (colorChange.value != false) {
               colorChange.value = false;
-              HapticFeedback.lightImpact();
+              // HapticFeedback.lightImpact();
             }
           }
           controller.jumpTo(controller.position.pixels - details.delta.dx);

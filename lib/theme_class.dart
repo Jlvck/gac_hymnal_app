@@ -27,7 +27,7 @@ class ThemeClass {
         titleMedium: TextStyle(
             fontSize: 23, color: Colors.black, fontWeight: FontWeight.normal),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       useMaterial3: true,
@@ -78,7 +78,7 @@ class ThemeClass {
         titleMedium: TextStyle(
             fontSize: 23, color: Colors.white, fontWeight: FontWeight.normal),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       useMaterial3: true,
