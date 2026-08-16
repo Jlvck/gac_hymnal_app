@@ -629,7 +629,7 @@ class HymnText201to250 {
         ],
         [
           "The Lord has given the gift",
-          "To His gac_hymnal_app on the earth,",
+          "To His church on the earth,",
           "The light is held high above",
           "To light the world over;",
           "It is a box of treasure",
@@ -648,7 +648,7 @@ class HymnText201to250 {
           "It come to Christ the Lord."
         ],
         [
-          "O Saviour transform Thy gac_hymnal_app",
+          "O Saviour transform Thy church",
           "Into a golden light,",
           "To shed Thy light all over",
           "Just like the olden days;",
@@ -717,7 +717,7 @@ class HymnText201to250 {
           "How God Himself is found."
         ],
         [
-          "The moon above, the gac_hymnal_app below,",
+          "The moon above, the church below,",
           "A wondrous race they run;",
           "But all their radiance, all their glow",
           "Each borrows of its sun."

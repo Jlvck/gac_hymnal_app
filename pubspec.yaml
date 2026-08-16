@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 
 # change version code here at the number beside "+""
-version: 1.0.0+3
+version: 1.0.0+4
 
 environment:
   sdk: '>3.0.0'
@@ -60,7 +60,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   test: ^1.24.6
 
 flutter_launcher_icons:

@@ -803,7 +803,7 @@ class HymnText451to500 {
         [
           "We speak of its service of love,",
           "Of the robes which the glorified wear,",
-          "The gac_hymnal_app of the First-born above;",
+          "The church of the First-born above;",
           "But what must it be to be there?"
         ],
         [
@@ -2377,7 +2377,7 @@ class HymnText451to500 {
       id: '484',
       versesEnglish: [
         [
-          "THE gac_hymnal_app has waited long",
+          "THE church has waited long",
           "Her absent Lord to see;",
           "And still in loneliness she waits,",
           "A friendless stranger she.",
@@ -2405,7 +2405,7 @@ class HymnText451to500 {
           "And love is waxing cold",
           "How long, O Lord our God,",
           "Holy and true, and good,",
-          "Wilt Thou not judge Thy suffering gac_hymnal_app",
+          "Wilt Thou not judge Thy suffering church",
           "Her sighs, and tear and blood?",
           "Come then, Lord Jesus, come."
         ],

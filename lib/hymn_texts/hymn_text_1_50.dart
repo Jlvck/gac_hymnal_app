@@ -1164,7 +1164,7 @@ class HymnText1to50 {
         "Thy praise shall hallow now our rest.",
       ],
       [
-        "We thank Thee that Thy gac_hymnal_app",
+        "We thank Thee that Thy church",
         "Unsleeping,",
         "While earth rolls onward into light.",
         "Through all the world her watch is keeping",
@@ -2690,7 +2690,7 @@ class HymnText1to50 {
           "Day and night incessantly.",
         ],
         [
-          "Alleluia! gac_hymnal_app victorious,",
+          "Alleluia! church victorious,",
           "Thou mayst lift the joyful strain.",
           "Alleluia! Songs of triumph",
           "Well befit the ransom’d train",

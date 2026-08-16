@@ -16,7 +16,7 @@ class SocialMediaTile extends StatelessWidget {
       required this.socialIcon,
       required this.linkText});
 
-  _launchURL(Uri urltext) async {
+  Future<void> _launchURL(Uri urltext) async {
     final url = urltext;
     if (await canLaunchUrl(url)) {
       await launchUrl(
